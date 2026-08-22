@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Food is Medicine</title>
+<meta name="description" content="Nutrition data for raw whole foods, straight from USDA FoodData Central, tailored to your own reference intakes -- plus an honestly graded guide to the medicinal properties of herbs.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>&#127807;</text></svg>">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="#/foods">
+      <span class="brand-mark" aria-hidden="true">&#127807;</span>
+      <span class="brand-text">Food <em>is</em> Medicine</span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#/foods" data-route="foods">Foods</a>
+      <a href="#/medicinal" data-route="medicinal">Medicinal</a>
+      <a href="#/you" data-route="you">Your profile</a>
+      <a href="#/sources" data-route="sources">Sources</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle colour theme">
+      <span aria-hidden="true">&#9681;</span>
+    </button>
+  </div>
+</header>
+
+<div class="profile-strip" id="profileStrip" hidden></div>
+
+<main id="main" class="wrap"></main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p class="disclaimer">
+      <strong>This site is not medical advice.</strong> It is a reference built on public
+      nutrition data and published research. Food supports health; it does not replace
+      treatment. Herbs are pharmacologically active and some interact dangerously with
+      prescription medicines. Talk to a doctor or pharmacist before using any herb
+      medicinally, especially if you are pregnant, breastfeeding, taking medication, or
+      managing a health condition.
+    </p>
+    <p class="colophon">
+      Nutrition figures: <a href="https://fdc.nal.usda.gov/" rel="noopener">USDA FoodData Central</a>,
+      SR Legacy. Daily targets: <a href="https://nap.nationalacademies.org/read/25353" rel="noopener">NASEM Dietary Reference Intakes</a>.
+      Herb assessments follow <a href="https://www.nccih.nih.gov/health/herbsataglance" rel="noopener">NIH NCCIH</a>,
+      Cochrane reviews and named primary trials &mdash; all listed under <a href="#/sources">Sources</a>.
+    </p>
+  </div>
+</footer>
+
+<script src="data/foods.js"></script>
+<script src="data/dri.js"></script>
+<script src="data/sources.js"></script>
+<script src="data/medicinal.js"></script>
+<script src="js/profile.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

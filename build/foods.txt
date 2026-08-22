@@ -1,0 +1,106 @@
+# group | slug | display name | exact USDA SR Legacy description
+fruit|apple|Apple (with skin)|Apples, raw, with skin
+fruit|banana|Banana|Bananas, raw
+fruit|blueberry|Blueberries|Blueberries, raw
+fruit|strawberry|Strawberries|Strawberries, raw
+fruit|raspberry|Raspberries|Raspberries, raw
+fruit|blackberry|Blackberries|Blackberries, raw
+fruit|cranberry|Cranberries|Cranberries, raw
+fruit|orange|Orange|Oranges, raw, all commercial varieties
+fruit|lemon|Lemon|Lemons, raw, without peel
+fruit|grapefruit|Grapefruit (pink/red)|Grapefruit, raw, pink and red, all areas
+fruit|avocado|Avocado|Avocados, raw, all commercial varieties
+fruit|mango|Mango|Mangos, raw
+fruit|papaya|Papaya|Papayas, raw
+fruit|pineapple|Pineapple|Pineapple, raw, all varieties
+fruit|kiwi|Kiwifruit (green)|Kiwifruit, green, raw
+fruit|pomegranate|Pomegranate|Pomegranates, raw
+fruit|watermelon|Watermelon|Watermelon, raw
+fruit|cantaloupe|Cantaloupe|Melons, cantaloupe, raw
+fruit|grape|Grapes (red/green)|Grapes, red or green (European type, such as Thompson seedless), raw
+fruit|cherry|Sweet cherries|Cherries, sweet, raw
+fruit|peach|Peach (yellow)|Peaches, yellow, raw
+fruit|pear|Pear|Pears, raw
+fruit|plum|Plum|Plums, raw
+fruit|apricot|Apricot|Apricots, raw
+fruit|fig|Fig|Figs, raw
+fruit|date|Medjool dates|Dates, medjool
+fruit|guava|Guava|Guavas, common, raw
+fruit|persimmon|Persimmon (Japanese)|Persimmons, japanese, raw
+fruit|tomato|Tomato (red)|Tomatoes, red, ripe, raw, year round average
+veg|broccoli|Broccoli|Broccoli, raw
+veg|kale|Kale|Kale, raw
+veg|spinach|Spinach|Spinach, raw
+veg|swisschard|Swiss chard|Chard, swiss, raw
+veg|collards|Collard greens|Collards, raw
+veg|arugula|Arugula|Arugula, raw
+veg|watercress|Watercress|Watercress, raw
+veg|brusselsprouts|Brussels sprouts|Brussels sprouts, raw
+veg|cauliflower|Cauliflower|Cauliflower, raw
+veg|cabbage|Cabbage (green)|Cabbage, raw
+veg|redcabbage|Red cabbage|Cabbage, red, raw
+veg|bokchoy|Bok choy|Cabbage, chinese (pak-choi), raw
+veg|carrot|Carrot|Carrots, raw
+veg|beet|Beetroot|Beets, raw
+veg|sweetpotato|Sweet potato|Sweet potato, raw, unprepared
+veg|potato|Potato (with skin)|Potatoes, flesh and skin, raw
+veg|onion|Onion|Onions, raw
+veg|garlic|Garlic|Garlic, raw
+veg|leek|Leek|Leeks, (bulb and lower leaf-portion), raw
+veg|ginger|Ginger root|Ginger root, raw
+veg|bellpepper|Red bell pepper|Peppers, sweet, red, raw
+veg|greenpepper|Green bell pepper|Peppers, sweet, green, raw
+veg|chilipepper|Hot chili pepper (red)|Peppers, hot chili, red, raw
+veg|cucumber|Cucumber (with peel)|Cucumber, with peel, raw
+veg|celery|Celery|Celery, raw
+veg|asparagus|Asparagus|Asparagus, raw
+veg|zucchini|Zucchini|Squash, summer, zucchini, includes skin, raw
+veg|butternut|Butternut squash|Squash, winter, butternut, raw
+veg|pumpkin|Pumpkin|Pumpkin, raw
+veg|greenpeas|Green peas|Peas, green, raw
+veg|greenbeans|Green beans|Beans, snap, green, raw
+veg|corn|Sweet corn (yellow)|Corn, sweet, yellow, raw
+veg|artichoke|Artichoke|Artichokes, (globe or french), raw
+veg|romaine|Romaine lettuce|Lettuce, cos or romaine, raw
+veg|radish|Radish|Radishes, raw
+veg|turnip|Turnip|Turnips, raw
+veg|seaweed|Seaweed (wakame)|Seaweed, wakame, raw
+veg|okra|Okra|Okra, raw
+veg|eggplant|Eggplant|Eggplant, raw
+mushroom|whitemushroom|White button mushroom|Mushrooms, white, raw
+mushroom|crimini|Crimini mushroom|Mushrooms, brown, italian, or crimini, raw
+mushroom|portabella|Portabella mushroom|Mushrooms, portabella, raw
+mushroom|shiitake|Shiitake mushroom|Mushrooms, shiitake, raw
+mushroom|maitake|Maitake mushroom|Mushrooms, maitake, raw
+mushroom|oyster|Oyster mushroom|Mushrooms, oyster, raw
+mushroom|enoki|Enoki mushroom|Mushrooms, enoki, raw
+mushroom|chanterelle|Chanterelle mushroom|Mushrooms, Chanterelle, raw
+mushroom|morel|Morel mushroom|Mushrooms, morel, raw
+mushroom|uvwhite|White mushroom (UV-exposed)|Mushroom, white, exposed to ultraviolet light, raw
+mushroom|uvportabella|Portabella (UV-exposed)|Mushrooms, portabella, exposed to ultraviolet light, raw
+nut|almond|Almonds|Nuts, almonds
+nut|walnut|Walnuts (English)|Nuts, walnuts, english
+nut|pecan|Pecans|Nuts, pecans
+nut|cashew|Cashews (raw)|Nuts, cashew nuts, raw
+nut|pistachio|Pistachios (raw)|Nuts, pistachio nuts, raw
+nut|brazilnut|Brazil nuts|Nuts, brazilnuts, dried, unblanched
+nut|hazelnut|Hazelnuts|Nuts, hazelnuts or filberts
+nut|macadamia|Macadamia nuts|Nuts, macadamia nuts, raw
+nut|chia|Chia seeds|Seeds, chia seeds, dried
+nut|flax|Flaxseed|Seeds, flaxseed
+nut|pumpkinseed|Pumpkin seeds|Seeds, pumpkin and squash seed kernels, dried
+nut|sunflowerseed|Sunflower seeds|Seeds, sunflower seed kernels, dried
+nut|sesame|Sesame seeds|Seeds, sesame seeds, whole, dried
+nut|hempseed|Hemp seeds|Seeds, hemp seed, hulled
+legume|lentil|Lentils (raw)|Lentils, raw
+legume|chickpea|Chickpeas (raw)|Chickpeas (garbanzo beans, bengal gram), mature seeds, raw
+legume|blackbean|Black beans (raw)|Beans, black, mature seeds, raw
+legume|kidneybean|Kidney beans (raw)|Beans, kidney, red, mature seeds, raw
+legume|soybean|Soybeans (raw)|Soybeans, mature seeds, raw
+legume|edamame|Edamame (frozen, raw)|Soybeans, green, raw
+legume|peanut|Peanuts (raw)|Peanuts, all types, raw
+grain|oats|Oats|Oats
+grain|quinoa|Quinoa (uncooked)|Quinoa, uncooked
+grain|brownrice|Brown rice (long-grain, raw)|Rice, brown, long-grain, raw
+grain|buckwheat|Buckwheat|Buckwheat
+grain|barley|Barley (hulled)|Barley, hulled
