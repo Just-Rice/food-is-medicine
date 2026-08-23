@@ -47,7 +47,25 @@ talk with adolescents outright, because it is one of the few interventions in th
 with good evidence of harm. A support signpost appears wherever the site touches weight or
 restriction, for adults too.
 
-**Medicinal properties** — 31 herbs, spices, mushrooms and foods, each claim graded on a
+**Recipes** — pick what is actually in your kitchen and how much of each, choose a cuisine,
+and get a recipe built around exactly that. Ingredient search understands the alias system,
+so typing *bhindi* finds okra. Your dietary settings are passed along as hard constraints.
+There is a free-text instruction box you can edit at any time ("no oven", "ready in 20
+minutes", "I only have one pan") and a regenerate button that raises the temperature so you
+get something genuinely different rather than the same dish reworded.
+
+The nutrition figures shown are computed from the USDA data on this site rather than asked
+of the model, because a language model produces plausible nutrition numbers rather than
+correct ones.
+
+This is the one feature that needs an API key. It uses **your own Gemini key**, entered on
+the Recipes or Settings page and stored only in your browser — the site is static files on
+GitHub Pages, so there is no server here that could receive it, and it is sent only to
+Google. Free keys come from [Google AI Studio](https://aistudio.google.com/apikey). An API
+key in localStorage is normal for a client-side app but readable by anything running on the
+page, so don't save one on a shared computer.
+
+**Medicinal properties** — 40 herbs, spices, mushrooms and foods, each claim graded on a
 five-point scale from *established* down to *ineffective*, with mechanism, safety and drug
 interactions. Several popular remedies are graded *ineffective* because large trials looked
 carefully and found nothing.
@@ -60,7 +78,7 @@ lactose, egg, fish, crustacean, mollusc, tree nut, peanut, soy, gluten, sesame) 
 list of anything else. Excluded foods drop out of every list and are flagged if you open one
 directly. The tags are derived in the build script, not hand-maintained.
 
-**Sources** — all 37, tiered by kind, with a note on each explaining what it contributes.
+**Sources** — all 58, tiered by kind, with a note on each explaining what it contributes.
 
 ## The data is generated, not typed
 
@@ -150,6 +168,7 @@ js/app.js             hash router and all views
 js/prefs.js           display and dietary preferences
 js/profile.js         profile storage and the personal maths
 js/weight.js          weight-change arithmetic and its safety checks
+js/recipes.js         Gemini client, prompt construction, key storage
 data/foods.js         GENERATED from USDA — do not edit by hand
 data/images.js        GENERATED photo credits — do not edit by hand
 data/dri.js           reference intakes, upper limits, energy equations

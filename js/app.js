@@ -1127,6 +1127,397 @@
   }
 
   // ======================================================================
+  // View: recipes
+  // ======================================================================
+  var CUISINES = [
+    'any', 'North Indian', 'South Indian', 'Bengali', 'Gujarati', 'Pakistani',
+    'Sri Lankan', 'Thai', 'Vietnamese', 'Chinese (Sichuan)', 'Chinese (Cantonese)',
+    'Japanese', 'Korean', 'Filipino', 'Indonesian', 'Malaysian',
+    'Italian', 'French', 'Spanish', 'Portuguese', 'Greek', 'Turkish',
+    'Lebanese', 'Persian', 'Moroccan', 'Ethiopian', 'West African', 'Egyptian',
+    'Mexican', 'Peruvian', 'Brazilian', 'Caribbean', 'Cajun', 'American',
+    'British', 'German', 'Polish', 'Russian', 'Scandinavian'
+  ];
+
+  var RECIPE_STORE = 'fim.recipe.v1';
+
+  function loadRecipeState() {
+    var base = { basket: [], cuisine: 'any', servings: 2, notes: '', result: '', error: '' };
+    try {
+      var raw = localStorage.getItem(RECIPE_STORE);
+      if (raw) {
+        var saved = JSON.parse(raw);
+        Object.keys(base).forEach(function (k) {
+          if (saved[k] !== undefined) base[k] = saved[k];
+        });
+      }
+    } catch (e) { /* ignore */ }
+    return base;
+  }
+
+  var recipeState = loadRecipeState();
+  var recipeBusy = false;
+
+  function saveRecipeState() {
+    try {
+      localStorage.setItem(RECIPE_STORE, JSON.stringify({
+        basket: recipeState.basket, cuisine: recipeState.cuisine,
+        servings: recipeState.servings, notes: recipeState.notes,
+        result: recipeState.result
+      }));
+    } catch (e) { /* ignore */ }
+  }
+
+  // A deliberately small markdown renderer: headings, bold, italics, lists and
+  // paragraphs. The site loads no external scripts, and a recipe needs nothing
+  // more than this.
+  function renderMarkdown(md) {
+    var lines = String(md).split(/\r?\n/);
+    var out = [], listType = null;
+
+    function closeList() {
+      if (listType) { out.push('</' + listType + '>'); listType = null; }
+    }
+    function inline(text) {
+      return esc(text)
+        .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+        .replace(/(^|[^*])\*([^*]+)\*/g, '$1<em>$2</em>')
+        .replace(/`([^`]+)`/g, '<code>$1</code>');
+    }
+
+    lines.forEach(function (line) {
+      var trimmed = line.trim();
+      if (!trimmed) { closeList(); return; }
+
+      var h = /^(#{1,6})\s+(.*)$/.exec(trimmed);
+      if (h) {
+        closeList();
+        var level = Math.min(h[1].length + 1, 6);
+        out.push('<h' + level + '>' + inline(h[2]) + '</h' + level + '>');
+        return;
+      }
+      var ol = /^\d+[.)]\s+(.*)$/.exec(trimmed);
+      if (ol) {
+        if (listType !== 'ol') { closeList(); out.push('<ol>'); listType = 'ol'; }
+        out.push('<li>' + inline(ol[1]) + '</li>');
+        return;
+      }
+      var ul = /^[-*+]\s+(.*)$/.exec(trimmed);
+      if (ul) {
+        if (listType !== 'ul') { closeList(); out.push('<ul>'); listType = 'ul'; }
+        out.push('<li>' + inline(ul[1]) + '</li>');
+        return;
+      }
+      closeList();
+      out.push('<p>' + inline(trimmed) + '</p>');
+    });
+    closeList();
+    return out.join('\n');
+  }
+
+  // Nutrition for the basket, from this site's USDA data rather than from the
+  // model. Asking a language model for a nutrition breakdown produces plausible
+  // numbers; this produces real ones.
+  function basketNutrition() {
+    var totals = {};
+    recipeState.basket.forEach(function (item) {
+      var food = FOODS.filter(function (f) { return f.slug === item.slug; })[0];
+      if (!food) return;
+      var factor = item.amount / 100;
+      Object.keys(food.nutrients).forEach(function (k) {
+        totals[k] = (totals[k] || 0) + food.nutrients[k] * factor;
+      });
+    });
+    return totals;
+  }
+
+  // Dietary restrictions in a form the model can be told to respect.
+  function restrictionSentences() {
+    var prefs = Prefs.get();
+    var out = [];
+    if (prefs.diet && prefs.diet !== 'none') {
+      out.push('the cook is ' + prefs.diet);
+    }
+    (prefs.allergens || []).forEach(function (a) {
+      out.push('must contain no ' + t('a_' + a).toLowerCase() +
+        (a === 'lactose' ? ' (intolerance)' : ' (allergy)'));
+    });
+    var custom = (prefs.customExclude || '').split(',')
+      .map(function (x) { return x.trim(); }).filter(Boolean);
+    if (custom.length) out.push('avoid entirely: ' + custom.join(', '));
+    return out;
+  }
+
+  function keyBar() {
+    var has = window.Recipes.hasKey();
+    return '<div class="card pad key-bar">' +
+      '<div><strong>' + esc(t('api_key')) + '</strong>' +
+      (has
+        ? '<p class="hint">' + esc(t('api_key_set')) + ' · <code>' +
+          esc(window.Recipes.maskedKey()) + '</code></p>'
+        : '<p class="hint">' + esc(t('api_key_missing')) + ' · ' +
+          '<a href="' + esc(window.Recipes.STUDIO_URL) + '" rel="noopener" target="_blank">' +
+          esc(t('get_free_key')) + '</a></p>') +
+      '</div>' +
+      (has
+        ? '<button class="btn ghost" type="button" id="clearKey">' + esc(t('remove_key')) + '</button>'
+        : '<div class="key-entry">' +
+          '<input id="keyInput" type="password" autocomplete="off" spellcheck="false" ' +
+          'placeholder="AIza…" aria-label="' + esc(t('api_key')) + '">' +
+          '<button class="btn" type="button" id="saveKey">' + esc(t('save_key')) + '</button>' +
+          '</div>') +
+      '</div>';
+  }
+
+  function viewRecipes() {
+    var has = window.Recipes.hasKey();
+    var basket = recipeState.basket;
+    var restrictions = restrictionSentences();
+
+    main.innerHTML =
+      '<div class="page-head"><h1>' + esc(t('recipes_title')) + '</h1>' +
+      '<p>' + esc(t('recipes_lede')) + '</p></div>' +
+
+      keyBar() +
+      '<p class="hint" style="margin:-6px 0 22px">' + esc(t('key_privacy')) + '</p>' +
+
+      '<h2 class="section">' + esc(t('your_ingredients')) + '</h2>' +
+      '<div class="card pad">' +
+      '<div class="ingredient-add">' +
+      '<input class="search" id="ingSearch" type="search" placeholder="' +
+      esc(t('add_ingredient')) + '" autocomplete="off" aria-label="' + esc(t('add_ingredient')) + '">' +
+      '<div class="suggest" id="ingSuggest" hidden></div>' +
+      '</div>' +
+      (basket.length
+        ? '<ul class="basket" id="basket">' + basket.map(function (item, i) {
+            var food = FOODS.filter(function (f) { return f.slug === item.slug; })[0];
+            return '<li>' +
+              '<span class="b-name">' + esc(food ? food.name : item.slug) + '</span>' +
+              '<span class="b-amt"><input type="number" min="1" max="5000" step="5" ' +
+              'value="' + esc(item.amount) + '" data-idx="' + i + '" class="amt" ' +
+              'aria-label="' + esc(t('amount_g')) + '"> g</span>' +
+              '<button class="chip" type="button" data-remove="' + i + '">' +
+              esc(t('remove')) + '</button></li>';
+          }).join('') + '</ul>'
+        : '<p class="empty" style="padding:20px 0">' + esc(t('empty_basket')) + '</p>') +
+      '</div>' +
+
+      (basket.length ? basketNutritionBlock() : '') +
+
+      '<h2 class="section">' + esc(t('cuisine')) + '</h2>' +
+      '<div class="card pad">' +
+      '<div class="field-row">' +
+      '<div class="field"><label for="cuisineSel">' + esc(t('cuisine')) + '</label>' +
+      '<select id="cuisineSel">' + CUISINES.map(function (c) {
+        return '<option value="' + esc(c) + '"' +
+          (recipeState.cuisine === c ? ' selected' : '') + '>' +
+          esc(c === 'any' ? t('any_cuisine') : c) + '</option>';
+      }).join('') + '</select></div>' +
+      '<div class="field"><label for="servingsInput">' + esc(t('servings')) + '</label>' +
+      '<input id="servingsInput" type="number" min="1" max="12" step="1" value="' +
+      esc(recipeState.servings) + '"></div></div>' +
+
+      '<div class="field"><label for="notesInput">' + esc(t('extra_instructions')) + '</label>' +
+      '<textarea id="notesInput" rows="3" placeholder="…">' + esc(recipeState.notes) + '</textarea>' +
+      '<span class="hint">' + esc(t('extra_hint')) + '</span></div>' +
+
+      (restrictions.length
+        ? '<p class="hint" style="margin-top:14px">Your <a href="#/settings">dietary settings</a> ' +
+          'are sent with the request: ' + esc(restrictions.join('; ')) + '.</p>'
+        : '') +
+
+      '<div class="btn-row" style="margin-top:18px">' +
+      '<button class="btn" type="button" id="genBtn"' +
+      (has && basket.length ? '' : ' disabled') + '>' +
+      esc(recipeState.result ? t('regenerate') : t('generate')) + '</button>' +
+      (recipeState.result
+        ? '<button class="btn ghost" type="button" id="clearRecipe">' + esc(t('remove')) + '</button>'
+        : '') +
+      '</div></div>' +
+
+      '<div id="recipeOut">' + recipeOutput() + '</div>';
+
+    bindRecipeEvents();
+  }
+
+  function basketNutritionBlock() {
+    var totals = basketNutrition();
+    var ref = referenceSet();
+    var keys = ['kcal', 'protein', 'carbs', 'fiber', 'fat'];
+    var servings = Math.max(1, Number(recipeState.servings) || 1);
+
+    return '<h2 class="section">' + esc(t('basket_nutrition')) + '</h2>' +
+      '<div class="energy-row">' +
+      keys.map(function (k) {
+        var v = totals[k] || 0;
+        return '<div class="macro"><div class="v">' + fmt(v) +
+          '<span class="u"> ' + (k === 'kcal' ? 'kcal' : 'g') + '</span></div>' +
+          '<div class="l">' + esc(nutrientLabel(k)) + '</div></div>';
+      }).join('') + '</div>' +
+      '<p class="result-count">Whole basket, raw, from USDA data. Per serving at ' +
+      servings + ': <strong>' + fmt((totals.kcal || 0) / servings) + ' kcal</strong>, ' +
+      fmt((totals.protein || 0) / servings) + ' g protein' +
+      (ref.personal
+        ? ' — ' + Math.round(((totals.kcal || 0) / servings) /
+            (Profile.energy().tdee / 3) * 100) + '% of a third of your daily energy'
+        : '') +
+      '. Cooking changes this: water is lost, fat is added, and some vitamins leach out.</p>';
+  }
+
+  function recipeOutput() {
+    if (recipeBusy) {
+      return '<div class="note"><p>' + esc(t('generating')) + '</p></div>';
+    }
+    if (recipeState.error) {
+      return '<div class="note danger"><p><strong>That did not work.</strong></p>' +
+        '<p>' + esc(recipeState.error) + '</p></div>';
+    }
+    if (!recipeState.result) return '';
+    return '<div class="card pad recipe">' + renderMarkdown(recipeState.result) + '</div>' +
+      '<p class="hint">Written by Gemini from your ingredient list. Unlike the rest of this ' +
+      'site it is not drawn from a checked source, so treat cooking times and food-safety ' +
+      'steps — especially for meat, fish and eggs — as a starting point rather than an ' +
+      'authority. ' + englishMark() + '</p>';
+  }
+
+  function bindRecipeEvents() {
+    var saveBtn = document.getElementById('saveKey');
+    if (saveBtn) {
+      saveBtn.addEventListener('click', function () {
+        var input = document.getElementById('keyInput');
+        var v = (input.value || '').trim();
+        if (!v) return;
+        window.Recipes.setKey(v);
+        viewRecipes();
+      });
+    }
+    var clearBtn = document.getElementById('clearKey');
+    if (clearBtn) {
+      clearBtn.addEventListener('click', function () {
+        window.Recipes.setKey('');
+        viewRecipes();
+      });
+    }
+
+    var search = document.getElementById('ingSearch');
+    var suggest = document.getElementById('ingSuggest');
+    if (search) {
+      search.addEventListener('input', function () {
+        var q = search.value.trim().toLowerCase();
+        if (!q) { suggest.hidden = true; suggest.innerHTML = ''; return; }
+        var chosen = {};
+        recipeState.basket.forEach(function (b) { chosen[b.slug] = true; });
+        var hits = FOODS
+          .filter(function (f) {
+            return !chosen[f.slug] && !Prefs.excludedReason(f) && haystack(f).indexOf(q) >= 0;
+          })
+          .sort(function (a, b) {
+            var d = relevance(b, q) - relevance(a, q);
+            return d !== 0 ? d : a.name.localeCompare(b.name);
+          })
+          .slice(0, 8);
+        suggest.hidden = !hits.length;
+        suggest.innerHTML = hits.map(function (f) {
+          return '<button type="button" data-add="' + esc(f.slug) + '">' +
+            esc(f.name) + '<span class="dim"> · ' + esc(groupLabel(f.group)) + '</span></button>';
+        }).join('');
+        suggest.querySelectorAll('[data-add]').forEach(function (b) {
+          b.addEventListener('click', function () {
+            var food = FOODS.filter(function (f) { return f.slug === b.dataset.add; })[0];
+            var start = food && food.portion ? Math.round(food.portion.grams) : 100;
+            recipeState.basket.push({ slug: b.dataset.add, amount: start });
+            saveRecipeState();
+            viewRecipes();
+          });
+        });
+      });
+    }
+
+    main.querySelectorAll('[data-remove]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        recipeState.basket.splice(Number(b.dataset.remove), 1);
+        saveRecipeState();
+        viewRecipes();
+      });
+    });
+    main.querySelectorAll('input.amt').forEach(function (inp) {
+      inp.addEventListener('change', function () {
+        var v = Math.max(1, Number(inp.value) || 1);
+        recipeState.basket[Number(inp.dataset.idx)].amount = v;
+        saveRecipeState();
+        viewRecipes();
+      });
+    });
+
+    var cuisine = document.getElementById('cuisineSel');
+    if (cuisine) {
+      cuisine.addEventListener('change', function () {
+        recipeState.cuisine = cuisine.value;
+        saveRecipeState();
+      });
+    }
+    var servings = document.getElementById('servingsInput');
+    if (servings) {
+      servings.addEventListener('change', function () {
+        recipeState.servings = Math.max(1, Number(servings.value) || 1);
+        saveRecipeState();
+        viewRecipes();
+      });
+    }
+    var notes = document.getElementById('notesInput');
+    if (notes) {
+      notes.addEventListener('input', function () {
+        recipeState.notes = notes.value;
+        saveRecipeState();
+      });
+    }
+    var clearRecipe = document.getElementById('clearRecipe');
+    if (clearRecipe) {
+      clearRecipe.addEventListener('click', function () {
+        recipeState.result = '';
+        recipeState.error = '';
+        saveRecipeState();
+        viewRecipes();
+      });
+    }
+
+    var gen = document.getElementById('genBtn');
+    if (gen) {
+      gen.addEventListener('click', function () {
+        if (recipeBusy) return;
+        var regenerating = !!recipeState.result;
+        recipeBusy = true;
+        recipeState.error = '';
+        document.getElementById('recipeOut').innerHTML = recipeOutput();
+        gen.disabled = true;
+
+        window.Recipes.generate({
+          ingredients: recipeState.basket.map(function (item) {
+            var food = FOODS.filter(function (f) { return f.slug === item.slug; })[0];
+            return { name: food ? food.name : item.slug, amount: item.amount };
+          }),
+          cuisine: recipeState.cuisine,
+          servings: recipeState.servings,
+          notes: recipeState.notes,
+          restrictions: restrictionSentences(),
+          regenerating: regenerating
+        }).then(function (text) {
+          recipeState.result = text;
+          recipeState.error = '';
+        }).catch(function (err) {
+          recipeState.error = err && err.message ? err.message : String(err);
+        }).then(function () {
+          recipeBusy = false;
+          saveRecipeState();
+          viewRecipes();
+          var out = document.getElementById('recipeOut');
+          if (out) out.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+    }
+  }
+
+  // ======================================================================
   // View: settings & accessibility
   // ======================================================================
   function viewSettings() {
@@ -1167,6 +1558,11 @@
       '<div class="setting-row"><div><strong>' + esc(t('reduce_motion')) + '</strong>' +
       '<p class="hint">' + esc(t('reduce_motion_hint')) + '</p></div>' +
       toggle('reduceMotion', prefs.reduceMotion) + '</div></div>' +
+
+      '<h2 class="section">' + esc(t('api_key')) + '</h2>' +
+      keyBar() +
+      '<p class="hint" style="margin:-6px 0 0">' + esc(t('key_privacy')) + ' ' +
+      '<a href="#/recipes">' + esc(t('nav_recipes')) + ' &rarr;</a></p>' +
 
       '<h2 class="section">' + esc(t('dietary_title')) + '</h2>' +
       '<div class="card pad">' +
@@ -1235,6 +1631,23 @@
         rerender();
       });
     });
+    var saveKeyBtn = document.getElementById('saveKey');
+    if (saveKeyBtn) {
+      saveKeyBtn.addEventListener('click', function () {
+        var v = (document.getElementById('keyInput').value || '').trim();
+        if (!v) return;
+        window.Recipes.setKey(v);
+        rerender();
+      });
+    }
+    var clearKeyBtn = document.getElementById('clearKey');
+    if (clearKeyBtn) {
+      clearKeyBtn.addEventListener('click', function () {
+        window.Recipes.setKey('');
+        rerender();
+      });
+    }
+
     var custom = document.getElementById('customExcl');
     custom.addEventListener('input', function () {
       Prefs.set('customExclude', custom.value);
@@ -1374,6 +1787,7 @@
     else if (top === 'medicinal') viewMedicinal();
     else if (top === 'you') viewProfile();
     else if (top === 'weight') viewWeight();
+    else if (top === 'recipes') viewRecipes();
     else if (top === 'settings') viewSettings();
     else if (top === 'sources') viewSources(anchor);
     else { top = 'foods'; viewFoods(); }
@@ -1387,9 +1801,10 @@
   function renderChrome(top) {
     document.querySelector('.brand-text').innerHTML = t('brand');
     var nav = document.getElementById('nav');
-    var items = [['foods', 'nav_foods'], ['medicinal', 'nav_medicinal'],
-                 ['you', 'nav_you'], ['weight', 'nav_weight'],
-                 ['settings', 'nav_settings'], ['sources', 'nav_sources']];
+    var items = [['foods', 'nav_foods'], ['recipes', 'nav_recipes'],
+                 ['medicinal', 'nav_medicinal'], ['you', 'nav_you'],
+                 ['weight', 'nav_weight'], ['settings', 'nav_settings'],
+                 ['sources', 'nav_sources']];
     nav.innerHTML = items.map(function (it) {
       var active = it[0] === top ||
         (it[0] === 'foods' && top === 'food') ||
