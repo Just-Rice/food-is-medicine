@@ -17,9 +17,62 @@
   var MODEL_STORE = 'fim.gemini.model';
   var API = 'https://generativelanguage.googleapis.com/v1beta';
 
-  // A conservative default. The model list is fetched from the API when a key
-  // is present, so this only has to work until that returns.
+  // Only a fallback for the moment before the live model list arrives. The
+  // actual choice is made by ranking whatever the API reports, so this file does
+  // not go stale every time Google ships a generation.
   var DEFAULT_MODEL = 'gemini-2.5-flash';
+  var AUTO = '__auto__';
+
+  // Names that are not general chat models, whatever their version number.
+  var EXCLUDE = /embedding|aqa|imagen|veo|image-generation|tts|audio|native-audio|live|vision|learnlm|gemma/i;
+
+  /**
+   * Score a model name so the newest and most capable sorts first.
+   *
+   * The ordering that matters is generation before tier: a new flash beats an
+   * old pro, because a generation jump is usually worth more than a tier jump.
+   * Within a generation, pro beats flash beats flash-lite. Stable is preferred
+   * over preview or experimental only as a tie-break, so a newer preview still
+   * outranks an older stable release -- which is what "newest" has to mean while
+   * a generation is still rolling out.
+   */
+  function scoreModel(name) {
+    var n = name.toLowerCase();
+    if (EXCLUDE.test(n)) return -1;
+
+    // Generation: "gemini-3-pro" -> 3, "gemini-2.5-flash" -> 2.5.
+    var gen = 0;
+    var m = /gemini-(\d+(?:\.\d+)?)/.exec(n);
+    if (m) gen = parseFloat(m[1]);
+    else if (/gemini-(pro|flash)/.test(n)) gen = 1;   // the original unversioned names
+
+    var tier = 1;                       // unknown tier sits between lite and flash
+    if (/flash-?lite/.test(n)) tier = 0;
+    else if (/\bflash\b/.test(n)) tier = 2;
+    else if (/\bpro\b/.test(n)) tier = 3;
+    else if (/ultra/.test(n)) tier = 4;
+
+    // Smaller distilled variants are less capable at the same tier. The
+    // patterns are anchored deliberately: a bare /mini/ matches inside the word
+    // "gemini" and would penalise every model equally.
+    if (/-8b\b|-nano\b|-mini\b/.test(n)) tier -= 0.5;
+
+    var stability = 2;
+    if (/preview|-exp\b|experimental/.test(n)) stability = 1;
+    if (/\d{3,}/.test(n.replace(/gemini-\d+(\.\d+)?/, ''))) stability -= 0.5;  // dated snapshots
+
+    // Generation dominates, then tier, then stability.
+    return gen * 1000 + tier * 10 + stability;
+  }
+
+  /** Best model from a list of names. */
+  function pickBest(names) {
+    var ranked = names
+      .map(function (n) { return { name: n, score: scoreModel(n) }; })
+      .filter(function (x) { return x.score > 0; })
+      .sort(function (a, b) { return b.score - a.score; });
+    return ranked.length ? ranked[0].name : null;
+  }
 
   function getKey() {
     try { return localStorage.getItem(KEY_STORE) || ''; } catch (e) { return ''; }
@@ -34,13 +87,39 @@
 
   function hasKey() { return !!getKey(); }
 
+  var resolvedAuto = null;   // best model discovered this session
+
+  /** The stored preference: a specific model name, or AUTO. */
+  function getPreference() {
+    try { return localStorage.getItem(MODEL_STORE) || AUTO; }
+    catch (e) { return AUTO; }
+  }
+
+  /** The model an actual request should use right now. */
   function getModel() {
-    try { return localStorage.getItem(MODEL_STORE) || DEFAULT_MODEL; }
-    catch (e) { return DEFAULT_MODEL; }
+    var pref = getPreference();
+    if (pref && pref !== AUTO) return pref;
+    return resolvedAuto || DEFAULT_MODEL;
   }
 
   function setModel(m) {
-    try { localStorage.setItem(MODEL_STORE, m || DEFAULT_MODEL); } catch (e) { /* ignore */ }
+    try { localStorage.setItem(MODEL_STORE, m || AUTO); } catch (e) { /* ignore */ }
+  }
+
+  /**
+   * Ask the API what exists and pick the best of it. Cached for the session so
+   * this costs one request, not one per recipe. Resolves to the chosen name.
+   */
+  function resolveAuto(force) {
+    if (resolvedAuto && !force) return Promise.resolve(resolvedAuto);
+    if (!hasKey()) return Promise.resolve(DEFAULT_MODEL);
+    return listModels()
+      .then(function (names) {
+        var best = pickBest(names);
+        if (best) resolvedAuto = best;
+        return resolvedAuto || DEFAULT_MODEL;
+      })
+      .catch(function () { return DEFAULT_MODEL; });
   }
 
   /** Masked form of the key, for showing that one is stored without showing it. */
@@ -92,7 +171,8 @@
     lines.push('');
     lines.push('INGREDIENTS AVAILABLE (these amounts are what they actually have):');
     opts.ingredients.forEach(function (it) {
-      lines.push('- ' + it.name + ': ' + it.amount + ' g');
+      lines.push('- ' + it.name + ': ' + it.amount + ' g' +
+        (it.portion ? ' (' + it.portion + ')' : ''));
     });
     lines.push('');
 
@@ -149,7 +229,14 @@
     if (!opts.ingredients || !opts.ingredients.length) {
       return Promise.reject(new Error('Add at least one ingredient first.'));
     }
+    // Make sure the model has been chosen from the live list before asking.
+    if (getPreference() === AUTO && !resolvedAuto) {
+      return resolveAuto().then(function () { return callModel(opts); });
+    }
+    return callModel(opts);
+  }
 
+  function callModel(opts) {
     var body = {
       contents: [{ role: 'user', parts: [{ text: buildPrompt(opts) }] }],
       generationConfig: {
@@ -187,9 +274,12 @@
 
   window.Recipes = {
     getKey: getKey, setKey: setKey, hasKey: hasKey, maskedKey: maskedKey,
-    getModel: getModel, setModel: setModel, listModels: listModels,
+    getModel: getModel, setModel: setModel, getPreference: getPreference,
+    listModels: listModels, resolveAuto: resolveAuto,
+    pickBest: pickBest, scoreModel: scoreModel,
     generate: generate, buildPrompt: buildPrompt,
-    DEFAULT_MODEL: DEFAULT_MODEL,
+    resolved: function () { return resolvedAuto; },
+    AUTO: AUTO, DEFAULT_MODEL: DEFAULT_MODEL,
     STUDIO_URL: 'https://aistudio.google.com/apikey'
   };
 })();

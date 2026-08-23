@@ -62,6 +62,10 @@ window.FOODS = [
    "vitd": 0.0
   },
   "portion": {
+   "label": "medium",
+   "grams": 182.0
+  },
+  "serving": {
    "label": "cup, quartered or chopped",
    "grams": 125.0
   }
@@ -123,6 +127,10 @@ window.FOODS = [
    "vite": 0.1
   },
   "portion": {
+   "label": "medium",
+   "grams": 118.0
+  },
+  "serving": {
    "label": "cup, mashed",
    "grams": 225.0
   }
@@ -186,6 +194,10 @@ window.FOODS = [
   "portion": {
    "label": "cup",
    "grams": 148.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 148.0
   }
  },
  {
@@ -245,6 +257,10 @@ window.FOODS = [
    "vitd": 0.0
   },
   "portion": {
+   "label": "extra large",
+   "grams": 27.0
+  },
+  "serving": {
    "label": "cup, halves",
    "grams": 152.0
   }
@@ -308,6 +324,10 @@ window.FOODS = [
   "portion": {
    "label": "cup",
    "grams": 123.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 123.0
   }
  },
  {
@@ -369,6 +389,10 @@ window.FOODS = [
   "portion": {
    "label": "cup",
    "grams": 144.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 144.0
   }
  },
  {
@@ -428,6 +452,10 @@ window.FOODS = [
    "vitd": 0.0
   },
   "portion": {
+   "label": "cup, whole",
+   "grams": 100.0
+  },
+  "serving": {
    "label": "cup, chopped",
    "grams": 110.0
   }
@@ -490,6 +518,10 @@ window.FOODS = [
    "choline": 8.4
   },
   "portion": {
+   "label": "large",
+   "grams": 184.0
+  },
+  "serving": {
    "label": "cup, sections",
    "grams": 180.0
   }
@@ -552,6 +584,10 @@ window.FOODS = [
    "selenium": 0.4
   },
   "portion": {
+   "label": "fruit",
+   "grams": 58.0
+  },
+  "serving": {
    "label": "cup, sections",
    "grams": 212.0
   }
@@ -614,6 +650,10 @@ window.FOODS = [
    "vitd": 0.0
   },
   "portion": {
+   "label": "0.5 fruit",
+   "grams": 123.0
+  },
+  "serving": {
    "label": "cup sections, with juice",
    "grams": 230.0
   }
@@ -679,6 +719,10 @@ window.FOODS = [
   "portion": {
    "label": "cup, cubes",
    "grams": 150.0
+  },
+  "serving": {
+   "label": "cup, cubes",
+   "grams": 150.0
   }
  },
  {
@@ -739,6 +783,10 @@ window.FOODS = [
    "selenium": 0.6
   },
   "portion": {
+   "label": "fruit without refuse",
+   "grams": 336.0
+  },
+  "serving": {
    "label": "cup pieces",
    "grams": 165.0
   }
@@ -801,6 +849,10 @@ window.FOODS = [
    "vitd": 0.0
   },
   "portion": {
+   "label": "fruit, small",
+   "grams": 157.0
+  },
+  "serving": {
    "label": "cup 1\" pieces",
    "grams": 145.0
   }
@@ -862,6 +914,10 @@ window.FOODS = [
    "vitd": 0.0
   },
   "portion": {
+   "label": "fruit",
+   "grams": 905.0
+  },
+  "serving": {
    "label": "cup, chunks",
    "grams": 165.0
   }
@@ -919,6 +975,10 @@ window.FOODS = [
    "vitd": 0.0
   },
   "portion": {
+   "label": "fruit",
+   "grams": 69.0
+  },
+  "serving": {
    "label": "cup, sliced",
    "grams": 180.0
   }
@@ -981,6 +1041,10 @@ window.FOODS = [
    "vitd": 0.0
   },
   "portion": {
+   "label": "0.5 cup arils (seed/juice sacs)",
+   "grams": 87.0
+  },
+  "serving": {
    "label": "0.5 cup arils (seed/juice sacs)",
    "grams": 87.0
   }
@@ -1046,6 +1110,10 @@ window.FOODS = [
   "portion": {
    "label": "cup, balls",
    "grams": 154.0
+  },
+  "serving": {
+   "label": "cup, balls",
+   "grams": 154.0
   }
  },
  {
@@ -1109,6 +1177,10 @@ window.FOODS = [
    "fat": 0.19
   },
   "portion": {
+   "label": "melon, medium",
+   "grams": 552.0
+  },
+  "serving": {
    "label": "cup, balls",
    "grams": 177.0
   }
@@ -1170,6 +1242,10 @@ window.FOODS = [
    "vitd": 0.0
   },
   "portion": {
+   "label": "cup",
+   "grams": 151.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 151.0
   }
@@ -1234,6 +1310,10 @@ window.FOODS = [
   "portion": {
    "label": "cup, with pits, yields",
    "grams": 138.0
+  },
+  "serving": {
+   "label": "cup, with pits, yields",
+   "grams": 138.0
   }
  },
  {
@@ -1294,6 +1374,10 @@ window.FOODS = [
    "vite": 0.73
   },
   "portion": {
+   "label": "medium",
+   "grams": 150.0
+  },
+  "serving": {
    "label": "cup slices",
    "grams": 154.0
   }
@@ -1356,6 +1440,10 @@ window.FOODS = [
    "sodium": 1.0
   },
   "portion": {
+   "label": "medium",
+   "grams": 178.0
+  },
+  "serving": {
    "label": "cup, slices",
    "grams": 140.0
   }
@@ -1418,6 +1506,10 @@ window.FOODS = [
    "vite": 0.26
   },
   "portion": {
+   "label": "fruit",
+   "grams": 66.0
+  },
+  "serving": {
    "label": "cup, sliced",
    "grams": 165.0
   }
@@ -1482,6 +1574,10 @@ window.FOODS = [
   "portion": {
    "label": "cup, halves",
    "grams": 155.0
+  },
+  "serving": {
+   "label": "cup, halves",
+   "grams": 155.0
   }
  },
  {
@@ -1541,7 +1637,11 @@ window.FOODS = [
    "choline": 4.7
   },
   "portion": {
-   "label": "large (2-1/2\" dia)",
+   "label": "medium",
+   "grams": 50.0
+  },
+  "serving": {
+   "label": "large",
    "grams": 64.0
   }
  },
@@ -1594,6 +1694,10 @@ window.FOODS = [
    "vitd": 0.0
   },
   "portion": {
+   "label": "date, pitted",
+   "grams": 24.0
+  },
+  "serving": {
    "label": "date, pitted",
    "grams": 24.0
   }
@@ -1656,6 +1760,10 @@ window.FOODS = [
    "selenium": 0.6
   },
   "portion": {
+   "label": "fruit, without refuse",
+   "grams": 55.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 165.0
   }
@@ -1718,7 +1826,11 @@ window.FOODS = [
    "selenium": 0.6
   },
   "portion": {
-   "label": "fruit (2-1/2\" dia)",
+   "label": "fruit",
+   "grams": 168.0
+  },
+  "serving": {
+   "label": "fruit",
    "grams": 168.0
   }
  },
@@ -1779,6 +1891,10 @@ window.FOODS = [
    "vitd": 0.0
   },
   "portion": {
+   "label": "medium whole",
+   "grams": 123.0
+  },
+  "serving": {
    "label": "cup cherry tomatoes",
    "grams": 149.0
   }
@@ -1841,6 +1957,10 @@ window.FOODS = [
    "vitd": 0.0
   },
   "portion": {
+   "label": "stalk",
+   "grams": 151.0
+  },
+  "serving": {
    "label": "cup chopped",
    "grams": 91.0
   }
@@ -1907,6 +2027,10 @@ window.FOODS = [
   "portion": {
    "label": "cup",
    "grams": 21.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 21.0
   }
  },
  {
@@ -1966,6 +2090,10 @@ window.FOODS = [
    "selenium": 1.0
   },
   "portion": {
+   "label": "bunch",
+   "grams": 340.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 30.0
   }
@@ -2029,6 +2157,10 @@ window.FOODS = [
    "sugar": 1.1
   },
   "portion": {
+   "label": "leaf",
+   "grams": 48.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 36.0
   }
@@ -2093,6 +2225,10 @@ window.FOODS = [
    "sugar": 0.46
   },
   "portion": {
+   "label": "cup, chopped",
+   "grams": 36.0
+  },
+  "serving": {
    "label": "cup, chopped",
    "grams": 36.0
   }
@@ -2225,6 +2361,10 @@ window.FOODS = [
   "portion": {
    "label": "cup, chopped",
    "grams": 34.0
+  },
+  "serving": {
+   "label": "cup, chopped",
+   "grams": 34.0
   }
  },
  {
@@ -2285,6 +2425,10 @@ window.FOODS = [
    "selenium": 1.6
   },
   "portion": {
+   "label": "cup",
+   "grams": 88.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 88.0
   }
@@ -2350,7 +2494,11 @@ window.FOODS = [
    "choline": 44.3
   },
   "portion": {
-   "label": "cup chopped (1/2\" pieces)",
+   "label": "head medium",
+   "grams": 588.0
+  },
+  "serving": {
+   "label": "cup chopped",
    "grams": 107.0
   }
  },
@@ -2413,6 +2561,10 @@ window.FOODS = [
    "vitd": 0.0
   },
   "portion": {
+   "label": "leaf, medium",
+   "grams": 23.0
+  },
+  "serving": {
    "label": "cup, chopped",
    "grams": 89.0
   }
@@ -2475,6 +2627,10 @@ window.FOODS = [
    "folate": 18.0
   },
   "portion": {
+   "label": "head, medium",
+   "grams": 839.0
+  },
+  "serving": {
    "label": "cup, chopped",
    "grams": 89.0
   }
@@ -2540,6 +2696,10 @@ window.FOODS = [
    "kcal": 13.0
   },
   "portion": {
+   "label": "head",
+   "grams": 840.0
+  },
+  "serving": {
    "label": "cup, shredded",
    "grams": 70.0
   }
@@ -2601,6 +2761,10 @@ window.FOODS = [
    "vitd": 0.0
   },
   "portion": {
+   "label": "medium",
+   "grams": 61.0
+  },
+  "serving": {
    "label": "cup chopped",
    "grams": 128.0
   }
@@ -2664,6 +2828,10 @@ window.FOODS = [
    "selenium": 0.7
   },
   "portion": {
+   "label": "cup",
+   "grams": 136.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 136.0
   }
@@ -2730,6 +2898,10 @@ window.FOODS = [
   "portion": {
    "label": "cup, cubes",
    "grams": 133.0
+  },
+  "serving": {
+   "label": "cup, cubes",
+   "grams": 133.0
   }
  },
  {
@@ -2792,6 +2964,10 @@ window.FOODS = [
    "vitd": 0.0
   },
   "portion": {
+   "label": "Potato medium",
+   "grams": 213.0
+  },
+  "serving": {
    "label": "0.5 cup, diced",
    "grams": 75.0
   }
@@ -2855,6 +3031,10 @@ window.FOODS = [
    "vitd": 0.0
   },
   "portion": {
+   "label": "medium",
+   "grams": 110.0
+  },
+  "serving": {
    "label": "cup, chopped",
    "grams": 160.0
   }
@@ -2917,6 +3097,10 @@ window.FOODS = [
    "selenium": 14.2
   },
   "portion": {
+   "label": "clove",
+   "grams": 3.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 136.0
   }
@@ -2980,6 +3164,10 @@ window.FOODS = [
   "portion": {
    "label": "cup",
    "grams": 89.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 89.0
   }
  },
  {
@@ -3041,7 +3229,11 @@ window.FOODS = [
    "selenium": 0.7
   },
   "portion": {
-   "label": "0.25 cup slices (1\" dia)",
+   "label": "0.25 cup slices",
+   "grams": 24.0
+  },
+  "serving": {
+   "label": "0.25 cup slices",
    "grams": 24.0
   }
  },
@@ -3106,6 +3298,10 @@ window.FOODS = [
    "vitd": 0.0
   },
   "portion": {
+   "label": "medium",
+   "grams": 119.0
+  },
+  "serving": {
    "label": "cup, chopped",
    "grams": 149.0
   }
@@ -3169,6 +3365,10 @@ window.FOODS = [
    "vitd": 0.0
   },
   "portion": {
+   "label": "medium",
+   "grams": 119.0
+  },
+  "serving": {
    "label": "cup, chopped",
    "grams": 149.0
   }
@@ -3234,8 +3434,12 @@ window.FOODS = [
    "vitd": 0.0
   },
   "portion": {
-   "label": "pepper",
-   "grams": 45.0
+   "label": "0.5 cup, chopped or diced",
+   "grams": 75.0
+  },
+  "serving": {
+   "label": "0.5 cup, chopped or diced",
+   "grams": 75.0
   }
  },
  {
@@ -3299,6 +3503,10 @@ window.FOODS = [
   "portion": {
    "label": "0.5 cup slices",
    "grams": 52.0
+  },
+  "serving": {
+   "label": "0.5 cup slices",
+   "grams": 52.0
   }
  },
  {
@@ -3358,6 +3566,10 @@ window.FOODS = [
    "vitd": 0.0
   },
   "portion": {
+   "label": "stalk, medium",
+   "grams": 40.0
+  },
+  "serving": {
    "label": "cup chopped",
    "grams": 101.0
   }
@@ -3419,6 +3631,10 @@ window.FOODS = [
    "b6": 0.091
   },
   "portion": {
+   "label": "spear, large",
+   "grams": 20.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 134.0
   }
@@ -3485,6 +3701,10 @@ window.FOODS = [
    "vitd": 0.0
   },
   "portion": {
+   "label": "medium",
+   "grams": 196.0
+  },
+  "serving": {
    "label": "cup, chopped",
    "grams": 124.0
   }
@@ -3549,6 +3769,10 @@ window.FOODS = [
   "portion": {
    "label": "cup, cubes",
    "grams": 140.0
+  },
+  "serving": {
+   "label": "cup, cubes",
+   "grams": 140.0
   }
  },
  {
@@ -3610,7 +3834,11 @@ window.FOODS = [
    "selenium": 0.3
   },
   "portion": {
-   "label": "cup (1\" cubes)",
+   "label": "cup",
+   "grams": 116.0
+  },
+  "serving": {
+   "label": "cup",
    "grams": 116.0
   }
  },
@@ -3672,6 +3900,10 @@ window.FOODS = [
    "selenium": 1.8
   },
   "portion": {
+   "label": "cup",
+   "grams": 145.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 145.0
   }
@@ -3739,6 +3971,10 @@ window.FOODS = [
   "portion": {
    "label": "cup 1/2\" pieces",
    "grams": 100.0
+  },
+  "serving": {
+   "label": "cup 1/2\" pieces",
+   "grams": 100.0
   }
  },
  {
@@ -3803,6 +4039,10 @@ window.FOODS = [
    "selenium": 0.6
   },
   "portion": {
+   "label": "ear, medium yields",
+   "grams": 102.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 145.0
   }
@@ -3866,6 +4106,10 @@ window.FOODS = [
   "portion": {
    "label": "artichoke, medium",
    "grams": 128.0
+  },
+  "serving": {
+   "label": "artichoke, medium",
+   "grams": 128.0
   }
  },
  {
@@ -3926,6 +4170,10 @@ window.FOODS = [
    "protein": 1.23
   },
   "portion": {
+   "label": "leaf outer",
+   "grams": 28.0
+  },
+  "serving": {
    "label": "cup shredded",
    "grams": 47.0
   }
@@ -3990,6 +4238,10 @@ window.FOODS = [
    "pantothenic": 0.165
   },
   "portion": {
+   "label": "medium",
+   "grams": 4.5
+  },
+  "serving": {
    "label": "cup slices",
    "grams": 116.0
   }
@@ -4053,6 +4305,10 @@ window.FOODS = [
    "selenium": 0.7
   },
   "portion": {
+   "label": "medium",
+   "grams": 122.0
+  },
+  "serving": {
    "label": "cup, cubes",
    "grams": 130.0
   }
@@ -4185,6 +4441,10 @@ window.FOODS = [
   "portion": {
    "label": "cup",
    "grams": 100.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 100.0
   }
  },
  {
@@ -4249,6 +4509,10 @@ window.FOODS = [
   "portion": {
    "label": "cup, cubes",
    "grams": 82.0
+  },
+  "serving": {
+   "label": "cup, cubes",
+   "grams": 82.0
   }
  },
  {
@@ -4311,6 +4575,10 @@ window.FOODS = [
    "water": 92.45
   },
   "portion": {
+   "label": "large",
+   "grams": 23.0
+  },
+  "serving": {
    "label": "cup, pieces or slices",
    "grams": 70.0
   }
@@ -4377,6 +4645,10 @@ window.FOODS = [
   "portion": {
    "label": "cup whole",
    "grams": 87.0
+  },
+  "serving": {
+   "label": "cup whole",
+   "grams": 87.0
   }
  },
  {
@@ -4437,6 +4709,10 @@ window.FOODS = [
    "sugar": 2.5
   },
   "portion": {
+   "label": "piece whole",
+   "grams": 84.0
+  },
+  "serving": {
    "label": "cup diced",
    "grams": 86.0
   }
@@ -4488,6 +4764,10 @@ window.FOODS = [
    "vitd": 0.4
   },
   "portion": {
+   "label": "piece whole",
+   "grams": 19.0
+  },
+  "serving": {
    "label": "piece whole",
    "grams": 19.0
   }
@@ -4550,6 +4830,10 @@ window.FOODS = [
    "kcal": 31.0
   },
   "portion": {
+   "label": "piece whole",
+   "grams": 1.1
+  },
+  "serving": {
    "label": "cup diced",
    "grams": 70.0
   }
@@ -4615,6 +4899,10 @@ window.FOODS = [
   "portion": {
    "label": "large",
    "grams": 148.0
+  },
+  "serving": {
+   "label": "cup sliced",
+   "grams": 86.0
   }
  },
  {
@@ -4677,6 +4965,10 @@ window.FOODS = [
   "portion": {
    "label": "cup whole",
    "grams": 64.0
+  },
+  "serving": {
+   "label": "cup whole",
+   "grams": 64.0
   }
  },
  {
@@ -4725,6 +5017,10 @@ window.FOODS = [
    "carbs": 6.86
   },
   "portion": {
+   "label": "piece",
+   "grams": 5.4
+  },
+  "serving": {
    "label": "cup",
    "grams": 54.0
   }
@@ -4784,6 +5080,10 @@ window.FOODS = [
    "vitd": 5.1
   },
   "portion": {
+   "label": "piece",
+   "grams": 12.9
+  },
+  "serving": {
    "label": "cup",
    "grams": 66.0
   }
@@ -4845,6 +5145,10 @@ window.FOODS = [
    "epa": 0.0
   },
   "portion": {
+   "label": "large",
+   "grams": 23.0
+  },
+  "serving": {
    "label": "cup pieces or slices",
    "grams": 70.0
   }
@@ -4907,6 +5211,10 @@ window.FOODS = [
    "vita": 0.0
   },
   "portion": {
+   "label": "piece whole",
+   "grams": 84.0
+  },
+  "serving": {
    "label": "cup diced",
    "grams": 86.0
   }
@@ -4974,6 +5282,10 @@ window.FOODS = [
   "portion": {
    "label": "cup, whole",
    "grams": 143.0
+  },
+  "serving": {
+   "label": "cup, whole",
+   "grams": 143.0
   }
  },
  {
@@ -5035,6 +5347,10 @@ window.FOODS = [
    "fat": 65.21
   },
   "portion": {
+   "label": "cup, chopped",
+   "grams": 117.0
+  },
+  "serving": {
    "label": "cup, chopped",
    "grams": 117.0
   }
@@ -5100,6 +5416,10 @@ window.FOODS = [
   "portion": {
    "label": "cup, chopped",
    "grams": 109.0
+  },
+  "serving": {
+   "label": "cup, chopped",
+   "grams": 109.0
   }
  },
  {
@@ -5162,6 +5482,10 @@ window.FOODS = [
   "portion": {
    "label": "oz",
    "grams": 28.4
+  },
+  "serving": {
+   "label": "oz",
+   "grams": 28.4
   }
  },
  {
@@ -5222,6 +5546,10 @@ window.FOODS = [
    "cholesterol": 0.0
   },
   "portion": {
+   "label": "cup",
+   "grams": 123.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 123.0
   }
@@ -5290,6 +5618,10 @@ window.FOODS = [
   "portion": {
    "label": "cup, whole",
    "grams": 133.0
+  },
+  "serving": {
+   "label": "cup, whole",
+   "grams": 133.0
   }
  },
  {
@@ -5352,6 +5684,10 @@ window.FOODS = [
    "vita": 1.0
   },
   "portion": {
+   "label": "cup, whole",
+   "grams": 135.0
+  },
+  "serving": {
    "label": "cup, chopped",
    "grams": 115.0
   }
@@ -5415,6 +5751,10 @@ window.FOODS = [
   "portion": {
    "label": "cup, whole or halves",
    "grams": 134.0
+  },
+  "serving": {
+   "label": "cup, whole or halves",
+   "grams": 134.0
   }
  },
  {
@@ -5467,6 +5807,10 @@ window.FOODS = [
    "b12": 0.0
   },
   "portion": {
+   "label": "oz",
+   "grams": 28.4
+  },
+  "serving": {
    "label": "oz",
    "grams": 28.4
   }
@@ -5529,6 +5873,10 @@ window.FOODS = [
    "cholesterol": 0.0
   },
   "portion": {
+   "label": "cup, whole",
+   "grams": 168.0
+  },
+  "serving": {
    "label": "cup, whole",
    "grams": 168.0
   }
@@ -5595,6 +5943,10 @@ window.FOODS = [
   "portion": {
    "label": "cup",
    "grams": 129.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 129.0
   }
  },
  {
@@ -5654,6 +6006,10 @@ window.FOODS = [
    "choline": 55.1
   },
   "portion": {
+   "label": "cup, with hulls, edible yield",
+   "grams": 46.0
+  },
+  "serving": {
    "label": "cup, with hulls, edible yield",
    "grams": 46.0
   }
@@ -5719,6 +6075,10 @@ window.FOODS = [
    "choline": 25.6
   },
   "portion": {
+   "label": "cup",
+   "grams": 144.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 144.0
   }
@@ -5841,6 +6201,10 @@ window.FOODS = [
   "portion": {
    "label": "cup",
    "grams": 192.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 192.0
   }
  },
  {
@@ -5906,6 +6270,10 @@ window.FOODS = [
   "portion": {
    "label": "cup",
    "grams": 200.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 200.0
   }
  },
  {
@@ -5967,6 +6335,10 @@ window.FOODS = [
    "selenium": 3.2
   },
   "portion": {
+   "label": "cup",
+   "grams": 194.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 194.0
   }
@@ -6032,6 +6404,10 @@ window.FOODS = [
   "portion": {
    "label": "cup",
    "grams": 184.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 184.0
   }
  },
  {
@@ -6093,6 +6469,10 @@ window.FOODS = [
    "selenium": 17.8
   },
   "portion": {
+   "label": "cup",
+   "grams": 186.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 186.0
   }
@@ -6218,8 +6598,12 @@ window.FOODS = [
    "vitd": 0.0
   },
   "portion": {
-   "label": "oz",
-   "grams": 28.4
+   "label": "cup",
+   "grams": 146.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 146.0
   }
  },
  {
@@ -6276,6 +6660,10 @@ window.FOODS = [
    "vitd": 0.0
   },
   "portion": {
+   "label": "cup",
+   "grams": 156.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 156.0
   }
@@ -6336,6 +6724,10 @@ window.FOODS = [
    "vitd": 0.0
   },
   "portion": {
+   "label": "cup",
+   "grams": 170.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 170.0
   }
@@ -6403,6 +6795,10 @@ window.FOODS = [
   "portion": {
    "label": "cup",
    "grams": 185.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 185.0
   }
  },
  {
@@ -6460,6 +6856,10 @@ window.FOODS = [
    "selenium": 8.3
   },
   "portion": {
+   "label": "cup",
+   "grams": 170.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 170.0
   }
@@ -6525,6 +6925,10 @@ window.FOODS = [
   "portion": {
    "label": "cup",
    "grams": 184.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 184.0
   }
  },
  {
@@ -6586,7 +6990,11 @@ window.FOODS = [
    "choline": 5.1
   },
   "portion": {
-   "label": "fruit (2\" dia)",
+   "label": "fruit",
+   "grams": 67.0
+  },
+  "serving": {
+   "label": "fruit",
    "grams": 67.0
   }
  },
@@ -6649,6 +7057,10 @@ window.FOODS = [
    "phosphorus": 20.0
   },
   "portion": {
+   "label": "medium",
+   "grams": 88.0
+  },
+  "serving": {
    "label": "cup, sections",
    "grams": 195.0
   }
@@ -6702,6 +7114,10 @@ window.FOODS = [
    "vitd": 0.0
   },
   "portion": {
+   "label": "fruit",
+   "grams": 74.0
+  },
+  "serving": {
    "label": "fruit",
    "grams": 74.0
   }
@@ -6765,6 +7181,10 @@ window.FOODS = [
   "portion": {
    "label": "fruit without refuse",
    "grams": 19.0
+  },
+  "serving": {
+   "label": "fruit without refuse",
+   "grams": 19.0
   }
  },
  {
@@ -6813,6 +7233,10 @@ window.FOODS = [
    "protein": 0.76
   },
   "portion": {
+   "label": "fruit without refuse",
+   "grams": 609.0
+  },
+  "serving": {
    "label": "cup, sections",
    "grams": 190.0
   }
@@ -6878,6 +7302,10 @@ window.FOODS = [
   "portion": {
    "label": "cup, diced (approx 20 pieces per cup)",
    "grams": 170.0
+  },
+  "serving": {
+   "label": "cup, diced (approx 20 pieces per cup)",
+   "grams": 170.0
   }
  },
  {
@@ -6939,6 +7367,10 @@ window.FOODS = [
    "choline": 7.6
   },
   "portion": {
+   "label": "0.1 fruit",
+   "grams": 164.0
+  },
+  "serving": {
    "label": "cup, cubes",
    "grams": 170.0
   }
@@ -7001,6 +7433,10 @@ window.FOODS = [
    "folate": 5.0
   },
   "portion": {
+   "label": "medium",
+   "grams": 142.0
+  },
+  "serving": {
    "label": "cup slices",
    "grams": 143.0
   }
@@ -7066,6 +7502,10 @@ window.FOODS = [
   "portion": {
    "label": "cup, without pits",
    "grams": 155.0
+  },
+  "serving": {
+   "label": "cup, without pits",
+   "grams": 155.0
   }
  },
  {
@@ -7127,6 +7567,10 @@ window.FOODS = [
   "portion": {
    "label": "cup, unthawed",
    "grams": 132.0
+  },
+  "serving": {
+   "label": "cup, unthawed",
+   "grams": 132.0
   }
  },
  {
@@ -7183,6 +7627,10 @@ window.FOODS = [
    "selenium": 0.6
   },
   "portion": {
+   "label": "cup",
+   "grams": 150.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 150.0
   }
@@ -7243,6 +7691,10 @@ window.FOODS = [
    "selenium": 0.6
   },
   "portion": {
+   "label": "10 fruit",
+   "grams": 15.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 140.0
   }
@@ -7301,6 +7753,10 @@ window.FOODS = [
   "portion": {
    "label": "cup",
    "grams": 145.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 145.0
   }
  },
  {
@@ -7352,6 +7808,10 @@ window.FOODS = [
    "polyfat": 0.179
   },
   "portion": {
+   "label": "cup",
+   "grams": 112.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 112.0
   }
@@ -7413,6 +7873,10 @@ window.FOODS = [
    "selenium": 0.6
   },
   "portion": {
+   "label": "cup",
+   "grams": 112.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 112.0
   }
@@ -7517,6 +7981,10 @@ window.FOODS = [
    "selenium": 10.1
   },
   "portion": {
+   "label": "medium",
+   "grams": 397.0
+  },
+  "serving": {
    "label": "cup, shredded",
    "grams": 80.0
   }
@@ -7577,6 +8045,10 @@ window.FOODS = [
    "selenium": 0.6
   },
   "portion": {
+   "label": "fruit without refuse",
+   "grams": 18.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 236.0
   }
@@ -7638,6 +8110,10 @@ window.FOODS = [
    "selenium": 0.6
   },
   "portion": {
+   "label": "fruit without refuse",
+   "grams": 9.6
+  },
+  "serving": {
    "label": "cup",
    "grams": 190.0
   }
@@ -7688,6 +8164,10 @@ window.FOODS = [
    "cholesterol": 0.0
   },
   "portion": {
+   "label": "fruit",
+   "grams": 9.0
+  },
+  "serving": {
    "label": "cup, drained",
    "grams": 150.0
   }
@@ -7796,6 +8276,10 @@ window.FOODS = [
    "vitd": 0.0
   },
   "portion": {
+   "label": "medium",
+   "grams": 91.0
+  },
+  "serving": {
    "label": "cup, cubes",
    "grams": 132.0
   }
@@ -7858,6 +8342,10 @@ window.FOODS = [
   "portion": {
    "label": "cup, sliced",
    "grams": 165.0
+  },
+  "serving": {
+   "label": "cup, sliced",
+   "grams": 165.0
   }
  },
  {
@@ -7906,6 +8394,10 @@ window.FOODS = [
    "cholesterol": 0.0
   },
   "portion": {
+   "label": "fruit",
+   "grams": 602.0
+  },
+  "serving": {
    "label": "cup, chopped or diced",
    "grams": 243.0
   }
@@ -7957,6 +8449,10 @@ window.FOODS = [
    "vitd": 0.0
   },
   "portion": {
+   "label": "cup, drained",
+   "grams": 196.0
+  },
+  "serving": {
    "label": "cup, drained",
    "grams": 196.0
   }
@@ -8019,6 +8515,10 @@ window.FOODS = [
    "selenium": 0.6
   },
   "portion": {
+   "label": "fruit",
+   "grams": 625.0
+  },
+  "serving": {
    "label": "cup, pulp",
    "grams": 225.0
   }
@@ -8080,6 +8580,10 @@ window.FOODS = [
    "selenium": 0.6
   },
   "portion": {
+   "label": "0.25 fruit, small",
+   "grams": 96.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 220.0
   }
@@ -8146,6 +8650,10 @@ window.FOODS = [
   "portion": {
    "label": "cup, sliced",
    "grams": 148.0
+  },
+  "serving": {
+   "label": "cup, sliced",
+   "grams": 148.0
   }
  },
  {
@@ -8204,6 +8712,10 @@ window.FOODS = [
    "selenium": 1.3
   },
   "portion": {
+   "label": "fruit",
+   "grams": 2.0
+  },
+  "serving": {
    "label": "cup, pulp",
    "grams": 120.0
   }
@@ -8260,6 +8772,10 @@ window.FOODS = [
    "cholesterol": 0.0
   },
   "portion": {
+   "label": "fruit without peel",
+   "grams": 42.0
+  },
+  "serving": {
    "label": "cup, pureed",
    "grams": 243.0
   }
@@ -8323,6 +8839,10 @@ window.FOODS = [
    "vitd": 0.0
   },
   "portion": {
+   "label": "cup, pitted",
+   "grams": 174.0
+  },
+  "serving": {
    "label": "cup, pitted",
    "grams": 174.0
   }
@@ -8425,6 +8945,10 @@ window.FOODS = [
    "vite": 0.18
   },
   "portion": {
+   "label": "head",
+   "grams": 163.0
+  },
+  "serving": {
    "label": "cup, shredded or chopped",
    "grams": 55.0
   }
@@ -8488,6 +9012,10 @@ window.FOODS = [
    "carbs": 3.35
   },
   "portion": {
+   "label": "head",
+   "grams": 513.0
+  },
+  "serving": {
    "label": "0.5 cup, chopped",
    "grams": 25.0
   }
@@ -8550,6 +9078,10 @@ window.FOODS = [
    "selenium": 0.9
   },
   "portion": {
+   "label": "leaf",
+   "grams": 8.0
+  },
+  "serving": {
    "label": "cup, shredded",
    "grams": 40.0
   }
@@ -8611,6 +9143,10 @@ window.FOODS = [
    "selenium": 0.5
   },
   "portion": {
+   "label": "cup, chopped",
+   "grams": 55.0
+  },
+  "serving": {
    "label": "cup, chopped",
    "grams": 55.0
   }
@@ -8677,6 +9213,10 @@ window.FOODS = [
   "portion": {
    "label": "cup, chopped",
    "grams": 56.0
+  },
+  "serving": {
+   "label": "cup, chopped",
+   "grams": 56.0
   }
  },
  {
@@ -8737,6 +9277,10 @@ window.FOODS = [
    "sodium": 226.0
   },
   "portion": {
+   "label": "leaf",
+   "grams": 32.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 38.0
   }
@@ -8801,6 +9345,10 @@ window.FOODS = [
    "protein": 3.17
   },
   "portion": {
+   "label": "stalk",
+   "grams": 19.0
+  },
+  "serving": {
    "label": "cup chopped",
    "grams": 40.0
   }
@@ -8863,6 +9411,10 @@ window.FOODS = [
    "selenium": 0.6
   },
   "portion": {
+   "label": "head, medium",
+   "grams": 431.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 64.0
   }
@@ -8984,6 +9536,10 @@ window.FOODS = [
   "portion": {
    "label": "cup, shredded",
    "grams": 70.0
+  },
+  "serving": {
+   "label": "cup, shredded",
+   "grams": 70.0
   }
  },
  {
@@ -9046,6 +9602,10 @@ window.FOODS = [
    "epa": 0.0
   },
   "portion": {
+   "label": "cup, shredded",
+   "grams": 76.0
+  },
+  "serving": {
    "label": "cup, shredded",
    "grams": 76.0
   }
@@ -9111,6 +9671,10 @@ window.FOODS = [
   "portion": {
    "label": "cup",
    "grams": 135.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 135.0
   }
  },
  {
@@ -9167,6 +9731,10 @@ window.FOODS = [
    "vitd": 0.0
   },
   "portion": {
+   "label": "cup slices",
+   "grams": 133.0
+  },
+  "serving": {
    "label": "cup slices",
    "grams": 133.0
   }
@@ -9232,6 +9800,10 @@ window.FOODS = [
    "selenium": 0.7
   },
   "portion": {
+   "label": "medium",
+   "grams": 386.0
+  },
+  "serving": {
    "label": "cup, cubes",
    "grams": 140.0
   }
@@ -9294,6 +9866,10 @@ window.FOODS = [
    "selenium": 0.7
   },
   "portion": {
+   "label": "cup",
+   "grams": 156.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 156.0
   }
@@ -9360,6 +9936,10 @@ window.FOODS = [
    "selenium": 0.7
   },
   "portion": {
+   "label": "cup slices",
+   "grams": 116.0
+  },
+  "serving": {
    "label": "cup slices",
    "grams": 116.0
   }
@@ -9486,6 +10066,10 @@ window.FOODS = [
    "selenium": 0.7
   },
   "portion": {
+   "label": "medium",
+   "grams": 659.0
+  },
+  "serving": {
    "label": "cup slices",
    "grams": 120.0
   }
@@ -9550,6 +10134,10 @@ window.FOODS = [
    "vitk": 0.1
   },
   "portion": {
+   "label": "cup slices",
+   "grams": 150.0
+  },
+  "serving": {
    "label": "cup slices",
    "grams": 150.0
   }
@@ -9618,6 +10206,10 @@ window.FOODS = [
   "portion": {
    "label": "cup, sliced",
    "grams": 104.0
+  },
+  "serving": {
+   "label": "cup, sliced",
+   "grams": 104.0
   }
  },
  {
@@ -9681,6 +10273,10 @@ window.FOODS = [
    "vitk": 1.9
   },
   "portion": {
+   "label": "cup",
+   "grams": 206.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 206.0
   }
@@ -9748,6 +10344,10 @@ window.FOODS = [
   "portion": {
    "label": "cup, cubes",
    "grams": 150.0
+  },
+  "serving": {
+   "label": "cup, cubes",
+   "grams": 150.0
   }
  },
  {
@@ -9803,7 +10403,11 @@ window.FOODS = [
    "vita": 0.0
   },
   "portion": {
-   "label": "10 slices (2-1/2\" dia)",
+   "label": "10 slices",
+   "grams": 81.0
+  },
+  "serving": {
+   "label": "10 slices",
    "grams": 81.0
   }
  },
@@ -9860,7 +10464,11 @@ window.FOODS = [
    "selenium": 0.8
   },
   "portion": {
-   "label": "cup (1/2\" slices)",
+   "label": "cup",
+   "grams": 151.0
+  },
+  "serving": {
+   "label": "cup",
    "grams": 151.0
   }
  },
@@ -9924,6 +10532,10 @@ window.FOODS = [
   "portion": {
    "label": "0.5 cup slices",
    "grams": 62.0
+  },
+  "serving": {
+   "label": "0.5 cup slices",
+   "grams": 62.0
   }
  },
  {
@@ -9985,6 +10597,10 @@ window.FOODS = [
    "selenium": 0.6
   },
   "portion": {
+   "label": "large",
+   "grams": 25.0
+  },
+  "serving": {
    "label": "cup, chopped",
    "grams": 100.0
   }
@@ -10176,6 +10792,10 @@ window.FOODS = [
   "portion": {
    "label": "cup sliced",
    "grams": 127.0
+  },
+  "serving": {
+   "label": "cup sliced",
+   "grams": 127.0
   }
  },
  {
@@ -10237,6 +10857,10 @@ window.FOODS = [
   "portion": {
    "label": "cup, cubes",
    "grams": 101.0
+  },
+  "serving": {
+   "label": "cup, cubes",
+   "grams": 101.0
   }
  },
  {
@@ -10292,6 +10916,10 @@ window.FOODS = [
    "selenium": 0.5
   },
   "portion": {
+   "label": "cup, cubes",
+   "grams": 140.0
+  },
+  "serving": {
    "label": "cup, cubes",
    "grams": 140.0
   }
@@ -10357,6 +10985,10 @@ window.FOODS = [
   "portion": {
    "label": "cup, cubes",
    "grams": 116.0
+  },
+  "serving": {
+   "label": "cup, cubes",
+   "grams": 116.0
   }
  },
  {
@@ -10420,7 +11052,11 @@ window.FOODS = [
    "vite": 0.12
   },
   "portion": {
-   "label": "cup (1\" pieces)",
+   "label": "cup",
+   "grams": 132.0
+  },
+  "serving": {
+   "label": "cup",
    "grams": 132.0
   }
  },
@@ -10476,7 +11112,11 @@ window.FOODS = [
    "selenium": 0.2
   },
   "portion": {
-   "label": "cup (1/2\" pieces)",
+   "label": "cup",
+   "grams": 93.0
+  },
+  "serving": {
+   "label": "cup",
    "grams": 93.0
   }
  },
@@ -10540,6 +11180,10 @@ window.FOODS = [
   "portion": {
    "label": "medium",
    "grams": 34.0
+  },
+  "serving": {
+   "label": "0.5 cup, chopped or diced",
+   "grams": 66.0
   }
  },
  {
@@ -10602,6 +11246,10 @@ window.FOODS = [
    "selenium": 0.7
   },
   "portion": {
+   "label": "cup, whole",
+   "grams": 63.0
+  },
+  "serving": {
    "label": "cup, chopped",
    "grams": 98.0
   }
@@ -10664,6 +11312,10 @@ window.FOODS = [
    "selenium": 0.7
   },
   "portion": {
+   "label": "cup, sliced",
+   "grams": 87.0
+  },
+  "serving": {
    "label": "cup, sliced",
    "grams": 87.0
   }
@@ -10730,6 +11382,10 @@ window.FOODS = [
   "portion": {
    "label": "cup, sliced",
    "grams": 90.0
+  },
+  "serving": {
+   "label": "cup, sliced",
+   "grams": 90.0
   }
  },
  {
@@ -10790,6 +11446,10 @@ window.FOODS = [
    "selenium": 0.4
   },
   "portion": {
+   "label": "cup, chopped",
+   "grams": 105.0
+  },
+  "serving": {
    "label": "cup, chopped",
    "grams": 105.0
   }
@@ -10899,7 +11559,11 @@ window.FOODS = [
    "selenium": 0.3
   },
   "portion": {
-   "label": "pepper, large (3-3/4\" long, 3\" dia)",
+   "label": "pepper, large",
+   "grams": 186.0
+  },
+  "serving": {
+   "label": "pepper, large",
    "grams": 186.0
   }
  },
@@ -10953,6 +11617,10 @@ window.FOODS = [
    "selenium": 11.1
   },
   "portion": {
+   "label": "piece",
+   "grams": 6.0
+  },
+  "serving": {
    "label": "cup slices",
    "grams": 99.0
   }
@@ -11008,6 +11676,10 @@ window.FOODS = [
    "selenium": 15.2
   },
   "portion": {
+   "label": "piece",
+   "grams": 5.5
+  },
+  "serving": {
    "label": "cup",
    "grams": 182.0
   }
@@ -11072,6 +11744,10 @@ window.FOODS = [
   "portion": {
    "label": "cup",
    "grams": 193.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 193.0
   }
  },
  {
@@ -11132,6 +11808,10 @@ window.FOODS = [
    "vitd": 0.0
   },
   "portion": {
+   "label": "cup",
+   "grams": 208.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 208.0
   }
@@ -11197,6 +11877,10 @@ window.FOODS = [
   "portion": {
    "label": "cup",
    "grams": 202.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 202.0
   }
  },
  {
@@ -11256,6 +11940,10 @@ window.FOODS = [
    "selenium": 12.9
   },
   "portion": {
+   "label": "cup",
+   "grams": 183.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 183.0
   }
@@ -11319,6 +12007,10 @@ window.FOODS = [
    "selenium": 7.2
   },
   "portion": {
+   "label": "cup",
+   "grams": 178.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 178.0
   }
@@ -11385,6 +12077,10 @@ window.FOODS = [
   "portion": {
    "label": "cup",
    "grams": 150.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 150.0
   }
  },
  {
@@ -11449,6 +12145,10 @@ window.FOODS = [
   "portion": {
    "label": "cup",
    "grams": 207.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 207.0
   }
  },
  {
@@ -11505,6 +12205,10 @@ window.FOODS = [
    "selenium": 3.1
   },
   "portion": {
+   "label": "cup",
+   "grams": 197.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 197.0
   }
@@ -11572,6 +12276,10 @@ window.FOODS = [
   "portion": {
    "label": "cup",
    "grams": 167.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 167.0
   }
  },
  {
@@ -11621,6 +12329,10 @@ window.FOODS = [
    "selenium": 8.2
   },
   "portion": {
+   "label": "cup",
+   "grams": 205.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 205.0
   }
@@ -11687,6 +12399,10 @@ window.FOODS = [
   "portion": {
    "label": "cup",
    "grams": 196.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 196.0
   }
  },
  {
@@ -11741,6 +12457,10 @@ window.FOODS = [
    "selenium": 8.2
   },
   "portion": {
+   "label": "cup",
+   "grams": 180.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 180.0
   }
@@ -11798,6 +12518,10 @@ window.FOODS = [
    "selenium": 12.7
   },
   "portion": {
+   "label": "cup",
+   "grams": 195.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 195.0
   }
@@ -11866,6 +12590,10 @@ window.FOODS = [
   "portion": {
    "label": "cup",
    "grams": 135.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 135.0
   }
  },
  {
@@ -11920,6 +12648,10 @@ window.FOODS = [
    "polyfat": 0.493
   },
   "portion": {
+   "label": "oz",
+   "grams": 28.4
+  },
+  "serving": {
    "label": "oz",
    "grams": 28.4
   }
@@ -12099,6 +12831,10 @@ window.FOODS = [
   "portion": {
    "label": "cup",
    "grams": 120.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 120.0
   }
  },
  {
@@ -12151,6 +12887,10 @@ window.FOODS = [
    "zinc": 10.24
   },
   "portion": {
+   "label": "cup",
+   "grams": 108.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 108.0
   }
@@ -12208,6 +12948,10 @@ window.FOODS = [
   "portion": {
    "label": "cup",
    "grams": 120.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 120.0
   }
  },
  {
@@ -12256,6 +13000,10 @@ window.FOODS = [
    "polyfat": 20.089
   },
   "portion": {
+   "label": "oz",
+   "grams": 28.4
+  },
+  "serving": {
    "label": "oz",
    "grams": 28.4
   }
@@ -12323,6 +13071,10 @@ window.FOODS = [
   "portion": {
    "label": "cup",
    "grams": 192.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 192.0
   }
  },
  {
@@ -12388,6 +13140,10 @@ window.FOODS = [
   "portion": {
    "label": "cup",
    "grams": 140.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 140.0
   }
  },
  {
@@ -12447,6 +13203,10 @@ window.FOODS = [
    "ala": 0.065
   },
   "portion": {
+   "label": "cup",
+   "grams": 174.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 174.0
   }
@@ -12550,6 +13310,10 @@ window.FOODS = [
   "portion": {
    "label": "cup",
    "grams": 186.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 186.0
   }
  },
  {
@@ -12614,6 +13378,10 @@ window.FOODS = [
   "portion": {
    "label": "cup",
    "grams": 169.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 169.0
   }
  },
  {
@@ -12672,6 +13440,10 @@ window.FOODS = [
    "selenium": 2.7
   },
   "portion": {
+   "label": "cup",
+   "grams": 200.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 200.0
   }
@@ -12733,6 +13505,10 @@ window.FOODS = [
   "portion": {
    "label": "cup",
    "grams": 192.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 192.0
   }
  },
  {
@@ -12787,6 +13563,10 @@ window.FOODS = [
    "kcal": 367.0
   },
   "portion": {
+   "label": "cup",
+   "grams": 193.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 193.0
   }
@@ -12849,6 +13629,10 @@ window.FOODS = [
    "vitd": 0.0
   },
   "portion": {
+   "label": "cup",
+   "grams": 193.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 193.0
   }
@@ -12915,6 +13699,10 @@ window.FOODS = [
   "portion": {
    "label": "cup",
    "grams": 185.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 185.0
   }
  },
  {
@@ -12961,6 +13749,10 @@ window.FOODS = [
    "vitd": 0.0
   },
   "portion": {
+   "label": "cup",
+   "grams": 200.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 200.0
   }
@@ -13023,6 +13815,10 @@ window.FOODS = [
    "selenium": 2.8
   },
   "portion": {
+   "label": "cup",
+   "grams": 160.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 160.0
   }
@@ -13128,6 +13924,10 @@ window.FOODS = [
   "portion": {
    "label": "cup",
    "grams": 122.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 122.0
   }
  },
  {
@@ -13188,8 +13988,8 @@ window.FOODS = [
    "protein": 3.15
   },
   "portion": {
-   "label": "5 leaves",
-   "grams": 2.5
+   "label": "0.25 cup leaves, whole",
+   "grams": 6.0
   }
  },
  {
@@ -13251,6 +14051,10 @@ window.FOODS = [
    "vitd": 0.0
   },
   "portion": {
+   "label": "0.25 cup",
+   "grams": 4.0
+  },
+  "serving": {
    "label": "9 sprigs",
    "grams": 20.0
   }
@@ -13312,6 +14116,10 @@ window.FOODS = [
    "selenium": 0.1
   },
   "portion": {
+   "label": "cup chopped",
+   "grams": 60.0
+  },
+  "serving": {
    "label": "cup chopped",
    "grams": 60.0
   }
@@ -13708,8 +14516,8 @@ window.FOODS = [
    "vitd": 0.0
   },
   "portion": {
-   "label": "5 sprigs",
-   "grams": 1.0
+   "label": "cup sprigs",
+   "grams": 8.9
   }
  },
  {
@@ -13819,6 +14627,10 @@ window.FOODS = [
    "selenium": 0.7
   },
   "portion": {
+   "label": "cup",
+   "grams": 67.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 67.0
   }
@@ -14484,6 +15296,10 @@ window.FOODS = [
   "portion": {
    "label": "cup",
    "grams": 244.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 244.0
   }
  },
  {
@@ -14549,6 +15365,10 @@ window.FOODS = [
    "b12": 0.53
   },
   "portion": {
+   "label": "cup",
+   "grams": 244.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 244.0
   }
@@ -14617,6 +15437,10 @@ window.FOODS = [
   "portion": {
    "label": "cup",
    "grams": 244.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 244.0
   }
  },
  {
@@ -14675,6 +15499,10 @@ window.FOODS = [
    "selenium": 2.4
   },
   "portion": {
+   "label": "cup",
+   "grams": 246.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 246.0
   }
@@ -14739,8 +15567,12 @@ window.FOODS = [
    "selenium": 1.4
   },
   "portion": {
-   "label": "fl oz",
-   "grams": 30.5
+   "label": "cup",
+   "grams": 244.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 244.0
   }
  },
  {
@@ -14797,6 +15629,10 @@ window.FOODS = [
    "selenium": 1.7
   },
   "portion": {
+   "label": "cup",
+   "grams": 245.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 245.0
   }
@@ -14856,6 +15692,10 @@ window.FOODS = [
   "portion": {
    "label": "cup",
    "grams": 244.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 244.0
   }
  },
  {
@@ -14910,8 +15750,12 @@ window.FOODS = [
    "selenium": 2.3
   },
   "portion": {
-   "label": "fl oz",
-   "grams": 31.5
+   "label": "0.5 cup",
+   "grams": 126.0
+  },
+  "serving": {
+   "label": "0.5 cup",
+   "grams": 126.0
   }
  },
  {
@@ -14974,6 +15818,10 @@ window.FOODS = [
    "vitk": 0.6
   },
   "portion": {
+   "label": "cup",
+   "grams": 306.0
+  },
+  "serving": {
    "label": "fl oz",
    "grams": 38.2
   }
@@ -15039,8 +15887,12 @@ window.FOODS = [
    "selenium": 27.3
   },
   "portion": {
-   "label": "0.25 cup",
-   "grams": 30.0
+   "label": "cup",
+   "grams": 120.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 120.0
   }
  },
  {
@@ -15108,6 +15960,10 @@ window.FOODS = [
   "portion": {
    "label": "container (6 oz)",
    "grams": 170.0
+  },
+  "serving": {
+   "label": "cup (8 fl oz)",
+   "grams": 245.0
   }
  },
  {
@@ -15236,6 +16092,10 @@ window.FOODS = [
   "portion": {
    "label": "serving",
    "grams": 156.0
+  },
+  "serving": {
+   "label": "serving",
+   "grams": 156.0
   }
  },
  {
@@ -15300,6 +16160,10 @@ window.FOODS = [
    "vitk": 0.1
   },
   "portion": {
+   "label": "cup",
+   "grams": 245.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 245.0
   }
@@ -15370,6 +16234,10 @@ window.FOODS = [
   "portion": {
    "label": "cup, crumbled",
    "grams": 122.0
+  },
+  "serving": {
+   "label": "cup, crumbled",
+   "grams": 122.0
   }
  },
  {
@@ -15433,8 +16301,12 @@ window.FOODS = [
    "choline": 18.4
   },
   "portion": {
-   "label": "4 oz",
-   "grams": 113.0
+   "label": "cup, large curd (not packed)",
+   "grams": 210.0
+  },
+  "serving": {
+   "label": "cup, large curd (not packed)",
+   "grams": 210.0
   }
  },
  {
@@ -15499,8 +16371,12 @@ window.FOODS = [
    "vitk": 1.1
   },
   "portion": {
-   "label": "0.5 cup",
-   "grams": 124.0
+   "label": "cup",
+   "grams": 246.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 246.0
   }
  },
  {
@@ -15567,6 +16443,10 @@ window.FOODS = [
   "portion": {
    "label": "cup (not packed)",
    "grams": 145.0
+  },
+  "serving": {
+   "label": "cup (not packed)",
+   "grams": 145.0
   }
  },
  {
@@ -15628,6 +16508,10 @@ window.FOODS = [
    "polyfat": 1.149
   },
   "portion": {
+   "label": "cup, crumbled",
+   "grams": 118.0
+  },
+  "serving": {
    "label": "cup, crumbled",
    "grams": 118.0
   }
@@ -15695,6 +16579,10 @@ window.FOODS = [
   "portion": {
    "label": "cup, shredded",
    "grams": 112.0
+  },
+  "serving": {
+   "label": "cup, shredded",
+   "grams": 112.0
   }
  },
  {
@@ -15760,6 +16648,10 @@ window.FOODS = [
    "fiber": 0.0
   },
   "portion": {
+   "label": "package, small (3 oz)",
+   "grams": 85.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 232.0
   }
@@ -15824,6 +16716,10 @@ window.FOODS = [
    "selenium": 15.0
   },
   "portion": {
+   "label": "cup, crumbled",
+   "grams": 150.0
+  },
+  "serving": {
    "label": "cup, crumbled",
    "grams": 150.0
   }
@@ -15891,6 +16787,10 @@ window.FOODS = [
   "portion": {
    "label": "cup, crumbled",
    "grams": 132.0
+  },
+  "serving": {
+   "label": "cup, crumbled",
+   "grams": 132.0
   }
  },
  {
@@ -15953,8 +16853,12 @@ window.FOODS = [
    "selenium": 14.5
   },
   "portion": {
-   "label": "oz",
-   "grams": 28.4
+   "label": "cup, sliced",
+   "grams": 144.0
+  },
+  "serving": {
+   "label": "cup, sliced",
+   "grams": 144.0
   }
  },
  {
@@ -16017,8 +16921,12 @@ window.FOODS = [
    "selenium": 14.5
   },
   "portion": {
-   "label": "oz",
-   "grams": 28.4
+   "label": "cup",
+   "grams": 246.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 246.0
   }
  },
  {
@@ -16082,6 +16990,10 @@ window.FOODS = [
    "selenium": 2.8
   },
   "portion": {
+   "label": "oz",
+   "grams": 28.4
+  },
+  "serving": {
    "label": "oz",
    "grams": 28.4
   }
@@ -16148,6 +17060,10 @@ window.FOODS = [
   "portion": {
    "label": "cup, diced",
    "grams": 132.0
+  },
+  "serving": {
+   "label": "cup, diced",
+   "grams": 132.0
   }
  },
  {
@@ -16209,6 +17125,10 @@ window.FOODS = [
   "portion": {
    "label": "shredded",
    "grams": 105.0
+  },
+  "serving": {
+   "label": "serving",
+   "grams": 17.0
   }
  },
  {
@@ -16271,6 +17191,10 @@ window.FOODS = [
    "selenium": 14.5
   },
   "portion": {
+   "label": "oz",
+   "grams": 28.4
+  },
+  "serving": {
    "label": "oz",
    "grams": 28.4
   }
@@ -16341,6 +17265,10 @@ window.FOODS = [
   "portion": {
    "label": "cup, diced",
    "grams": 132.0
+  },
+  "serving": {
+   "label": "cup, diced",
+   "grams": 132.0
   }
  },
  {
@@ -16403,8 +17331,12 @@ window.FOODS = [
    "selenium": 14.5
   },
   "portion": {
-   "label": "oz",
-   "grams": 28.4
+   "label": "cup, diced",
+   "grams": 132.0
+  },
+  "serving": {
+   "label": "cup, diced",
+   "grams": 132.0
   }
  },
  {
@@ -16467,6 +17399,10 @@ window.FOODS = [
    "sugar": 0.56
   },
   "portion": {
+   "label": "cup, diced",
+   "grams": 132.0
+  },
+  "serving": {
    "label": "cup, diced",
    "grams": 132.0
   }
@@ -16533,6 +17469,10 @@ window.FOODS = [
   "portion": {
    "label": "cup, diced",
    "grams": 132.0
+  },
+  "serving": {
+   "label": "cup, diced",
+   "grams": 132.0
   }
  },
  {
@@ -16595,6 +17535,10 @@ window.FOODS = [
    "vitk": 2.7
   },
   "portion": {
+   "label": "cup, diced",
+   "grams": 132.0
+  },
+  "serving": {
    "label": "cup, diced",
    "grams": 132.0
   }
@@ -16661,6 +17605,10 @@ window.FOODS = [
   "portion": {
    "label": "cup, diced",
    "grams": 132.0
+  },
+  "serving": {
+   "label": "cup, diced",
+   "grams": 132.0
   }
  },
  {
@@ -16723,6 +17671,10 @@ window.FOODS = [
    "selenium": 14.5
   },
   "portion": {
+   "label": "oz",
+   "grams": 28.4
+  },
+  "serving": {
    "label": "oz",
    "grams": 28.4
   }
@@ -16790,6 +17742,10 @@ window.FOODS = [
   "portion": {
    "label": "oz",
    "grams": 28.4
+  },
+  "serving": {
+   "label": "oz",
+   "grams": 28.4
   }
  },
  {
@@ -16854,6 +17810,10 @@ window.FOODS = [
   "portion": {
    "label": "oz",
    "grams": 28.4
+  },
+  "serving": {
+   "label": "oz",
+   "grams": 28.4
   }
  },
  {
@@ -16910,6 +17870,10 @@ window.FOODS = [
    "selenium": 14.5
   },
   "portion": {
+   "label": "oz",
+   "grams": 28.4
+  },
+  "serving": {
    "label": "oz",
    "grams": 28.4
   }
@@ -16977,8 +17941,12 @@ window.FOODS = [
    "vitk": 2.4
   },
   "portion": {
-   "label": "oz",
-   "grams": 28.4
+   "label": "cup, crumbled, not packed",
+   "grams": 135.0
+  },
+  "serving": {
+   "label": "cup, crumbled, not packed",
+   "grams": 135.0
   }
  },
  {
@@ -17047,6 +18015,10 @@ window.FOODS = [
   "portion": {
    "label": "cup, whipped",
    "grams": 120.0
+  },
+  "serving": {
+   "label": "cup, whipped",
+   "grams": 120.0
   }
  },
  {
@@ -17112,8 +18084,12 @@ window.FOODS = [
    "vitk": 1.7
   },
   "portion": {
-   "label": "fl oz",
-   "grams": 30.0
+   "label": "cup",
+   "grams": 240.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 240.0
   }
  },
  {
@@ -17178,8 +18154,12 @@ window.FOODS = [
    "water": 80.57
   },
   "portion": {
-   "label": "fl oz",
-   "grams": 30.2
+   "label": "cup",
+   "grams": 242.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 242.0
   }
  },
  {
@@ -17248,6 +18228,10 @@ window.FOODS = [
   "portion": {
    "label": "cup",
    "grams": 230.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 230.0
   }
  },
  {
@@ -17312,6 +18296,10 @@ window.FOODS = [
    "selenium": 1.0
   },
   "portion": {
+   "label": "cup",
+   "grams": 227.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 227.0
   }
@@ -17380,6 +18368,10 @@ window.FOODS = [
   "portion": {
    "label": "cup",
    "grams": 227.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 227.0
   }
  },
  {
@@ -17442,6 +18434,10 @@ window.FOODS = [
    "choline": 22.3
   },
   "portion": {
+   "label": "cup",
+   "grams": 205.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 205.0
   }
@@ -17509,6 +18505,10 @@ window.FOODS = [
   "portion": {
    "label": "cup",
    "grams": 145.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 145.0
   }
  },
  {
@@ -17572,6 +18572,10 @@ window.FOODS = [
   "portion": {
    "label": "cup",
    "grams": 57.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 57.0
   }
  },
  {
@@ -17629,6 +18633,10 @@ window.FOODS = [
    "protein": 19.46
   },
   "portion": {
+   "label": "4 oz",
+   "grams": 113.0
+  },
+  "serving": {
    "label": "4 oz",
    "grams": 113.0
   }
@@ -17692,6 +18700,10 @@ window.FOODS = [
   "portion": {
    "label": "4 oz",
    "grams": 113.0
+  },
+  "serving": {
+   "label": "4 oz",
+   "grams": 113.0
   }
  },
  {
@@ -17750,6 +18762,10 @@ window.FOODS = [
    "kcal": 148.0
   },
   "portion": {
+   "label": "4 oz",
+   "grams": 113.0
+  },
+  "serving": {
    "label": "4 oz",
    "grams": 113.0
   }
@@ -17811,6 +18827,10 @@ window.FOODS = [
   "portion": {
    "label": "4 oz",
    "grams": 113.0
+  },
+  "serving": {
+   "label": "4 oz",
+   "grams": 113.0
   }
  },
  {
@@ -17870,6 +18890,10 @@ window.FOODS = [
    "choline": 90.7
   },
   "portion": {
+   "label": "4 oz",
+   "grams": 113.0
+  },
+  "serving": {
    "label": "4 oz",
    "grams": 113.0
   }
@@ -17936,6 +18960,10 @@ window.FOODS = [
   "portion": {
    "label": "4 oz",
    "grams": 113.0
+  },
+  "serving": {
+   "label": "4 oz",
+   "grams": 113.0
   }
  },
  {
@@ -17989,6 +19017,10 @@ window.FOODS = [
    "vita": 0.0
   },
   "portion": {
+   "label": "4 oz",
+   "grams": 113.0
+  },
+  "serving": {
    "label": "4 oz",
    "grams": 113.0
   }
@@ -18051,6 +19083,10 @@ window.FOODS = [
   "portion": {
    "label": "4 oz",
    "grams": 113.0
+  },
+  "serving": {
+   "label": "4 oz",
+   "grams": 113.0
   }
  },
  {
@@ -18106,6 +19142,10 @@ window.FOODS = [
    "manganese": 0.01
   },
   "portion": {
+   "label": "4 oz",
+   "grams": 113.0
+  },
+  "serving": {
    "label": "4 oz",
    "grams": 113.0
   }
@@ -18170,6 +19210,10 @@ window.FOODS = [
   "portion": {
    "label": "4 oz",
    "grams": 113.0
+  },
+  "serving": {
+   "label": "4 oz",
+   "grams": 113.0
   }
  },
  {
@@ -18229,6 +19273,10 @@ window.FOODS = [
   "portion": {
    "label": "4 oz",
    "grams": 113.0
+  },
+  "serving": {
+   "label": "4 oz",
+   "grams": 113.0
   }
  },
  {
@@ -18281,6 +19329,10 @@ window.FOODS = [
    "selenium": 29.5
   },
   "portion": {
+   "label": "oz",
+   "grams": 28.4
+  },
+  "serving": {
    "label": "oz",
    "grams": 28.4
   }
@@ -18342,8 +19394,12 @@ window.FOODS = [
    "selenium": 18.8
   },
   "portion": {
-   "label": "3 oz",
-   "grams": 85.0
+   "label": "cup",
+   "grams": 140.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 140.0
   }
  },
  {
@@ -18407,6 +19463,10 @@ window.FOODS = [
   "portion": {
    "label": "4 oz",
    "grams": 113.0
+  },
+  "serving": {
+   "label": "4 oz",
+   "grams": 113.0
   }
  },
  {
@@ -18460,6 +19520,10 @@ window.FOODS = [
    "vita": 0.0
   },
   "portion": {
+   "label": "oz",
+   "grams": 28.4
+  },
+  "serving": {
    "label": "oz",
    "grams": 28.4
   }
@@ -18516,6 +19580,10 @@ window.FOODS = [
   "portion": {
    "label": "oz",
    "grams": 28.4
+  },
+  "serving": {
+   "label": "oz",
+   "grams": 28.4
   }
  },
  {
@@ -18568,6 +19636,10 @@ window.FOODS = [
    "vita": 0.0
   },
   "portion": {
+   "label": "oz",
+   "grams": 28.4
+  },
+  "serving": {
    "label": "oz",
    "grams": 28.4
   }
@@ -18631,6 +19703,10 @@ window.FOODS = [
   "portion": {
    "label": "oz",
    "grams": 28.4
+  },
+  "serving": {
+   "label": "oz",
+   "grams": 28.4
   }
  },
  {
@@ -18689,6 +19765,10 @@ window.FOODS = [
   "portion": {
    "label": "oz",
    "grams": 28.4
+  },
+  "serving": {
+   "label": "oz",
+   "grams": 28.4
   }
  },
  {
@@ -18738,6 +19818,10 @@ window.FOODS = [
   "portion": {
    "label": "oz",
    "grams": 28.4
+  },
+  "serving": {
+   "label": "oz",
+   "grams": 28.4
   }
  },
  {
@@ -18783,6 +19867,10 @@ window.FOODS = [
    "vita": 0.0
   },
   "portion": {
+   "label": "oz",
+   "grams": 28.4
+  },
+  "serving": {
    "label": "oz",
    "grams": 28.4
   }
@@ -18837,6 +19925,10 @@ window.FOODS = [
   "portion": {
    "label": "oz",
    "grams": 28.4
+  },
+  "serving": {
+   "label": "oz",
+   "grams": 28.4
   }
  },
  {
@@ -18876,6 +19968,10 @@ window.FOODS = [
    "vita": 0.0
   },
   "portion": {
+   "label": "oz",
+   "grams": 28.4
+  },
+  "serving": {
    "label": "oz",
    "grams": 28.4
   }
@@ -18922,6 +20018,10 @@ window.FOODS = [
    "vita": 0.0
   },
   "portion": {
+   "label": "oz",
+   "grams": 28.4
+  },
+  "serving": {
    "label": "oz",
    "grams": 28.4
   }
@@ -18985,6 +20085,10 @@ window.FOODS = [
    "polyfat": 0.384
   },
   "portion": {
+   "label": "piece",
+   "grams": 263.0
+  },
+  "serving": {
    "label": "4 oz",
    "grams": 113.0
   }
@@ -19045,6 +20149,10 @@ window.FOODS = [
    "vitc": 0.0
   },
   "portion": {
+   "label": "thigh without skin",
+   "grams": 149.0
+  },
+  "serving": {
    "label": "4 oz",
    "grams": 113.0
   }
@@ -19109,6 +20217,10 @@ window.FOODS = [
   "portion": {
    "label": "4 oz",
    "grams": 113.0
+  },
+  "serving": {
+   "label": "4 oz",
+   "grams": 113.0
   }
  },
  {
@@ -19168,6 +20280,10 @@ window.FOODS = [
    "polyfat": 2.498
   },
   "portion": {
+   "label": "piece",
+   "grams": 107.0
+  },
+  "serving": {
    "label": "4 oz",
    "grams": 113.0
   }
@@ -19230,6 +20346,10 @@ window.FOODS = [
    "vitc": 0.0
   },
   "portion": {
+   "label": "breast",
+   "grams": 1769.0
+  },
+  "serving": {
    "label": "4 oz",
    "grams": 113.0
   }
@@ -19294,6 +20414,10 @@ window.FOODS = [
   "portion": {
    "label": "4 oz",
    "grams": 113.0
+  },
+  "serving": {
+   "label": "4 oz",
+   "grams": 113.0
   }
  },
  {
@@ -19353,6 +20477,10 @@ window.FOODS = [
   "portion": {
    "label": "unit (yield from 1 lb ready-to-cook duck)",
    "grams": 137.0
+  },
+  "serving": {
+   "label": "unit (yield from 1 lb ready-to-cook duck)",
+   "grams": 137.0
   }
  },
  {
@@ -19405,6 +20533,10 @@ window.FOODS = [
    "epa": 0.0
   },
   "portion": {
+   "label": "3 oz",
+   "grams": 85.0
+  },
+  "serving": {
    "label": "3 oz",
    "grams": 85.0
   }
@@ -19463,6 +20595,10 @@ window.FOODS = [
   "portion": {
    "label": "quail",
    "grams": 92.0
+  },
+  "serving": {
+   "label": "quail",
+   "grams": 92.0
   }
  },
  {
@@ -19516,6 +20652,10 @@ window.FOODS = [
    "epa": 0.0
   },
   "portion": {
+   "label": "3 oz",
+   "grams": 85.0
+  },
+  "serving": {
    "label": "3 oz",
    "grams": 85.0
   }
@@ -19572,6 +20712,10 @@ window.FOODS = [
    "zinc": 2.7
   },
   "portion": {
+   "label": "unit (yield from 1 lb ready-to-cook squab)",
+   "grams": 251.0
+  },
+  "serving": {
    "label": "squab",
    "grams": 168.0
   }
@@ -19630,6 +20774,10 @@ window.FOODS = [
   "portion": {
    "label": "3 oz",
    "grams": 85.0
+  },
+  "serving": {
+   "label": "3 oz",
+   "grams": 85.0
   }
  },
  {
@@ -19683,6 +20831,10 @@ window.FOODS = [
    "carbs": 0.0
   },
   "portion": {
+   "label": "oz",
+   "grams": 28.4
+  },
+  "serving": {
    "label": "serving (cooked from 4 oz raw)",
    "grams": 85.0
   }
@@ -19748,6 +20900,10 @@ window.FOODS = [
   "portion": {
    "label": "4 oz",
    "grams": 113.0
+  },
+  "serving": {
+   "label": "4 oz",
+   "grams": 113.0
   }
  },
  {
@@ -19811,6 +20967,10 @@ window.FOODS = [
   "portion": {
    "label": "4 oz",
    "grams": 113.0
+  },
+  "serving": {
+   "label": "4 oz",
+   "grams": 113.0
   }
  },
  {
@@ -19870,6 +21030,10 @@ window.FOODS = [
    "fiber": 0.0
   },
   "portion": {
+   "label": "oz",
+   "grams": 28.4
+  },
+  "serving": {
    "label": "oz",
    "grams": 28.4
   }
@@ -19932,6 +21096,10 @@ window.FOODS = [
   "portion": {
    "label": "oz",
    "grams": 28.4
+  },
+  "serving": {
+   "label": "oz",
+   "grams": 28.4
   }
  },
  {
@@ -19988,6 +21156,10 @@ window.FOODS = [
   "portion": {
    "label": "oz",
    "grams": 28.4
+  },
+  "serving": {
+   "label": "oz",
+   "grams": 28.4
   }
  },
  {
@@ -20042,6 +21214,10 @@ window.FOODS = [
    "vita": 0.0
   },
   "portion": {
+   "label": "oz",
+   "grams": 28.4
+  },
+  "serving": {
    "label": "oz",
    "grams": 28.4
   }
@@ -20136,6 +21312,10 @@ window.FOODS = [
   "portion": {
    "label": "oz",
    "grams": 28.4
+  },
+  "serving": {
+   "label": "oz",
+   "grams": 28.4
   }
  },
  {
@@ -20196,6 +21376,10 @@ window.FOODS = [
   "portion": {
    "label": "4 oz",
    "grams": 113.0
+  },
+  "serving": {
+   "label": "4 oz",
+   "grams": 113.0
   }
  },
  {
@@ -20254,6 +21438,10 @@ window.FOODS = [
    "kcal": 143.0
   },
   "portion": {
+   "label": "oz",
+   "grams": 28.4
+  },
+  "serving": {
    "label": "oz",
    "grams": 28.4
   }
@@ -20319,6 +21507,10 @@ window.FOODS = [
    "fiber": 0.0
   },
   "portion": {
+   "label": "0.5 fillet",
+   "grams": 198.0
+  },
+  "serving": {
    "label": "oz, boneless",
    "grams": 28.4
   }
@@ -20379,6 +21571,10 @@ window.FOODS = [
    "selenium": 36.5
   },
   "portion": {
+   "label": "0.5 fillet",
+   "grams": 198.0
+  },
+  "serving": {
    "label": "3 oz",
    "grams": 85.0
   }
@@ -20442,6 +21638,10 @@ window.FOODS = [
    "selenium": 36.5
   },
   "portion": {
+   "label": "0.5 fillet",
+   "grams": 198.0
+  },
+  "serving": {
    "label": "3 oz",
    "grams": 85.0
   }
@@ -20506,6 +21706,10 @@ window.FOODS = [
    "choline": 78.5
   },
   "portion": {
+   "label": "0.5 fillet",
+   "grams": 198.0
+  },
+  "serving": {
    "label": "3 oz",
    "grams": 85.0
   }
@@ -20571,6 +21775,10 @@ window.FOODS = [
   "portion": {
    "label": "fillet",
    "grams": 112.0
+  },
+  "serving": {
+   "label": "fillet",
+   "grams": 112.0
   }
  },
  {
@@ -20632,6 +21840,10 @@ window.FOODS = [
    "selenium": 52.7
   },
   "portion": {
+   "label": "small",
+   "grams": 12.0
+  },
+  "serving": {
    "label": "cup, drained",
    "grams": 149.0
   }
@@ -20692,6 +21904,10 @@ window.FOODS = [
    "selenium": 36.5
   },
   "portion": {
+   "label": "3 oz",
+   "grams": 85.0
+  },
+  "serving": {
    "label": "3 oz",
    "grams": 85.0
   }
@@ -20755,6 +21971,10 @@ window.FOODS = [
    "selenium": 36.5
   },
   "portion": {
+   "label": "fillet",
+   "grams": 184.0
+  },
+  "serving": {
    "label": "oz, boneless",
    "grams": 28.4
   }
@@ -20821,6 +22041,10 @@ window.FOODS = [
   "portion": {
    "label": "fillet",
    "grams": 79.0
+  },
+  "serving": {
+   "label": "fillet",
+   "grams": 79.0
   }
  },
  {
@@ -20882,6 +22106,10 @@ window.FOODS = [
    "selenium": 65.7
   },
   "portion": {
+   "label": "3 oz",
+   "grams": 85.0
+  },
+  "serving": {
    "label": "3 oz",
    "grams": 85.0
   }
@@ -20947,6 +22175,10 @@ window.FOODS = [
   "portion": {
    "label": "3 oz",
    "grams": 85.0
+  },
+  "serving": {
+   "label": "3 oz",
+   "grams": 85.0
   }
  },
  {
@@ -21007,6 +22239,10 @@ window.FOODS = [
    "selenium": 33.1
   },
   "portion": {
+   "label": "fillet",
+   "grams": 231.0
+  },
+  "serving": {
    "label": "3 oz",
    "grams": 85.0
   }
@@ -21073,6 +22309,10 @@ window.FOODS = [
   "portion": {
    "label": "fillet",
    "grams": 116.0
+  },
+  "serving": {
+   "label": "fillet",
+   "grams": 116.0
   }
  },
  {
@@ -21135,6 +22375,10 @@ window.FOODS = [
    "carbs": 0.0
   },
   "portion": {
+   "label": "fillet",
+   "grams": 193.0
+  },
+  "serving": {
    "label": "3 oz",
    "grams": 85.0
   }
@@ -21199,6 +22443,10 @@ window.FOODS = [
    "carbs": 0.0
   },
   "portion": {
+   "label": "0.5 fillet",
+   "grams": 204.0
+  },
+  "serving": {
    "label": "3 oz",
    "grams": 85.0
   }
@@ -21264,6 +22512,10 @@ window.FOODS = [
   "portion": {
    "label": "fillet",
    "grams": 129.0
+  },
+  "serving": {
+   "label": "fillet",
+   "grams": 129.0
   }
  },
  {
@@ -21324,6 +22576,10 @@ window.FOODS = [
    "selenium": 38.2
   },
   "portion": {
+   "label": "fillet",
+   "grams": 218.0
+  },
+  "serving": {
    "label": "3 oz",
    "grams": 85.0
   }
@@ -21390,6 +22646,10 @@ window.FOODS = [
    "carbs": 0.0
   },
   "portion": {
+   "label": "fillet",
+   "grams": 163.0
+  },
+  "serving": {
    "label": "oz, boneless",
    "grams": 28.4
   }
@@ -21447,6 +22707,10 @@ window.FOODS = [
    "selenium": 36.5
   },
   "portion": {
+   "label": "fillet",
+   "grams": 259.0
+  },
+  "serving": {
    "label": "3 oz",
    "grams": 85.0
   }
@@ -21510,6 +22774,10 @@ window.FOODS = [
    "polyfat": 1.149
   },
   "portion": {
+   "label": "piece",
+   "grams": 136.0
+  },
+  "serving": {
    "label": "3 oz",
    "grams": 85.0
   }
@@ -21575,6 +22843,10 @@ window.FOODS = [
   "portion": {
    "label": "fillet",
    "grams": 116.0
+  },
+  "serving": {
+   "label": "fillet",
+   "grams": 116.0
   }
  },
  {
@@ -21631,6 +22903,10 @@ window.FOODS = [
    "selenium": 12.6
   },
   "portion": {
+   "label": "fillet",
+   "grams": 159.0
+  },
+  "serving": {
    "label": "3 oz",
    "grams": 85.0
   }
@@ -21697,6 +22973,10 @@ window.FOODS = [
    "fiber": 0.0
   },
   "portion": {
+   "label": "4 large",
+   "grams": 28.0
+  },
+  "serving": {
    "label": "3 oz",
    "grams": 85.0
   }
@@ -21761,6 +23041,10 @@ window.FOODS = [
   "portion": {
    "label": "lobster",
    "grams": 150.0
+  },
+  "serving": {
+   "label": "3 oz",
+   "grams": 85.0
   }
  },
  {
@@ -21816,6 +23100,10 @@ window.FOODS = [
    "selenium": 46.2
   },
   "portion": {
+   "label": "3 oz",
+   "grams": 85.0
+  },
+  "serving": {
    "label": "3 oz",
    "grams": 85.0
   }
@@ -21875,6 +23163,10 @@ window.FOODS = [
   "portion": {
    "label": "3 oz",
    "grams": 85.0
+  },
+  "serving": {
+   "label": "3 oz",
+   "grams": 85.0
   }
  },
  {
@@ -21926,6 +23218,10 @@ window.FOODS = [
   "portion": {
    "label": "3 oz",
    "grams": 85.0
+  },
+  "serving": {
+   "label": "3 oz",
+   "grams": 85.0
   }
  },
  {
@@ -21973,6 +23269,10 @@ window.FOODS = [
    "selenium": 36.4
   },
   "portion": {
+   "label": "3 oz",
+   "grams": 85.0
+  },
+  "serving": {
    "label": "3 oz",
    "grams": 85.0
   }
@@ -22024,6 +23324,10 @@ window.FOODS = [
    "selenium": 34.6
   },
   "portion": {
+   "label": "3 oz",
+   "grams": 85.0
+  },
+  "serving": {
    "label": "3 oz",
    "grams": 85.0
   }
@@ -22090,6 +23394,10 @@ window.FOODS = [
   "portion": {
    "label": "3 oz",
    "grams": 85.0
+  },
+  "serving": {
+   "label": "3 oz",
+   "grams": 85.0
   }
  },
  {
@@ -22151,6 +23459,10 @@ window.FOODS = [
    "selenium": 44.8
   },
   "portion": {
+   "label": "large",
+   "grams": 20.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 150.0
   }
@@ -22217,8 +23529,12 @@ window.FOODS = [
    "fiber": 0.0
   },
   "portion": {
-   "label": "3 oz",
-   "grams": 85.0
+   "label": "large",
+   "grams": 20.0
+  },
+  "serving": {
+   "label": "cup (with liquid and clams)",
+   "grams": 227.0
   }
  },
  {
@@ -22284,6 +23600,10 @@ window.FOODS = [
   "portion": {
    "label": "unit 2 large or 5 small",
    "grams": 30.0
+  },
+  "serving": {
+   "label": "unit 2 large or 5 small",
+   "grams": 30.0
   }
  },
  {
@@ -22345,6 +23665,10 @@ window.FOODS = [
    "selenium": 44.8
   },
   "portion": {
+   "label": "3 oz",
+   "grams": 85.0
+  },
+  "serving": {
    "label": "3 oz",
    "grams": 85.0
   }
@@ -22409,6 +23733,10 @@ window.FOODS = [
   "portion": {
    "label": "3 oz",
    "grams": 85.0
+  },
+  "serving": {
+   "label": "3 oz",
+   "grams": 85.0
   }
  },
  {
@@ -22467,6 +23795,10 @@ window.FOODS = [
    "polyfat": 0.252
   },
   "portion": {
+   "label": "3 oz",
+   "grams": 85.0
+  },
+  "serving": {
    "label": "3 oz",
    "grams": 85.0
   }
@@ -22532,6 +23864,10 @@ window.FOODS = [
   "portion": {
    "label": "oz, boneless",
    "grams": 28.4
+  },
+  "serving": {
+   "label": "oz, boneless",
+   "grams": 28.4
   }
  },
  {
@@ -22594,6 +23930,10 @@ window.FOODS = [
   "portion": {
    "label": "3 oz",
    "grams": 85.0
+  },
+  "serving": {
+   "label": "3 oz",
+   "grams": 85.0
   }
  },
  {
@@ -22649,6 +23989,10 @@ window.FOODS = [
    "selenium": 44.8
   },
   "portion": {
+   "label": "3 oz",
+   "grams": 85.0
+  },
+  "serving": {
    "label": "3 oz",
    "grams": 85.0
   }
@@ -22715,8 +24059,12 @@ window.FOODS = [
    "fiber": 0.0
   },
   "portion": {
-   "label": "large",
-   "grams": 50.0
+   "label": "medium",
+   "grams": 44.0
+  },
+  "serving": {
+   "label": "cup (4.86 large eggs)",
+   "grams": 243.0
   }
  },
  {
@@ -22780,6 +24128,10 @@ window.FOODS = [
   "portion": {
    "label": "large",
    "grams": 33.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 243.0
   }
  },
  {
@@ -22841,6 +24193,10 @@ window.FOODS = [
    "epa": 0.011
   },
   "portion": {
+   "label": "large",
+   "grams": 17.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 243.0
   }
@@ -22903,6 +24259,10 @@ window.FOODS = [
    "selenium": 36.4
   },
   "portion": {
+   "label": "egg",
+   "grams": 70.0
+  },
+  "serving": {
    "label": "egg",
    "grams": 70.0
   }
@@ -23029,6 +24389,10 @@ window.FOODS = [
   "portion": {
    "label": "egg",
    "grams": 144.0
+  },
+  "serving": {
+   "label": "egg",
+   "grams": 144.0
   }
  },
  {
@@ -23090,6 +24454,10 @@ window.FOODS = [
    "selenium": 65.5
   },
   "portion": {
+   "label": "oz",
+   "grams": 28.4
+  },
+  "serving": {
    "label": "oz",
    "grams": 28.4
   }
@@ -23158,6 +24526,10 @@ window.FOODS = [
   "portion": {
    "label": "oz",
    "grams": 28.4
+  },
+  "serving": {
+   "label": "oz",
+   "grams": 28.4
   }
  },
  {
@@ -23215,6 +24587,10 @@ window.FOODS = [
    "selenium": 0.2
   },
   "portion": {
+   "label": "cup",
+   "grams": 205.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 205.0
   }
@@ -23277,6 +24653,10 @@ window.FOODS = [
   "portion": {
    "label": "cup",
    "grams": 205.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 205.0
   }
  },
  {
@@ -23333,6 +24713,10 @@ window.FOODS = [
    "selenium": 0.2
   },
   "portion": {
+   "label": "cup",
+   "grams": 205.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 205.0
   }
@@ -23395,6 +24779,10 @@ window.FOODS = [
   "portion": {
    "label": "package (1 oz)",
    "grams": 28.0
+  },
+  "serving": {
+   "label": "package (1 oz)",
+   "grams": 28.0
   }
  },
  {
@@ -23455,8 +24843,8 @@ window.FOODS = [
    "choline": 2.2
   },
   "portion": {
-   "label": "tbsp",
-   "grams": 21.0
+   "label": "cup",
+   "grams": 339.0
   }
  },
  {
@@ -23520,6 +24908,10 @@ window.FOODS = [
   "portion": {
    "label": "6 medium",
    "grams": 84.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 248.0
   }
  },
  {
@@ -23577,7 +24969,11 @@ window.FOODS = [
    "selenium": 0.2
   },
   "portion": {
-   "label": "0.5 cup (1\" pieces)",
+   "label": "0.5 cup",
+   "grams": 58.0
+  },
+  "serving": {
+   "label": "0.5 cup",
    "grams": 58.0
   }
  },
@@ -23640,7 +25036,11 @@ window.FOODS = [
    "selenium": 0.2
   },
   "portion": {
-   "label": "cup (1\" pieces)",
+   "label": "cup",
+   "grams": 95.0
+  },
+  "serving": {
+   "label": "cup",
    "grams": 95.0
   }
  },
@@ -23694,6 +25094,10 @@ window.FOODS = [
    "selenium": 0.9
   },
   "portion": {
+   "label": "leaf",
+   "grams": 4.0
+  },
+  "serving": {
    "label": "0.5 cup",
    "grams": 24.0
   }
@@ -23746,6 +25150,10 @@ window.FOODS = [
    "selenium": 0.7
   },
   "portion": {
+   "label": "cup",
+   "grams": 33.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 33.0
   }
@@ -23804,6 +25212,10 @@ window.FOODS = [
    "selenium": 0.7
   },
   "portion": {
+   "label": "pod",
+   "grams": 11.0
+  },
+  "serving": {
    "label": "cup slices",
    "grams": 100.0
   }
@@ -23858,6 +25270,10 @@ window.FOODS = [
    "selenium": 0.9
   },
   "portion": {
+   "label": "cup, chopped",
+   "grams": 21.0
+  },
+  "serving": {
    "label": "cup, chopped",
    "grams": 21.0
   }
@@ -23917,6 +25333,10 @@ window.FOODS = [
    "selenium": 0.9
   },
   "portion": {
+   "label": "leaf",
+   "grams": 14.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 28.0
   }
@@ -23976,6 +25396,10 @@ window.FOODS = [
    "selenium": 1.5
   },
   "portion": {
+   "label": "pod",
+   "grams": 12.0
+  },
+  "serving": {
    "label": "cup slices",
    "grams": 91.0
   }
@@ -24035,6 +25459,10 @@ window.FOODS = [
   "portion": {
    "label": "cup",
    "grams": 28.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 28.0
   }
  },
  {
@@ -24086,6 +25514,10 @@ window.FOODS = [
    "selenium": 0.9
   },
   "portion": {
+   "label": "cup",
+   "grams": 43.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 43.0
   }
@@ -24201,6 +25633,10 @@ window.FOODS = [
   "portion": {
    "label": "cup, sliced",
    "grams": 120.0
+  },
+  "serving": {
+   "label": "cup, sliced",
+   "grams": 120.0
   }
  },
  {
@@ -24252,6 +25688,10 @@ window.FOODS = [
    "selenium": 0.7
   },
   "portion": {
+   "label": "large",
+   "grams": 25.0
+  },
+  "serving": {
    "label": "large",
    "grams": 25.0
   }
@@ -24313,7 +25753,11 @@ window.FOODS = [
    "vitk": 1.6
   },
   "portion": {
-   "label": "cup (1\" pieces)",
+   "label": "cup",
+   "grams": 118.0
+  },
+  "serving": {
+   "label": "cup",
    "grams": 118.0
   }
  },
@@ -24369,6 +25813,10 @@ window.FOODS = [
    "vitd": 0.0
   },
   "portion": {
+   "label": "cup, shredded",
+   "grams": 178.0
+  },
+  "serving": {
    "label": "cup, shredded",
    "grams": 178.0
   }
@@ -24430,6 +25878,10 @@ window.FOODS = [
    "selenium": 1.1
   },
   "portion": {
+   "label": "stalk",
+   "grams": 51.0
+  },
+  "serving": {
    "label": "cup, diced",
    "grams": 122.0
   }
@@ -24495,6 +25947,10 @@ window.FOODS = [
   "portion": {
    "label": "cup, sliced",
    "grams": 86.0
+  },
+  "serving": {
+   "label": "cup, sliced",
+   "grams": 86.0
   }
  },
  {
@@ -24548,7 +26004,11 @@ window.FOODS = [
    "vitd": 0.0
   },
   "portion": {
-   "label": "cup (1\" pieces)",
+   "label": "cup",
+   "grams": 25.0
+  },
+  "serving": {
+   "label": "cup",
    "grams": 25.0
   }
  },
@@ -24646,7 +26106,11 @@ window.FOODS = [
    "selenium": 0.9
   },
   "portion": {
-   "label": "cup (1\" pieces)",
+   "label": "cup",
+   "grams": 89.0
+  },
+  "serving": {
+   "label": "cup",
    "grams": 89.0
   }
  },
@@ -24708,8 +26172,8 @@ window.FOODS = [
    "selenium": 0.9
   },
   "portion": {
-   "label": "cup",
-   "grams": 14.0
+   "label": "leaf",
+   "grams": 3.0
   }
  },
  {
@@ -24761,6 +26225,10 @@ window.FOODS = [
    "selenium": 0.8
   },
   "portion": {
+   "label": "cup slices",
+   "grams": 133.0
+  },
+  "serving": {
    "label": "cup slices",
    "grams": 133.0
   }
@@ -24880,6 +26348,10 @@ window.FOODS = [
   "portion": {
    "label": "cup, chopped",
    "grams": 29.0
+  },
+  "serving": {
+   "label": "cup, chopped",
+   "grams": 29.0
   }
  },
  {
@@ -24937,6 +26409,10 @@ window.FOODS = [
   "portion": {
    "label": "head",
    "grams": 53.0
+  },
+  "serving": {
+   "label": "0.5 cup",
+   "grams": 45.0
   }
  },
  {
@@ -24983,6 +26459,10 @@ window.FOODS = [
    "selenium": 0.9
   },
   "portion": {
+   "label": "cup flowers",
+   "grams": 20.0
+  },
+  "serving": {
    "label": "cup flowers",
    "grams": 20.0
   }
@@ -25110,6 +26590,10 @@ window.FOODS = [
    "selenium": 0.7
   },
   "portion": {
+   "label": "10 sheets",
+   "grams": 26.0
+  },
+  "serving": {
    "label": "10 sheets",
    "grams": 26.0
   }
@@ -25288,6 +26772,10 @@ window.FOODS = [
   "portion": {
    "label": "cup",
    "grams": 210.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 210.0
   }
  },
  {
@@ -25342,6 +26830,10 @@ window.FOODS = [
    "selenium": 1.5
   },
   "portion": {
+   "label": "pod",
+   "grams": 16.0
+  },
+  "serving": {
    "label": "cup slices",
    "grams": 44.0
   }
@@ -25408,6 +26900,10 @@ window.FOODS = [
   "portion": {
    "label": "cup",
    "grams": 154.0
+  },
+  "serving": {
+   "label": "cup",
+   "grams": 154.0
   }
  },
  {
@@ -25461,6 +26957,10 @@ window.FOODS = [
    "satfat": 0.088
   },
   "portion": {
+   "label": "oz",
+   "grams": 28.4
+  },
+  "serving": {
    "label": "oz",
    "grams": 28.4
   }
@@ -25521,6 +27021,10 @@ window.FOODS = [
    "kcal": 75.0
   },
   "portion": {
+   "label": "fruit without skin and seeds",
+   "grams": 235.0
+  },
+  "serving": {
    "label": "cup, pieces",
    "grams": 160.0
   }
@@ -25622,6 +27126,10 @@ window.FOODS = [
    "selenium": 0.6
   },
   "portion": {
+   "label": "large",
+   "grams": 20.0
+  },
+  "serving": {
    "label": "cup, cubed",
    "grams": 149.0
   }
@@ -25680,6 +27188,10 @@ window.FOODS = [
   "portion": {
    "label": "fruit without refuse",
    "grams": 92.0
+  },
+  "serving": {
+   "label": "fruit without refuse",
+   "grams": 92.0
   }
  },
  {
@@ -25716,6 +27228,10 @@ window.FOODS = [
    "potassium": 310.0
   },
   "portion": {
+   "label": "fruit without refuse",
+   "grams": 25.0
+  },
+  "serving": {
    "label": "fruit without refuse",
    "grams": 25.0
   }
@@ -25763,6 +27279,10 @@ window.FOODS = [
    "b6": 0.038
   },
   "portion": {
+   "label": "3 fruit",
+   "grams": 9.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 135.0
   }
@@ -25823,6 +27343,10 @@ window.FOODS = [
   "portion": {
    "label": "cup, pulp",
    "grams": 241.0
+  },
+  "serving": {
+   "label": "cup, pulp",
+   "grams": 241.0
   }
  },
  {
@@ -25880,6 +27404,10 @@ window.FOODS = [
    "manganese": 0.204
   },
   "portion": {
+   "label": "fruit without refuse",
+   "grams": 558.0
+  },
+  "serving": {
    "label": "cup 1\" pieces",
    "grams": 175.0
   }
@@ -25936,6 +27464,10 @@ window.FOODS = [
    "selenium": 0.6
   },
   "portion": {
+   "label": "fruit without refuse",
+   "grams": 103.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 149.0
   }
@@ -25975,6 +27507,10 @@ window.FOODS = [
    "niacin": 0.3
   },
   "portion": {
+   "label": "fruit without refuse",
+   "grams": 7.0
+  },
+  "serving": {
    "label": "cup",
    "grams": 173.0
   }
@@ -26020,6 +27556,10 @@ window.FOODS = [
    "niacin": 0.2
   },
   "portion": {
+   "label": "fruit without skin and seeds",
+   "grams": 20.0
+  },
+  "serving": {
    "label": "cup slices",
    "grams": 150.0
   }
@@ -26076,6 +27616,10 @@ window.FOODS = [
    "selenium": 0.6
   },
   "portion": {
+   "label": "fruit without refuse",
+   "grams": 4.8
+  },
+  "serving": {
    "label": "cup",
    "grams": 98.0
   }
@@ -26126,6 +27670,10 @@ window.FOODS = [
   "portion": {
    "label": "cup slices",
    "grams": 110.0
+  },
+  "serving": {
+   "label": "cup slices",
+   "grams": 110.0
   }
  },
  {
@@ -26170,6 +27718,10 @@ window.FOODS = [
    "cholesterol": 0.0
   },
   "portion": {
+   "label": "cup, without refuse",
+   "grams": 57.0
+  },
+  "serving": {
    "label": "cup, without refuse",
    "grams": 57.0
   }

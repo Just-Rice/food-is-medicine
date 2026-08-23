@@ -710,3 +710,34 @@ ul.basket li + li { border-top: 1px solid color-mix(in srgb, var(--card-edge) 55
 .recipe li { margin-bottom: 5px; }
 .recipe strong { color: var(--ink); }
 .btn[disabled] { opacity: .45; cursor: not-allowed; }
+
+/* ---- Basket quantities and model picker -------------------------------- */
+.b-qty { display: flex; align-items: center; gap: 5px; }
+.b-qty input.qty {
+  width: 58px; padding: 6px 8px; font-size: .92rem; font-family: inherit;
+  border: 1px solid var(--card-edge); border-radius: 8px;
+  background: var(--bg); color: var(--ink); text-align: center;
+}
+.step {
+  width: 28px; height: 28px; border-radius: 8px; cursor: pointer; flex: none;
+  border: 1px solid var(--card-edge); background: var(--card); color: var(--ink);
+  font-size: 1rem; line-height: 1; display: grid; place-items: center; font-family: inherit;
+}
+.step:hover { border-color: var(--accent); color: var(--accent-ink); }
+.b-portion { font-size: .82rem; color: var(--ink-faint); white-space: nowrap; }
+
+.suggest .already {
+  display: block; font-size: .74rem; color: var(--accent-ink); margin-top: 1px;
+}
+
+.key-actions { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.model-pick { display: flex; flex-direction: column; gap: 3px; }
+.model-pick label {
+  font-size: .72rem; text-transform: uppercase; letter-spacing: .04em;
+  color: var(--ink-faint); font-weight: 600;
+}
+.model-pick select {
+  padding: 7px 10px; font-size: .88rem; font-family: inherit; max-width: 260px;
+  border: 1px solid var(--card-edge); border-radius: 8px;
+  background: var(--card); color: var(--ink); cursor: pointer;
+}

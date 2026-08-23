@@ -146,6 +146,103 @@ def classify(group, slug):
     return sorted(diet), sorted(allergens)
 
 
+# Portion labels that describe a fraction of something rather than a thing you
+# can count, and so make a poor unit for a "how many do you have" control.
+NOT_COUNTABLE = re.compile(
+    r'\b(slice|strip|wedge|ring|tbsp|tsp|teaspoon|tablespoon|piece\s+\d|'
+    r'cubic|fl oz|serving)\b', re.I)
+COUNTABLE = re.compile(
+    r'\b(medium|large|small|whole|each|piece|fruit|clove|stalk|head|bunch|'
+    r'leaf|pod|fillet|egg|breast|thigh|wing|link)\b', re.I)
+DIMENSIONS = re.compile(r'\s*\((?:[^()]*(?:"|dia|long|thick|inch)[^()]*)\)')
+
+
+def clean_label(label):
+    """Trim the dimension notes USDA appends, which are noise in a UI."""
+    out = DIMENSIONS.sub('', label)
+    out = re.sub(r'\s{2,}', ' ', out).strip().strip(',').strip()
+    return out or label
+
+
+def choose_portion(opts):
+    """Pick the portion a cook would actually count in.
+
+    USDA lists several per food and the first is often a fraction of a cup.
+    "2 x 0.5 cup, diced" is a poor way to say "two potatoes", so a countable
+    whole item wins, preferring the medium size as the canonical one. Volume
+    measures are the fallback for foods that have no natural unit.
+    """
+    if not opts:
+        return None
+
+    def score(o):
+        label = o['label']
+        grams = o['grams']
+        if NOT_COUNTABLE.search(label):
+            return -1
+        s = 0
+        if COUNTABLE.search(label):
+            s += 100
+            if re.search(r'\bmedium\b', label, re.I):
+                s += 30
+            elif re.search(r'\blarge\b', label, re.I):
+                s += 10
+            elif re.search(r'\bsmall\b', label, re.I):
+                s += 5
+            if re.search(r'\bextra\b', label, re.I):
+                s -= 8
+        elif re.search(r'\bcup\b', label, re.I):
+            s += 40
+            # A whole cup beats a fraction of one.
+            if o.get('amount', 1) and abs(o['amount'] - 1) < 1e-9:
+                s += 10
+        # Keep portions in a plausible single-serving range.
+        if 20 <= grams <= 400:
+            s += 20
+        elif grams < 20 or grams > 900:
+            s -= 20
+        return s
+
+    ranked = sorted(opts, key=lambda o: -score(o))
+    top = ranked[0]
+    if score(top) < 0:
+        top = opts[0]
+    return {'label': clean_label(top['label']), 'grams': top['grams']}
+
+
+def choose_serving(opts):
+    """Pick a plausible amount for one person to eat at once.
+
+    This is a different question from choose_portion. A whole cabbage is a
+    perfectly good unit to have in your kitchen, and a hopeless answer to "best
+    sources of vitamin C" -- nobody eats one in a sitting. So the basket counts
+    in countable units, and nutrition rankings use this instead.
+    """
+    if not opts:
+        return None
+
+    def score(o):
+        label, grams = o['label'], o['grams']
+        if not (15 <= grams <= 250):
+            return -1
+        s = 20
+        if re.search(r'\bcup\b', label, re.I):
+            s += 30
+            if o.get('amount', 1) and abs(o['amount'] - 1) < 1e-9:
+                s += 10
+        if re.search(r'\b(medium|piece|fillet|large|slice|oz)\b', label, re.I):
+            s += 15
+        if re.search(r'\b(tbsp|tsp|teaspoon|tablespoon)\b', label, re.I):
+            s -= 25
+        return s
+
+    ranked = sorted(opts, key=lambda o: -score(o))
+    top = ranked[0]
+    if score(top) < 0:
+        return None
+    return {'label': clean_label(top['label']), 'grams': top['grams']}
+
+
 def read_dataset(directory, wanted_ids, foods, portions, pub):
     """Pull the wanted foods, their nutrients and portions out of one release."""
     if not directory or not os.path.isdir(directory):
@@ -231,7 +328,8 @@ def main():
     for c in curated:
         fdc = c['fdcId']
         opts = portions.get(fdc, [])
-        best = next((o for o in opts if 20 <= o['grams'] <= 250), opts[0] if opts else None)
+        best = choose_portion(opts)
+        serve = choose_serving(opts)
         diet, allergens = classify(c['group'], c['slug'])
         entry = {
             'slug': c['slug'], 'name': c['name'], 'group': c['group'],
@@ -243,6 +341,8 @@ def main():
         }
         if best:
             entry['portion'] = {'label': best['label'], 'grams': round(best['grams'], 1)}
+        if serve:
+            entry['serving'] = {'label': serve['label'], 'grams': round(serve['grams'], 1)}
         out.append(entry)
 
     with open(OUT, 'w') as fh:

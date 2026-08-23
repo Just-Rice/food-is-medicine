@@ -47,6 +47,9 @@
       save_key: 'Save key', remove_key: 'Remove key',
       key_privacy: 'Your key is stored only in this browser and is sent only to Google, never to this site — there is no server here to send it to. Do not save a key on a shared or public computer.',
       empty_basket: 'Add some ingredients to get started.',
+      model: 'Model', model_auto: 'Newest available (automatic)',
+      model_hint: 'Chosen from the models your key can actually call, preferring the newest generation and then the most capable tier.',
+      checking_models: 'Checking which models your key can use…',
 
       foods_title: 'What is actually in your food',
       foods_lede_count: '{n} foods — fruits, vegetables, mushrooms, nuts, legumes, grains, herbs, dairy, meat, fish and eggs — with their full nutrient profile per 100 g, taken directly from the USDA’s reference database.',
@@ -175,6 +178,9 @@
       save_key: 'Guardar clave', remove_key: 'Quitar clave',
       key_privacy: 'Tu clave se guarda solo en este navegador y se envía solo a Google, nunca a este sitio: aquí no hay ningún servidor al que enviarla. No guardes una clave en un ordenador compartido o público.',
       empty_basket: 'Añade algunos ingredientes para empezar.',
+      model: 'Modelo', model_auto: 'El más nuevo disponible (automático)',
+      model_hint: 'Se elige entre los modelos a los que tu clave tiene acceso, dando prioridad a la generación más reciente y después al nivel más capaz.',
+      checking_models: 'Comprobando qué modelos puede usar tu clave…',
 
       foods_title: 'Qué contienen realmente tus alimentos',
       foods_lede_count: '{n} alimentos — frutas, verduras, setas, frutos secos, legumbres, cereales, hierbas, lácteos, carne, pescado y huevos — con su perfil nutricional completo por 100 g, tomado directamente de la base de datos de referencia del USDA.',
@@ -303,6 +309,9 @@
       save_key: 'कुंजी सहेजें', remove_key: 'कुंजी हटाएँ',
       key_privacy: 'आपकी कुंजी सिर्फ़ इसी ब्राउज़र में सहेजी जाती है और सिर्फ़ Google को भेजी जाती है, इस साइट को कभी नहीं — यहाँ कोई सर्वर है ही नहीं। साझा या सार्वजनिक कंप्यूटर पर कुंजी न सहेजें।',
       empty_basket: 'शुरू करने के लिए कुछ सामग्री जोड़ें।',
+      model: 'मॉडल', model_auto: 'उपलब्ध सबसे नया (स्वतः)',
+      model_hint: 'आपकी कुंजी जिन मॉडलों को चला सकती है उन्हीं में से चुना जाता है — पहले सबसे नई पीढ़ी, फिर सबसे सक्षम श्रेणी।',
+      checking_models: 'देख रहे हैं कि आपकी कुंजी कौन-से मॉडल चला सकती है…',
 
       foods_title: 'आपके भोजन में वास्तव में क्या है',
       foods_lede_count: '{n} खाद्य पदार्थ — फल, सब्ज़ियाँ, मशरूम, मेवे, दालें, अनाज, जड़ी-बूटियाँ, दुग्ध उत्पाद, माँस, मछली और अंडे — प्रति 100 ग्राम पूरा पोषण विवरण, सीधे USDA के संदर्भ डेटाबेस से।',
@@ -431,6 +440,9 @@
       save_key: 'ಕೀ ಉಳಿಸಿ', remove_key: 'ಕೀ ತೆಗೆದುಹಾಕಿ',
       key_privacy: 'ನಿಮ್ಮ ಕೀ ಈ ಬ್ರೌಸರ್‌ನಲ್ಲಿ ಮಾತ್ರ ಉಳಿಯುತ್ತದೆ ಮತ್ತು Google ಗೆ ಮಾತ್ರ ಕಳುಹಿಸಲಾಗುತ್ತದೆ, ಈ ತಾಣಕ್ಕೆ ಎಂದಿಗೂ ಅಲ್ಲ — ಇಲ್ಲಿ ಸರ್ವರ್ ಇಲ್ಲವೇ ಇಲ್ಲ. ಹಂಚಿಕೊಂಡ ಅಥವಾ ಸಾರ್ವಜನಿಕ ಕಂಪ್ಯೂಟರ್‌ನಲ್ಲಿ ಕೀ ಉಳಿಸಬೇಡಿ.',
       empty_basket: 'ಪ್ರಾರಂಭಿಸಲು ಕೆಲವು ಪದಾರ್ಥಗಳನ್ನು ಸೇರಿಸಿ.',
+      model: 'ಮಾದರಿ', model_auto: 'ಲಭ್ಯವಿರುವ ಹೊಸದು (ಸ್ವಯಂಚಾಲಿತ)',
+      model_hint: 'ನಿಮ್ಮ ಕೀ ಬಳಸಬಹುದಾದ ಮಾದರಿಗಳಿಂದಲೇ ಆಯ್ಕೆ — ಮೊದಲು ಹೊಸ ತಲೆಮಾರು, ನಂತರ ಹೆಚ್ಚು ಸಮರ್ಥ ಶ್ರೇಣಿ.',
+      checking_models: 'ನಿಮ್ಮ ಕೀ ಯಾವ ಮಾದರಿಗಳನ್ನು ಬಳಸಬಹುದೆಂದು ಪರಿಶೀಲಿಸಲಾಗುತ್ತಿದೆ…',
 
       foods_title: 'ನಿಮ್ಮ ಆಹಾರದಲ್ಲಿ ನಿಜಕ್ಕೂ ಏನಿದೆ',
       foods_lede_count: '{n} ಆಹಾರಗಳು — ಹಣ್ಣುಗಳು, ತರಕಾರಿಗಳು, ಅಣಬೆಗಳು, ಬೀಜಗಳು, ಬೇಳೆಕಾಳುಗಳು, ಧಾನ್ಯಗಳು, ಗಿಡಮೂಲಿಕೆಗಳು, ಹಾಲಿನ ಉತ್ಪನ್ನಗಳು, ಮಾಂಸ, ಮೀನು ಮತ್ತು ಮೊಟ್ಟೆ — 100 ಗ್ರಾಂಗೆ ಪೂರ್ಣ ಪೋಷಕಾಂಶ ವಿವರ, ನೇರವಾಗಿ USDA ಆಕರ ದತ್ತಸಂಚಯದಿಂದ.',

@@ -681,12 +681,22 @@
   // vegetable, and nobody eats 100 g of it. Ranking by a realistic household
   // portion fixes that without special-casing anything -- cinnamon's portion is
   // a 2.6 g teaspoon, broccoli's is a 91 g cup.
+  // `serving` is a plausible amount to eat at once; `portion` is a countable
+  // kitchen unit and can be a whole cabbage, which is useless here.
   function servingGrams(food) {
-    return (food.portion && food.portion.grams) ? food.portion.grams : 100;
+    if (food.serving && food.serving.grams) return food.serving.grams;
+    if (food.portion && food.portion.grams && food.portion.grams <= 250) {
+      return food.portion.grams;
+    }
+    return 100;
   }
 
   function servingLabel(food) {
-    return (food.portion && food.portion.label) ? food.portion.label : '100 g';
+    if (food.serving && food.serving.label) return food.serving.label;
+    if (food.portion && food.portion.label && food.portion.grams <= 250) {
+      return food.portion.label;
+    }
+    return '100 g';
   }
 
   function servingAmount(food, key) {
@@ -1254,19 +1264,71 @@
       '<div><strong>' + esc(t('api_key')) + '</strong>' +
       (has
         ? '<p class="hint">' + esc(t('api_key_set')) + ' · <code>' +
-          esc(window.Recipes.maskedKey()) + '</code></p>'
+          esc(window.Recipes.maskedKey()) + '</code>' +
+          '<span id="modelNote"> · ' +
+          (window.Recipes.getPreference() !== window.Recipes.AUTO
+            ? esc(t('model')) + ': <code>' + esc(window.Recipes.getPreference()) + '</code>'
+            : (window.Recipes.resolved()
+                ? esc(t('model')) + ': <code>' + esc(window.Recipes.resolved()) + '</code>'
+                : esc(t('checking_models')))) +
+          '</span></p>'
         : '<p class="hint">' + esc(t('api_key_missing')) + ' · ' +
           '<a href="' + esc(window.Recipes.STUDIO_URL) + '" rel="noopener" target="_blank">' +
           esc(t('get_free_key')) + '</a></p>') +
       '</div>' +
       (has
-        ? '<button class="btn ghost" type="button" id="clearKey">' + esc(t('remove_key')) + '</button>'
+        ? '<div class="key-actions">' +
+          '<div class="model-pick"><label for="modelSel">' + esc(t('model')) + '</label>' +
+          '<select id="modelSel"><option value="' + esc(window.Recipes.AUTO) + '"' +
+          (window.Recipes.getPreference() === window.Recipes.AUTO ? ' selected' : '') + '>' +
+          esc(t('model_auto')) + '</option>' +
+          (window.Recipes.getPreference() !== window.Recipes.AUTO
+            ? '<option value="' + esc(window.Recipes.getPreference()) + '" selected>' +
+              esc(window.Recipes.getPreference()) + '</option>'
+            : '') +
+          '</select></div>' +
+          '<button class="btn ghost" type="button" id="clearKey">' + esc(t('remove_key')) + '</button>' +
+          '</div>'
         : '<div class="key-entry">' +
           '<input id="keyInput" type="password" autocomplete="off" spellcheck="false" ' +
           'placeholder="AIza…" aria-label="' + esc(t('api_key')) + '">' +
           '<button class="btn" type="button" id="saveKey">' + esc(t('save_key')) + '</button>' +
           '</div>') +
       '</div>';
+  }
+
+  // Discover which models the key can call and fill the picker. Runs at most
+  // once per page load; the result is cached in the Recipes module.
+  function hydrateModels() {
+    if (!window.Recipes.hasKey()) return;
+    var note = document.getElementById('modelNote');
+    var sel = document.getElementById('modelSel');
+
+    window.Recipes.resolveAuto().then(function (best) {
+      var current = document.getElementById('modelNote');
+      if (current && window.Recipes.getPreference() === window.Recipes.AUTO) {
+        current.innerHTML = ' · ' + esc(t('model')) + ': <code>' + esc(best) + '</code>';
+      }
+      return window.Recipes.listModels();
+    }).then(function (names) {
+      var current = document.getElementById('modelSel');
+      if (!current || !names || !names.length) return;
+      var pref = window.Recipes.getPreference();
+      var ranked = names.slice().sort(function (a, b) {
+        return window.Recipes.scoreModel(b) - window.Recipes.scoreModel(a);
+      }).filter(function (n) { return window.Recipes.scoreModel(n) > 0; });
+      current.innerHTML =
+        '<option value="' + esc(window.Recipes.AUTO) + '"' +
+        (pref === window.Recipes.AUTO ? ' selected' : '') + '>' +
+        esc(t('model_auto')) + '</option>' +
+        ranked.map(function (n) {
+          return '<option value="' + esc(n) + '"' + (pref === n ? ' selected' : '') + '>' +
+            esc(n) + '</option>';
+        }).join('');
+    }).catch(function () {
+      var current = document.getElementById('modelNote');
+      if (current) current.textContent = '';
+    });
   }
 
   function viewRecipes() {
@@ -1291,10 +1353,22 @@
       (basket.length
         ? '<ul class="basket" id="basket">' + basket.map(function (item, i) {
             var food = FOODS.filter(function (f) { return f.slug === item.slug; })[0];
+            var portion = food && food.portion;
             return '<li>' +
               '<span class="b-name">' + esc(food ? food.name : item.slug) + '</span>' +
-              '<span class="b-amt"><input type="number" min="1" max="5000" step="5" ' +
-              'value="' + esc(item.amount) + '" data-idx="' + i + '" class="amt" ' +
+              (portion
+                ? '<span class="b-qty">' +
+                  '<button class="step" type="button" data-dec="' + i + '" ' +
+                  'aria-label="One fewer">&minus;</button>' +
+                  '<input type="number" min="0.5" max="99" step="0.5" class="qty" ' +
+                  'value="' + esc(item.qty || 1) + '" data-idx="' + i + '" ' +
+                  'aria-label="Number of portions"> ' +
+                  '<button class="step" type="button" data-inc="' + i + '" ' +
+                  'aria-label="One more">+</button>' +
+                  '<span class="b-portion">&times; ' + esc(portion.label) + '</span></span>'
+                : '') +
+              '<span class="b-amt"><input type="number" min="1" max="9000" step="5" ' +
+              'value="' + esc(Math.round(item.amount)) + '" data-idx="' + i + '" class="amt" ' +
               'aria-label="' + esc(t('amount_g')) + '"> g</span>' +
               '<button class="chip" type="button" data-remove="' + i + '">' +
               esc(t('remove')) + '</button></li>';
@@ -1338,6 +1412,40 @@
       '<div id="recipeOut">' + recipeOutput() + '</div>';
 
     bindRecipeEvents();
+  }
+
+  // Adding a food already in the basket adds another portion of it rather than
+  // creating a duplicate row -- two rows of potato would double-count in the
+  // nutrition totals and read as a mistake.
+  function addToBasket(slug) {
+    var existing = -1;
+    recipeState.basket.forEach(function (b, i) { if (b.slug === slug) existing = i; });
+    var food = FOODS.filter(function (f) { return f.slug === slug; })[0];
+
+    if (existing >= 0) {
+      setQty(existing, (recipeState.basket[existing].qty || 1) + 1);
+      return;
+    }
+    var grams = food && food.portion ? food.portion.grams : 100;
+    recipeState.basket.push({
+      slug: slug,
+      amount: Math.round(grams),
+      qty: food && food.portion ? 1 : null
+    });
+    saveRecipeState();
+    viewRecipes();
+  }
+
+  function setQty(idx, qty) {
+    var item = recipeState.basket[idx];
+    if (!item) return;
+    var food = FOODS.filter(function (f) { return f.slug === item.slug; })[0];
+    if (!food || !food.portion) return;
+    qty = Math.max(0.5, Math.round(qty * 2) / 2);
+    item.qty = qty;
+    item.amount = Math.round(qty * food.portion.grams);
+    saveRecipeState();
+    viewRecipes();
   }
 
   function basketNutritionBlock() {
@@ -1398,6 +1506,14 @@
         viewRecipes();
       });
     }
+    var modelSel = document.getElementById('modelSel');
+    if (modelSel) {
+      modelSel.addEventListener('change', function () {
+        window.Recipes.setModel(modelSel.value);
+        viewRecipes();
+      });
+    }
+    hydrateModels();
 
     var search = document.getElementById('ingSearch');
     var suggest = document.getElementById('ingSuggest');
@@ -1405,11 +1521,14 @@
       search.addEventListener('input', function () {
         var q = search.value.trim().toLowerCase();
         if (!q) { suggest.hidden = true; suggest.innerHTML = ''; return; }
+        // Foods already in the basket stay in the list. Hiding them was the
+        // wrong call: someone with two potatoes searches "potato" again and
+        // concludes the site is broken. Clicking one adds another portion.
         var chosen = {};
-        recipeState.basket.forEach(function (b) { chosen[b.slug] = true; });
+        recipeState.basket.forEach(function (b, idx) { chosen[b.slug] = idx; });
         var hits = FOODS
           .filter(function (f) {
-            return !chosen[f.slug] && !Prefs.excludedReason(f) && haystack(f).indexOf(q) >= 0;
+            return !Prefs.excludedReason(f) && haystack(f).indexOf(q) >= 0;
           })
           .sort(function (a, b) {
             var d = relevance(b, q) - relevance(a, q);
@@ -1418,16 +1537,15 @@
           .slice(0, 8);
         suggest.hidden = !hits.length;
         suggest.innerHTML = hits.map(function (f) {
+          var already = chosen[f.slug] !== undefined;
           return '<button type="button" data-add="' + esc(f.slug) + '">' +
-            esc(f.name) + '<span class="dim"> · ' + esc(groupLabel(f.group)) + '</span></button>';
+            esc(f.name) + '<span class="dim"> · ' + esc(groupLabel(f.group)) + '</span>' +
+            (already ? '<span class="already">in basket · add another</span>' : '') +
+            '</button>';
         }).join('');
         suggest.querySelectorAll('[data-add]').forEach(function (b) {
           b.addEventListener('click', function () {
-            var food = FOODS.filter(function (f) { return f.slug === b.dataset.add; })[0];
-            var start = food && food.portion ? Math.round(food.portion.grams) : 100;
-            recipeState.basket.push({ slug: b.dataset.add, amount: start });
-            saveRecipeState();
-            viewRecipes();
+            addToBasket(b.dataset.add);
           });
         });
       });
@@ -1442,10 +1560,35 @@
     });
     main.querySelectorAll('input.amt').forEach(function (inp) {
       inp.addEventListener('change', function () {
+        var idx = Number(inp.dataset.idx);
         var v = Math.max(1, Number(inp.value) || 1);
-        recipeState.basket[Number(inp.dataset.idx)].amount = v;
+        var item = recipeState.basket[idx];
+        item.amount = v;
+        // Editing grams directly re-derives the portion count so the two
+        // controls never disagree.
+        var food = FOODS.filter(function (f) { return f.slug === item.slug; })[0];
+        if (food && food.portion) {
+          item.qty = Math.round((v / food.portion.grams) * 10) / 10;
+        }
         saveRecipeState();
         viewRecipes();
+      });
+    });
+    main.querySelectorAll('input.qty').forEach(function (inp) {
+      inp.addEventListener('change', function () {
+        setQty(Number(inp.dataset.idx), Number(inp.value));
+      });
+    });
+    main.querySelectorAll('[data-inc]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var i = Number(b.dataset.inc);
+        setQty(i, (recipeState.basket[i].qty || 1) + 1);
+      });
+    });
+    main.querySelectorAll('[data-dec]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var i = Number(b.dataset.dec);
+        setQty(i, (recipeState.basket[i].qty || 1) - 1);
       });
     });
 
@@ -1494,7 +1637,13 @@
         window.Recipes.generate({
           ingredients: recipeState.basket.map(function (item) {
             var food = FOODS.filter(function (f) { return f.slug === item.slug; })[0];
-            return { name: food ? food.name : item.slug, amount: item.amount };
+            return {
+              name: food ? food.name : item.slug,
+              amount: item.amount,
+              // "2 × potato, medium" is more useful to a cook than "150 g".
+              portion: (food && food.portion && item.qty)
+                ? item.qty + ' × ' + food.portion.label : null
+            };
           }),
           cuisine: recipeState.cuisine,
           servings: recipeState.servings,
@@ -1647,6 +1796,14 @@
         rerender();
       });
     }
+    var modelSelS = document.getElementById('modelSel');
+    if (modelSelS) {
+      modelSelS.addEventListener('change', function () {
+        window.Recipes.setModel(modelSelS.value);
+        rerender();
+      });
+    }
+    hydrateModels();
 
     var custom = document.getElementById('customExcl');
     custom.addEventListener('input', function () {
