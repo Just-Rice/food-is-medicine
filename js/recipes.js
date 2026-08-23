@@ -134,7 +134,8 @@
   function listModels() {
     var key = getKey();
     if (!key) return Promise.reject(new Error('No API key set.'));
-    return fetch(API + '/models?key=' + encodeURIComponent(key))
+    return withTimeout(fetch(API + '/models?key=' + encodeURIComponent(key)),
+                       30000, 'Listing models timed out.')
       .then(readJson)
       .then(function (d) {
         return (d.models || [])
@@ -144,6 +145,25 @@
           .map(function (m) { return m.name.replace(/^models\//, ''); })
           .filter(function (n) { return n.indexOf('gemini') === 0; });
       });
+  }
+
+  /**
+   * Reject if a request has not settled in time. Without this a stalled
+   * connection leaves the UI sitting on "Thinking…" with nothing to click and
+   * no way to find out what went wrong.
+   */
+  function withTimeout(promise, ms, message) {
+    return new Promise(function (resolve, reject) {
+      var done = false;
+      var timer = setTimeout(function () {
+        if (!done) { done = true; reject(new Error(message)); }
+      }, ms);
+      promise.then(function (v) {
+        if (!done) { done = true; clearTimeout(timer); resolve(v); }
+      }, function (e) {
+        if (!done) { done = true; clearTimeout(timer); reject(e); }
+      });
+    });
   }
 
   function readJson(res) {
@@ -224,19 +244,23 @@
 
   /** Generate a recipe. Resolves to markdown text. */
   function generate(opts) {
-    var key = getKey();
-    if (!key) return Promise.reject(new Error('No API key set.'));
-    if (!opts.ingredients || !opts.ingredients.length) {
-      return Promise.reject(new Error('Add at least one ingredient first.'));
-    }
-    // Make sure the model has been chosen from the live list before asking.
-    if (getPreference() === AUTO && !resolvedAuto) {
-      return resolveAuto().then(function () { return callModel(opts); });
-    }
-    return callModel(opts);
+    // Everything runs inside a promise chain so that a programming error throws
+    // into .catch rather than escaping synchronously past the caller's handler.
+    return Promise.resolve().then(function () {
+      if (!getKey()) throw new Error('No API key set.');
+      if (!opts.ingredients || !opts.ingredients.length) {
+        throw new Error('Add at least one ingredient first.');
+      }
+      // Make sure the model has been chosen from the live list before asking.
+      if (getPreference() === AUTO && !resolvedAuto) {
+        return resolveAuto().then(function () { return callModel(opts); });
+      }
+      return callModel(opts);
+    });
   }
 
   function callModel(opts) {
+    var key = getKey();
     var body = {
       contents: [{ role: 'user', parts: [{ text: buildPrompt(opts) }] }],
       generationConfig: {
@@ -246,12 +270,13 @@
       }
     };
 
-    return fetch(API + '/models/' + encodeURIComponent(getModel()) +
-                 ':generateContent?key=' + encodeURIComponent(key), {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(body)
-    })
+    return withTimeout(
+      fetch(API + '/models/' + encodeURIComponent(getModel()) +
+            ':generateContent?key=' + encodeURIComponent(key), {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body)
+      }), 60000, 'The request to Google timed out after 60 seconds.')
       .then(readJson)
       .then(function (d) {
         var cand = (d.candidates || [])[0];
