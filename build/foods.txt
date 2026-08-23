@@ -777,8 +777,6 @@ fat|poppyseedoil|Poppyseed oil|171423
 fat|tomatoseedoil|Tomatoseed oil|171424
 fat|soybeanlecithinoil|Soybean lecithin oil|171426
 fat|hazelnutoil|Hazelnut oil|171427
-fat|pamcookingsprayoiloriginal|PAM cooking spray oil, original|171430
-fat|cookingandsaladoilenova80dig|Cooking and salad oil, ENOVA, 80% diglycerides|171433
 poultry|chickenbroilersorfryerslight|Chicken, broilers or fryers, light meat|171464
 poultry|turkey|Turkey|171480
 poultry|turkeywing|Turkey, wing|171497

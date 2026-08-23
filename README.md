@@ -7,7 +7,7 @@ sources and honest about how good the evidence actually is.
 
 ## What it does
 
-**Food explorer** — 1,004 foods across 16 groups: fruits, vegetables, mushrooms, nuts and
+**Food explorer** — 1,002 foods across 16 groups: fruits, vegetables, mushrooms, nuts and
 seeds, legumes, grains, herbs and spices, dairy, meat, poultry, offal, fish, shellfish,
 eggs and roe, animal fats and bee products. Up to 38 nutrients each — energy, protein,
 carbohydrate, fibre, sugars, the full fat breakdown including ALA, EPA and DHA, 13 vitamins
@@ -124,8 +124,13 @@ script fails loudly if an ID has no USDA record, so a typo cannot produce an emp
 Only foods whose names a picture search can actually resolve get a photograph.
 Curated names like "Okra" work; USDA descriptions like "Pork, fresh, loin, center
 rib (chops or roasts)" do not, and an early run illustrated 2% milk with a
-photograph of a milk-float garage. So 718 foods carry a photo and 286 show a
+photograph of a milk-float garage. So 692 foods carry a photo and 310 show a
 placeholder tile, which is the honest outcome.
+
+The fetcher also rejects digitised print. Wikimedia holds a great many scanned
+seed catalogues and agricultural yearbooks whose filenames match food searches
+perfectly and whose contents are a page of Victorian type — "Acorns" came back
+as a page from a report on the birds of Pennsylvania.
 
 `build/fetch_images.py` pulls one photograph per food from Wikimedia Commons and records the
 author and licence of each file in `data/images.js`, which the food pages display. Commons
@@ -200,7 +205,7 @@ data/sources.js       every citation, keyed by id
 data/i18n.js          four languages, with the localisation reasoning
 data/growth.js        GENERATED CDC BMI-for-age parameters
 js/growth.js          BMI-for-age percentile maths
-img/                  718 food photographs from Wikimedia Commons
+img/                  692 food photographs from Wikimedia Commons
 build/build_foods.py  the nutrition generator
 build/select_foods.py bulk selector: whole ingredients, per-category rules
 build/name_foods.py   names, slugs and family tags from USDA descriptions

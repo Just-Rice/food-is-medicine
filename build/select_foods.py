@@ -29,7 +29,7 @@ JUNK = re.compile(r'\b(baby ?food|infant|formula|fast ?food|restaurant|school|'
     r'soup|gravy|casserole|salad dressing|sandwich|burrito|pizza|entree|'
     r'dinner|meal,|pie |cake|cookie|cracker|candy|snack|beverage|drink|'
     r'imitation|substitute|analog|meat extender|puff|chip|bar,|shake|'
-    r'supplement|meal replacement|infant|toddler)\b', re.I)
+    r'supplement|meal replacement|infant|toddler|PAM |ENOVA|diglyceride|cooking spray)\b', re.I)
 
 # Preparations that make an entry a variant of something else rather than a
 # distinct ingredient.

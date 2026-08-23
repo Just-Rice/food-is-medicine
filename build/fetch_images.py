@@ -141,6 +141,11 @@ CURATED_FILE = {
     'groundlamb': 'Kibbeh Nayyeh.jpg',
     'lambshank': 'Lammhaxe mit Kloß Bischofsmühle.jpg',
     'wheyacid': 'Whey powder.jpg',
+    'pomegranate': 'Punica granatum fruit Grenade.jpg',
+    'beechnut': 'Opengebarsten vrucht van beuk (Fagus sylvatica) (d.j.b.) 01.jpg',
+    'drymilk': 'PowderedMilk.jpg',
+    'edam': 'SmallEdamCheese.jpg',
+    'walnutsblack': 'Black Walnut Juglans nigra Nut 2400px.jpg',
     # A previous run illustrated these with a milk-float garage and an NFL
     # promotional photo. Pinned so it cannot happen again.
     'milkwhole': 'Milk glass.jpg',
@@ -179,6 +184,24 @@ COMPLEX_NAME = re.compile(
     r'\b(fresh|separable|trimmed|grade|includes|unenriched|enriched|without added|'
     r'with added|all varieties|mixed species|type of|partially|defatted|low fat|'
     r'low sodium|whole-grain|glandless|puree)\b', re.I)
+
+
+# Wikimedia holds a great many digitised books, seed catalogues and agricultural
+# yearbooks. Their filenames match food searches well and their contents are a
+# page of Victorian type, so "Acorns" came back as a page from a report on the
+# birds of Pennsylvania. Reject anything that looks like archival print.
+ARCHIVAL = re.compile(
+    r'\((1[6-9]\d\d|20[01]\d)\)|'                    # a bare year, as scans are titled
+    r'\b(catalogue|catalog|yearbook|annual report|report on|proceedings|'
+    r'bulletin|circular|almanac|advertising card|trade card|postcard|'
+    r'illustrated|plate \d|figure \d|page \d|survey of|diseases of|'
+    r'manual of|handbook|encyclop|dictionary|magazine|journal|gazette|'
+    r'seed (list|annual)|price list|herbarium sheet|'
+    r'stamp of|coat of arms|logo|banknote|postage)\b', re.I)
+
+
+def acceptable_file(name):
+    return not ARCHIVAL.search(name.replace('_', ' '))
 
 
 def load_curated_slugs():
@@ -402,7 +425,8 @@ def main():
             if url:
                 candidates.append((name, url))
 
-        pick = next(((n, u) for n, u in candidates if n not in used), None)
+        pick = next(((n, u) for n, u in candidates
+                      if n not in used and acceptable_file(n)), None)
         if not pick:
             # Better an honest placeholder than a picture of the wrong thing.
             print('  [%d/%d] %s -- NO UNIQUE IMAGE, leaving placeholder' % (i + 1, len(todo), slug))

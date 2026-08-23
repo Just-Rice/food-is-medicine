@@ -68,7 +68,7 @@
       g_grain: 'Grains', g_herb: 'Herbs & spices', g_dairy: 'Dairy',
       g_meat: 'Meat', g_poultry: 'Poultry', g_offal: 'Offal',
       g_fish: 'Fish', g_shellfish: 'Shellfish', g_egg: 'Eggs & roe',
-      g_fat: 'Animal fats', g_bee: 'Bee products',
+      g_fat: 'Fats & oils', g_bee: 'Bee products',
 
       all_foods: 'All foods', per100: 'per 100 g', show: 'Show:',
       amount: 'Amount', nutrient: 'Nutrient',
@@ -199,7 +199,7 @@
       g_grain: 'Cereales', g_herb: 'Hierbas y especias', g_dairy: 'Lácteos',
       g_meat: 'Carne', g_poultry: 'Aves', g_offal: 'Casquería',
       g_fish: 'Pescado', g_shellfish: 'Marisco', g_egg: 'Huevos y huevas',
-      g_fat: 'Grasas animales', g_bee: 'Productos apícolas',
+      g_fat: 'Grasas y aceites', g_bee: 'Productos apícolas',
 
       all_foods: 'Todos los alimentos', per100: 'por 100 g', show: 'Mostrar:',
       amount: 'Cantidad', nutrient: 'Nutriente',
@@ -330,7 +330,7 @@
       g_grain: 'अनाज', g_herb: 'जड़ी-बूटियाँ और मसाले', g_dairy: 'दुग्ध उत्पाद',
       g_meat: 'माँस', g_poultry: 'मुर्गी', g_offal: 'कलेजी आदि',
       g_fish: 'मछली', g_shellfish: 'शंख-मछली', g_egg: 'अंडे',
-      g_fat: 'पशु वसा', g_bee: 'मधुमक्खी उत्पाद',
+      g_fat: 'वसा और तेल', g_bee: 'मधुमक्खी उत्पाद',
 
       all_foods: 'सभी खाद्य पदार्थ', per100: 'प्रति 100 ग्राम', show: 'दिखाएँ:',
       amount: 'मात्रा', nutrient: 'पोषक तत्व',
@@ -461,7 +461,7 @@
       g_grain: 'ಧಾನ್ಯಗಳು', g_herb: 'ಗಿಡಮೂಲಿಕೆ ಮತ್ತು ಮಸಾಲೆ', g_dairy: 'ಹಾಲಿನ ಉತ್ಪನ್ನ',
       g_meat: 'ಮಾಂಸ', g_poultry: 'ಕೋಳಿ', g_offal: 'ಒಳಾಂಗ ಮಾಂಸ',
       g_fish: 'ಮೀನು', g_shellfish: 'ಚಿಪ್ಪುಮೀನು', g_egg: 'ಮೊಟ್ಟೆ',
-      g_fat: 'ಪ್ರಾಣಿಜ ಕೊಬ್ಬು', g_bee: 'ಜೇನು ಉತ್ಪನ್ನ',
+      g_fat: 'ಕೊಬ್ಬು ಮತ್ತು ಎಣ್ಣೆ', g_bee: 'ಜೇನು ಉತ್ಪನ್ನ',
 
       all_foods: 'ಎಲ್ಲಾ ಆಹಾರಗಳು', per100: '100 ಗ್ರಾಂಗೆ', show: 'ತೋರಿಸಿ:',
       amount: 'ಪ್ರಮಾಣ', nutrient: 'ಪೋಷಕಾಂಶ',
