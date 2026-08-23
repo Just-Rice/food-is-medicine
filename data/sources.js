@@ -62,6 +62,170 @@ window.SOURCES = {
     note: 'The Mifflin-St Jeor equation this site uses to estimate your resting energy expenditure. Validation studies consistently find it the most accurate of the common predictive equations for the general population.'
   },
 
+  // ---- Animal foods, fermented foods and omega-3 --------------------------
+  cochrane_omega3: {
+    tier: 'systematic',
+    title: 'Omega-3 fatty acids for the primary and secondary prevention of cardiovascular disease',
+    org: 'Abdelhamid AS, Brown TJ, Brainard JS, et al. Cochrane Database Syst Rev 2020;3:CD003177',
+    year: 2020,
+    url: 'https://doi.org/10.1002/14651858.CD003177.pub5',
+    note: 'Pooled 86 trials with over 160,000 participants and found that long-chain omega-3 supplements have little or no effect on all-cause mortality or cardiovascular events. One of the clearest examples on this site of a supplement failing to reproduce what the food it came from seemed to promise.'
+  },
+  vital: {
+    tier: 'trial',
+    title: 'Marine n-3 fatty acids and prevention of cardiovascular disease and cancer (VITAL)',
+    org: 'Manson JE, Cook NR, Lee IM, et al. N Engl J Med 2019;380(1):23-32',
+    year: 2019,
+    url: 'https://doi.org/10.1056/NEJMoa1811403',
+    note: 'Over 25,000 participants randomised to 1 g/day of fish oil: no reduction in major cardiovascular events or cancer.'
+  },
+  reduce_it: {
+    tier: 'trial',
+    title: 'Cardiovascular risk reduction with icosapent ethyl for hypertriglyceridemia (REDUCE-IT)',
+    org: 'Bhatt DL, Steg PG, Miller M, et al. N Engl J Med 2019;380(1):11-22',
+    year: 2019,
+    url: 'https://doi.org/10.1056/NEJMoa1812792',
+    note: 'The exception that proves the rule: a high-dose purified EPA drug did cut cardiovascular events, but in a selected high-risk population already on statins, at four times the dose of a typical supplement. It is a prescription medicine, not a reason to buy fish oil.'
+  },
+  aha_fish: {
+    tier: 'guideline',
+    title: 'Advisory: seafood long-chain n-3 polyunsaturated fatty acids and cardiovascular disease',
+    org: 'Rimm EB, Appel LJ, Chiuve SE, et al. Circulation 2018;138(1):e35-e47 (American Heart Association)',
+    year: 2018,
+    url: 'https://doi.org/10.1161/CIR.0000000000000574',
+    note: 'Continues to recommend one to two servings of seafood a week, on evidence that is largely observational but consistent, while declining to recommend supplements for the general population.'
+  },
+  efsa_yoghurt: {
+    tier: 'government',
+    title: 'Scientific opinion on live yoghurt cultures and improved lactose digestion',
+    org: 'EFSA Panel on Dietetic Products, Nutrition and Allergies. EFSA Journal 2010;8(10):1763',
+    year: 2010,
+    url: 'https://doi.org/10.2903/j.efsa.2010.1763',
+    note: 'One of very few probiotic claims EFSA has ever accepted, and the only one relevant to a whole food: live cultures in yoghurt improve digestion of the lactose in that yoghurt. EFSA rejected essentially every other probiotic health claim put to it.'
+  },
+  cochrane_probiotics: {
+    tier: 'systematic',
+    title: 'Probiotics for the prevention of antibiotic-associated diarrhoea in children',
+    org: 'Guo Q, Goldenberg JZ, Humphrey C, et al. Cochrane Database Syst Rev 2019;4:CD004827',
+    year: 2019,
+    url: 'https://doi.org/10.1002/14651858.CD004827.pub5',
+    note: 'Moderate-certainty evidence that specific strains at adequate doses reduce antibiotic-associated diarrhoea. Strain and dose matter; "probiotic" on a label means very little on its own.'
+  },
+  cochrane_honey: {
+    tier: 'systematic',
+    title: 'Honey for acute cough in children',
+    org: 'Oduwole O, Udoh EE, Oyo-Ita A, Meremikwu MM. Cochrane Database Syst Rev 2018;4:CD007094',
+    year: 2018,
+    url: 'https://doi.org/10.1002/14651858.CD007094.pub5',
+    note: 'Honey probably reduces cough symptoms more than no treatment or placebo, and about as well as dextromethorphan. Applies to children over one year only.'
+  },
+  cochrane_honey_wounds: {
+    tier: 'systematic',
+    title: 'Honey as a topical treatment for wounds',
+    org: 'Jull AB, Cullum N, Dumville JC, et al. Cochrane Database Syst Rev 2015;3:CD005083',
+    year: 2015,
+    url: 'https://doi.org/10.1002/14651858.CD005083.pub4',
+    note: 'Evidence is reasonable for partial-thickness burns and poor for most other wound types. Medical-grade sterilised honey is not the same product as the jar in the kitchen.'
+  },
+  cdc_botulism: {
+    tier: 'government',
+    title: 'Infant botulism — prevention',
+    org: 'U.S. Centers for Disease Control and Prevention',
+    year: 2024,
+    url: 'https://www.cdc.gov/botulism/prevention/index.html',
+    note: 'Honey is the one food consistently linked to infant botulism and must never be given to a child under 12 months. An infant gut has not yet developed the flora that keeps Clostridium botulinum spores from germinating.'
+  },
+  iarc_meat: {
+    tier: 'systematic',
+    title: 'IARC Monographs Volume 114: Red meat and processed meat',
+    org: 'International Agency for Research on Cancer, World Health Organization',
+    year: 2018,
+    url: 'https://publications.iarc.fr/564',
+    note: 'Classified processed meat as carcinogenic to humans (Group 1) and red meat as probably carcinogenic (Group 2A), on colorectal cancer evidence. The group describes strength of evidence that something causes cancer, not how much risk it carries — which is why processed meat sits in the same group as tobacco while carrying a far smaller effect.'
+  },
+  cochrane_zinc: {
+    tier: 'systematic',
+    title: 'Zinc for the common cold',
+    org: 'Nault D, Machingo TP, Shipper AG, et al. Cochrane Database Syst Rev 2024;5:CD014914',
+    year: 2024,
+    url: 'https://doi.org/10.1002/14651858.CD014914',
+    note: 'The 2024 update found the evidence far weaker and less certain than the older reviews suggested: any effect on cold duration is small and uncertain, and side effects are common.'
+  },
+  fda_zinc_nasal: {
+    tier: 'government',
+    title: 'Warning on Zicam intranasal zinc products and loss of sense of smell',
+    org: 'U.S. Food and Drug Administration',
+    year: 2009,
+    url: 'https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/questions-and-answers-fdas-actions-zicam-cold-remedy-nasal-products',
+    note: 'The FDA advised consumers to stop using intranasal zinc gels after more than 130 reports of anosmia, some of it lasting. Oral zinc does not carry this risk; the route mattered.'
+  },
+  morton_protein: {
+    tier: 'systematic',
+    title: 'A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength',
+    org: 'Morton RW, Murphy KT, McKellar SR, et al. Br J Sports Med 2018;52(6):376-84',
+    year: 2018,
+    url: 'https://doi.org/10.1136/bjsports-2017-097608',
+    note: 'Protein supplementation modestly increases muscle mass and strength gains from resistance training, with benefit plateauing around 1.6 g per kg body weight a day. Also finds the source barely matters — whey has no meaningful advantage over other complete proteins.'
+  },
+  ods_vitamina: {
+    tier: 'government',
+    title: 'Vitamin A and carotenoids — health professional fact sheet',
+    org: 'NIH Office of Dietary Supplements',
+    year: 2025,
+    url: 'https://ods.od.nih.gov/factsheets/VitaminA-HealthProfessional/',
+    note: 'Source of the distinction this site draws between preformed vitamin A (retinol, from liver and other animal foods, which is teratogenic in excess) and provitamin A carotenoids from plants, which are not.'
+  },
+  soll_hypervitaminosis: {
+    tier: 'reference',
+    title: 'Hypervitaminosis A — teratogenicity of retinol in pregnancy',
+    org: 'Summarised in NIH ODS and in national antenatal guidance (UK NHS, US ACOG)',
+    year: 2025,
+    url: 'https://ods.od.nih.gov/factsheets/VitaminA-HealthProfessional/',
+    note: 'The basis for the standing advice that pregnant women avoid liver and liver products: a single serving can contain several times the daily upper limit of preformed vitamin A, which causes birth defects.'
+  },
+
+  // ---- Weight and body composition ---------------------------------------
+  hall_dynamics: {
+    tier: 'systematic',
+    title: 'Quantification of the effect of energy imbalance on bodyweight',
+    org: 'Hall KD, Sacks G, Chandramohan D, et al. Lancet 2011;378(9793):826-37',
+    year: 2011,
+    url: 'https://doi.org/10.1016/S0140-6736(11)60812-X',
+    note: 'The paper that retired the "3,500 kcal is a pound, forever" rule. It shows that expenditure falls as body mass falls, so a fixed deficit yields a flattening curve rather than a straight line — which is why weight loss slows even when nothing about the diet changes.'
+  },
+  nih_bwp: {
+    tier: 'government',
+    title: 'Body Weight Planner',
+    org: 'NIH National Institute of Diabetes and Digestive and Kidney Diseases',
+    year: 2025,
+    url: 'https://www.niddk.nih.gov/bwp',
+    note: 'A public implementation of the Hall model. Where this site gives a straight-line estimate and warns that it is optimistic, the Body Weight Planner gives the realistic curve.'
+  },
+  who_bmi: {
+    tier: 'government',
+    title: 'A healthy lifestyle — WHO recommendations on body mass index',
+    org: 'World Health Organization',
+    year: 2010,
+    url: 'https://www.who.int/europe/news-room/fact-sheets/item/a-healthy-lifestyle---who-recommendations',
+    note: 'The source of the adult BMI cut-offs used on this site: under 18.5 underweight, 18.5-24.9 healthy, 25-29.9 overweight, 30 and above obese. WHO is explicit that these are population categories and that the same cut-offs do not carry the same risk across all ancestries.'
+  },
+  cdc_weightloss: {
+    tier: 'government',
+    title: 'Steps for losing weight — recommended rate of loss',
+    org: 'U.S. Centers for Disease Control and Prevention',
+    year: 2024,
+    url: 'https://www.cdc.gov/healthy-weight-growth/losing-weight/index.html',
+    note: 'Source of the 0.5-1 kg (1-2 lb) per week guidance this site uses as its safe-rate benchmark, and of the finding that gradual loss is more likely to be maintained than rapid loss.'
+  },
+  cdc_bmi_children: {
+    tier: 'government',
+    title: 'BMI for children and teens',
+    org: 'U.S. Centers for Disease Control and Prevention',
+    year: 2024,
+    url: 'https://www.cdc.gov/bmi/child-teen-calculator/index.html',
+    note: 'Why this site refuses to calculate a deficit for anyone under 18: adult BMI categories do not apply during growth, and assessment uses age-and-sex percentile charts instead.'
+  },
+
   // ---- FDA authorised health claims --------------------------------------
   fda_fiber_chd: {
     tier: 'government',

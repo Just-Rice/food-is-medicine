@@ -1,106 +1,389 @@
-# group | slug | display name | exact USDA SR Legacy description
-fruit|apple|Apple (with skin)|Apples, raw, with skin
-fruit|banana|Banana|Bananas, raw
-fruit|blueberry|Blueberries|Blueberries, raw
-fruit|strawberry|Strawberries|Strawberries, raw
-fruit|raspberry|Raspberries|Raspberries, raw
-fruit|blackberry|Blackberries|Blackberries, raw
-fruit|cranberry|Cranberries|Cranberries, raw
-fruit|orange|Orange|Oranges, raw, all commercial varieties
-fruit|lemon|Lemon|Lemons, raw, without peel
-fruit|grapefruit|Grapefruit (pink/red)|Grapefruit, raw, pink and red, all areas
-fruit|avocado|Avocado|Avocados, raw, all commercial varieties
-fruit|mango|Mango|Mangos, raw
-fruit|papaya|Papaya|Papayas, raw
-fruit|pineapple|Pineapple|Pineapple, raw, all varieties
-fruit|kiwi|Kiwifruit (green)|Kiwifruit, green, raw
-fruit|pomegranate|Pomegranate|Pomegranates, raw
-fruit|watermelon|Watermelon|Watermelon, raw
-fruit|cantaloupe|Cantaloupe|Melons, cantaloupe, raw
-fruit|grape|Grapes (red/green)|Grapes, red or green (European type, such as Thompson seedless), raw
-fruit|cherry|Sweet cherries|Cherries, sweet, raw
-fruit|peach|Peach (yellow)|Peaches, yellow, raw
-fruit|pear|Pear|Pears, raw
-fruit|plum|Plum|Plums, raw
-fruit|apricot|Apricot|Apricots, raw
-fruit|fig|Fig|Figs, raw
-fruit|date|Medjool dates|Dates, medjool
-fruit|guava|Guava|Guavas, common, raw
-fruit|persimmon|Persimmon (Japanese)|Persimmons, japanese, raw
-fruit|tomato|Tomato (red)|Tomatoes, red, ripe, raw, year round average
-veg|broccoli|Broccoli|Broccoli, raw
-veg|kale|Kale|Kale, raw
-veg|spinach|Spinach|Spinach, raw
-veg|swisschard|Swiss chard|Chard, swiss, raw
-veg|collards|Collard greens|Collards, raw
-veg|arugula|Arugula|Arugula, raw
-veg|watercress|Watercress|Watercress, raw
-veg|brusselsprouts|Brussels sprouts|Brussels sprouts, raw
-veg|cauliflower|Cauliflower|Cauliflower, raw
-veg|cabbage|Cabbage (green)|Cabbage, raw
-veg|redcabbage|Red cabbage|Cabbage, red, raw
-veg|bokchoy|Bok choy|Cabbage, chinese (pak-choi), raw
-veg|carrot|Carrot|Carrots, raw
-veg|beet|Beetroot|Beets, raw
-veg|sweetpotato|Sweet potato|Sweet potato, raw, unprepared
-veg|potato|Potato (with skin)|Potatoes, flesh and skin, raw
-veg|onion|Onion|Onions, raw
-veg|garlic|Garlic|Garlic, raw
-veg|leek|Leek|Leeks, (bulb and lower leaf-portion), raw
-veg|ginger|Ginger root|Ginger root, raw
-veg|bellpepper|Red bell pepper|Peppers, sweet, red, raw
-veg|greenpepper|Green bell pepper|Peppers, sweet, green, raw
-veg|chilipepper|Hot chili pepper (red)|Peppers, hot chili, red, raw
-veg|cucumber|Cucumber (with peel)|Cucumber, with peel, raw
-veg|celery|Celery|Celery, raw
-veg|asparagus|Asparagus|Asparagus, raw
-veg|zucchini|Zucchini|Squash, summer, zucchini, includes skin, raw
-veg|butternut|Butternut squash|Squash, winter, butternut, raw
-veg|pumpkin|Pumpkin|Pumpkin, raw
-veg|greenpeas|Green peas|Peas, green, raw
-veg|greenbeans|Green beans|Beans, snap, green, raw
-veg|corn|Sweet corn (yellow)|Corn, sweet, yellow, raw
-veg|artichoke|Artichoke|Artichokes, (globe or french), raw
-veg|romaine|Romaine lettuce|Lettuce, cos or romaine, raw
-veg|radish|Radish|Radishes, raw
-veg|turnip|Turnip|Turnips, raw
-veg|seaweed|Seaweed (wakame)|Seaweed, wakame, raw
-veg|okra|Okra|Okra, raw
-veg|eggplant|Eggplant|Eggplant, raw
-mushroom|whitemushroom|White button mushroom|Mushrooms, white, raw
-mushroom|crimini|Crimini mushroom|Mushrooms, brown, italian, or crimini, raw
-mushroom|portabella|Portabella mushroom|Mushrooms, portabella, raw
-mushroom|shiitake|Shiitake mushroom|Mushrooms, shiitake, raw
-mushroom|maitake|Maitake mushroom|Mushrooms, maitake, raw
-mushroom|oyster|Oyster mushroom|Mushrooms, oyster, raw
-mushroom|enoki|Enoki mushroom|Mushrooms, enoki, raw
-mushroom|chanterelle|Chanterelle mushroom|Mushrooms, Chanterelle, raw
-mushroom|morel|Morel mushroom|Mushrooms, morel, raw
-mushroom|uvwhite|White mushroom (UV-exposed)|Mushroom, white, exposed to ultraviolet light, raw
-mushroom|uvportabella|Portabella (UV-exposed)|Mushrooms, portabella, exposed to ultraviolet light, raw
-nut|almond|Almonds|Nuts, almonds
-nut|walnut|Walnuts (English)|Nuts, walnuts, english
-nut|pecan|Pecans|Nuts, pecans
-nut|cashew|Cashews (raw)|Nuts, cashew nuts, raw
-nut|pistachio|Pistachios (raw)|Nuts, pistachio nuts, raw
-nut|brazilnut|Brazil nuts|Nuts, brazilnuts, dried, unblanched
-nut|hazelnut|Hazelnuts|Nuts, hazelnuts or filberts
-nut|macadamia|Macadamia nuts|Nuts, macadamia nuts, raw
-nut|chia|Chia seeds|Seeds, chia seeds, dried
-nut|flax|Flaxseed|Seeds, flaxseed
-nut|pumpkinseed|Pumpkin seeds|Seeds, pumpkin and squash seed kernels, dried
-nut|sunflowerseed|Sunflower seeds|Seeds, sunflower seed kernels, dried
-nut|sesame|Sesame seeds|Seeds, sesame seeds, whole, dried
-nut|hempseed|Hemp seeds|Seeds, hemp seed, hulled
-legume|lentil|Lentils (raw)|Lentils, raw
-legume|chickpea|Chickpeas (raw)|Chickpeas (garbanzo beans, bengal gram), mature seeds, raw
-legume|blackbean|Black beans (raw)|Beans, black, mature seeds, raw
-legume|kidneybean|Kidney beans (raw)|Beans, kidney, red, mature seeds, raw
-legume|soybean|Soybeans (raw)|Soybeans, mature seeds, raw
-legume|edamame|Edamame (frozen, raw)|Soybeans, green, raw
-legume|peanut|Peanuts (raw)|Peanuts, all types, raw
-grain|oats|Oats|Oats
-grain|quinoa|Quinoa (uncooked)|Quinoa, uncooked
-grain|brownrice|Brown rice (long-grain, raw)|Rice, brown, long-grain, raw
-grain|buckwheat|Buckwheat|Buckwheat
-grain|barley|Barley (hulled)|Barley, hulled
+# group | slug | display name | USDA FoodData Central FDC ID
+# Locked to FDC IDs so the build is reproducible. Regenerate with build_foods.py.
+fruit|apple|Apple (with skin)|171688
+fruit|banana|Banana|173944
+fruit|blueberry|Blueberries|171711
+fruit|strawberry|Strawberries|167762
+fruit|raspberry|Raspberries|167755
+fruit|blackberry|Blackberries|173946
+fruit|cranberry|Cranberries|171722
+fruit|orange|Orange|169097
+fruit|lemon|Lemon|167746
+fruit|grapefruit|Grapefruit (pink/red)|174673
+fruit|avocado|Avocado|171705
+fruit|mango|Mango|169910
+fruit|papaya|Papaya|169926
+fruit|pineapple|Pineapple|169124
+fruit|kiwi|Kiwifruit (green)|168153
+fruit|pomegranate|Pomegranate|169134
+fruit|watermelon|Watermelon|167765
+fruit|cantaloupe|Cantaloupe|169092
+fruit|grape|Grapes (red/green)|174683
+fruit|cherry|Sweet cherries|171719
+fruit|peach|Peach (yellow)|169928
+fruit|pear|Pear|169118
+fruit|plum|Plum|169949
+fruit|apricot|Apricot|171697
+fruit|fig|Fig|173021
+fruit|date|Medjool dates|168191
+fruit|guava|Guava|173044
+fruit|persimmon|Persimmon (Japanese)|169941
+fruit|tomato|Tomato (red)|170457
+veg|broccoli|Broccoli|170379
+veg|kale|Kale|168421
+veg|spinach|Spinach|168462
+veg|swisschard|Swiss chard|169991
+veg|collards|Collard greens|170406
+veg|arugula|Arugula|169387
+veg|watercress|Watercress|170068
+veg|brusselsprouts|Brussels sprouts|170383
+veg|cauliflower|Cauliflower|169986
+veg|cabbage|Cabbage (green)|169975
+veg|redcabbage|Red cabbage|169977
+veg|bokchoy|Bok choy|170390
+veg|carrot|Carrot|170393
+veg|beet|Beetroot|169145
+veg|sweetpotato|Sweet potato|168482
+veg|potato|Potato (with skin)|170026
+veg|onion|Onion|170000
+veg|garlic|Garlic|169230
+veg|leek|Leek|169246
+veg|ginger|Ginger root|169231
+veg|bellpepper|Red bell pepper|170108
+veg|greenpepper|Green bell pepper|170427
+veg|chilipepper|Hot chili pepper (red)|170106
+veg|cucumber|Cucumber (with peel)|168409
+veg|celery|Celery|169988
+veg|asparagus|Asparagus|168389
+veg|zucchini|Zucchini|169291
+veg|butternut|Butternut squash|169295
+veg|pumpkin|Pumpkin|168448
+veg|greenpeas|Green peas|170419
+veg|greenbeans|Green beans|169961
+veg|corn|Sweet corn (yellow)|169998
+veg|artichoke|Artichoke|169205
+veg|romaine|Romaine lettuce|169247
+veg|radish|Radish|169276
+veg|turnip|Turnip|170465
+veg|seaweed|Seaweed (wakame)|170496
+veg|okra|Okra|169260
+veg|eggplant|Eggplant|169228
+mushroom|whitemushroom|White button mushroom|169251
+mushroom|crimini|Crimini mushroom|168434
+mushroom|portabella|Portabella mushroom|169255
+mushroom|shiitake|Shiitake mushroom|169242
+mushroom|maitake|Maitake mushroom|169403
+mushroom|oyster|Oyster mushroom|168580
+mushroom|enoki|Enoki mushroom|169382
+mushroom|chanterelle|Chanterelle mushroom|168422
+mushroom|morel|Morel mushroom|168423
+mushroom|uvwhite|White mushroom (UV-exposed)|169376
+mushroom|uvportabella|Portabella (UV-exposed)|170143
+nut|almond|Almonds|170567
+nut|walnut|Walnuts (English)|170187
+nut|pecan|Pecans|170182
+nut|cashew|Cashews (raw)|170162
+nut|pistachio|Pistachios (raw)|170184
+nut|brazilnut|Brazil nuts|170569
+nut|hazelnut|Hazelnuts|170581
+nut|macadamia|Macadamia nuts|170178
+nut|chia|Chia seeds|170554
+nut|flax|Flaxseed|169414
+nut|pumpkinseed|Pumpkin seeds|170556
+nut|sunflowerseed|Sunflower seeds|170562
+nut|sesame|Sesame seeds|170150
+nut|hempseed|Hemp seeds|170148
+legume|lentil|Lentils (raw)|172420
+legume|chickpea|Chickpeas (raw)|173756
+legume|blackbean|Black beans (raw)|173734
+legume|kidneybean|Kidney beans (raw)|173744
+legume|soybean|Soybeans (raw)|174270
+legume|edamame|Edamame (frozen, raw)|169282
+legume|peanut|Peanuts (raw)|172430
+grain|oats|Oats|169705
+grain|quinoa|Quinoa (uncooked)|168874
+grain|brownrice|Brown rice (long-grain, raw)|169703
+grain|buckwheat|Buckwheat|170286
+grain|barley|Barley (hulled)|170283
+fruit|lime|Lime|168155
+fruit|mandarin|Mandarin orange|169105
+fruit|clementine|Clementine|168195
+fruit|kumquat|Kumquat|168154
+fruit|pomelo|Pomelo|167754
+fruit|honeydew|Honeydew melon|169911
+fruit|casaba|Casaba melon|169093
+fruit|nectarine|Nectarine|169914
+fruit|sourcherry|Sour cherry|173954
+fruit|boysenberry|Boysenberries (frozen)|171713
+fruit|gooseberry|Gooseberry|173030
+fruit|mulberry|Mulberry|169913
+fruit|elderberryfruit|Elderberry|171727
+fruit|currantblack|Blackcurrant|173963
+fruit|currantred|Redcurrant|173964
+fruit|goji|Goji berries (dried)|173032
+fruit|coconut|Coconut meat|170169
+fruit|passionfruit|Passion fruit|169108
+fruit|lychee|Lychee|169086
+fruit|rambutan|Rambutan (canned)|168167
+fruit|longan|Longan|169089
+fruit|starfruit|Starfruit (carambola)|171715
+fruit|jackfruit|Jackfruit|174687
+fruit|durian|Durian|168192
+fruit|mangosteen|Mangosteen (canned)|169090
+fruit|soursop|Soursop|167761
+fruit|breadfruit|Breadfruit|171714
+fruit|plantain|Plantain|169130
+fruit|tamarind|Tamarind|167763
+fruit|feijoa|Feijoa|168176
+fruit|prune|Prune (dried plum)|168162
+veg|iceberg|Iceberg lettuce|2346388
+veg|butterhead|Butterhead lettuce|168429
+veg|endive|Endive|168412
+veg|radicchio|Radicchio|168564
+veg|dandelion|Dandelion greens|169226
+veg|mustardgreens|Mustard greens|169256
+veg|beetgreens|Beet greens|170375
+veg|broccolini|Broccolini|170381
+veg|romanesco|Green cauliflower (Romanesco type)|169389
+veg|gailan|Chinese broccoli (gai lan)|169404
+veg|savoy|Savoy cabbage|170388
+veg|napa|Napa cabbage|169979
+veg|kohlrabi|Kohlrabi|168424
+veg|parsnip|Parsnip|170417
+veg|rutabaga|Rutabaga|168454
+veg|celeriac|Celeriac|170400
+veg|daikon|Daikon radish|168451
+veg|horseradish|Horseradish (prepared)|173472
+veg|jicama|Jicama|170073
+veg|sunchoke|Jerusalem artichoke|169236
+veg|taro|Taro|169308
+veg|cassava|Cassava (yuca)|169985
+veg|yam|True yam|170071
+veg|lotusroot|Lotus root|169250
+veg|bambooshoot|Bamboo shoots|169210
+veg|waterchestnut|Water chestnuts|170066
+veg|scallion|Scallions|170005
+veg|shallot|Shallot|170499
+veg|chives|Chives|169994
+veg|yellowsquash|Yellow summer squash|168464
+veg|spaghettisquash|Spaghetti squash|169298
+veg|acornsquash|Acorn squash|168472
+veg|hubbard|Hubbard squash|168475
+veg|chayote|Chayote|170402
+veg|bittermelon|Bitter melon|168393
+veg|tomatillo|Tomatillo|168566
+veg|snappea|Sugar snap peas|170010
+veg|fennel|Fennel bulb|169385
+veg|jalapeno|Jalapeño pepper|168576
+veg|serrano|Serrano pepper|169395
+veg|poblano|Pasilla (dried poblano)|168579
+veg|yellowpepper|Yellow bell pepper|169383
+mushroom|woodear|Wood ear mushroom|169237
+mushroom|straw|Straw mushroom (canned)|168582
+legume|pinto|Pinto beans|175199
+legume|navy|Navy beans|173745
+legume|cannellini|Cannellini beans|175202
+legume|greatnorthern|Great Northern beans|175190
+legume|lima|Lima beans|174252
+legume|fava|Fava beans|175205
+legume|mung|Mung beans|174256
+legume|adzuki|Adzuki beans|173727
+legume|blackeyed|Black-eyed peas|173758
+legume|pigeonpea|Pigeon peas|172436
+legume|splitpea|Split peas|172428
+legume|lupin|Lupin beans|172423
+legume|cranberrybean|Borlotti (cranberry) beans|175189
+nut|pinenut|Pine nuts|170591
+nut|chestnut|Chestnuts|170575
+nut|poppyseed|Poppy seeds|171330
+nut|mustardseed|Mustard seeds|170929
+nut|pilinut|Pili nuts|170590
+nut|watermelonseed|Watermelon seeds|169407
+nut|hickory|Hickory nuts|170177
+nut|beechnut|Beechnuts|170161
+grain|wheatberry|Wheat berries (hard red)|168890
+grain|bulgur|Bulgur|170688
+grain|spelt|Spelt|169745
+grain|farro|Farro (emmer)|2710828
+grain|kamut|Kamut (khorasan)|169743
+grain|rye|Rye|168884
+grain|millet|Millet|169702
+grain|sorghum|Sorghum|169716
+grain|teff|Teff|169747
+grain|amaranth|Amaranth|170682
+grain|whiterice|White rice (long-grain)|168877
+grain|arborio|Arborio rice|168931
+grain|wildrice|Wild rice|169726
+grain|fonio|Fonio|2710829
+grain|cornmeal|Cornmeal (whole-grain)|169697
+herb|basil|Basil (fresh)|172232
+herb|cilantro|Cilantro (fresh)|169997
+herb|parsley|Parsley (fresh)|170416
+herb|mint|Peppermint (fresh)|173474
+herb|spearmint|Spearmint (fresh)|173475
+herb|rosemary|Rosemary (fresh)|173473
+herb|thyme|Thyme (fresh)|173470
+herb|oregano|Oregano (fresh)|171328
+herb|sage|Sage (ground)|170935
+herb|dill|Dill weed (fresh)|172233
+herb|tarragon|Tarragon (ground)|170937
+herb|lemongrass|Lemongrass|168573
+herb|turmericroot|Turmeric (ground)|172231
+herb|cinnamonspice|Cinnamon (ground)|171320
+herb|cumin|Cumin seed|170923
+herb|coriander seed|Coriander seed|170922
+herb|blackpepper|Black pepper|170931
+herb|cloves|Cloves|171321
+herb|cardamom|Cardamom|170919
+herb|fenugreekseed|Fenugreek seed|171324
+herb|paprika|Paprika|171329
+herb|nutmeg|Nutmeg|171326
+dairy|milkwhole|Whole milk (3.25%)|171265
+dairy|milk2|2% milk|171267
+dairy|milk1|1% milk|170872
+dairy|milkskim|Skim milk|171271
+dairy|goatmilk|Goat milk|171278
+dairy|sheepmilk|Sheep milk|170882
+dairy|buffalomilk|Water buffalo milk|171280
+dairy|evapmilk|Evaporated milk|172194
+dairy|condensedmilk|Sweetened condensed milk|171275
+dairy|drymilk|Powdered dry milk|172195
+dairy|yogurtplain|Plain whole-milk yogurt|171284
+dairy|greekyogurt|Greek yogurt (plain, whole)|171304
+dairy|skyr|Skyr / nonfat Greek yoghurt|330137
+dairy|buttermilk|Cultured buttermilk|170874
+dairy|paneer|Paneer / queso fresco|172223
+dairy|cottagecheese|Cottage cheese|172179
+dairy|ricotta|Ricotta|170851
+dairy|quark|Quark / dry-curd farmer cheese|172181
+dairy|quesoblanco|Queso blanco|172224
+dairy|mozzarella|Fresh mozzarella|170845
+dairy|mascarpone|Cream cheese / mascarpone-style|173418
+dairy|feta|Feta|173420
+dairy|halloumi|Queso añejo (halloumi-style)|172201
+dairy|brie|Brie|172177
+dairy|camembert|Camembert|172178
+dairy|chevre|Chèvre (soft goat cheese)|173435
+dairy|muenster|Muenster|171245
+dairy|cheddar|Cheddar|328637
+dairy|gouda|Gouda|171241
+dairy|swiss|Swiss (Emmental)|171251
+dairy|gruyere|Gruyère|171242
+dairy|provolone|Provolone|170850
+dairy|montereyjack|Monterey Jack|170844
+dairy|colby|Colby|173416
+dairy|fontina|Fontina|170843
+dairy|edam|Edam|173419
+dairy|parmesan|Parmigiano-Reggiano|170848
+dairy|pecorino|Romano (Pecorino-style)|171249
+dairy|roquefort|Roquefort|171250
+dairy|bluecheese|Blue cheese / Gorgonzola|172175
+dairy|heavycream|Heavy cream|170859
+dairy|lightcream|Light cream|170857
+dairy|halfandhalf|Half-and-half|171255
+dairy|sourcream|Sour cream|171257
+dairy|butter|Butter (unsalted)|173430
+dairy|buttersalted|Butter (salted)|173410
+dairy|ghee|Ghee (clarified butter)|173412
+dairy|wheyprotein|Whey protein concentrate|171283
+dairy|wheyacid|Acid whey (dried)|171281
+meat|ribeye|Beef ribeye steak|174699
+meat|sirloin|Beef top sirloin|171804
+meat|tenderloin|Beef tenderloin|171803
+meat|brisket|Beef brisket|168607
+meat|flanksteak|Beef flank steak|168609
+meat|groundbeef|Ground beef (85% lean)|171796
+meat|veal|Veal cutlet|175269
+meat|porkloin|Pork loin|168230
+meat|porkchop|Pork chop|168302
+meat|porktenderloin|Pork tenderloin|168249
+meat|porkbelly|Pork belly|167812
+meat|porkshoulder|Pork shoulder|167845
+meat|ham|Ham|167876
+meat|bacon|Bacon|168277
+meat|lambchop|Lamb loin chop|172491
+meat|lamblegs|Leg of lamb|172486
+meat|lambshank|Lamb shank|172483
+meat|groundlamb|Ground lamb|174370
+meat|venison|Venison (deer)|173855
+meat|bison|Bison|173851
+meat|elk|Elk|175301
+meat|goatmeat|Goat meat|175303
+meat|boar|Wild boar|175297
+meat|rabbit|Rabbit|174347
+poultry|chickenbreast|Chicken breast|171509
+poultry|chickenthigh|Chicken thigh|173627
+poultry|chickendrumstick|Chicken drumstick|173614
+poultry|chickenwing|Chicken wing|172390
+poultry|turkeybreast|Turkey breast|171098
+poultry|groundturkey|Ground turkey|171505
+poultry|duck|Duck|172410
+poultry|goose|Goose|172413
+poultry|quail|Quail|172419
+poultry|pheasant|Pheasant|174473
+poultry|squab|Squab (pigeon)|171079
+poultry|guineafowl|Guinea fowl|174471
+poultry|ostrich|Ostrich|174489
+offal|beefliver|Beef liver|169451
+offal|chickenliver|Chicken liver|171060
+offal|kidney|Beef kidney|169449
+offal|heart|Beef heart|168625
+offal|tongue|Beef tongue|170196
+offal|sweetbread|Sweetbreads (pancreas)|169452
+offal|marrow|Bone marrow (caribou)|169800
+offal|tripe|Tripe|170599
+offal|gizzard|Chicken gizzard|171456
+offal|brain|Beef brain|168622
+fish|sockeye|Sockeye salmon|173691
+fish|chinook|Chinook salmon|173688
+fish|coho|Coho salmon|175136
+fish|atlanticsalmon|Atlantic salmon (farmed)|175167
+fish|mackerel|Atlantic mackerel|175119
+fish|sardine|Sardines (canned in oil, with bone)|175139
+fish|anchovy|Anchovy|174182
+fish|herring|Herring|175116
+fish|trout|Rainbow trout|173717
+fish|albacore|Albacore tuna (canned in water)|175158
+fish|bluefin|Bluefin tuna|173706
+fish|cod|Atlantic cod|171955
+fish|pacificcod|Pacific cod|174191
+fish|haddock|Haddock|171964
+fish|halibut|Halibut|174200
+fish|seabass|Sea bass|175142
+fish|snapper|Red snapper|173698
+fish|flounder|Flounder / sole|174196
+fish|grouper|Grouper|171962
+fish|swordfish|Swordfish|173703
+fish|tilapia|Tilapia|175176
+fish|catfish|Catfish|174186
+shellfish|shrimp|Shrimp|174210
+shellfish|lobster|Lobster|174208
+shellfish|spinylobster|Spiny lobster|174211
+shellfish|bluecrab|Blue crab|174204
+shellfish|dungeness|Dungeness crab|171968
+shellfish|kingcrab|King crab|175164
+shellfish|snowcrab|Snow crab|171969
+shellfish|crawfish|Crawfish|174206
+shellfish|mussel|Blue mussels|174216
+shellfish|clam|Clams|174214
+shellfish|scallop|Scallops|174220
+shellfish|abalone|Abalone|174212
+shellfish|whelk|Whelk|171983
+shellfish|snail|Escargot (land snails)|167744
+shellfish|squid|Squid (calamari)|174223
+shellfish|octopus|Octopus|174218
+shellfish|cuttlefish|Cuttlefish|174215
+egg|chickenegg|Chicken egg (whole)|171287
+egg|eggwhite|Egg white|172183
+egg|eggyolk|Egg yolk|172184
+egg|duckegg|Duck egg|172189
+egg|quailegg|Quail egg|172191
+egg|gooseegg|Goose egg|172190
+egg|caviar|Sturgeon caviar|174188
+egg|fishroe|Fish roe (mixed species)|175132
+fat|tallow|Beef tallow|171400
+fat|lard|Lard|171401
+fat|schmaltz|Schmaltz (chicken fat)|173564
+fat|gelatin|Culinary gelatin|169599
+bee|honey|Raw honey|169640
+shellfish|oysters|Oysters (eastern, wild)|171978

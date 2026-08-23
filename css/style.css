@@ -405,3 +405,217 @@ dl.facts dd { margin: 4px 0 0; color: var(--ink-soft); font-size: .93rem; }
   .theme-toggle { margin-left: auto; }
   .brand-text { font-size: 1rem; }
 }
+
+/* ======================================================================
+   Additions: images, accessibility modes, settings, weight section
+   ====================================================================== */
+
+/* ---- Text scaling. Everything is sized in rem, so one variable moves it. -- */
+:root { font-size: 16px; }
+:root[data-text="large"]  { font-size: 18px; }
+:root[data-text="larger"] { font-size: 20px; }
+
+/* ---- Reduce motion: honour the OS setting, and the in-page override. ------ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: .001ms !important;
+    animation-duration: .001ms !important;
+  }
+}
+:root[data-reduce-motion] *,
+:root[data-reduce-motion] *::before,
+:root[data-reduce-motion] *::after {
+  transition: none !important;
+  animation: none !important;
+}
+:root[data-reduce-motion] .food-card:hover,
+:root[data-reduce-motion] .herb-card:hover { transform: none; }
+
+/* ---- High contrast -------------------------------------------------------
+   Raises body text to WCAG AAA (7:1) against its background and thickens the
+   borders, which is what actually helps at low vision -- colour alone does not.
+   Defined for both themes so the toggle composes with light/dark.            */
+:root[data-contrast] {
+  --bg:        #ffffff;
+  --bg-sunk:   #f0f0f0;
+  --card:      #ffffff;
+  --card-edge: #4a4a4a;
+  --ink:       #000000;
+  --ink-soft:  #1c1c1c;
+  --ink-faint: #3a3a3a;
+  --accent:    #14532d;
+  --accent-ink:#0b3d1f;
+  --accent-wash:#d7ead9;
+  --amber:     #6b4300;
+  --amber-wash:#fbeccd;
+  --red:       #8a1008;
+  --red-wash:  #fbe0dd;
+  --blue:      #10395c;
+  --blue-wash: #dbe9f5;
+  --grey-wash: #e4e4e4;
+  --shadow:    none;
+}
+:root[data-contrast][data-theme="dark"],
+:root[data-contrast]:not([data-theme="light"]):not([data-theme="dark"]) {
+  /* only when the resolved theme is dark -- see the media query below */
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-contrast]:not([data-theme="light"]) {
+    --bg:        #000000;
+    --bg-sunk:   #141414;
+    --card:      #0b0b0b;
+    --card-edge: #b9b9b9;
+    --ink:       #ffffff;
+    --ink-soft:  #ededed;
+    --ink-faint: #cfcfcf;
+    --accent:    #7ee495;
+    --accent-ink:#a8f2ba;
+    --accent-wash:#0d2a15;
+    --amber:     #ffcc5c;
+    --amber-wash:#2f2506;
+    --red:       #ff9c90;
+    --red-wash:  #38100b;
+    --blue:      #96ccf5;
+    --blue-wash: #0a1e2e;
+    --grey-wash: #1e1e1e;
+    --shadow:    none;
+  }
+}
+:root[data-contrast][data-theme="dark"] {
+  --bg:        #000000;
+  --bg-sunk:   #141414;
+  --card:      #0b0b0b;
+  --card-edge: #b9b9b9;
+  --ink:       #ffffff;
+  --ink-soft:  #ededed;
+  --ink-faint: #cfcfcf;
+  --accent:    #7ee495;
+  --accent-ink:#a8f2ba;
+  --accent-wash:#0d2a15;
+  --amber:     #ffcc5c;
+  --amber-wash:#2f2506;
+  --red:       #ff9c90;
+  --red-wash:  #38100b;
+  --blue:      #96ccf5;
+  --blue-wash: #0a1e2e;
+  --grey-wash: #1e1e1e;
+  --shadow:    none;
+}
+:root[data-contrast] .card,
+:root[data-contrast] .food-card,
+:root[data-contrast] .herb-card,
+:root[data-contrast] .chip,
+:root[data-contrast] .search,
+:root[data-contrast] select.control,
+:root[data-contrast] .table-scroll { border-width: 2px; }
+/* Underline links in running text only. WCAG asks that body-text links be
+   distinguishable by more than colour, but nav items, chips, pills and whole
+   card links are not body text -- underlining those just makes the page noisy.
+   The :not() list names the elements that ARE links rather than contain them. */
+:root[data-contrast] :is(.prose, .note, .page-head, .footer, .claim, .facts,
+  .result-count, .source-line, .legend, .hint, .colophon, .disclaimer,
+  table.nutrients td, .source-item p) a:not(.ref-pill):not(.crumb):not(.chip) {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+:root[data-contrast] :is(a.brand, a.food-card, a.herb-card, a.ref-pill, a.crumb,
+  .nav a, .profile-strip a, .skip) {
+  text-decoration: none;
+}
+
+/* ---- Food images ------------------------------------------------------- */
+.food-card { display: flex; flex-direction: column; padding: 0; overflow: hidden; }
+.food-card-body { padding: 13px 15px 15px; }
+
+.thumb {
+  width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block;
+  background: var(--bg-sunk); border-bottom: 1px solid var(--card-edge);
+}
+.thumb.noimg { display: grid; place-items: center; }
+.thumb.noimg::after { content: "🍃"; font-size: 1.6rem; opacity: .35; }
+
+.food-hero { display: flex; gap: 20px; align-items: flex-start; margin-bottom: 8px; flex-wrap: wrap; }
+.hero-img {
+  width: 190px; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius);
+  border: 1px solid var(--card-edge); background: var(--bg-sunk); flex: none;
+}
+.hero-img.noimg { display: grid; place-items: center; }
+.hero-img.noimg::after { content: "🍃"; font-size: 2.4rem; opacity: .35; }
+.food-hero-text { flex: 1 1 280px; min-width: 0; }
+.food-hero-text h1 {
+  font-family: var(--serif); font-size: clamp(1.6rem, 4vw, 2.2rem);
+  margin: 0 0 6px; font-weight: 600; line-height: 1.15;
+}
+.credit { font-size: .78rem; color: var(--ink-faint); }
+.credit a { color: var(--ink-faint); }
+
+@media (max-width: 560px) {
+  .hero-img { width: 100%; }
+}
+
+/* ---- English-only marker ---------------------------------------------- */
+.en-mark {
+  display: inline-block; font-size: .66rem; font-weight: 700; letter-spacing: .05em;
+  text-transform: uppercase; padding: 2px 7px; border-radius: 999px;
+  background: var(--blue-wash); color: var(--blue); vertical-align: 2px;
+  margin-left: 6px; white-space: nowrap;
+}
+
+/* ---- Settings ---------------------------------------------------------- */
+.card.pad { padding: 18px 20px; }
+
+.setting-row {
+  display: flex; gap: 18px; align-items: flex-start; justify-content: space-between;
+  padding: 14px 0; flex-wrap: wrap;
+}
+.setting-row + .setting-row { border-top: 1px solid color-mix(in srgb, var(--card-edge) 55%, transparent); }
+.setting-row > div:first-child { flex: 1 1 220px; }
+.setting-row .hint { margin: 3px 0 0; }
+
+.hint { font-size: .84rem; color: var(--ink-faint); }
+
+.switch {
+  width: 50px; height: 28px; border-radius: 999px; flex: none; cursor: pointer;
+  border: 1px solid var(--card-edge); background: var(--grey-wash); padding: 3px;
+  display: flex; align-items: center;
+}
+.switch span {
+  width: 20px; height: 20px; border-radius: 999px; background: var(--ink-faint);
+  transition: transform .14s, background .14s; display: block;
+}
+.switch[aria-checked="true"] { background: var(--accent); border-color: var(--accent); }
+.switch[aria-checked="true"] span { transform: translateX(22px); background: #fff; }
+
+/* ---- Destructive action ------------------------------------------------ */
+.danger-zone {
+  display: flex; gap: 16px; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; margin-top: 22px; padding: 16px 18px;
+  border: 1px solid var(--red); border-radius: var(--radius);
+  background: var(--red-wash);
+}
+.danger-zone p { margin: 3px 0 0; font-size: .86rem; color: var(--ink-soft); max-width: 46ch; }
+.danger-zone strong { color: var(--red); }
+
+.btn.danger {
+  background: var(--red); border-color: var(--red); color: #fff; flex: none;
+}
+:root[data-theme="dark"] .btn.danger,
+:root:not([data-theme="light"]) .btn.danger { color: #14170f; }
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) .btn.danger { color: #fff; }
+}
+.btn.danger:hover { filter: brightness(1.08); }
+
+/* ---- Misc -------------------------------------------------------------- */
+.macro .u { font-size: .6em; font-weight: 500; opacity: .65; }
+.dim { color: var(--ink-faint); }
+.src-cell { font-size: .86rem; }
+.inline-inputs { display: flex; gap: 8px; }
+.result-count a { font-weight: 500; }
+
+.nav { margin-left: auto; }
+
+table.nutrients .dri-type {
+  font-size: .68rem; color: var(--ink-faint); font-weight: 600; margin-left: 5px;
+  letter-spacing: .03em;
+}

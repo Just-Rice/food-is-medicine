@@ -595,6 +595,244 @@ window.MEDICINAL = [
     warning: true
   },
 
+  // ================= Animal foods and fermented foods =====================
+  {
+    slug: 'oily-fish',
+    name: 'Oily fish',
+    latin: null,
+    kind: 'food',
+    activeCompounds: ['EPA (eicosapentaenoic acid)', 'DHA (docosahexaenoic acid)', 'Vitamin D', 'Selenium'],
+    foodSlugs: ['sockeye', 'chinook', 'mackerel', 'sardine', 'herring', 'anchovy', 'trout', 'atlanticsalmon'],
+    claims: [
+      {
+        claim: 'Eating fish once or twice a week is associated with lower cardiovascular risk',
+        grade: 'moderate',
+        detail: 'The American Heart Association continues to recommend one to two servings of seafood a week. The supporting evidence is largely observational but unusually consistent, and the advice is about the food, not a capsule.',
+        refs: ['aha_fish']
+      },
+      {
+        claim: 'Fish oil supplements prevent heart attacks and strokes',
+        grade: 'ineffective',
+        detail: 'This is the sharpest food-versus-supplement split on the site. Cochrane pooled 86 trials and over 160,000 people and found little or no effect on mortality or cardiovascular events; the VITAL trial randomised 25,000 people to 1 g/day and found nothing. Whatever benefit eating fish carries, it does not appear to travel in a capsule.',
+        refs: ['cochrane_omega3', 'vital']
+      },
+      {
+        claim: 'High-dose purified EPA reduces events in high-risk patients already on statins',
+        grade: 'established',
+        detail: 'REDUCE-IT did show a real reduction — but with a prescription drug, at roughly four times a typical supplement dose, in a selected population with raised triglycerides already taking statins. It is a medicine with an indication, not a general endorsement of fish oil.',
+        refs: ['reduce_it']
+      }
+    ],
+    mechanism: 'EPA and DHA are incorporated into cell membranes and give rise to resolvins and protectins, signalling molecules that actively terminate inflammation. They also modestly lower triglycerides and blood pressure. Why this fails to translate into supplement trial outcomes is genuinely unresolved.',
+    safety: 'Large predatory fish accumulate methylmercury; swordfish, shark, king mackerel and bigeye tuna are the ones antenatal guidance singles out to avoid in pregnancy. Small oily fish such as sardines and anchovies carry far less and are the better source.',
+    interactions: 'High-dose omega-3 modestly increases bleeding time; relevant alongside anticoagulants, though clinically significant bleeding is uncommon.'
+  },
+  {
+    slug: 'fermented-dairy',
+    name: 'Yoghurt and fermented milk',
+    latin: null,
+    kind: 'food',
+    activeCompounds: ['Live Lactobacillus and Streptococcus cultures', 'Bacterial lactase'],
+    foodSlugs: ['yogurtplain', 'greekyogurt', 'skyr', 'buttermilk'],
+    claims: [
+      {
+        claim: 'Live yoghurt cultures improve digestion of the lactose in that yoghurt',
+        grade: 'established',
+        detail: 'One of very few probiotic claims EFSA has ever accepted — and it accepted almost none of the others. The bacteria carry their own lactase, which survives long enough in the gut to break down the lactose arriving with them. This is why many lactose-intolerant people tolerate yoghurt but not milk.',
+        refs: ['efsa_yoghurt']
+      },
+      {
+        claim: 'Specific probiotic strains reduce antibiotic-associated diarrhoea',
+        grade: 'moderate',
+        detail: 'Moderate-certainty Cochrane evidence, but for particular strains at adequate doses. "Contains probiotics" on a label tells you almost nothing: the strain and the count are what the trials tested.',
+        refs: ['cochrane_probiotics']
+      },
+      {
+        claim: 'Probiotics improve general immunity, mood or weight',
+        grade: 'insufficient',
+        detail: 'EFSA has rejected essentially every general probiotic health claim submitted to it, on the grounds that the evidence did not establish cause and effect.',
+        refs: ['efsa_yoghurt']
+      }
+    ],
+    mechanism: 'Fermentation pre-digests lactose and delivers bacterial lactase to the gut. Longer-term effects on the resident microbiome are real but transient — most supplemented strains do not colonise, and populations return to baseline within weeks of stopping.',
+    safety: 'Safe for most people. Live cultures should be avoided by the severely immunocompromised, in whom bacteraemia from probiotic organisms has been reported.',
+    interactions: null
+  },
+  {
+    slug: 'liver',
+    name: 'Liver',
+    latin: null,
+    kind: 'food',
+    activeCompounds: ['Preformed vitamin A (retinol)', 'Vitamin B12', 'Haem iron', 'Copper', 'Folate'],
+    foodSlugs: ['beefliver', 'chickenliver'],
+    claims: [
+      {
+        claim: 'Among the most nutrient-dense foods available',
+        grade: 'established',
+        detail: 'This is a matter of composition rather than clinical trial, and the USDA figures on this site make it plainly: 100 g of beef liver carries roughly 59 µg of vitamin B12 — around 25 times a day’s requirement — along with highly absorbable haem iron, copper, folate and riboflavin. For iron-deficiency anaemia it is a more effective food source than any plant.',
+        refs: ['fdc', 'ods']
+      },
+      {
+        claim: 'Safe to eat freely in pregnancy',
+        grade: 'ineffective',
+        detail: 'The opposite: antenatal guidance in most countries tells pregnant women to avoid liver entirely. A single serving can carry several times the upper limit for preformed vitamin A, which is teratogenic. This is one of the clearest cases on the site where "nutrient-dense" and "safe in quantity" come apart.',
+        refs: ['ods_vitamina', 'soll_hypervitaminosis']
+      }
+    ],
+    mechanism: 'The liver is the body’s storage organ for retinol, B12, copper and iron, so eating one delivers a concentrated dose of everything it had stored. That is precisely why it is both exceptionally nourishing and easy to overdo.',
+    safety: 'Preformed vitamin A accumulates and is toxic in chronic excess, causing liver damage, bone loss and, in pregnancy, birth defects. Weekly rather than daily is the usual advice for anyone; in pregnancy, avoid.',
+    interactions: 'High vitamin A intake is additive with retinoid medicines such as isotretinoin and acitretin.',
+    refs: ['ods_vitamina'],
+    warning: true
+  },
+  {
+    slug: 'red-processed-meat',
+    name: 'Red and processed meat',
+    latin: null,
+    kind: 'food',
+    activeCompounds: ['Haem iron', 'N-nitroso compounds', 'Nitrite curing salts'],
+    foodSlugs: ['bacon', 'ham', 'groundbeef', 'ribeye', 'porkbelly'],
+    claims: [{
+      claim: 'Processed meat causes colorectal cancer; red meat probably does',
+      grade: 'established',
+      detail: 'IARC classified processed meat as Group 1 (carcinogenic to humans) and red meat as Group 2A (probably carcinogenic), on colorectal cancer evidence. The classification is routinely misread: an IARC group describes how confident we are that something causes cancer, not how much risk it carries. Processed meat sits in the same group as tobacco while carrying a vastly smaller effect — roughly an 18% relative increase in colorectal cancer risk per 50 g a day, against a lifetime baseline of a few percent.',
+      refs: ['iarc_meat', 'aicr']
+    }],
+    mechanism: 'Haem iron catalyses formation of N-nitroso compounds in the gut, which are genotoxic to colonic epithelium. Curing salts add nitrite directly, and high-temperature cooking generates heterocyclic amines and polycyclic aromatic hydrocarbons — which is why processing and charring both matter, not just the meat.',
+    safety: 'This is a dose-response relationship, not a threshold: WCRF advises limiting red meat to about three portions a week and eating very little processed meat, rather than eliminating either. Red meat remains a good source of haem iron, zinc and B12.',
+    interactions: null,
+    refs: ['iarc_meat'],
+    warning: true
+  },
+  {
+    slug: 'honey-medicinal',
+    name: 'Honey',
+    latin: null,
+    kind: 'food',
+    activeCompounds: ['Hydrogen peroxide (from glucose oxidase)', 'Methylglyoxal (manuka)', 'Low water activity'],
+    foodSlugs: ['honey'],
+    claims: [
+      {
+        claim: 'Relieves acute cough in children over one year',
+        grade: 'moderate',
+        detail: 'Cochrane found honey probably reduces cough symptoms more than no treatment or placebo, and performs about as well as dextromethorphan. Given that over-the-counter cough medicines are not recommended for young children at all, this is a genuinely useful finding.',
+        refs: ['cochrane_honey']
+      },
+      {
+        claim: 'Speeds healing of partial-thickness burns applied topically',
+        grade: 'moderate',
+        detail: 'Reasonable evidence for partial-thickness burns; poor evidence for most other wound types. Clinical use involves sterilised medical-grade honey, which is a regulated product and not the jar in your kitchen.',
+        refs: ['cochrane_honey_wounds']
+      },
+      {
+        claim: 'Raw or local honey treats seasonal allergies',
+        grade: 'insufficient',
+        detail: 'A popular idea with a plausible-sounding mechanism and no good supporting evidence. Allergenic pollen is wind-borne; the pollen bees collect is largely not the kind that causes hay fever.',
+        refs: ['nccih']
+      }
+    ],
+    mechanism: 'Honey’s antibacterial action is mostly physical rather than pharmacological: very low water activity draws moisture out of bacteria, and the enzyme glucose oxidase releases hydrogen peroxide slowly as honey is diluted. Manuka honey adds methylglyoxal, which works without peroxide.',
+    safety: 'Never give honey to an infant under 12 months. It is the one food consistently linked to infant botulism: a baby’s gut flora is not yet developed enough to stop Clostridium botulinum spores germinating, and the result can be fatal. Honey is also essentially sugar, at about 304 kcal per 100 g.',
+    interactions: null,
+    refs: ['cdc_botulism'],
+    warning: true
+  },
+  {
+    slug: 'oysters-zinc',
+    name: 'Oysters and dietary zinc',
+    latin: null,
+    kind: 'food',
+    activeCompounds: ['Zinc', 'Vitamin B12', 'Copper', 'Selenium'],
+    foodSlugs: ['oysters', 'clam', 'mussel', 'pumpkinseed', 'beefliver'],
+    claims: [
+      {
+        claim: 'The densest natural source of zinc',
+        grade: 'established',
+        detail: 'A compositional fact rather than a trial result, and a striking one — oysters carry more zinc per gram than any other common food, several times a day’s requirement in a modest serving.',
+        refs: ['fdc', 'ods']
+      },
+      {
+        claim: 'Zinc supplements shorten the common cold',
+        grade: 'insufficient',
+        detail: 'Older reviews were encouraging; the 2024 Cochrane update found the evidence much weaker and less certain than previously believed, with small and uncertain effects and frequent side effects. A case worth knowing about — the claim got weaker, not stronger, as the trials got better.',
+        refs: ['cochrane_zinc']
+      }
+    ],
+    mechanism: 'Zinc is a cofactor for hundreds of enzymes and for the zinc-finger proteins that regulate gene transcription; deficiency impairs immune function, wound healing and taste. Whether flooding the throat with zinc ions interferes with rhinovirus replication in practice is the part that has not held up.',
+    safety: 'Chronic supplemental zinc above 40 mg a day induces copper deficiency, which causes anaemia and neurological damage. Raw oysters carry a genuine risk of Vibrio infection, which is severe in people with liver disease or immunosuppression.',
+    interactions: 'Never use intranasal zinc: the FDA acted against zinc nasal gels after more than 130 reports of lasting loss of smell. Oral zinc does not carry this risk. Zinc also reduces absorption of tetracycline and quinolone antibiotics.',
+    refs: ['fda_zinc_nasal'],
+    warning: true
+  },
+  {
+    slug: 'whey-protein',
+    name: 'Whey and dietary protein',
+    latin: null,
+    kind: 'food',
+    activeCompounds: ['Leucine and the branched-chain amino acids', 'Whey protein fractions'],
+    foodSlugs: ['wheyprotein', 'greekyogurt', 'chickenbreast', 'eggwhite', 'lentil'],
+    claims: [
+      {
+        claim: 'Extra protein increases muscle gained from resistance training',
+        grade: 'moderate',
+        detail: 'A meta-analysis of 49 trials found real but modest additional gains in muscle mass and strength, with the benefit plateauing at around 1.6 g of protein per kg of body weight a day. Beyond that, more protein added nothing.',
+        refs: ['morton_protein']
+      },
+      {
+        claim: 'Whey is superior to other protein sources',
+        grade: 'insufficient',
+        detail: 'The same meta-analysis found protein source made no meaningful difference. Whey is fast-absorbed and leucine-rich, which matters in acute laboratory measurements, but it does not show up as an advantage in the outcomes people actually care about.',
+        refs: ['morton_protein']
+      }
+    ],
+    mechanism: 'Leucine triggers the mTOR pathway that initiates muscle protein synthesis. Resistance training is what makes the tissue responsive to it — protein without the training stimulus does very little.',
+    safety: 'Well tolerated in healthy people. High protein intakes require caution in existing kidney disease; in healthy kidneys they have not been shown to cause harm.',
+    interactions: null
+  },
+  {
+    slug: 'collagen',
+    name: 'Collagen, gelatin and bone broth',
+    latin: null,
+    kind: 'food',
+    activeCompounds: ['Hydrolysed collagen peptides', 'Glycine', 'Proline', 'Hydroxyproline'],
+    foodSlugs: ['gelatin', 'marrow'],
+    claims: [
+      {
+        claim: 'Improves skin elasticity and joint pain',
+        grade: 'preliminary',
+        detail: 'Small industry-funded trials report modest effects on skin hydration and joint discomfort. They are short, small and rarely independently replicated, and the mechanism has an obvious problem described below.',
+        refs: ['nccih']
+      },
+      {
+        claim: 'Bone broth is a meaningful source of minerals',
+        grade: 'insufficient',
+        detail: 'Analyses find broth contributes fairly little calcium or magnesium relative to a day’s requirement. It is a good source of glycine and a pleasant food; it is not a mineral supplement.',
+        refs: ['fdc']
+      }
+    ],
+    mechanism: 'The obvious objection is that eating collagen does not deliver collagen: it is digested to amino acids and short peptides like any other protein, and the body builds collagen from that pool wherever it chooses. The counter-argument is that certain hydroxyproline-containing dipeptides survive digestion intact and may act as signals to fibroblasts. That is a real hypothesis with real supporting biochemistry, and it is not yet a demonstrated clinical effect.',
+    safety: 'Safe as food. Collagen is an incomplete protein — it lacks tryptophan — so it should not be counted as a main protein source.',
+    interactions: null
+  },
+  {
+    slug: 'bee-products',
+    name: 'Royal jelly, propolis and bee pollen',
+    latin: null,
+    kind: 'food',
+    activeCompounds: ['Royalactin', 'Flavonoids and caffeic acid esters (propolis)'],
+    foodSlugs: [],
+    claims: [{
+      claim: 'Improve immunity, fertility, energy or allergy symptoms',
+      grade: 'insufficient',
+      detail: 'Widely sold on the strength of what royal jelly does to bee larvae, which has no bearing on human physiology. Human trials are small, poor quality and inconsistent, and NCCIH does not consider any use established.',
+      refs: ['nccih']
+    }],
+    mechanism: 'Royal jelly determines caste in honeybees through royalactin acting on an insect signalling pathway. The leap from that to human health claims is unsupported.',
+    safety: 'The main issue is allergy rather than efficacy: royal jelly and bee pollen have caused anaphylaxis and severe asthma, particularly in people with existing pollen or bee-sting allergy, and there have been deaths.',
+    interactions: 'Possible increased bleeding risk with warfarin.',
+    warning: true
+  },
+
   // ================= Safety entries ======================================
   {
     slug: 'licorice',
