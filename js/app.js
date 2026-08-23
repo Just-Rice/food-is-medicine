@@ -786,32 +786,45 @@
       '<div class="field-row">' +
       '<div class="field"><label for="wGoal">' + esc(t('goal')) + '</label>' +
       '<select id="wGoal">' +
-      ['lose', 'maintain', 'gain'].map(function (g) {
+      ['lose', 'maintain', 'gain', 'recomp'].map(function (g) {
         return '<option value="' + g + '"' + (planState.goal === g ? ' selected' : '') + '>' +
           esc(t(g)) + '</option>';
-      }).join('') + '</select></div>' +
-      '<div class="field"><label for="wTarget">' + esc(t('target_weight')) + ' (kg)</label>' +
-      '<input id="wTarget" type="number" min="25" max="400" step="0.5" value="' +
-      esc(planState.targetKg) + '"></div>' +
-      '<div class="field"><label for="wRate">' + esc(t('rate')) + ' (kg/' + esc(t('weeks').slice(0, 4)) + ')</label>' +
-      '<select id="wRate">' +
-      [0.25, 0.5, 0.75, 1].map(function (r) {
-        return '<option value="' + r + '"' + (planState.rate === r ? ' selected' : '') + '>' +
-          r + ' kg</option>';
-      }).join('') + '</select></div></div></div>' +
+      }).join('') + '</select>' +
+      (planState.goal === 'recomp'
+        ? '<span class="hint">' + esc(t('recomp_hint')) + '</span>' : '') + '</div>' +
+      (planState.goal === 'recomp' || planState.goal === 'maintain' ? '' :
+        '<div class="field"><label for="wTarget">' + esc(t('target_weight')) + ' (kg)</label>' +
+        '<input id="wTarget" type="number" min="25" max="400" step="0.5" value="' +
+        esc(planState.targetKg) + '"></div>' +
+        '<div class="field"><label for="wRate">' + esc(t('rate')) + ' (kg/' + esc(t('weeks').slice(0, 4)) + ')</label>' +
+        '<select id="wRate">' +
+        [0.25, 0.5, 0.75, 1].map(function (r) {
+          return '<option value="' + r + '"' + (planState.rate === r ? ' selected' : '') + '>' +
+            r + ' kg</option>';
+        }).join('') + '</select></div>') + '</div></div>' +
 
       '<div id="weightResults"></div>';
 
-    function sync() {
-      planState.goal = document.getElementById('wGoal').value;
-      planState.targetKg = Number(document.getElementById('wTarget').value);
-      planState.rate = Number(document.getElementById('wRate').value);
+    function sync(rerenderForm) {
+      var goalEl = document.getElementById('wGoal');
+      var targetEl = document.getElementById('wTarget');
+      var rateEl = document.getElementById('wRate');
+      var prevGoal = planState.goal;
+      planState.goal = goalEl.value;
+      if (targetEl) planState.targetKg = Number(targetEl.value);
+      if (rateEl) planState.rate = Number(rateEl.value);
+      // Switching goal changes which fields exist, so rebuild the form.
+      if (rerenderForm && planState.goal !== prevGoal) { viewWeight(); return; }
       paint();
     }
-    ['wGoal', 'wTarget', 'wRate'].forEach(function (id) {
-      document.getElementById(id).addEventListener('change', sync);
+    document.getElementById('wGoal').addEventListener('change', function () { sync(true); });
+    ['wTarget', 'wRate'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) {
+        el.addEventListener('change', function () { sync(false); });
+        el.addEventListener('input', function () { sync(false); });
+      }
     });
-    document.getElementById('wTarget').addEventListener('input', sync);
     paint();
 
     function paint() {
@@ -819,11 +832,23 @@
         goal: planState.goal, targetKg: planState.targetKg, rateKgWeek: planState.rate
       });
       var maintain = planState.goal === 'maintain';
+      var recomp = planState.goal === 'recomp';
 
       document.getElementById('weightResults').innerHTML =
         r.warnings.filter(function (w) { return w.level === 'danger'; }).map(warnBlock).join('') +
 
-        (r.blocked ? '' :
+        (r.blocked || !recomp ? '' :
+          '<div class="energy-row">' +
+          '<div class="macro"><div class="v">' + r.targetIntake + '<span class="u"> kcal</span></div>' +
+          '<div class="l">' + esc(t('target_intake')) + '</div></div>' +
+          '<div class="macro"><div class="v">' + r.proteinLow + '–' + r.proteinHigh +
+          '<span class="u"> g</span></div>' +
+          '<div class="l">' + esc(t('protein_target')) + '</div></div>' +
+          '<div class="macro"><div class="v" style="font-size:1rem;line-height:1.35">' +
+          esc(t('resistance_needed')) + '</div>' +
+          '<div class="l">' + esc(t('training')) + '</div></div></div>') +
+
+        (r.blocked || recomp ? '' :
           '<div class="energy-row">' +
           '<div class="macro"><div class="v">' + r.tdee + '<span class="u"> kcal</span></div>' +
           '<div class="l">' + esc(t('daily_total')) + '</div></div>' +
@@ -843,8 +868,9 @@
         '<div class="energy-row">' +
         '<div class="macro"><div class="v">' + r.currentBmi + '</div>' +
         '<div class="l">' + esc(t('current_bmi')) + '</div></div>' +
-        '<div class="macro"><div class="v">' + r.targetBmi + '</div>' +
-        '<div class="l">' + esc(t('goal_bmi')) + '</div></div>' +
+        (recomp || maintain ? '' :
+          '<div class="macro"><div class="v">' + r.targetBmi + '</div>' +
+          '<div class="l">' + esc(t('goal_bmi')) + '</div></div>') +
         '<div class="macro"><div class="v">' + r.healthyMin + '–' + r.healthyMax +
         '<span class="u"> kg</span></div>' +
         '<div class="l">Healthy range for your height</div></div></div>' +
@@ -862,6 +888,16 @@
         '<a href="#/sources#src-who_bmi">WHO</a>. For a projection that models the slowdown ' +
         'properly rather than assuming a straight line, use the ' +
         '<a href="#/sources#src-nih_bwp">NIH Body Weight Planner</a>. ' + englishMark() + '</p>' +
+        (recomp
+          ? '<p>The redistribution figures come from a different literature. The protein ' +
+            'range is where <a href="#/sources#src-morton_protein">supplementation trials</a> ' +
+            'stop showing added benefit; the claim that fat loss and muscle gain can happen ' +
+            'together rests on <a href="#/sources#src-barakat_recomp">a review of the ' +
+            'evidence</a> and on <a href="#/sources#src-longland_recomp">a controlled trial</a> ' +
+            'in which men in a real energy deficit still gained lean mass on high protein with ' +
+            'resistance training. The small deficit shown is a starting point, not the ' +
+            'mechanism — protein and training are. ' + englishMark() + '</p>'
+          : '') +
         '<p>This page deliberately does not produce a meal plan, a macro split or a food list ' +
         'to follow. It tells you the size of the gap and how fast the evidence says you can ' +
         'safely close it; what you eat to get there is a conversation for you and, if the ' +

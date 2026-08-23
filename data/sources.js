@@ -185,6 +185,23 @@ window.SOURCES = {
   },
 
   // ---- Weight and body composition ---------------------------------------
+  barakat_recomp: {
+    tier: 'systematic',
+    title: 'Body recomposition: can trained individuals build muscle and lose fat at the same time?',
+    org: 'Barakat C, Pearson J, Escalante G, Campbell B, De Souza EO. Strength Cond J 2020;42(5):7-21',
+    year: 2020,
+    url: 'https://doi.org/10.1519/SSC.0000000000000584',
+    note: 'The standard review of simultaneous fat loss and muscle gain. It concludes recomposition is real and best documented in people who are new to training, returning after a break, or carrying more body fat — and that it depends on adequate protein and resistance training rather than on any particular calorie deficit.'
+  },
+  longland_recomp: {
+    tier: 'trial',
+    title: 'Higher compared with lower dietary protein during an energy deficit combined with intense exercise promotes greater lean mass gain and fat mass loss',
+    org: 'Longland TM, Oikawa SY, Mitchell CJ, Devries MC, Phillips SM. Am J Clin Nutr 2016;103(3):738-46',
+    year: 2016,
+    url: 'https://doi.org/10.3945/ajcn.115.119339',
+    note: 'A controlled feeding trial in which young men in a substantial energy deficit still gained lean mass on 2.4 g of protein per kg per day with resistance and interval training, while a 1.2 g/kg group did not. Direct evidence that the scale can stay still while body composition changes underneath it.'
+  },
+
   hall_dynamics: {
     tier: 'systematic',
     title: 'Quantification of the effect of energy imbalance on bodyweight',

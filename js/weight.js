@@ -71,6 +71,56 @@
       blocked: false
     };
 
+    // Redistribution ("body recomposition"): losing fat and gaining muscle at
+    // roughly stable weight. It is handled separately because the whole point
+    // is that the scale is the wrong instrument -- there is no weekly target to
+    // hit and no time-to-goal to quote, so quoting one would be dishonest.
+    if (plan.goal === 'recomp') {
+      result.dailyAdjust = -200;
+      result.targetIntake = tdee - 200;
+      result.weeklyChange = 0;
+      result.weeks = null;
+      result.targetBmi = result.currentBmi;
+      // Protein does the work here. 1.6 g/kg is where supplementation trials
+      // stop showing added benefit; the higher end suits a deficit.
+      result.proteinLow = Math.round(1.6 * profile.weightKg);
+      result.proteinHigh = Math.round(2.2 * profile.weightKg);
+      result.recomp = true;
+
+      if (currentBmi < 18.5) {
+        result.warnings.push({
+          level: 'danger',
+          title: 'Build first, redistribute later',
+          body: 'At a BMI of ' + result.currentBmi + ' you are below a healthy weight, and ' +
+                'a deficit of any size is the wrong starting point. Gaining weight with ' +
+                'resistance training and enough protein will change your body composition ' +
+                'more effectively than trying to hold weight steady, and it is safer. ' +
+                'Please talk to a doctor before restricting intake at this weight.'
+        });
+        result.blocked = true;
+      }
+
+      result.warnings.push({
+        level: 'info',
+        title: 'What recomposition actually requires',
+        body: 'Two things do nearly all the work: resistance training at least three days a ' +
+              'week, and protein of roughly ' + result.proteinLow + '–' + result.proteinHigh +
+              ' g a day. Calories matter less than either. Effects are clearest in people new ' +
+              'to training, returning after a break, or carrying more body fat; in already-lean ' +
+              'trained people progress is slow and small.'
+      });
+      result.warnings.push({
+        level: 'info',
+        title: 'The scale will mislead you here',
+        body: 'That is the point of choosing this goal: fat lost and muscle gained can cancel ' +
+              'out almost exactly, so body weight and BMI can sit still for months while your ' +
+              'body composition changes substantially. Track how clothes fit, waist ' +
+              'circumference, and what you can lift instead. Expect months, not weeks.'
+      });
+      addUniversalWarnings(result, profile);
+      return result;
+    }
+
     if (plan.goal === 'maintain') {
       result.dailyAdjust = 0;
       result.targetIntake = tdee;

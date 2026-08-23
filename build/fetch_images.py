@@ -88,6 +88,70 @@ GROUP_HINT = {
 }
 
 
+# Exact Commons filenames, curated where the generic lookup returned the wrong
+# subject. The recurring failure is that an encyclopedia article about an animal
+# leads with a photo of the live animal: "Duck egg" resolved to a roast duck,
+# "Chicken breast" to hens in a market. For a food reference the food itself is
+# what belongs on the page.
+CURATED_FILE = {
+    # eggs
+    'chickenegg': 'Brown-eggs.jpg',
+    'duckegg': 'Duck Egg (4055112201).jpg',
+    'quailegg': 'Jiro with quail eggs.jpg',
+    # poultry cuts
+    'chickenbreast': 'Kycklingfilé.jpg',
+    'chickenthigh': 'Raw chicken thighs.jpg',
+    'chickendrumstick': 'Raw chicken drumsticks (3312851753).jpg',
+    'chickenwing': 'Raw chicken wings.jpg',
+    'squab': 'Trussed Squab (7276586328).jpg',
+    'ostrich': 'Straußensteak.JPG',
+    # offal
+    'chickenliver': 'Preparing Chicken Liver 01.JPG',
+    'tongue': 'Beef tongue preparation.jpg',
+    'brain': 'Calf Brains.jpg',
+    'marrow': 'Roast Bone Marrow & Parsley Salad (3512154149).jpg',
+    'sweetbread': 'Cut of veal sweetbreads.png',
+    # meat
+    'lambchop': 'Lamb Chops.JPG',
+    'elk': 'Grilled Elk rib chops-01.jpg',
+    # dairy and fats
+    'ghee': 'Clarified-butter.jpg',
+    'muenster': 'Munster 01.jpg',
+    'paneer': 'Homemade Paneer Block Fromage Cheese India.jpg',
+    # fish
+    'coho': 'Young Coho Salmon Oncorhynchus kisutch.jpg',
+    'snapper': 'Lutjanus campechanus.png',
+    # plants
+    'peanut': 'Raw peanuts with skin on white plate.jpg',
+    'cannellini': 'Dried sorana beans.jpg',
+    'adzuki': 'HK 紅豆 Red Adzuki beans with water June 2019 SSG 02.jpg',
+    'watermelonseed': 'Char Magaz.JPG',
+    'beechnut': 'Opengebarsten vrucht van beuk (Fagus sylvatica) (d.j.b) 02.jpg',
+    'waterchestnut': 'Eleocharis dulcis Blanco1.15.jpg',
+    'yam': 'Dioscorea alata - Purple yam tuber - Mindanao, Philippines.jpg',
+    'asparagus': 'Asparagus-Bundle.jpg',
+    'fennel': 'Cut Fennel bulb 01.jpg',
+    'fonio': 'Fonio Grains (Digitaria Exilis).jpg',
+    'peach': 'Owoce Brzoskwinia.jpg',
+    'plum': 'Prunus domestica ripe fruits.jpg',
+    'fig': 'Figo comum.jpg',
+    # meat cuts whose article leads with the live animal
+    'veal': 'A tray of breaded veal cutlets.jpg',
+    'porkshoulder': 'Boston butt , boneless, tied.jpg',
+    'groundlamb': 'Kibbeh Nayyeh.jpg',
+    'lambshank': 'Lammhaxe mit Kloß Bischofsmühle.jpg',
+    'wheyacid': 'Whey powder.jpg',
+}
+
+# Foods for which Commons has no photograph that is actually of the food. The
+# lookup would otherwise settle on something confidently wrong -- ground turkey
+# resolved to a tin of cat food, acid whey to a scan of a 1920s dairy-board
+# report. A blank tile is honest; a picture of the wrong thing is not.
+NO_IMAGE = {
+    'groundturkey', 'gooseegg', 'clam', 'seabass', 'butter', 'buttersalted',
+}
+
+
 def get(url, params):
     q = urllib.parse.urlencode(params)
     req = urllib.request.Request(url + '?' + q, headers={'User-Agent': UA})
@@ -141,6 +205,45 @@ def image_from_search(term):
     return None, None
 
 
+
+def thumb_for_file(filename, width=400):
+    """Thumbnail URL for an exact Commons filename."""
+    try:
+        d = get(COMMONS, {
+            'action': 'query', 'format': 'json', 'formatversion': '2',
+            'titles': 'File:' + filename, 'prop': 'imageinfo',
+            'iiprop': 'url', 'iiurlwidth': str(width),
+        })
+        page = d['query']['pages'][0]
+        if page.get('missing'):
+            return None
+        return page['imageinfo'][0].get('thumburl') or page['imageinfo'][0].get('url')
+    except Exception:
+        return None
+
+
+def image_from_commons(term):
+    """Search Commons' File namespace directly. More precise than an article
+    lookup for foods that share a name with the animal or plant they come from."""
+    try:
+        d = get(COMMONS, {
+            'action': 'query', 'format': 'json', 'formatversion': '2',
+            'generator': 'search', 'gsrsearch': 'filetype:bitmap ' + term,
+            'gsrnamespace': '6', 'gsrlimit': '5',
+            'prop': 'imageinfo', 'iiprop': 'url', 'iiurlwidth': '400',
+        })
+        out = []
+        for page in (d.get('query', {}).get('pages') or []):
+            info = (page.get('imageinfo') or [{}])[0]
+            url = info.get('thumburl') or info.get('url')
+            name = page.get('title', '')[5:]
+            if url and name and not name.lower().endswith('.svg'):
+                out.append((name, url))
+        return out
+    except Exception:
+        return []
+
+
 def credit(filename):
     """Author and licence for a Commons file, for the attribution manifest."""
     try:
@@ -166,6 +269,10 @@ def main():
     limit = None
     if '--limit' in sys.argv:
         limit = int(sys.argv[sys.argv.index('--limit') + 1])
+    only = None
+    if '--only' in sys.argv:
+        only = set(sys.argv[sys.argv.index('--only') + 1].split(','))
+    refetch = '--refetch' in sys.argv
 
     src = open(os.path.join(ROOT, 'data', 'foods.js')).read()
     foods = json.loads(src[src.index('['):src.rindex(';')])
@@ -176,44 +283,107 @@ def main():
         m = open(MANIFEST).read()
         manifest = json.loads(m[m.index('{'):m.rindex(';')])
 
-    todo = [f for f in foods
-            if f['slug'] not in manifest
-            or not os.path.exists(os.path.join(IMG_DIR, f['slug'] + '.jpg'))]
+    # No two foods may share a photograph. A repeated image reads as an error
+    # even when it is technically of the right subject -- and in practice a
+    # repeat usually means the lookup fell back to something generic.
+    def claimed(skip_slug=None):
+        return {v.get('file') for k, v in manifest.items()
+                if k != skip_slug and v.get('file')}
+
+    if only:
+        todo = [f for f in foods if f['slug'] in only]
+    elif refetch:
+        todo = foods
+    else:
+        todo = [f for f in foods
+                if f['slug'] not in manifest
+                or not os.path.exists(os.path.join(IMG_DIR, f['slug'] + '.jpg'))]
     if limit:
         todo = todo[:limit]
-    print('%d foods need an image' % len(todo))
+    print('%d foods to process' % len(todo))
 
     for i, food in enumerate(todo):
-        base = QUERY_OVERRIDES.get(food['slug'], food['name'])
+        slug = food['slug']
+        if slug in NO_IMAGE:
+            manifest.pop(slug, None)
+            path = os.path.join(IMG_DIR, slug + '.jpg')
+            if os.path.exists(path):
+                os.remove(path)
+            print('  [%d/%d] %s -- no accurate photo exists, placeholder' % (i + 1, len(todo), slug))
+            continue
+        used = claimed(skip_slug=slug)
+        candidates = []
+
+        # 1. A hand-curated exact file always wins.
+        if slug in CURATED_FILE:
+            name = CURATED_FILE[slug]
+            url = thumb_for_file(name)
+            if url:
+                candidates.append((name, url))
+
+        base = QUERY_OVERRIDES.get(slug, food['name'])
         base = re.sub(r'\s*\([^)]*\)', '', base).strip()
         hint = GROUP_HINT.get(food['group'], '')
-        # Exact article titles first, most specific to least; then a search.
-        candidates = [base, '%s (%s)' % (base, hint.split()[0])] if hint else [base]
-        name, thumb = image_from_titles(candidates)
-        if not thumb:
-            name, thumb = image_from_search((base + ' ' + hint).strip())
-        term = base
-        if not thumb:
-            print('  no image: %s (%s)' % (food['slug'], term))
+
+        # 2. Exact encyclopedia article titles.
+        if not candidates:
+            titles = [base, '%s (%s)' % (base, hint.split()[0])] if hint else [base]
+            name, url = image_from_titles(titles)
+            if url:
+                candidates.append((name, url))
+
+        # 3. Commons File-namespace search, which knows about food photographs
+        #    rather than about the animal an article happens to be named for.
+        if not candidates or candidates[0][0] in used:
+            candidates.extend(image_from_commons((base + ' ' + hint).strip()))
+
+        # 4. Last resort: a plain article search.
+        if not candidates:
+            name, url = image_from_search((base + ' ' + hint).strip())
+            if url:
+                candidates.append((name, url))
+
+        pick = next(((n, u) for n, u in candidates if n not in used), None)
+        if not pick:
+            # Better an honest placeholder than a picture of the wrong thing.
+            print('  [%d/%d] %s -- NO UNIQUE IMAGE, leaving placeholder' % (i + 1, len(todo), slug))
+            manifest.pop(slug, None)
+            path = os.path.join(IMG_DIR, slug + '.jpg')
+            if os.path.exists(path):
+                os.remove(path)
             continue
+
+        name, url = pick
         try:
-            req = urllib.request.Request(thumb, headers={'User-Agent': UA})
+            req = urllib.request.Request(url, headers={'User-Agent': UA})
             with urllib.request.urlopen(req, timeout=30) as r:
                 data = r.read()
-            with open(os.path.join(IMG_DIR, food['slug'] + '.jpg'), 'wb') as fh:
+            with open(os.path.join(IMG_DIR, slug + '.jpg'), 'wb') as fh:
                 fh.write(data)
-            manifest[food['slug']] = credit(name)
-            manifest[food['slug']]['file'] = name
-            print('  [%d/%d] %s <- %s' % (i + 1, len(todo), food['slug'], name[:50]))
+            manifest[slug] = credit(name)
+            manifest[slug]['file'] = name
+            print('  [%d/%d] %s <- %s' % (i + 1, len(todo), slug, name[:56]))
         except Exception as e:
-            print('  failed %s: %s' % (food['slug'], e))
+            print('  failed %s: %s' % (slug, e))
         time.sleep(0.12)
 
         if (i + 1) % 25 == 0:
             write_manifest(manifest)
 
     write_manifest(manifest)
+
+    # Report anything that ended up shared, which should now be impossible.
+    seen = {}
+    for slug, cr in manifest.items():
+        seen.setdefault(cr.get('file'), []).append(slug)
+    dupes = {f: s for f, s in seen.items() if len(s) > 1}
     print('manifest holds %d images' % len(manifest))
+    if dupes:
+        print('DUPLICATES:', dupes)
+    missing = [f['slug'] for f in foods if f['slug'] not in manifest]
+    if missing:
+        print('%d foods without an image (placeholder shown): %s'
+              % (len(missing), ', '.join(missing)))
 
 
 def write_manifest(manifest):

@@ -92,7 +92,7 @@
       resting: 'Resting (BMR)', daily_total: 'Daily total', bmi: 'BMI',
       privacy_note: '<strong>This stays on your device.</strong> Your details are saved in this browser’s local storage and are never uploaded, transmitted or shared. Clearing them below removes them completely.',
 
-      settings_title: 'Settings & accessibility',
+      settings_title: 'Settings & Accessibility',
       language: 'Language', appearance: 'Appearance',
       theme_light: 'Light', theme_dark: 'Dark', theme_system: 'Match system',
       high_contrast: 'High contrast',
@@ -121,6 +121,10 @@
       weekly_target: 'Weekly change', daily_adjust: 'Daily calorie adjustment',
       target_intake: 'Target daily intake', time_to_goal: 'Estimated time',
       weeks: 'weeks', current_bmi: 'Current BMI', goal_bmi: 'BMI at target weight',
+      recomp: 'Redistribute weight',
+      recomp_hint: 'Lose fat and gain muscle at roughly the same body weight',
+      protein_target: 'Protein target', training: 'Training',
+      resistance_needed: 'Resistance training, 3+ days a week',
 
       sources_title: 'Sources',
       untranslated: 'Shown in English',
@@ -222,6 +226,10 @@
       weekly_target: 'Cambio semanal', daily_adjust: 'Ajuste calórico diario',
       target_intake: 'Ingesta diaria objetivo', time_to_goal: 'Tiempo estimado',
       weeks: 'semanas', current_bmi: 'IMC actual', goal_bmi: 'IMC al peso objetivo',
+      recomp: 'Redistribuir el peso',
+      recomp_hint: 'Perder grasa y ganar músculo manteniendo más o menos el mismo peso',
+      protein_target: 'Objetivo de proteínas', training: 'Entrenamiento',
+      resistance_needed: 'Entrenamiento de fuerza, 3 o más días por semana',
 
       sources_title: 'Fuentes',
       untranslated: 'En inglés',
@@ -323,6 +331,10 @@
       weekly_target: 'साप्ताहिक बदलाव', daily_adjust: 'दैनिक कैलोरी समायोजन',
       target_intake: 'लक्षित दैनिक कैलोरी', time_to_goal: 'अनुमानित समय',
       weeks: 'सप्ताह', current_bmi: 'वर्तमान BMI', goal_bmi: 'लक्षित वज़न पर BMI',
+      recomp: 'शरीर की संरचना बदलना',
+      recomp_hint: 'वज़न लगभग वही रखते हुए चर्बी घटाना और मांसपेशी बढ़ाना',
+      protein_target: 'प्रोटीन लक्ष्य', training: 'व्यायाम',
+      resistance_needed: 'भार-प्रतिरोध व्यायाम, सप्ताह में कम से कम 3 दिन',
 
       sources_title: 'स्रोत',
       untranslated: 'अंग्रेज़ी में',
@@ -424,6 +436,10 @@
       weekly_target: 'ವಾರದ ಬದಲಾವಣೆ', daily_adjust: 'ದೈನಂದಿನ ಕ್ಯಾಲೊರಿ ಹೊಂದಾಣಿಕೆ',
       target_intake: 'ಗುರಿ ದೈನಂದಿನ ಸೇವನೆ', time_to_goal: 'ಅಂದಾಜು ಸಮಯ',
       weeks: 'ವಾರಗಳು', current_bmi: 'ಈಗಿನ BMI', goal_bmi: 'ಗುರಿ ತೂಕದಲ್ಲಿ BMI',
+      recomp: 'ದೇಹ ರಚನೆ ಬದಲಾಯಿಸುವುದು',
+      recomp_hint: 'ತೂಕ ಸುಮಾರು ಅಷ್ಟೇ ಇರಿಸಿಕೊಂಡು ಕೊಬ್ಬು ಕಡಿಮೆ ಮಾಡಿ ಸ್ನಾಯು ಹೆಚ್ಚಿಸುವುದು',
+      protein_target: 'ಪ್ರೋಟೀನ್ ಗುರಿ', training: 'ವ್ಯಾಯಾಮ',
+      resistance_needed: 'ಭಾರ ಎತ್ತುವ ವ್ಯಾಯಾಮ, ವಾರಕ್ಕೆ ಕನಿಷ್ಠ 3 ದಿನ',
 
       sources_title: 'ಆಕರಗಳು',
       untranslated: 'ಇಂಗ್ಲಿಷ್‌ನಲ್ಲಿ',
