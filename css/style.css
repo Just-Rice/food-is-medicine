@@ -619,3 +619,18 @@ table.nutrients .dri-type {
   font-size: .68rem; color: var(--ink-faint); font-weight: 600; margin-left: 5px;
   letter-spacing: .03em;
 }
+
+/* ---- Support signpost and the percentile disclosure -------------------- */
+.note.support {
+  background: var(--accent-wash);
+  border-left: 3px solid var(--accent);
+}
+.note.support p:last-child { font-size: .86rem; }
+
+.reveal-card {
+  display: flex; gap: 16px; align-items: center; justify-content: space-between;
+  flex-wrap: wrap;
+}
+.reveal-card > div { flex: 1 1 260px; }
+.reveal-card .hint { margin: 4px 0 0; max-width: 60ch; }
+.reveal-card .btn { flex: none; }

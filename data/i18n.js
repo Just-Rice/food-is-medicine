@@ -129,6 +129,14 @@
       sources_title: 'Sources',
       untranslated: 'Shown in English',
       untranslated_hint: 'Detailed medical text is kept in English rather than machine translated, because a subtly wrong drug-interaction warning is more dangerous than one you have to read in a second language.',
+      growing_title: 'Growing and eating well',
+      bmi_for_age: 'BMI-for-age percentile',
+      percentile_of: '{n}th percentile for age {age}',
+      show_percentile: 'Show my BMI-for-age percentile',
+      hide_percentile: 'Hide it again',
+      ed_help: 'If food or your body feels like it is taking up too much of your thinking, that is worth talking to someone about. It is common, it is treatable, and asking early makes it easier.',
+      ed_help_link: 'What eating disorders are, and how to get help',
+      under18_title: 'These calculations are for adults',
       not_medical_advice: 'This site is not medical advice.'
     },
 
@@ -234,6 +242,14 @@
       sources_title: 'Fuentes',
       untranslated: 'En inglés',
       untranslated_hint: 'El texto médico detallado se mantiene en inglés en vez de traducirse automáticamente, porque una advertencia sobre interacciones farmacológicas mal traducida es más peligrosa que una que haya que leer en otro idioma.',
+      growing_title: 'Crecer y comer bien',
+      bmi_for_age: 'Percentil de IMC para la edad',
+      percentile_of: 'percentil {n} para {age} años',
+      show_percentile: 'Ver mi percentil de IMC para la edad',
+      hide_percentile: 'Ocultarlo',
+      ed_help: 'Si la comida o tu cuerpo ocupan demasiado espacio en tu cabeza, merece la pena hablarlo con alguien. Es frecuente, tiene tratamiento, y pedir ayuda pronto lo hace más fácil.',
+      ed_help_link: 'Qué son los trastornos alimentarios y cómo pedir ayuda',
+      under18_title: 'Estos cálculos son para personas adultas',
       not_medical_advice: 'Este sitio no es consejo médico.'
     },
 
@@ -339,6 +355,14 @@
       sources_title: 'स्रोत',
       untranslated: 'अंग्रेज़ी में',
       untranslated_hint: 'विस्तृत चिकित्सा-संबंधी पाठ मशीन से अनुवाद करने के बजाय अंग्रेज़ी में ही रखा गया है, क्योंकि दवा-प्रतिक्रिया की थोड़ी-सी ग़लत चेतावनी उस चेतावनी से अधिक ख़तरनाक है जिसे दूसरी भाषा में पढ़ना पड़े।',
+      growing_title: 'बढ़ती उम्र और अच्छा खानपान',
+      bmi_for_age: 'उम्र के अनुसार BMI पर्सेंटाइल',
+      percentile_of: '{age} वर्ष की उम्र के लिए {n}वाँ पर्सेंटाइल',
+      show_percentile: 'उम्र के अनुसार मेरा BMI पर्सेंटाइल देखें',
+      hide_percentile: 'इसे छिपाएँ',
+      ed_help: 'अगर खाना या अपना शरीर आपके मन में ज़रूरत से ज़्यादा जगह लेने लगे, तो इस बारे में किसी से बात करना ज़रूरी है। यह आम बात है, इसका इलाज होता है, और जल्दी बात करने से यह आसान हो जाता है।',
+      ed_help_link: 'खान-पान संबंधी विकार क्या हैं और मदद कैसे लें',
+      under18_title: 'ये गणनाएँ वयस्कों के लिए हैं',
       not_medical_advice: 'यह साइट चिकित्सकीय सलाह नहीं है।'
     },
 
@@ -444,6 +468,14 @@
       sources_title: 'ಆಕರಗಳು',
       untranslated: 'ಇಂಗ್ಲಿಷ್‌ನಲ್ಲಿ',
       untranslated_hint: 'ವಿವರವಾದ ವೈದ್ಯಕೀಯ ಪಠ್ಯವನ್ನು ಯಂತ್ರಾನುವಾದ ಮಾಡದೆ ಇಂಗ್ಲಿಷ್‌ನಲ್ಲೇ ಇಡಲಾಗಿದೆ. ಔಷಧ ಪ್ರತಿಕ್ರಿಯೆಯ ಎಚ್ಚರಿಕೆ ಸ್ವಲ್ಪವೇ ತಪ್ಪಾದರೂ ಅದು ಬೇರೆ ಭಾಷೆಯಲ್ಲಿ ಓದಬೇಕಾದ ಎಚ್ಚರಿಕೆಗಿಂತ ಹೆಚ್ಚು ಅಪಾಯಕಾರಿ.',
+      growing_title: 'ಬೆಳವಣಿಗೆ ಮತ್ತು ಉತ್ತಮ ಆಹಾರ',
+      bmi_for_age: 'ವಯಸ್ಸಿಗೆ ತಕ್ಕ BMI ಶೇಕಡಾಸ್ಥಾನ',
+      percentile_of: '{age} ವರ್ಷಕ್ಕೆ {n}ನೇ ಶೇಕಡಾಸ್ಥಾನ',
+      show_percentile: 'ವಯಸ್ಸಿಗೆ ತಕ್ಕ ನನ್ನ BMI ಶೇಕಡಾಸ್ಥಾನ ತೋರಿಸಿ',
+      hide_percentile: 'ಮರೆಮಾಡಿ',
+      ed_help: 'ಆಹಾರ ಅಥವಾ ನಿಮ್ಮ ದೇಹ ನಿಮ್ಮ ಮನಸ್ಸಿನಲ್ಲಿ ಅಗತ್ಯಕ್ಕಿಂತ ಹೆಚ್ಚು ಜಾಗ ಆಕ್ರಮಿಸುತ್ತಿದೆ ಎನಿಸಿದರೆ, ಅದನ್ನು ಯಾರೊಂದಿಗಾದರೂ ಮಾತನಾಡುವುದು ಒಳ್ಳೆಯದು. ಇದು ಸಾಮಾನ್ಯ, ಇದಕ್ಕೆ ಚಿಕಿತ್ಸೆ ಇದೆ, ಮತ್ತು ಬೇಗ ಕೇಳಿದರೆ ಸುಲಭವಾಗುತ್ತದೆ.',
+      ed_help_link: 'ಆಹಾರ ಸಂಬಂಧಿ ಅಸ್ವಸ್ಥತೆಗಳು ಏನು ಮತ್ತು ಸಹಾಯ ಹೇಗೆ ಪಡೆಯುವುದು',
+      under18_title: 'ಈ ಲೆಕ್ಕಾಚಾರಗಳು ವಯಸ್ಕರಿಗಾಗಿ',
       not_medical_advice: 'ಈ ತಾಣ ವೈದ್ಯಕೀಯ ಸಲಹೆಯಲ್ಲ.'
     }
   };

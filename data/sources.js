@@ -184,6 +184,40 @@ window.SOURCES = {
     note: 'The basis for the standing advice that pregnant women avoid liver and liver products: a single serving can contain several times the daily upper limit of preformed vitamin A, which causes birth defects.'
   },
 
+  // ---- Children and adolescents ------------------------------------------
+  aap_prevention: {
+    tier: 'guideline',
+    title: 'Preventing Obesity and Eating Disorders in Adolescents',
+    org: 'Golden NH, Schneider M, Wood C; AAP Committee on Nutrition. Pediatrics 2016;138(3):e20161649 (reaffirmed 2022)',
+    year: 2016,
+    url: 'https://doi.org/10.1542/peds.2016-1649',
+    note: 'The reason this site will not calculate a calorie deficit for anyone under 18. The AAP advises clinicians and families to discourage dieting outright, and not to talk about weight at all with adolescents, but about eating and activity instead — because weight talk is associated with higher risk of both obesity and eating disorders. Encouraging a teenager to diet is one of the few interventions here with evidence of harm.'
+  },
+  aap_ed: {
+    tier: 'guideline',
+    title: 'Identification and Management of Eating Disorders in Children and Adolescents',
+    org: 'Hornberger LL, Lane MA; AAP Committee on Adolescence. Pediatrics 2021;147(1):e2020040279',
+    year: 2021,
+    url: 'https://doi.org/10.1542/peds.2020-040279',
+    note: 'Eating disorders have among the highest mortality of any mental illness, and dieting is the single most common precipitant. Early identification substantially improves outcomes, which is why this site signposts rather than staying silent.'
+  },
+  cdc_growth: {
+    tier: 'government',
+    title: 'CDC Growth Charts: BMI-for-age percentile data files with LMS values',
+    org: 'U.S. Centers for Disease Control and Prevention, National Center for Health Statistics',
+    year: 2022,
+    url: 'https://www.cdc.gov/growthcharts/cdc-data-files.htm',
+    note: 'The source of every percentile this site shows for anyone under 20, computed offline from the published L, M and S parameters. A healthy BMI changes month by month during growth: 17 is unremarkable at six and underweight at sixteen, so a single adult threshold cannot work.'
+  },
+  nimh_ed: {
+    tier: 'government',
+    title: 'Eating Disorders — what they are, and how to get help',
+    org: 'NIH National Institute of Mental Health',
+    year: 2024,
+    url: 'https://www.nimh.nih.gov/health/topics/eating-disorders',
+    note: 'A plain, non-commercial overview with routes to help. Linked from this site wherever weight or restriction is discussed.'
+  },
+
   // ---- Weight and body composition ---------------------------------------
   barakat_recomp: {
     tier: 'systematic',

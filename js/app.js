@@ -111,6 +111,58 @@
       'loading="lazy" decoding="async">';
   }
 
+  // BMI-for-age for anyone under 20. The number sits behind a deliberate click:
+  // AAP guidance is to avoid weight-focused talk with young people, so showing
+  // a body figure unprompted to a 13-year-old is the wrong default. Someone who
+  // wants it can have it, with the context that makes it meaningful.
+  var showPercentile = false;
+
+  function bmiForAgeBlock(prof) {
+    if (!window.Growth.applies(prof.age)) return '';
+    var bmi = Profile.bmi();
+    var r = window.Growth.percentile(bmi, prof.age, prof.sex);
+    if (!r) return '';
+
+    if (!showPercentile) {
+      return '<div class="card pad reveal-card">' +
+        '<div><strong>' + esc(t('bmi_for_age')) + '</strong>' +
+        '<p class="hint">Adult BMI categories do not apply under 20 \u2014 a healthy BMI ' +
+        'changes as you grow. Percentiles compare you with others of the same age and sex.</p></div>' +
+        '<button class="btn ghost" type="button" id="revealPct">' +
+        esc(t('show_percentile')) + '</button></div>';
+    }
+
+    return '<div class="card pad">' +
+      '<div class="energy-row" style="margin:0 0 14px">' +
+      '<div class="macro"><div class="v">' + r.percentile + '<span class="u">th</span></div>' +
+      '<div class="l">' + esc(t('bmi_for_age')) + '</div></div>' +
+      '<div class="macro"><div class="v">' + fmt(bmi) + '</div>' +
+      '<div class="l">' + esc(t('bmi')) + '</div></div>' +
+      '<div class="macro"><div class="v">' + r.median + '</div>' +
+      '<div class="l">Median at age ' + esc(prof.age) + '</div></div></div>' +
+      '<p><strong>' + esc(r.band.label) + '</strong> by the ' +
+      '<a href="#/sources#src-cdc_growth">CDC growth charts</a>. ' + englishMark() + '</p>' +
+      '<p class="hint">A percentile is a comparison, not a verdict. It says where you sit ' +
+      'among people of your age and sex \u2014 half of perfectly healthy children are below ' +
+      'the 50th by definition. It cannot tell muscle from fat, it does not account for when ' +
+      'puberty started, and one reading says far less than the direction of travel over a ' +
+      'year. If it worries you, the person to show it to is a doctor, who can put it next to ' +
+      'your growth history.</p>' +
+      '<button class="btn ghost" type="button" id="hidePct">' + esc(t('hide_percentile')) +
+      '</button></div>';
+  }
+
+  // Shown wherever the site touches weight, restriction or body composition.
+  // Dieting is the commonest precipitant of eating disorders and they carry
+  // among the highest mortality of any mental illness, so a page that discusses
+  // deficits should not be silent about that.
+  function supportNote() {
+    return '<div class="note support"><p>' + esc(t('ed_help')) + '</p>' +
+      '<p><a href="https://www.nimh.nih.gov/health/topics/eating-disorders" ' +
+      'rel="noopener" target="_blank">' + esc(t('ed_help_link')) + '</a> · ' +
+      '<a href="#/sources#src-aap_ed">' + esc(t('nav_sources')) + '</a></p></div>';
+  }
+
   // ---- profile strip ----------------------------------------------------
   function renderStrip() {
     var p = Profile.get();
@@ -352,10 +404,15 @@
 
   function ulNotes(food, scale) {
     var hits = [];
-    Object.keys(DRI.upperLimits).forEach(function (key) {
+    // A child's tolerable limits are far below an adult's -- selenium is 90 µg
+    // at age 1-3 against 400 for an adult -- so the limits shown have to follow
+    // whoever is reading.
+    var prof = Profile.get();
+    var limits = DRI.upperLimitsFor(prof ? prof.age : 30);
+    Object.keys(limits).forEach(function (key) {
       var amount = food.nutrients[key];
       if (amount == null) return;
-      var ul = DRI.upperLimits[key];
+      var ul = limits[key];
       if (ul.supplementOnly) return;   // does not apply to whole food
       var pct = (amount * scale / ul.value) * 100;
       if (pct >= 60) hits.push({ key: key, pct: pct, ul: ul });
@@ -627,7 +684,7 @@
       '<form id="profileForm">' +
       '<div class="field-row">' +
       '<div class="field"><label for="pAge">' + esc(t('age')) + '</label>' +
-      '<input id="pAge" type="number" min="9" max="119" step="1" required value="' +
+      '<input id="pAge" type="number" min="1" max="119" step="1" required value="' +
       (p ? esc(p.age) : '') + '"></div>' +
       '<div class="field"><label for="pSex">' + esc(t('sex')) + '</label>' +
       '<select id="pSex" required>' +
@@ -719,16 +776,39 @@
         .concat(['ala', 'la'])
         .filter(function (k) { return targets[k]; });
 
+      var minor = !DRI.energyApplies(prof.age);
+
       document.getElementById('profileResults').innerHTML =
-        '<h2 class="section">' + esc(t('energy_needs')) + '</h2>' +
-        '<div class="energy-row">' +
-        '<div class="macro"><div class="v">' + e.bmr + '<span class="u"> kcal</span></div>' +
-        '<div class="l">' + esc(t('resting')) + '</div></div>' +
-        '<div class="macro"><div class="v">' + e.tdee + '<span class="u"> kcal</span></div>' +
-        '<div class="l">' + esc(t('daily_total')) + '</div></div>' +
-        '<div class="macro"><div class="v">' + fmt(Profile.bmi()) + '</div>' +
-        '<div class="l">' + esc(t('bmi')) + '</div></div></div>' +
-        '<p class="result-count"><a href="#/weight">' + esc(t('weight_title')) + ' &rarr;</a></p>' +
+        (minor
+          ? '<h2 class="section">' + esc(t('growing_title')) + '</h2>' +
+            '<div class="note"><p><strong>You are still growing, so the adult numbers do ' +
+            'not apply to you — and that is the interesting part, not a limitation.</strong> ' +
+            'Your body is building bone and muscle at a rate it never will again, which is why ' +
+            'your calcium target is higher than an adult\'s and, if you are a teenage girl, ' +
+            'your iron target is more than double an adult man\'s. The targets below are the ' +
+            'real ones for your age.</p>' +
+            '<p>What this site will not do is give you a calorie target. Adult energy equations ' +
+            'do not account for the cost of growing, and the ' +
+            '<a href="#/sources#src-aap_prevention">American Academy of Pediatrics</a> advises ' +
+            'against dieting and against weight-focused talk with under-18s altogether — ' +
+            'because encouraging teenagers to diet is one of the few things in this whole area ' +
+            'with good evidence of harm. Eating enough of the right things is the goal at your ' +
+            'age. ' + englishMark() + '</p></div>' +
+            bmiForAgeBlock(prof) +
+            supportNote()
+          : '<h2 class="section">' + esc(t('energy_needs')) + '</h2>' +
+            '<div class="energy-row">' +
+            '<div class="macro"><div class="v">' + e.bmr + '<span class="u"> kcal</span></div>' +
+            '<div class="l">' + esc(t('resting')) + '</div></div>' +
+            '<div class="macro"><div class="v">' + e.tdee + '<span class="u"> kcal</span></div>' +
+            '<div class="l">' + esc(t('daily_total')) + '</div></div>' +
+            (window.Growth.applies(prof.age)
+              ? ''
+              : '<div class="macro"><div class="v">' + fmt(Profile.bmi()) + '</div>' +
+                '<div class="l">' + esc(t('bmi')) + '</div></div>') +
+            '</div>' +
+            (window.Growth.applies(prof.age) ? bmiForAgeBlock(prof) : '') +
+            '<p class="result-count"><a href="#/weight">' + esc(t('weight_title')) + ' &rarr;</a></p>') +
 
         '<h2 class="section">' + esc(t('your_targets')) + ' ' + englishMark() + '</h2>' +
         '<div class="table-scroll"><table class="nutrients">' +
@@ -753,7 +833,27 @@
         'day; for a vegan diet, whose iron requirement the Food and Nutrition Board sets ' +
         'roughly 1.8&times; higher because non-haem iron is absorbed less well; or for any ' +
         'medical condition or medication. If any of those apply to you, the right numbers ' +
-        'come from a clinician, not from this page. ' + englishMark() + '</p></div>';
+        'come from a clinician, not from this page. ' + englishMark() + '</p></div>' +
+        (minor ? '' : supportNote());
+
+      var reveal = document.getElementById('revealPct');
+      if (reveal) {
+        reveal.addEventListener('click', function () {
+          showPercentile = true;
+          var y = window.pageYOffset;
+          renderResults();
+          window.scrollTo(0, y);
+        });
+      }
+      var hide = document.getElementById('hidePct');
+      if (hide) {
+        hide.addEventListener('click', function () {
+          showPercentile = false;
+          var y = window.pageYOffset;
+          renderResults();
+          window.scrollTo(0, y);
+        });
+      }
     }
   }
 
@@ -769,6 +869,49 @@
         '<p>' + esc(t('weight_lede')) + '</p></div>' +
         '<div class="note"><p>This needs your height, weight, sex and age first. ' +
         '<a href="#/you">' + esc(t('profile_title')) + ' &rarr;</a></p></div>';
+      return;
+    }
+
+    // Under 18 the whole apparatus is wrong, so the page becomes something else
+    // rather than showing a form and then refusing to act on it.
+    if (!DRI.energyApplies(p.age)) {
+      main.innerHTML =
+        '<div class="page-head"><h1>' + esc(t('growing_title')) + '</h1></div>' +
+
+        '<div class="note"><p><strong>' + esc(t('under18_title')) + '</strong> — and not as a ' +
+        'formality. The equations this page uses were built and validated in adults. They have ' +
+        'no term for the energy cost of growing, so applied to someone your age they are simply ' +
+        'the wrong tool, and adult BMI categories do not apply under 20 either.</p></div>' +
+
+        '<div class="note warn"><p><strong>There is also a reason beyond the arithmetic.</strong> ' +
+        'The <a href="#/sources#src-aap_prevention">American Academy of Pediatrics</a> advises ' +
+        'clinicians and families to discourage dieting in under-18s, and to avoid talking about ' +
+        'weight at all — talking about eating and activity instead. That is not caution for its ' +
+        'own sake: weight-focused talk with teenagers is associated with higher rates of both ' +
+        'obesity and eating disorders later, so a calorie target is one of the few things on ' +
+        'this site with good evidence of doing harm. That is why there is no calculator here ' +
+        'rather than a calculator with a warning on it. ' + englishMark() + '</p></div>' +
+
+        '<h2 class="section">What is worth paying attention to instead</h2>' +
+        '<div class="prose">' +
+        '<p>Adolescence is the period of highest nutrient demand in a human life outside ' +
+        'pregnancy, and the things most likely to be short are specific and fixable. ' +
+        '<strong>Calcium</strong> matters more now than it ever will again: roughly half of ' +
+        'adult bone mass is laid down during the teenage years, and bone you do not build now ' +
+        'is difficult to build later. <strong>Iron</strong> requirements jump sharply — a ' +
+        '14-to-18-year-old girl needs 15 mg a day against 8 mg for an adult woman over 50, ' +
+        'because of growth and menstruation together. Both are on ' +
+        '<a href="#/you">your targets page</a>, calculated for your actual age.</p>' +
+        '<p>The behaviours with the best evidence behind them are unglamorous and have nothing ' +
+        'to do with weight: eating breakfast, eating meals with other people where that is ' +
+        'possible, sleeping enough, moving in ways you actually enjoy, and not skipping meals. ' +
+        'Those are what the paediatric guidance actually recommends, and they are the same ' +
+        'advice whatever your size.</p></div>' +
+
+        supportNote() +
+
+        '<p class="result-count"><a href="#/you">' + esc(t('your_targets')) + ' &rarr;</a> · ' +
+        '<a href="#/foods">' + esc(t('all_foods')) + ' &rarr;</a></p>';
       return;
     }
 
@@ -901,7 +1044,8 @@
         '<p>This page deliberately does not produce a meal plan, a macro split or a food list ' +
         'to follow. It tells you the size of the gap and how fast the evidence says you can ' +
         'safely close it; what you eat to get there is a conversation for you and, if the ' +
-        'change is large or you have any medical condition, a clinician.</p></div>';
+        'change is large or you have any medical condition, a clinician.</p></div>' +
+        supportNote();
     }
 
     function warnBlock(w) {
