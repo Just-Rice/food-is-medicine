@@ -547,6 +547,49 @@
         : '');
   }
 
+  // ---- "best sources" ranking -------------------------------------------
+  // Ranking by amount per 100 g is misleading once spices and concentrates are
+  // in the database: ground cinnamon is 53% fibre, so it outranks every
+  // vegetable, and nobody eats 100 g of it. Ranking by a realistic household
+  // portion fixes that without special-casing anything -- cinnamon's portion is
+  // a 2.6 g teaspoon, broccoli's is a 91 g cup.
+  function servingGrams(food) {
+    return (food.portion && food.portion.grams) ? food.portion.grams : 100;
+  }
+
+  function servingLabel(food) {
+    return (food.portion && food.portion.label) ? food.portion.label : '100 g';
+  }
+
+  function servingAmount(food, key) {
+    var per100 = food.nutrients[key];
+    if (per100 == null) return 0;
+    return per100 * (servingGrams(food) / 100);
+  }
+
+  // Excluded from source suggestions. Rendered fats and gelatin are cooking
+  // ingredients rather than things eaten for their nutrients -- and gelatin in
+  // particular is an incomplete protein that should never be recommended as a
+  // protein source. The named fats are excluded even though they sit in the
+  // dairy group, because USDA's portion for them is a measuring cup: a cup of
+  // ghee would top the vitamin A list and nobody eats one.
+  var NOT_A_SOURCE_GROUP = { fat: true, bee: true };
+  var NOT_A_SOURCE_SLUG = {
+    ghee: true, butter: true, buttersalted: true,
+    tallow: true, lard: true, schmaltz: true
+  };
+
+  function bestSources(key, n) {
+    return FOODS
+      .filter(function (f) {
+        return f.nutrients[key] != null &&
+          !NOT_A_SOURCE_GROUP[f.group] && !NOT_A_SOURCE_SLUG[f.slug] &&
+          !Prefs.excludedReason(f);
+      })
+      .sort(function (a, b) { return servingAmount(b, key) - servingAmount(a, key); })
+      .slice(0, n || 3);
+  }
+
   // ======================================================================
   // View: profile
   // ======================================================================
@@ -693,17 +736,14 @@
         '</th><th>' + esc(t('best_sources')) + '</th></tr></thead><tbody>' +
         order.map(function (key) {
           var target = targets[key];
-          var top = FOODS.filter(function (f) {
-              return f.nutrients[key] != null && !Prefs.excludedReason(f);
-            })
-            .sort(function (a, b) { return b.nutrients[key] - a.nutrients[key]; })
-            .slice(0, 3);
+          var top = bestSources(key, 3);
           return '<tr><td class="name">' + esc(nutrientLabel(key)) +
             '<span class="dri-type">' + esc(target.type) + '</span></td>' +
             '<td class="num">' + fmt(target.value) + ' ' + (UNIT_LABEL[target.unit] || target.unit) + '</td>' +
             '<td class="src-cell">' + top.map(function (f) {
               return '<a href="#/food/' + esc(f.slug) + '">' + esc(f.name) + '</a> <span class="dim">(' +
-                Math.round((f.nutrients[key] / target.value) * 100) + '%)</span>';
+                Math.round((servingAmount(f, key) / target.value) * 100) + '% per ' +
+                esc(servingLabel(f)) + ')</span>';
             }).join(', ') + '</td></tr>';
         }).join('') + '</tbody></table></div>' +
 

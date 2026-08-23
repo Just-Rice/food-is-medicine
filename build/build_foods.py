@@ -144,9 +144,21 @@ def read_dataset(directory, wanted_ids, foods, portions, pub):
             for row in csv.DictReader(fh):
                 if row['fdc_id'] not in present or not row['gram_weight']:
                     continue
+                # USDA splits a portion across three columns: amount, modifier and
+                # portion_description. "4 oz" is amount=4, modifier="oz" -- dropping
+                # the amount turns a 113 g portion into a label reading "oz",
+                # which understates it fourfold.
                 label = ', '.join(p for p in (row['portion_description'], row['modifier']) if p)
+                label = label or 'serving'
+                try:
+                    amount = float(row['amount'])
+                except (TypeError, ValueError):
+                    amount = 1.0
+                if amount and abs(amount - 1.0) > 1e-9:
+                    qty = int(amount) if amount == int(amount) else round(amount, 2)
+                    label = '%s %s' % (qty, label)
                 portions.setdefault(row['fdc_id'], []).append(
-                    {'label': label or 'serving', 'grams': float(row['gram_weight'])})
+                    {'label': label, 'grams': float(row['gram_weight']), 'amount': amount})
 
 
 def main():
