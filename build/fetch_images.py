@@ -141,6 +141,16 @@ CURATED_FILE = {
     'groundlamb': 'Kibbeh Nayyeh.jpg',
     'lambshank': 'Lammhaxe mit Kloß Bischofsmühle.jpg',
     'wheyacid': 'Whey powder.jpg',
+    # regional produce and sea vegetables, where the generic lookup drifted to
+    # the plant's habitat or to an unrelated dish
+    'spirulina': 'Spirulina-powder-shadow.jpg',
+    'irishmoss': 'Irish Moss (Chondrus crispus) - Oslo, Norway 2021-03-25.jpg',
+    'sesbania': 'Sesbania grandiflora flower and fruit.jpg',
+    'quince': 'Cydonia oblonga Fruit 1.jpg',
+    'crabapple': 'Pommier sauvage - Malus - crabapple (5053412726).jpg',
+    'roselle': 'Roselle, Hibiscus sabdariffa, 2014 01.JPG',
+    'acerola': 'Malpighia glabra acerola fruit green.jpg',
+    'cherimoya': 'Cherimoya cut hg.jpg',
 }
 
 # Foods for which Commons has no photograph that is actually of the food. The
@@ -149,6 +159,7 @@ CURATED_FILE = {
 # report. A blank tile is honest; a picture of the wrong thing is not.
 NO_IMAGE = {
     'groundturkey', 'gooseegg', 'clam', 'seabass', 'butter', 'buttersalted',
+    'laver', 'pigeonpeagreen',
 }
 
 

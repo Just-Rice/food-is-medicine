@@ -1,0 +1,460 @@
+# slug | other names people search for | family and category tags
+#
+# Two problems this solves. First, the same vegetable has different names in
+# different English-speaking places -- okra is ladyfinger in India and bhindi in
+# Hindi-speaking kitchens, and someone searching any of those should find it.
+# Second, people search by family: typing "gourd" should return the whole
+# cucurbit shelf, not only the two foods with "gourd" in the USDA name.
+#
+# Tags are botanical families where that is what people mean (gourd, brassica,
+# allium, nightshade, citrus) and culinary categories where it is not (leafy
+# green, root, berry). Both are searchable and both appear as clickable chips.
+
+# ---- cucurbits: the gourd family ---------------------------------------
+pumpkin|winter squash|gourd,cucurbit,squash
+butternut|butternut pumpkin|gourd,cucurbit,squash
+acornsquash|des moines squash|gourd,cucurbit,squash
+hubbard|hubbard pumpkin|gourd,cucurbit,squash
+spaghettisquash|vegetable spaghetti|gourd,cucurbit,squash
+yellowsquash|crookneck,summer squash|gourd,cucurbit,squash
+zucchini|courgette,baby marrow|gourd,cucurbit,squash
+cucumber|kheera,khira|gourd,cucurbit
+bittermelon|bitter gourd,karela,balsam pear,bitter squash|gourd,cucurbit
+bittergourdleaves|karela leaves,balsam pear tips|gourd,cucurbit,leafy green
+bottlegourd|calabash,lauki,dudhi,opo squash,long melon|gourd,cucurbit
+ridgegourd|luffa,turai,tori,sponge gourd,towel gourd,silk squash|gourd,cucurbit
+chayote|chow chow,christophene,mirliton,sayote|gourd,cucurbit
+pumpkinflower|squash blossom,kaddu ka phool|gourd,cucurbit,flower
+watermelon|tarbooj|gourd,cucurbit,melon
+cantaloupe|muskmelon,rockmelon,kharbooja|gourd,cucurbit,melon
+honeydew|honey melon|gourd,cucurbit,melon
+casaba|casaba|gourd,cucurbit,melon
+
+# ---- brassicas ---------------------------------------------------------
+broccoli|calabrese|brassica,cruciferous
+broccolini|broccoli raab,rapini,baby broccoli|brassica,cruciferous
+gailan|chinese broccoli,kai lan|brassica,cruciferous
+romanesco|romanesco broccoli|brassica,cruciferous
+cauliflower|gobi,phool gobi|brassica,cruciferous
+cabbage|patta gobi,green cabbage|brassica,cruciferous
+redcabbage|purple cabbage|brassica,cruciferous
+savoy|savoy|brassica,cruciferous
+napa|chinese cabbage,wombok,pe-tsai|brassica,cruciferous
+bokchoy|pak choi,pak choy,chinese chard|brassica,cruciferous,leafy green
+brusselsprouts|brussels sprout|brassica,cruciferous
+kale|borecole,curly kale|brassica,cruciferous,leafy green
+collards|collard,spring greens|brassica,cruciferous,leafy green
+mustardgreens|sarson,mustard leaf,gai choy|brassica,cruciferous,leafy green
+arugula|rocket,rucola,roquette|brassica,cruciferous,leafy green,salad
+watercress|watercress|brassica,cruciferous,leafy green,salad
+radish|mooli,daikon radish|brassica,cruciferous,root
+daikon|mooli,white radish,japanese radish,muli|brassica,cruciferous,root
+turnip|shalgam|brassica,cruciferous,root
+rutabaga|swede,swedish turnip,neep|brassica,cruciferous,root
+kohlrabi|german turnip,knol khol|brassica,cruciferous
+horseradish|horseradish|brassica,cruciferous,root
+
+# ---- alliums -----------------------------------------------------------
+onion|pyaz,brown onion,yellow onion|allium
+garlic|lehsun,lasan|allium
+leek|leek|allium
+scallion|spring onion,green onion,hara pyaz|allium
+shallot|eschalot|allium
+chives|chives|allium,herb
+
+# ---- nightshades -------------------------------------------------------
+tomato|tamatar|nightshade
+tomatillo|husk tomato,tomate verde|nightshade
+potato|aloo,spud|nightshade,root,tuber
+eggplant|aubergine,brinjal,baingan,guinea squash|nightshade
+bellpepper|capsicum,sweet pepper,red capsicum,shimla mirch|nightshade,pepper
+greenpepper|green capsicum,capsicum|nightshade,pepper
+yellowpepper|yellow capsicum|nightshade,pepper
+chilipepper|chilli,chile,mirchi,hot pepper|nightshade,pepper
+jalapeno|jalapeno chilli|nightshade,pepper
+serrano|serrano chilli|nightshade,pepper
+poblano|pasilla,ancho,poblano chilli|nightshade,pepper
+paprika|paprika|nightshade,pepper,spice
+
+# ---- leafy greens and salads -------------------------------------------
+spinach|palak|leafy green
+swisschard|silverbeet,chard,seakale beet|leafy green
+beetgreens|beet tops,chukandar leaves|leafy green
+amaranthleaves|chaulai,cholai,callaloo,chinese spinach,thotakura|leafy green
+purslane|kulfa,verdolaga,pigweed|leafy green
+jute|molokhia,mulukhiyah,saluyot,nalta jute|leafy green
+drumstickleaves|moringa leaves,sahjan,murungai keerai|leafy green
+romaine|cos lettuce|leafy green,salad
+iceberg|crisphead lettuce|leafy green,salad
+butterhead|bibb lettuce,boston lettuce|leafy green,salad
+endive|curly endive,frisee|leafy green,salad
+witloof|belgian endive,chicon|leafy green,salad
+radicchio|italian chicory|leafy green,salad
+chicorygreens|chicory,curly chicory|leafy green,salad
+dandelion|dandelion|leafy green
+chrysanthemum|tong ho,shungiku,chop suey greens,garland chrysanthemum|leafy green
+borage|starflower|leafy green,herb
+grapeleaves|vine leaves,dolma leaves|leafy green
+epazote|wormseed,mexican tea|leafy green,herb
+sesbania|agati,august flower,hummingbird tree|flower
+fiddlehead|ostrich fern|leafy green
+
+# ---- roots and tubers ---------------------------------------------------
+carrot|gajar|root
+beet|beetroot,chukandar,table beet|root
+parsnip|parsnip|root
+celeriac|celery root,knob celery|root
+sweetpotato|shakarkandi,kumara,yam (US)|root,tuber
+yam|ratalu,suran,true yam,dioscorea|root,tuber
+taro|arbi,arvi,dasheen,eddoe,kalo|root,tuber
+cassava|yuca,manioc,tapioca root,mogo|root,tuber
+jicama|yam bean,mexican turnip|root,tuber
+sunchoke|jerusalem artichoke,sunroot,topinambour|root,tuber
+lotusroot|kamal kakdi,renkon,bhein|root
+burdock|gobo|root
+salsify|oyster plant,vegetable oyster|root
+arrowroot|arrowroot|root,tuber
+arrowhead|wapato,chinese arrowhead|root,tuber
+waterchestnut|singhara,matai|root
+ginger|adrak,ginger root|root,spice
+turmericroot|haldi,curcuma|root,spice
+
+# ---- pods and beans ------------------------------------------------------
+okra|ladyfinger,lady finger,bhindi,bhendi,gumbo,okro,vendakkai|pod
+greenbeans|french beans,string beans,snap beans,haricot vert|pod,legume
+yardlong|long bean,snake bean,asparagus bean,chori,barbati|pod,legume
+snappea|sugar snap,mangetout,snow pea|pod,legume
+greenpeas|matar,garden peas|legume
+drumstickpods|moringa pods,sahjan,murungakkai,sajna|pod
+wingedbean|goa bean,four-angled bean,asparagus pea|pod,legume
+hyacinthbean|lablab,sem,avarai,val bean|legume
+pigeonpeagreen|toor,arhar,tuvar,gungo pea|legume
+chickpea|garbanzo,chana,kabuli chana,bengal gram|legume,pulse
+lentil|dal,daal,masoor,red lentil|legume,pulse
+splitpea|matar dal|legume,pulse
+mung|moong,green gram,mung dal|legume,pulse
+adzuki|aduki,red bean,chori|legume,pulse
+blackbean|turtle bean,black turtle bean|legume,pulse
+kidneybean|rajma,red kidney bean|legume,pulse
+cannellini|white kidney bean,fasolia|legume,pulse
+navy|haricot bean,pea bean|legume,pulse
+greatnorthern|great northern|legume,pulse
+pinto|pinto|legume,pulse
+lima|butter bean,madagascar bean|legume,pulse
+fava|broad bean,faba bean,bakla|legume,pulse
+blackeyed|cowpea,lobia,chawli,black eyed bean|legume,pulse
+soybean|soya,soya bean|legume,pulse
+edamame|green soybean,edamame|legume,pulse
+peanut|groundnut,moongphali,goober|legume,nut
+lupin|lupini|legume,pulse
+cranberrybean|borlotti,roman bean|legume,pulse
+
+# ---- citrus and other fruit families -------------------------------------
+orange|santra,sweet orange|citrus
+mandarin|tangerine,santra,satsuma|citrus
+clementine|clementine|citrus
+lemon|nimbu,limon|citrus
+lime|nimbu,key lime,kagzi nimbu|citrus
+grapefruit|pomelo hybrid,chakotra|citrus
+pomelo|pummelo,chakotra,shaddock|citrus
+kumquat|cumquat|citrus
+acerola|barbados cherry,west indian cherry|berry
+blueberry|blueberry|berry
+strawberry|strawberry|berry
+raspberry|raspberry|berry
+blackberry|bramble|berry
+boysenberry|boysenberry|berry
+gooseberry|amla substitute,goosegog|berry
+mulberry|shahtoot,shahtut|berry
+currantblack|cassis,black currant|berry
+currantred|red currant|berry
+elderberryfruit|elderberry,sambucus|berry
+goji|wolfberry,goji|berry
+cranberry|cranberry|berry
+grape|angoor|berry
+peach|aadu|stone fruit,drupe
+nectarine|nectarine|stone fruit,drupe
+plum|aloobukhara|stone fruit,drupe
+cherry|cherry|stone fruit,drupe
+sourcherry|tart cherry,morello|stone fruit,drupe
+apricot|khubani|stone fruit,drupe
+prune|dried plum|stone fruit,drupe,dried
+date|khajoor,medjool|dried
+fig|anjeer|fig
+mango|aam|tropical,stone fruit
+papaya|papita,pawpaw|tropical
+pineapple|ananas|tropical
+banana|kela|tropical
+greenplantain|raw banana,kachcha kela,cooking banana|tropical
+plantain|cooking banana,kela|tropical
+guava|amrood,amrud|tropical
+lychee|litchi,lichee|tropical
+longan|dragon eye|tropical
+rambutan|rambutan|tropical
+mangosteen|mangosteen|tropical
+jackfruit|kathal,katahal|tropical
+durian|durian|tropical
+soursop|guanabana,graviola,laxman phal|tropical
+breadfruit|breadfruit|tropical
+starfruit|carambola,kamrakh|tropical
+passionfruit|granadilla,krishna phal|tropical
+tamarind|imli|tropical
+sapodilla|chikoo,chiku,sapota,naseberry|tropical
+javaplum|jamun,jambul,black plum,jambolan|tropical
+mameysapote|mamey|tropical
+cherimoya|custard apple,sitaphal substitute|tropical
+carissa|natal plum,karonda|tropical
+jujube|ber,chinese date,red date|tropical
+loquat|loquat,japanese medlar|tropical
+roselle|hibiscus,gongura,sorrel (caribbean)|tropical,flower
+coconut|nariyal,copra|tropical,nut
+pomegranate|anar,dalim|fruit
+persimmon|kaki,sharon fruit,japani phal|fruit
+nativepersimmon|american persimmon|fruit
+quince|quince,safarjal|fruit
+crabapple|crabapple|fruit
+apple|seb|fruit,pome
+pear|nashpati|fruit,pome
+avocado|butter fruit,alligator pear|fruit
+pricklypear|nopal fruit,tuna,cactus pear|cactus
+nopales|nopal,cactus pads,cactus paddle|cactus
+rhubarb|rhubarb|stalk
+cardoon|cardoon,artichoke thistle|stalk
+celery|ajmoda|stalk
+asparagus|asparagus|stalk
+fennel|saunf bulb,finocchio|stalk
+artichoke|globe artichoke|flower
+
+# ---- seaweeds -----------------------------------------------------------
+seaweed|wakame,sea mustard|seaweed,sea vegetable
+kelp|kombu,oarweed|seaweed,sea vegetable
+laver|nori,gim,purple laver|seaweed,sea vegetable
+irishmoss|carrageen moss|seaweed,sea vegetable
+spirulina|blue-green algae|seaweed,algae
+
+# ---- mushrooms -----------------------------------------------------------
+whitemushroom|button mushroom,champignon,khumbi|mushroom,fungi
+crimini|cremini,baby bella,brown mushroom|mushroom,fungi
+portabella|portobello,portabello|mushroom,fungi
+uvwhite|uv button mushroom|mushroom,fungi
+uvportabella|uv portobello|mushroom,fungi
+shiitake|black forest mushroom,xiang gu|mushroom,fungi
+maitake|hen of the woods|mushroom,fungi
+oyster|pleurotus,oyster mushroom|mushroom,fungi
+enoki|enokitake,golden needle|mushroom,fungi
+chanterelle|girolle|mushroom,fungi
+morel|morille,gucchi|mushroom,fungi
+woodear|black fungus,cloud ear,kikurage|mushroom,fungi
+straw|paddy straw mushroom|mushroom,fungi
+
+# ---- nuts, seeds, grains -------------------------------------------------
+almond|badam|nut
+cashew|kaju|nut
+pistachio|pista|nut
+walnut|akhrot|nut
+pecan|pecan|nut
+hazelnut|filbert,cobnut|nut
+brazilnut|brazil nut,para nut|nut
+macadamia|queensland nut|nut
+pinenut|pignoli,chilgoza,pine kernel|nut
+chestnut|singhara substitute,marron|nut
+lotusseed|makhana,fox nut,phool makhana|seed
+sesame|til,gingelly,benne|seed
+flax|linseed,alsi|seed
+chia|chia|seed
+pumpkinseed|pepita,magaz|seed
+sunflowerseed|sunflower kernel|seed
+watermelonseed|magaz,char magaz|seed
+hempseed|hemp heart|seed
+poppyseed|khus khus,posto|seed,spice
+mustardseed|sarson,rai|seed,spice
+oats|jai,oatmeal|grain,cereal
+barley|jau|grain,cereal
+wheatberry|gehun,wheat|grain,cereal
+bulgur|dalia,cracked wheat|grain,cereal
+spelt|dinkel|grain,cereal
+farro|emmer|grain,cereal
+kamut|khorasan wheat|grain,cereal
+rye|rye|grain,cereal
+millet|bajra,ragi substitute,proso millet|grain,cereal
+sorghum|jowar,milo|grain,cereal
+teff|teff|grain,cereal
+fonio|acha,fonio|grain,cereal
+quinoa|quinoa|grain,pseudocereal
+amaranth|rajgira,ramdana|grain,pseudocereal
+buckwheat|kuttu,soba|grain,pseudocereal
+brownrice|chawal,brown rice|grain,cereal
+whiterice|chawal,basmati,jasmine rice|grain,cereal
+wildrice|wild rice|grain,cereal
+corn|maize,makai,sweetcorn|grain,cereal
+cornmeal|makai atta,polenta|grain,cereal
+
+# ---- herbs and spices ----------------------------------------------------
+cilantro|coriander leaves,dhania,chinese parsley|herb
+parsley|parsley|herb
+basil|tulsi substitute,sweet basil|herb
+mint|pudina,peppermint|herb
+spearmint|pudina|herb
+oregano|oregano|herb
+thyme|ajwain substitute,thyme|herb
+rosemary|rosemary|herb
+sage|sage|herb
+dill|sowa,suva,dill weed|herb
+tarragon|estragon|herb
+lemongrass|citronella,sera|herb
+cumin|jeera,zeera|spice
+coriander seed|dhania seed|spice
+blackpepper|kali mirch,peppercorn|spice
+cloves|laung|spice
+cardamom|elaichi,elachi|spice
+nutmeg|jaiphal|spice
+cinnamonspice|dalchini,cassia|spice
+fenugreekseed|methi seed,methi dana|spice
+
+# ---- animal products -----------------------------------------------------
+shrimp|prawn,prawns,jhinga|shellfish,crustacean,seafood
+lobster|maine lobster|shellfish,crustacean,seafood
+spinylobster|rock lobster|shellfish,crustacean,seafood
+bluecrab|blue crab|shellfish,crustacean,seafood
+crawfish|crayfish,crawdad,yabby|shellfish,crustacean,seafood
+oysters|oyster|shellfish,mollusc,seafood,bivalve
+mussel|mussels|shellfish,mollusc,seafood,bivalve
+clam|clams,vongole|shellfish,mollusc,seafood,bivalve
+scallop|scallops|shellfish,mollusc,seafood,bivalve
+abalone|abalone,paua|shellfish,mollusc,seafood
+whelk|sea snail|shellfish,mollusc,seafood
+snail|escargot,land snail|shellfish,mollusc
+squid|calamari,calamares|shellfish,cephalopod,seafood
+octopus|octopus|shellfish,cephalopod,seafood
+cuttlefish|sepia|shellfish,cephalopod,seafood
+sockeye|red salmon,salmon|fish,oily fish,seafood
+chinook|king salmon,salmon|fish,oily fish,seafood
+coho|silver salmon,salmon|fish,oily fish,seafood
+atlanticsalmon|salmon,farmed salmon|fish,oily fish,seafood
+trout|rainbow trout|fish,oily fish,seafood
+mackerel|bangda,mackerel|fish,oily fish,seafood
+sardine|sardines,pilchard|fish,oily fish,seafood
+anchovy|anchovies|fish,oily fish,seafood
+herring|kipper,herring|fish,oily fish,seafood
+albacore|tuna,white tuna|fish,oily fish,seafood
+bluefin|tuna,maguro|fish,oily fish,seafood
+cod|codfish|fish,white fish,seafood
+pacificcod|cod|fish,white fish,seafood
+haddock|haddock|fish,white fish,seafood
+halibut|halibut|fish,white fish,seafood
+seabass|sea bass,branzino|fish,white fish,seafood
+snapper|red snapper|fish,white fish,seafood
+flounder|sole,plaice,flatfish|fish,white fish,seafood
+grouper|grouper|fish,white fish,seafood
+swordfish|swordfish|fish,seafood
+tilapia|tilapia|fish,white fish,seafood
+catfish|catfish|fish,white fish,seafood
+caviar|sturgeon roe|roe,seafood
+fishroe|roe,ikura,tobiko,masago|roe,seafood
+chickenegg|egg,hen egg,anda|egg
+eggwhite|egg white,albumen|egg
+eggyolk|egg yolk,yolk|egg
+duckegg|duck egg|egg
+quailegg|quail egg|egg
+gooseegg|goose egg|egg
+ribeye|rib eye,scotch fillet,entrecote|beef,red meat,meat
+sirloin|top sirloin,rump|beef,red meat,meat
+tenderloin|filet mignon,fillet steak|beef,red meat,meat
+brisket|brisket|beef,red meat,meat
+flanksteak|flank,bavette|beef,red meat,meat
+groundbeef|mince,minced beef,hamburger meat,keema|beef,red meat,meat
+veal|veal,calf|beef,red meat,meat
+porkloin|pork loin|pork,red meat,meat
+porkchop|pork chop|pork,red meat,meat
+porktenderloin|pork fillet|pork,red meat,meat
+porkbelly|pork belly,samgyeopsal|pork,red meat,meat
+porkshoulder|boston butt,pork shoulder|pork,red meat,meat
+ham|gammon,ham|pork,processed meat,meat
+bacon|streaky bacon,rashers|pork,processed meat,meat
+lambchop|lamb chop,mutton chop|lamb,red meat,meat
+lamblegs|leg of lamb|lamb,red meat,meat
+lambshank|lamb shank|lamb,red meat,meat
+groundlamb|minced lamb,keema|lamb,red meat,meat
+venison|deer,deer meat|game,red meat,meat
+bison|buffalo,american buffalo|game,red meat,meat
+elk|wapiti,elk|game,red meat,meat
+goatmeat|chevon,cabrito,mutton (india)|game,red meat,meat
+boar|wild boar|game,red meat,meat
+rabbit|rabbit,coney|game,meat
+chickenbreast|chicken,murgh|poultry,white meat,meat
+chickenthigh|chicken thigh|poultry,meat
+chickendrumstick|drumstick,chicken leg|poultry,meat
+chickenwing|chicken wings|poultry,meat
+turkeybreast|turkey|poultry,white meat,meat
+groundturkey|minced turkey,turkey mince|poultry,meat
+duck|duck meat|poultry,meat
+goose|goose meat|poultry,meat
+quail|quail,bater|poultry,game,meat
+pheasant|pheasant|poultry,game,meat
+squab|pigeon,kabootar|poultry,game,meat
+guineafowl|guinea hen,pintade|poultry,game,meat
+ostrich|ostrich|poultry,game,meat
+beefliver|liver,kaleji|offal,organ meat,meat
+chickenliver|chicken liver,kaleji|offal,organ meat,meat
+kidney|kidneys,gurda|offal,organ meat,meat
+heart|heart,dil|offal,organ meat,meat
+tongue|tongue,zaban|offal,organ meat,meat
+sweetbread|sweetbreads,thymus|offal,organ meat,meat
+marrow|bone marrow,nalli|offal,organ meat,meat
+tripe|tripe,ojri|offal,organ meat,meat
+gizzard|gizzards,pota|offal,organ meat,meat
+brain|brains,maghaz|offal,organ meat,meat
+milkwhole|whole milk,full fat milk,doodh|dairy,milk
+milk2|semi skimmed,two percent milk|dairy,milk
+milk1|one percent milk|dairy,milk
+milkskim|skimmed milk,fat free milk,nonfat milk|dairy,milk
+goatmilk|goat milk|dairy,milk
+sheepmilk|sheep milk,ewe milk|dairy,milk
+buffalomilk|buffalo milk,bhains ka doodh|dairy,milk
+evapmilk|evaporated milk|dairy,milk
+condensedmilk|condensed milk|dairy,milk
+drymilk|milk powder,powdered milk|dairy,milk
+yogurtplain|yoghurt,curd,dahi|dairy,fermented,yoghurt
+greekyogurt|greek yoghurt,strained yoghurt|dairy,fermented,yoghurt
+skyr|skyr,icelandic yoghurt|dairy,fermented,yoghurt
+buttermilk|chaas,chhaas,cultured buttermilk|dairy,fermented
+paneer|queso fresco,cottage cheese (india),chhena|dairy,cheese
+cottagecheese|cottage cheese,curds|dairy,cheese
+ricotta|ricotta|dairy,cheese
+quark|quark,farmer cheese,tvorog|dairy,cheese
+quesoblanco|queso blanco|dairy,cheese
+mozzarella|mozzarella,fior di latte|dairy,cheese
+mascarpone|cream cheese,mascarpone|dairy,cheese
+feta|feta|dairy,cheese
+halloumi|halloumi,queso anejo|dairy,cheese
+brie|brie|dairy,cheese
+camembert|camembert|dairy,cheese
+chevre|goat cheese,chevre|dairy,cheese
+muenster|munster|dairy,cheese
+cheddar|cheddar|dairy,cheese
+gouda|gouda|dairy,cheese
+swiss|emmental,emmentaler,swiss cheese|dairy,cheese
+gruyere|gruyere|dairy,cheese
+provolone|provolone|dairy,cheese
+montereyjack|monterey jack|dairy,cheese
+colby|colby|dairy,cheese
+fontina|fontina|dairy,cheese
+edam|edam|dairy,cheese
+parmesan|parmesan,parmigiano,grana|dairy,cheese
+pecorino|pecorino,romano|dairy,cheese
+roquefort|roquefort|dairy,cheese,blue cheese
+bluecheese|gorgonzola,stilton,danish blue|dairy,cheese,blue cheese
+heavycream|double cream,whipping cream,malai|dairy,cream
+lightcream|single cream,table cream|dairy,cream
+halfandhalf|half and half|dairy,cream
+sourcream|sour cream,smetana|dairy,cream,fermented
+butter|makhan,unsalted butter|dairy,fat
+buttersalted|makhan,salted butter|dairy,fat
+ghee|clarified butter,desi ghee|dairy,fat
+wheyprotein|whey,whey powder|dairy,protein powder
+wheyacid|acid whey|dairy
+tallow|beef dripping,suet|fat,animal fat
+lard|pork fat,dripping|fat,animal fat
+schmaltz|chicken fat|fat,animal fat
+gelatin|gelatine,collagen|fat,collagen
+honey|shahad,madhu|bee,sweetener

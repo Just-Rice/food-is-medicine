@@ -387,3 +387,51 @@ fat|schmaltz|Schmaltz (chicken fat)|173564
 fat|gelatin|Culinary gelatin|169599
 bee|honey|Raw honey|169640
 shellfish|oysters|Oysters (eastern, wild)|171978
+veg|bottlegourd|Bottle gourd (calabash)|169232
+veg|ridgegourd|Ridge gourd (luffa)|168414
+veg|bittergourdleaves|Bitter gourd leaves|168391
+veg|pumpkinflower|Pumpkin flowers|169270
+veg|drumstickpods|Drumstick pods (moringa)|170483
+veg|drumstickleaves|Drumstick leaves (moringa)|168416
+veg|amaranthleaves|Amaranth leaves|168385
+veg|yardlong|Yardlong bean|169222
+veg|jute|Jute leaves|168419
+veg|purslane|Purslane|169274
+veg|greenplantain|Green plantain|168215
+veg|arrowroot|Arrowroot|168490
+veg|arrowhead|Arrowhead|169203
+veg|burdock|Burdock root|169974
+veg|cardoon|Cardoon|169981
+veg|rhubarb|Rhubarb|167758
+veg|nopales|Nopales (cactus pads)|168571
+veg|chrysanthemum|Garland chrysanthemum|169995
+veg|fiddlehead|Fiddlehead ferns|169405
+veg|borage|Borage|170481
+veg|grapeleaves|Grape leaves|168575
+veg|salsify|Salsify|169277
+veg|epazote|Epazote|169398
+veg|chicorygreens|Chicory greens|169992
+veg|witloof|Witloof chicory (Belgian endive)|170404
+veg|sesbania|Sesbania flower|168459
+veg|kelp|Kelp|168457
+veg|laver|Laver (nori)|168458
+veg|irishmoss|Irish moss|168456
+veg|spirulina|Spirulina|170091
+legume|hyacinthbean|Hyacinth beans|175210
+legume|wingedbean|Winged beans|170476
+legume|pigeonpeagreen|Green pigeon peas|170025
+nut|lotusseed|Lotus seeds|168591
+fruit|cherimoya|Cherimoya|173953
+fruit|jujube|Jujube|168151
+fruit|loquat|Loquat|169908
+fruit|quince|Quince|168163
+fruit|nativepersimmon|American persimmon|169943
+fruit|javaplum|Java plum (jamun)|168150
+fruit|sapodilla|Sapodilla (chikoo)|167759
+fruit|mameysapote|Mamey sapote|167760
+fruit|pricklypear|Prickly pear|167750
+fruit|pitanga|Pitanga (Surinam cherry)|169129
+fruit|carissa|Carissa (natal plum)|173952
+fruit|acerola|Acerola (West Indian cherry)|171686
+fruit|crabapple|Crabapple|171721
+fruit|roselle|Roselle (hibiscus calyx)|168170

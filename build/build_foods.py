@@ -39,6 +39,38 @@ NUTRIENTS = {
 
 SUFFIX = re.compile(r"\s*\(Includes foods for USDA's Food Distribution Program\)\s*$")
 
+ALIASES = os.path.join(HERE, 'aliases.txt')
+
+
+def load_aliases():
+    """Alternative names and family tags, from build/aliases.txt.
+
+    Two things fall out of this. A search for "ladyfinger" or "bhindi" has to
+    find okra, because that is what it is called in most of the world. And a
+    search for "gourd" should return the whole cucurbit shelf -- pumpkins,
+    squashes, cucumber, chayote -- not only the two foods with "gourd" in the
+    USDA description.
+    """
+    aka, tags = {}, {}
+    if not os.path.exists(ALIASES):
+        return aka, tags
+    with open(ALIASES) as fh:
+        for line in fh:
+            line = line.strip()
+            if not line or line.startswith('#'):
+                continue
+            parts = line.split('|')
+            if len(parts) < 3:
+                continue
+            slug = parts[0].strip()
+            names = [n.strip() for n in parts[1].split(',') if n.strip()]
+            tag_list = [t.strip() for t in parts[2].split(',') if t.strip()]
+            if names:
+                aka[slug] = sorted(set(names))
+            if tag_list:
+                tags[slug] = sorted(set(tag_list))
+    return aka, tags
+
 # ---------------------------------------------------------------------------
 # Dietary classification.
 #
@@ -180,6 +212,13 @@ def main():
     if len(wanted) != len(curated):
         sys.exit('duplicate FDC id in foods.txt')
 
+    aka, tags = load_aliases()
+    known = {c['slug'] for c in curated}
+    stale = sorted((set(aka) | set(tags)) - known)
+    if stale:
+        print('aliases.txt names %d slugs that are not in foods.txt: %s'
+              % (len(stale), ', '.join(stale)))
+
     foods, portions, pub = {}, {}, {}
     read_dataset(sr_dir, wanted, foods, portions, pub)
     read_dataset(fnd_dir, wanted, foods, portions, pub)
@@ -198,6 +237,8 @@ def main():
             'slug': c['slug'], 'name': c['name'], 'group': c['group'],
             'fdcId': int(fdc), 'usda': foods[fdc], 'published': pub[fdc],
             'diet': diet, 'allergens': allergens,
+            'aka': aka.get(c['slug'], []),
+            'tags': tags.get(c['slug'], []),
             'nutrients': c.get('n', {}),
         }
         if best:
@@ -215,7 +256,14 @@ def main():
         fh.write(';\n')
 
     thin = [o['slug'] for o in out if len(o['nutrients']) < 15]
+    tagged = sum(1 for o in out if o['tags'])
+    all_tags = sorted({t for o in out for t in o['tags']})
     print('wrote %d foods -> %s' % (len(out), OUT))
+    print('%d foods carry family tags; %d distinct tags: %s'
+          % (tagged, len(all_tags), ', '.join(all_tags)))
+    untagged = [o['slug'] for o in out if not o['tags']]
+    if untagged:
+        print('%d foods have no tag yet' % len(untagged))
     if thin:
         print('sparse records (<15 nutrients):', ', '.join(thin))
 

@@ -98,6 +98,59 @@
     return out.slice(0, limit || 3);
   }
 
+  // Everything a food can be found by: its display name, the USDA description,
+  // the other names people actually call it, and its family tags. Typing
+  // "ladyfinger" or "bhindi" finds okra; typing "gourd" returns the whole
+  // cucurbit shelf, not only the foods with "gourd" in the USDA name.
+  function haystack(food) {
+    if (food._hay) return food._hay;
+    food._hay = [food.name, food.usda || '',
+                 (food.aka || []).join(' '),
+                 (food.tags || []).join(' ')].join(' ').toLowerCase();
+    return food._hay;
+  }
+
+  // Relevance, so that substring matching stays useful without being silly.
+  // "anda" (egg) genuinely occurs inside "mandarin" and "chukandar"; those are
+  // real matches and should still be findable, but the chicken egg belongs at
+  // the top. Whole-word hits outrank buried substrings.
+  function relevance(food, q) {
+    var name = food.name.toLowerCase();
+    if (name === q) return 100;
+    if (name.indexOf(q) === 0) return 90;
+
+    var word = new RegExp('(^|[^a-z])' + q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i');
+    if (word.test(name)) return 80;
+
+    var aliases = food.aka || [];
+    for (var i = 0; i < aliases.length; i++) {
+      var a = aliases[i].toLowerCase();
+      if (a === q) return 70;
+      if (word.test(a)) return 60;
+    }
+
+    var tags = food.tags || [];
+    for (var j = 0; j < tags.length; j++) {
+      if (tags[j].toLowerCase() === q) return 50;
+      if (word.test(tags[j])) return 45;
+    }
+
+    if (name.indexOf(q) >= 0) return 30;
+    if (word.test(food.usda || '')) return 20;
+    return 5;   // matched somewhere, but only mid-word
+  }
+
+  // Which of a food's own labels matched, so the card can show why it appeared
+  // when the match was on a name the reader did not type.
+  function matchedAlias(food, q) {
+    if (!q) return null;
+    var hit = (food.aka || []).filter(function (a) {
+      return a.toLowerCase().indexOf(q) >= 0;
+    })[0];
+    if (hit && food.name.toLowerCase().indexOf(q) < 0) return hit;
+    return null;
+  }
+
   var GROUPS = ['all', 'fruit', 'veg', 'mushroom', 'nut', 'legume', 'grain',
                 'herb', 'dairy', 'meat', 'poultry', 'offal', 'fish',
                 'shellfish', 'egg', 'fat', 'bee'];
@@ -237,13 +290,17 @@
       var hidden = 0;
       var list = FOODS.filter(function (f) {
         if (foodState.group !== 'all' && f.group !== foodState.group) return false;
-        if (q && f.name.toLowerCase().indexOf(q) < 0 && f.slug.indexOf(q) < 0 &&
-            (f.usda || '').toLowerCase().indexOf(q) < 0) return false;
+        if (q && haystack(f).indexOf(q) < 0 && f.slug.indexOf(q) < 0) return false;
         if (Prefs.excludedReason(f)) { hidden++; return false; }
         return true;
       });
 
-      if (foodState.sort === 'name') {
+      if (foodState.sort === 'name' && q) {
+        list.sort(function (a, b) {
+          var d = relevance(b, q) - relevance(a, q);
+          return d !== 0 ? d : a.name.localeCompare(b.name);
+        });
+      } else if (foodState.sort === 'name') {
         list.sort(function (a, b) { return a.name.localeCompare(b.name); });
       } else {
         var key = foodState.sort;
@@ -267,6 +324,10 @@
           foodImage(f, 'thumb') +
           '<div class="food-card-body">' +
           '<h3>' + esc(f.name) + '</h3>' +
+          (function () {
+            var alias = matchedAlias(f, q);
+            return alias ? '<div class="alias-hit">also called ' + esc(alias) + '</div>' : '';
+          })() +
           '<div class="kcal">' + fmt(f.nutrients.kcal) + ' kcal · ' +
           fmt(f.nutrients.protein) + ' g ' + esc(t('n_protein').toLowerCase()) + '</div>' +
           (hs.length
@@ -319,6 +380,16 @@
       '<div class="food-hero-text">' +
       '<h1>' + esc(food.name) + '</h1>' +
       '<span class="tag g">' + esc(groupLabel(food.group)) + '</span>' +
+      ((food.aka || []).length
+        ? '<p class="also-called">Also called ' +
+          food.aka.map(function (a) { return esc(a); }).join(', ') + '</p>'
+        : '') +
+      ((food.tags || []).length
+        ? '<div class="tag-row">' + food.tags.map(function (tg) {
+            return '<a class="tag tappable" href="#/foods?q=' +
+              encodeURIComponent(tg) + '">' + esc(tg) + '</a>';
+          }).join('') + '</div>'
+        : '') +
       '<p class="source-line">' + esc(food.usda || '') + ' — ' +
       '<a href="' + fdcUrl + '" rel="noopener" target="_blank">FDC ' + food.fdcId + '</a>' +
       (credit && credit.page
@@ -1283,8 +1354,20 @@
     var anchor = null;
     var hashIdx = raw.indexOf('#');
     if (hashIdx >= 0) { anchor = raw.slice(hashIdx + 1); raw = raw.slice(0, hashIdx); }
+    // A tag chip links to #/foods?q=gourd, so pull the query off before routing.
+    var query = null;
+    var qIdx = raw.indexOf('?');
+    if (qIdx >= 0) {
+      var qs = raw.slice(qIdx + 1);
+      raw = raw.slice(0, qIdx);
+      qs.split('&').forEach(function (pair) {
+        var kv = pair.split('=');
+        if (kv[0] === 'q') query = decodeURIComponent(kv[1] || '').replace(/\+/g, ' ');
+      });
+    }
     var parts = raw.split('/').filter(Boolean);
     var top = parts[0] || 'foods';
+    if (query !== null) { foodState.q = query; foodState.group = 'all'; }
 
     if (top === 'food' && parts[1]) viewFood(parts[1]);
     else if (top === 'herb' && parts[1]) viewHerb(parts[1]);

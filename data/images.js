@@ -9,6 +9,12 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:LivingAbalone.JPG"
  },
+ "acerola": {
+  "author": "Arria Belli",
+  "file": "Malpighia glabra acerola fruit green.jpg",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Malpighia_glabra_acerola_fruit_green.jpg"
+ },
  "acornsquash": {
   "author": "Forest &amp; Kim Starr",
   "file": "Starr_070730-7820_Cucurbita_pepo.jpg",
@@ -39,6 +45,12 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Amaranthus_tricolor0.jpg"
  },
+ "amaranthleaves": {
+  "author": "John Lewis Childs (Firm); Henry G. Gilbert Nursery and Seed Trade Catalog Collection",
+  "file": "Childs' rare flowers, vegetables, and fruits (1898) (20419285800).jpg",
+  "license": "No restrictions",
+  "page": "https://commons.wikimedia.org/wiki/File:Childs%27_rare_flowers,_vegetables,_and_fruits_(1898)_(20419285800).jpg"
+ },
  "anchovy": {
   "author": "Unknown",
   "file": "Anchovy_closeup.jpg",
@@ -62,6 +74,18 @@ window.IMAGE_CREDITS = {
   "file": "Reis_Arborio.JPG",
   "license": "Public domain",
   "page": "https://commons.wikimedia.org/wiki/File:Reis_Arborio.JPG"
+ },
+ "arrowhead": {
+  "author": "Didier Descouens",
+  "file": "Fleche_Cartailhac_MHNT_PRE_2009.0.232.2_simple.jpg",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Fleche_Cartailhac_MHNT_PRE_2009.0.232.2_simple.jpg"
+ },
+ "arrowroot": {
+  "author": "andy_king50",
+  "file": "Zamia_integrifolia_Furnas_2015.jpg",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Zamia_integrifolia_Furnas_2015.jpg"
  },
  "artichoke": {
   "author": "Jamain",
@@ -159,6 +183,12 @@ window.IMAGE_CREDITS = {
   "license": "Public domain",
   "page": "https://commons.wikimedia.org/wiki/File:American_bison_k5680-1.jpg"
  },
+ "bittergourdleaves": {
+  "author": "Imbo.Namnama",
+  "file": "Dinengdeng Inabraw 3.jpg",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Dinengdeng_Inabraw_3.jpg"
+ },
  "bittermelon": {
   "author": "Francisco Manuel Blanco (O.S.A.)",
   "file": "Momordica_charantia_Blanco2.357.png",
@@ -224,6 +254,18 @@ window.IMAGE_CREDITS = {
   "file": "Bok_Choy_(49553125456).jpg",
   "license": "CC BY 2.0",
   "page": "https://commons.wikimedia.org/wiki/File:Bok_Choy_(49553125456).jpg"
+ },
+ "borage": {
+  "author": "Christian Orlandi",
+  "file": "Borago_officinalis_(2025).jpg",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Borago_officinalis_(2025).jpg"
+ },
+ "bottlegourd": {
+  "author": "\u64ae\u5f71\u8005\u306f\u30ab\u30fc\u30eb\u304a\u3058\u3055\u3093\u3067\u3059\u3002",
+  "file": "Courge_encore_verte.jpg",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Courge_encore_verte.jpg"
  },
  "boysenberry": {
   "author": "Unknown",
@@ -303,6 +345,12 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Bulgur.jpg"
  },
+ "burdock": {
+  "author": "Epukas",
+  "file": "Villtakjas_2008.jpg",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:Villtakjas_2008.jpg"
+ },
  "butterhead": {
   "author": "en:User:Geographer",
   "file": "Iceberg_lettuce_in_SB.jpg",
@@ -350,6 +398,18 @@ window.IMAGE_CREDITS = {
   "file": "02017_0119_Kardamom,_Winter_in_den_Beskiden.jpg",
   "license": "CC BY-SA 4.0",
   "page": "https://commons.wikimedia.org/wiki/File:02017_0119_Kardamom,_Winter_in_den_Beskiden.jpg"
+ },
+ "cardoon": {
+  "author": "peganum from Henfield, England",
+  "file": "Cynara_cardunculus_flavescens_(14684164583).jpg",
+  "license": "CC BY-SA 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Cynara_cardunculus_flavescens_(14684164583).jpg"
+ },
+ "carissa": {
+  "author": "Forest &amp; Kim Starr",
+  "file": "Starr_010820-0009_Carissa_macrocarpa.jpg",
+  "license": "CC BY 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Starr_010820-0009_Carissa_macrocarpa.jpg"
  },
  "carrot": {
   "author": "Evan-Amos",
@@ -423,6 +483,12 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Somerset-Cheddar.jpg"
  },
+ "cherimoya": {
+  "author": "Hannes Grobe 21:17, 5 November 2006 (UTC)",
+  "file": "Cherimoya cut hg.jpg",
+  "license": "CC BY-SA 2.5",
+  "page": "https://commons.wikimedia.org/wiki/File:Cherimoya_cut_hg.jpg"
+ },
  "cherry": {
   "author": "spurekar",
   "file": "Cherry_season_(48216568227).jpg",
@@ -489,6 +555,12 @@ window.IMAGE_CREDITS = {
   "license": "GFDL 1.2",
   "page": "https://commons.wikimedia.org/wiki/File:Chickpea_BNC.jpg"
  },
+ "chicorygreens": {
+  "author": "Henry G. Gilbert Nursery and Seed Trade Catalog Collection.; Peter Henderson &amp; Co.",
+  "file": "Everything for the garden (16389149001).jpg",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:Everything_for_the_garden_(16389149001).jpg"
+ },
  "chilipepper": {
   "author": "purdman1",
   "file": "Accras_et_sauce_chili.jpg",
@@ -506,6 +578,12 @@ window.IMAGE_CREDITS = {
   "file": "Allium_schoenoprasum_-_Bombus_lapidarius_-_Tootsi.jpg",
   "license": "CC BY-SA 4.0",
   "page": "https://commons.wikimedia.org/wiki/File:Allium_schoenoprasum_-_Bombus_lapidarius_-_Tootsi.jpg"
+ },
+ "chrysanthemum": {
+  "author": "Alvesgaspar",
+  "file": "Glebionis_February_2008-1.jpg",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Glebionis_February_2008-1.jpg"
  },
  "cilantro": {
   "author": "Franz Eugen K\u00f6hler, K\u00f6hler's Medizinal-Pflanzen",
@@ -591,6 +669,12 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Cottagecheese200px.jpg"
  },
+ "crabapple": {
+  "author": "Charles de Mille-Isles from Mille-Isles, Canada",
+  "file": "Pommier sauvage - Malus - crabapple (5053412726).jpg",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Pommier_sauvage_-_Malus_-_crabapple_(5053412726).jpg"
+ },
  "cranberry": {
   "author": "Photo by Keith Weller",
   "file": "Cranberry_bog.jpg",
@@ -668,6 +752,18 @@ window.IMAGE_CREDITS = {
   "file": "Illustration_Anethum_graveolens_clean.jpg",
   "license": "Public domain",
   "page": "https://commons.wikimedia.org/wiki/File:Illustration_Anethum_graveolens_clean.jpg"
+ },
+ "drumstickleaves": {
+  "author": "Subhashish Panigrahi",
+  "file": "Samba dasami ghanta.jpg",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Samba_dasami_ghanta.jpg"
+ },
+ "drumstickpods": {
+  "author": "Erector",
+  "file": "Moringa oleifera drumstick pods.JPG",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Moringa_oleifera_drumstick_pods.JPG"
  },
  "drymilk": {
   "author": "Internet Archive Book Images",
@@ -753,6 +849,12 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 2.0",
   "page": "https://commons.wikimedia.org/wiki/File:Flammulina_velutipes_(Enokitake,_winter_mushroom).jpg"
  },
+ "epazote": {
+  "author": "Robert H. Mohlenbrock",
+  "file": "Dysphania_ambrosioides_NRCS-1_(cropped).jpg",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:Dysphania_ambrosioides_NRCS-1_(cropped).jpg"
+ },
  "evapmilk": {
   "author": "HV",
   "file": "Dosenmilch.jpg",
@@ -794,6 +896,12 @@ window.IMAGE_CREDITS = {
   "file": "Feta_Cheese.jpg",
   "license": "CC BY-SA 2.5",
   "page": "https://commons.wikimedia.org/wiki/File:Feta_Cheese.jpg"
+ },
+ "fiddlehead": {
+  "author": "\u2c6e",
+  "file": "Fiddlehead_closeup.png",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Fiddlehead_closeup.png"
  },
  "fig": {
   "author": "Luis nunes alberto",
@@ -921,6 +1029,12 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 4.0",
   "page": "https://commons.wikimedia.org/wiki/File:Grapefruits_-_whole-halved-segments.jpg"
  },
+ "grapeleaves": {
+  "author": "James Gordon from Los Angeles, California, USA",
+  "file": "Merchant_selling_grape_leaves,_Al-Hamidiyah_Souq,_Damascus,_Syria.jpg",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Merchant_selling_grape_leaves,_Al-Hamidiyah_Souq,_Damascus,_Syria.jpg"
+ },
  "greatnorthern": {
   "author": "Bean appreciator",
   "file": "16 bean soup mix 03.jpg",
@@ -950,6 +1064,12 @@ window.IMAGE_CREDITS = {
   "file": "HK SYP Best of Best Vegetable Green \u71c8\u7c60\u6912 bell pepper Aug-2012.JPG",
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:HK_SYP_Best_of_Best_Vegetable_Green_%E7%87%88%E7%B1%A0%E6%A4%92_bell_pepper_Aug-2012.JPG"
+ },
+ "greenplantain": {
+  "author": "User:Dominicanoventura",
+  "file": "Mangu dominicano --Contenido- -Lonjas de salami fritas -Lonjas de queso blanco -Mangu o pur\u00e9 de pl\u00e1tano verde -Mantequilla --Este es un plato t\u00edpico en el desayuno dominicano --Rep\u00fablica Dominicana - 2013-10-08 14-28.jpg",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Mangu_dominicano_--Contenido-_-Lonjas_de_salami_fritas_-Lonjas_de_queso_blanco_-Mangu_o_pur%C3%A9_de_pl%C3%A1tano_verde_-Mantequilla_--Este_es_un_plato_t%C3%ADpico_en_el_desayuno_dominicano_--Rep%C3%BAblica_Dominicana_-_2013-10-08_14-28.jpg"
  },
  "groundbeef": {
   "author": "No machine-readable author provided. Rainer Zenz assumed (based on copyright claims).",
@@ -1077,11 +1197,23 @@ window.IMAGE_CREDITS = {
   "license": "Public domain",
   "page": "https://commons.wikimedia.org/wiki/File:Cucurbita_maxima_Blanco2.320.png"
  },
+ "hyacinthbean": {
+  "author": "Dinesh Valke from Thane, India",
+  "file": "Lablab purpureus (4194811383).jpg",
+  "license": "CC BY-SA 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Lablab_purpureus_(4194811383).jpg"
+ },
  "iceberg": {
   "author": "Rasbak 13:13, 20 May 2007 (UTC)",
   "file": "Iceberg_lettuce_(IJssla_krop).jpg",
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Iceberg_lettuce_(IJssla_krop).jpg"
+ },
+ "irishmoss": {
+  "author": "Ryan Hodnett",
+  "file": "Irish Moss (Chondrus crispus) - Oslo, Norway 2021-03-25.jpg",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Irish_Moss_(Chondrus_crispus)_-_Oslo,_Norway_2021-03-25.jpg"
  },
  "jackfruit": {
   "author": "This work was made by Tushar Hossain and released under the license(s) stated below. Please feel free to use it for any ",
@@ -1095,11 +1227,29 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Immature_jalapeno_capsicum_annuum_var_annuum.jpeg"
  },
+ "javaplum": {
+  "author": "Salil Kumar Mukherjee",
+  "file": "Java plum (Syzygium cumini).jpg",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Java_plum_(Syzygium_cumini).jpg"
+ },
  "jicama": {
   "author": "Francisco Manuel Blanco (O.S.A.)",
   "file": "Pachyrhizus_erosus_Blanco2.249.png",
   "license": "Public domain",
   "page": "https://commons.wikimedia.org/wiki/File:Pachyrhizus_erosus_Blanco2.249.png"
+ },
+ "jujube": {
+  "author": "Tokyo Watcher at English Wikipedia",
+  "file": "Ziziphus_jujuba.jpg",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Ziziphus_jujuba.jpg"
+ },
+ "jute": {
+  "author": "Prenn",
+  "file": "Corchorus_olitorius_(2).JPG",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Corchorus_olitorius_(2).JPG"
  },
  "kale": {
   "author": "Rasbak",
@@ -1112,6 +1262,12 @@ window.IMAGE_CREDITS = {
   "file": "Triticum_turgidum_2.jpg",
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Triticum_turgidum_2.jpg"
+ },
+ "kelp": {
+  "author": "Bj\u00f8rn Christian T\u00f8rrissen",
+  "file": "Kelp_In_Freycinet_Tasmania.jpg",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Kelp_In_Freycinet_Tasmania.jpg"
  },
  "kidney": {
   "author": "Kagor",
@@ -1227,11 +1383,23 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Longan_tree_at_Pine_Island_Nursery.jpg"
  },
+ "loquat": {
+  "author": "Aftabbanoori",
+  "file": "Loquat-0.jpg",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Loquat-0.jpg"
+ },
  "lotusroot": {
   "author": "T.Voekler",
   "file": "Sacred_lotus_Nelumbo_nucifera.jpg",
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Sacred_lotus_Nelumbo_nucifera.jpg"
+ },
+ "lotusseed": {
+  "author": "Sjschen at English Wikipedia",
+  "file": "DriedLotusSeeds.jpg",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:DriedLotusSeeds.jpg"
  },
  "lupin": {
   "author": "Calapito",
@@ -1262,6 +1430,12 @@ window.IMAGE_CREDITS = {
   "file": "Grifola_frondosa_(29715305790).jpg",
   "license": "CC BY-SA 2.0",
   "page": "https://commons.wikimedia.org/wiki/File:Grifola_frondosa_(29715305790).jpg"
+ },
+ "mameysapote": {
+  "author": "Unknown",
+  "file": "ARS-_Pouteria_sapota.jpg",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:ARS-_Pouteria_sapota.jpg"
  },
  "mandarin": {
   "author": "4028mdk09",
@@ -1389,6 +1563,12 @@ window.IMAGE_CREDITS = {
   "license": "CC0",
   "page": "https://commons.wikimedia.org/wiki/File:Napa_cabbages.png"
  },
+ "nativepersimmon": {
+  "author": "Britton, N.L., and A. Brown. 1913. An illustrated flora of the northern United States, Canada and the British Possession",
+  "file": "Diospyros_virginiana_BB-1913.png",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:Diospyros_virginiana_BB-1913.png"
+ },
  "navy": {
   "author": "Rasbak",
   "file": "Phaseolus_vulgaris_white_beans,_witte_boon.jpg",
@@ -1400,6 +1580,12 @@ window.IMAGE_CREDITS = {
   "file": "Illustration_Prunus_persica_clean_no_descr.jpg",
   "license": "Public domain",
   "page": "https://commons.wikimedia.org/wiki/File:Illustration_Prunus_persica_clean_no_descr.jpg"
+ },
+ "nopales": {
+  "author": "ZooFari (talk)",
+  "file": "Prickly_Pear_5half.JPG",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Prickly_Pear_5half.JPG"
  },
  "nutmeg": {
   "author": "Herusutimbul",
@@ -1587,6 +1773,12 @@ window.IMAGE_CREDITS = {
   "license": "CC BY 2.0",
   "page": "https://commons.wikimedia.org/wiki/File:Pistachio_vera.jpg"
  },
+ "pitanga": {
+  "author": "Yemisi Ogbe",
+  "file": "Pitanga Cherries.jpg",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Pitanga_Cherries.jpg"
+ },
  "plantain": {
   "author": "J &amp; E",
   "file": "Mega_racimos_de_guineos.jpg",
@@ -1665,6 +1857,12 @@ window.IMAGE_CREDITS = {
   "license": "Public domain",
   "page": "https://commons.wikimedia.org/wiki/File:Patates.jpg"
  },
+ "pricklypear": {
+  "author": "Tom\u00e1s Castelazo",
+  "file": "Prickly pears.jpg",
+  "license": "CC BY-SA 2.5",
+  "page": "https://commons.wikimedia.org/wiki/File:Prickly_pears.jpg"
+ },
  "provolone": {
   "author": "like the grand canyon",
   "file": "Provolone_watermelon_shape.jpg",
@@ -1683,11 +1881,23 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:FrenchMarketPumpkinsB.jpg"
  },
+ "pumpkinflower": {
+  "author": "John Lewis Childs (Firm); Henry G. Gilbert Nursery and Seed Trade Catalog Collection",
+  "file": "Childs' rare flowers, vegetables, and fruits (1911) (20598975492).jpg",
+  "license": "No restrictions",
+  "page": "https://commons.wikimedia.org/wiki/File:Childs%27_rare_flowers,_vegetables,_and_fruits_(1911)_(20598975492).jpg"
+ },
  "pumpkinseed": {
   "author": "Dmitry Makeev",
   "file": "Pepita_de_calabaza.jpg",
   "license": "CC BY-SA 4.0",
   "page": "https://commons.wikimedia.org/wiki/File:Pepita_de_calabaza.jpg"
+ },
+ "purslane": {
+  "author": "Ton Rulkens from Mozambique",
+  "file": "Purslane (4600243417).jpg",
+  "license": "CC BY-SA 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Purslane_(4600243417).jpg"
  },
  "quail": {
   "author": "Duncan Wright",
@@ -1712,6 +1922,12 @@ window.IMAGE_CREDITS = {
   "file": "Curd_Setting.jpg",
   "license": "Public domain",
   "page": "https://commons.wikimedia.org/wiki/File:Curd_Setting.jpg"
+ },
+ "quince": {
+  "author": "David W.",
+  "file": "Cydonia oblonga Fruit 1.jpg",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:Cydonia_oblonga_Fruit_1.jpg"
  },
  "quinoa": {
   "author": "User:MarkusHagenlocher",
@@ -1755,6 +1971,12 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Brassica_oleracea_var_capitata_Rubyball.jpg"
  },
+ "rhubarb": {
+  "author": "Dieter Weber (User:Uellue)",
+  "file": "Rheum_rhabarbarum.2006-04-27.uellue.jpg",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Rheum_rhabarbarum.2006-04-27.uellue.jpg"
+ },
  "ribeye": {
   "author": "Jon Sullivan",
   "file": "Steak_with_shitaki_mushrooms.jpg",
@@ -1766,6 +1988,12 @@ window.IMAGE_CREDITS = {
   "file": "Ricotte_fresche.jpg",
   "license": "CC0",
   "page": "https://commons.wikimedia.org/wiki/File:Ricotte_fresche.jpg"
+ },
+ "ridgegourd": {
+  "author": "\u2018Uncle Carl\u2019 (\u30ab\u30fc\u30eb\u304a\u3058\u3055\u3093).",
+  "file": "Luffa_aegyptica.jpg",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Luffa_aegyptica.jpg"
  },
  "romaine": {
   "author": "Forest &amp; Kim Starr",
@@ -1784,6 +2012,12 @@ window.IMAGE_CREDITS = {
   "file": "Wikicheese_-_Roquefort_-_20150417_-_003.jpg",
   "license": "CC BY-SA 4.0",
   "page": "https://commons.wikimedia.org/wiki/File:Wikicheese_-_Roquefort_-_20150417_-_003.jpg"
+ },
+ "roselle": {
+  "author": "Invertzoo",
+  "file": "Roselle, Hibiscus sabdariffa, 2014 01.JPG",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Roselle,_Hibiscus_sabdariffa,_2014_01.JPG"
  },
  "rosemary": {
   "author": "Margalob",
@@ -1808,6 +2042,18 @@ window.IMAGE_CREDITS = {
   "file": "Spices_22078028.jpg",
   "license": "CC BY 2.0",
   "page": "https://commons.wikimedia.org/wiki/File:Spices_22078028.jpg"
+ },
+ "salsify": {
+  "author": "Sarah Stierch",
+  "file": "Purple Salsify - Stierch.jpg",
+  "license": "CC BY 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Purple_Salsify_-_Stierch.jpg"
+ },
+ "sapodilla": {
+  "author": "Sugeesh at Malayalam Wikipedia",
+  "file": "\u0d38\u0d2a\u0d4d\u0d2a\u0d4b\u0d1f\u0d4d\u0d1f.jpg",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:%E0%B4%B8%E0%B4%AA%E0%B5%8D%E0%B4%AA%E0%B5%8B%E0%B4%9F%E0%B5%8D%E0%B4%9F.jpg"
  },
  "sardine": {
   "author": "TANAKA Juuyoh (\u7530\u4e2d\u5341\u6d0b)",
@@ -1856,6 +2102,12 @@ window.IMAGE_CREDITS = {
   "file": "Sesamum_indicum_-_K\u00f6hler\u2013s_Medizinal-Pflanzen-129.jpg",
   "license": "Public domain",
   "page": "https://commons.wikimedia.org/wiki/File:Sesamum_indicum_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-129.jpg"
+ },
+ "sesbania": {
+  "author": "Vijayanrajapuram",
+  "file": "Sesbania grandiflora flower and fruit.jpg",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Sesbania_grandiflora_flower_and_fruit.jpg"
  },
  "shallot": {
   "author": "No machine-readable author provided. Charles P. assumed (based on copyright claims).",
@@ -1982,6 +2234,12 @@ window.IMAGE_CREDITS = {
   "file": "California_spiny_lobster.JPG",
   "license": "CC BY-SA 2.5",
   "page": "https://commons.wikimedia.org/wiki/File:California_spiny_lobster.JPG"
+ },
+ "spirulina": {
+  "author": "Music4thekids",
+  "file": "Spirulina-powder-shadow.jpg",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Spirulina-powder-shadow.jpg"
  },
  "splitpea": {
   "author": "Sanjay Acharya",
@@ -2253,6 +2511,18 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 2.0",
   "page": "https://commons.wikimedia.org/wiki/File:Zizania_palustris_(20150198216).jpg"
  },
+ "wingedbean": {
+  "author": "Francisco Manuel Blanco (O.S.A.)",
+  "file": "Psophocarpus_tetragonolobus_Blanco2.293.png",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:Psophocarpus_tetragonolobus_Blanco2.293.png"
+ },
+ "witloof": {
+  "author": "Henry G. Gilbert Nursery and Seed Trade Catalog Collection.; J. Manns &amp; Co.",
+  "file": "Manns' superior seeds (16204136177).jpg",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Manns%27_superior_seeds_(16204136177).jpg"
+ },
  "woodear": {
   "author": "Stu's Images",
   "file": "Jelly_Ear,_Auricularia_auricula-judae,_UK_2.jpg",
@@ -2264,6 +2534,12 @@ window.IMAGE_CREDITS = {
   "file": "Dioscorea alata - Purple yam tuber - Mindanao, Philippines.jpg",
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Dioscorea_alata_-_Purple_yam_tuber_-_Mindanao,_Philippines.jpg"
+ },
+ "yardlong": {
+  "author": "Francisco Manuel Blanco (O.S.A.)",
+  "file": "Vigna_unguiculata_Blanco2.286-cropped.jpg",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:Vigna_unguiculata_Blanco2.286-cropped.jpg"
  },
  "yellowpepper": {
   "author": "Guruharsha",

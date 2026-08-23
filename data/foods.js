@@ -16,6 +16,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "seb"
+  ],
+  "tags": [
+   "fruit",
+   "pome"
+  ],
   "nutrients": {
    "folate": 3.0,
    "choline": 3.4,
@@ -71,6 +78,12 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "kela"
+  ],
+  "tags": [
+   "tropical"
+  ],
   "nutrients": {
    "satfat": 0.112,
    "dha": 0.0,
@@ -126,6 +139,12 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "blueberry"
+  ],
+  "tags": [
+   "berry"
+  ],
   "nutrients": {
    "potassium": 77.0,
    "sodium": 1.0,
@@ -181,6 +200,12 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "strawberry"
+  ],
+  "tags": [
+   "berry"
+  ],
   "nutrients": {
    "manganese": 0.386,
    "vitk": 2.2,
@@ -236,6 +261,12 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "raspberry"
+  ],
+  "tags": [
+   "berry"
+  ],
   "nutrients": {
    "satfat": 0.019,
    "dha": 0.0,
@@ -291,6 +322,12 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "bramble"
+  ],
+  "tags": [
+   "berry"
+  ],
   "nutrients": {
    "zinc": 0.53,
    "selenium": 0.4,
@@ -346,6 +383,12 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "cranberry"
+  ],
+  "tags": [
+   "berry"
+  ],
   "nutrients": {
    "kcal": 46.0,
    "choline": 5.5,
@@ -401,6 +444,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "santra",
+   "sweet orange"
+  ],
+  "tags": [
+   "citrus"
+  ],
   "nutrients": {
    "sugar": 9.35,
    "vite": 0.18,
@@ -456,6 +506,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "limon",
+   "nimbu"
+  ],
+  "tags": [
+   "citrus"
+  ],
   "nutrients": {
    "epa": 0.0,
    "dha": 0.0,
@@ -511,6 +568,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "chakotra",
+   "pomelo hybrid"
+  ],
+  "tags": [
+   "citrus"
+  ],
   "nutrients": {
    "fat": 0.14,
    "water": 88.06,
@@ -566,6 +630,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "alligator pear",
+   "butter fruit"
+  ],
+  "tags": [
+   "fruit"
+  ],
   "nutrients": {
    "dha": 0.0,
    "epa": 0.0,
@@ -622,6 +693,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "aam"
+  ],
+  "tags": [
+   "stone fruit",
+   "tropical"
+  ],
   "nutrients": {
    "epa": 0.0,
    "dha": 0.0,
@@ -677,6 +755,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "papita",
+   "pawpaw"
+  ],
+  "tags": [
+   "tropical"
+  ],
   "nutrients": {
    "choline": 6.1,
    "vitk": 2.6,
@@ -732,6 +817,12 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "ananas"
+  ],
+  "tags": [
+   "tropical"
+  ],
   "nutrients": {
    "vite": 0.02,
    "vitk": 0.7,
@@ -787,6 +878,8 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [],
+  "tags": [],
   "nutrients": {
    "vitk": 40.3,
    "protein": 1.14,
@@ -842,6 +935,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "anar",
+   "dalim"
+  ],
+  "tags": [
+   "fruit"
+  ],
   "nutrients": {
    "vite": 0.6,
    "choline": 7.6,
@@ -897,6 +997,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "tarbooj"
+  ],
+  "tags": [
+   "cucurbit",
+   "gourd",
+   "melon"
+  ],
   "nutrients": {
    "protein": 0.61,
    "fiber": 0.4,
@@ -952,6 +1060,16 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "kharbooja",
+   "muskmelon",
+   "rockmelon"
+  ],
+  "tags": [
+   "cucurbit",
+   "gourd",
+   "melon"
+  ],
   "nutrients": {
    "sodium": 16.0,
    "potassium": 267.0,
@@ -1007,6 +1125,12 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "angoor"
+  ],
+  "tags": [
+   "berry"
+  ],
   "nutrients": {
    "water": 80.54,
    "sugar": 15.48,
@@ -1062,6 +1186,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "cherry"
+  ],
+  "tags": [
+   "drupe",
+   "stone fruit"
+  ],
   "nutrients": {
    "choline": 6.1,
    "satfat": 0.038,
@@ -1117,6 +1248,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "aadu"
+  ],
+  "tags": [
+   "drupe",
+   "stone fruit"
+  ],
   "nutrients": {
    "monofat": 0.067,
    "polyfat": 0.086,
@@ -1172,6 +1310,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "nashpati"
+  ],
+  "tags": [
+   "fruit",
+   "pome"
+  ],
   "nutrients": {
    "magnesium": 7.0,
    "copper": 0.082,
@@ -1227,6 +1372,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "aloobukhara"
+  ],
+  "tags": [
+   "drupe",
+   "stone fruit"
+  ],
   "nutrients": {
    "choline": 1.9,
    "monofat": 0.134,
@@ -1282,6 +1434,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "khubani"
+  ],
+  "tags": [
+   "drupe",
+   "stone fruit"
+  ],
   "nutrients": {
    "fiber": 2.0,
    "iron": 0.39,
@@ -1337,6 +1496,12 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "anjeer"
+  ],
+  "tags": [
+   "fig"
+  ],
   "nutrients": {
    "dha": 0.0,
    "epa": 0.0,
@@ -1392,6 +1557,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "khajoor",
+   "medjool"
+  ],
+  "tags": [
+   "dried"
+  ],
   "nutrients": {
    "niacin": 1.61,
    "pantothenic": 0.805,
@@ -1438,6 +1610,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "amrood",
+   "amrud"
+  ],
+  "tags": [
+   "tropical"
+  ],
   "nutrients": {
    "satfat": 0.272,
    "dha": 0.0,
@@ -1493,6 +1672,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "japani phal",
+   "kaki",
+   "sharon fruit"
+  ],
+  "tags": [
+   "fruit"
+  ],
   "nutrients": {
    "satfat": 0.02,
    "dha": 0.0,
@@ -1547,6 +1734,12 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "tamatar"
+  ],
+  "tags": [
+   "nightshade"
+  ],
   "nutrients": {
    "choline": 6.7,
    "dha": 0.0,
@@ -1602,6 +1795,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "calabrese"
+  ],
+  "tags": [
+   "brassica",
+   "cruciferous"
+  ],
   "nutrients": {
    "monofat": 0.031,
    "polyfat": 0.112,
@@ -1657,6 +1857,15 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "borecole",
+   "curly kale"
+  ],
+  "tags": [
+   "brassica",
+   "cruciferous",
+   "leafy green"
+  ],
   "nutrients": {
    "b12": 0.0,
    "cholesterol": 0.0,
@@ -1712,6 +1921,12 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "palak"
+  ],
+  "tags": [
+   "leafy green"
+  ],
   "nutrients": {
    "calcium": 99.0,
    "potassium": 558.0,
@@ -1767,6 +1982,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "chard",
+   "seakale beet",
+   "silverbeet"
+  ],
+  "tags": [
+   "leafy green"
+  ],
   "nutrients": {
    "vita": 306.0,
    "satfat": 0.03,
@@ -1822,6 +2045,15 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "collard",
+   "spring greens"
+  ],
+  "tags": [
+   "brassica",
+   "cruciferous",
+   "leafy green"
+  ],
   "nutrients": {
    "choline": 23.2,
    "dha": 0.0,
@@ -1877,6 +2109,17 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "rocket",
+   "roquette",
+   "rucola"
+  ],
+  "tags": [
+   "brassica",
+   "cruciferous",
+   "leafy green",
+   "salad"
+  ],
   "nutrients": {
    "dha": 0.0,
    "epa": 0.0,
@@ -1932,6 +2175,15 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "watercress"
+  ],
+  "tags": [
+   "brassica",
+   "cruciferous",
+   "leafy green",
+   "salad"
+  ],
   "nutrients": {
    "vite": 1.0,
    "carbs": 1.29,
@@ -1987,6 +2239,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "brussels sprout"
+  ],
+  "tags": [
+   "brassica",
+   "cruciferous"
+  ],
   "nutrients": {
    "fiber": 3.8,
    "epa": 0.0,
@@ -2042,6 +2301,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "gobi",
+   "phool gobi"
+  ],
+  "tags": [
+   "brassica",
+   "cruciferous"
+  ],
   "nutrients": {
    "vita": 0.0,
    "carbs": 4.97,
@@ -2099,6 +2366,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "green cabbage",
+   "patta gobi"
+  ],
+  "tags": [
+   "brassica",
+   "cruciferous"
+  ],
   "nutrients": {
    "fat": 0.1,
    "carbs": 5.8,
@@ -2154,6 +2429,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "purple cabbage"
+  ],
+  "tags": [
+   "brassica",
+   "cruciferous"
+  ],
   "nutrients": {
    "choline": 17.1,
    "vitc": 57.0,
@@ -2209,6 +2491,16 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "chinese chard",
+   "pak choi",
+   "pak choy"
+  ],
+  "tags": [
+   "brassica",
+   "cruciferous",
+   "leafy green"
+  ],
   "nutrients": {
    "fiber": 1.0,
    "iron": 0.8,
@@ -2264,6 +2556,12 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "gajar"
+  ],
+  "tags": [
+   "root"
+  ],
   "nutrients": {
    "satfat": 0.032,
    "polyfat": 0.102,
@@ -2319,6 +2617,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "beetroot",
+   "chukandar",
+   "table beet"
+  ],
+  "tags": [
+   "root"
+  ],
   "nutrients": {
    "satfat": 0.027,
    "dha": 0.0,
@@ -2374,6 +2680,15 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "kumara",
+   "shakarkandi",
+   "yam (US)"
+  ],
+  "tags": [
+   "root",
+   "tuber"
+  ],
   "nutrients": {
    "fiber": 3.0,
    "vita": 709.0,
@@ -2429,6 +2744,15 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "aloo",
+   "spud"
+  ],
+  "tags": [
+   "nightshade",
+   "root",
+   "tuber"
+  ],
   "nutrients": {
    "choline": 12.1,
    "fat": 0.09,
@@ -2484,6 +2808,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "brown onion",
+   "pyaz",
+   "yellow onion"
+  ],
+  "tags": [
+   "allium"
+  ],
   "nutrients": {
    "monofat": 0.013,
    "polyfat": 0.017,
@@ -2539,6 +2871,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "lasan",
+   "lehsun"
+  ],
+  "tags": [
+   "allium"
+  ],
   "nutrients": {
    "dha": 0.0,
    "epa": 0.0,
@@ -2594,6 +2933,12 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "leek"
+  ],
+  "tags": [
+   "allium"
+  ],
   "nutrients": {
    "dha": 0.0,
    "epa": 0.0,
@@ -2649,6 +2994,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "adrak",
+   "ginger root"
+  ],
+  "tags": [
+   "root",
+   "spice"
+  ],
   "nutrients": {
    "water": 78.89,
    "sugar": 1.7,
@@ -2704,6 +3057,16 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "capsicum",
+   "red capsicum",
+   "shimla mirch",
+   "sweet pepper"
+  ],
+  "tags": [
+   "nightshade",
+   "pepper"
+  ],
   "nutrients": {
    "fiber": 2.1,
    "folate": 46.0,
@@ -2759,6 +3122,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "capsicum",
+   "green capsicum"
+  ],
+  "tags": [
+   "nightshade",
+   "pepper"
+  ],
   "nutrients": {
    "niacin": 0.48,
    "pantothenic": 0.099,
@@ -2814,6 +3185,16 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "chile",
+   "chilli",
+   "hot pepper",
+   "mirchi"
+  ],
+  "tags": [
+   "nightshade",
+   "pepper"
+  ],
   "nutrients": {
    "copper": 0.129,
    "manganese": 0.187,
@@ -2869,6 +3250,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "kheera",
+   "khira"
+  ],
+  "tags": [
+   "cucurbit",
+   "gourd"
+  ],
   "nutrients": {
    "carbs": 3.63,
    "kcal": 15.0,
@@ -2924,6 +3313,12 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "ajmoda"
+  ],
+  "tags": [
+   "stalk"
+  ],
   "nutrients": {
    "kcal": 14.0,
    "satfat": 0.042,
@@ -2979,6 +3374,12 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "asparagus"
+  ],
+  "tags": [
+   "stalk"
+  ],
   "nutrients": {
    "satfat": 0.04,
    "dha": 0.0,
@@ -3034,6 +3435,15 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "baby marrow",
+   "courgette"
+  ],
+  "tags": [
+   "cucurbit",
+   "gourd",
+   "squash"
+  ],
   "nutrients": {
    "choline": 9.5,
    "sugar": 2.5,
@@ -3091,6 +3501,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "butternut pumpkin"
+  ],
+  "tags": [
+   "cucurbit",
+   "gourd",
+   "squash"
+  ],
   "nutrients": {
    "fiber": 2.0,
    "epa": 0.0,
@@ -3145,6 +3563,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "winter squash"
+  ],
+  "tags": [
+   "cucurbit",
+   "gourd",
+   "squash"
+  ],
   "nutrients": {
    "carbs": 6.5,
    "vite": 1.06,
@@ -3200,6 +3626,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "garden peas",
+   "matar"
+  ],
+  "tags": [
+   "legume"
+  ],
   "nutrients": {
    "dha": 0.0,
    "epa": 0.0,
@@ -3255,6 +3688,16 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "french beans",
+   "haricot vert",
+   "snap beans",
+   "string beans"
+  ],
+  "tags": [
+   "legume",
+   "pod"
+  ],
   "nutrients": {
    "choline": 15.3,
    "water": 90.32,
@@ -3310,6 +3753,15 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "maize",
+   "makai",
+   "sweetcorn"
+  ],
+  "tags": [
+   "cereal",
+   "grain"
+  ],
   "nutrients": {
    "thiamin": 0.155,
    "riboflavin": 0.055,
@@ -3367,6 +3819,12 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "globe artichoke"
+  ],
+  "tags": [
+   "flower"
+  ],
   "nutrients": {
    "kcal": 47.0,
    "choline": 34.4,
@@ -3422,6 +3880,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "cos lettuce"
+  ],
+  "tags": [
+   "leafy green",
+   "salad"
+  ],
   "nutrients": {
    "choline": 9.9,
    "vita": 436.0,
@@ -3477,6 +3942,15 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "daikon radish",
+   "mooli"
+  ],
+  "tags": [
+   "brassica",
+   "cruciferous",
+   "root"
+  ],
   "nutrients": {
    "choline": 6.5,
    "monofat": 0.017,
@@ -3532,6 +4006,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "shalgam"
+  ],
+  "tags": [
+   "brassica",
+   "cruciferous",
+   "root"
+  ],
   "nutrients": {
    "dha": 0.0,
    "epa": 0.0,
@@ -3587,6 +4069,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "sea mustard",
+   "wakame"
+  ],
+  "tags": [
+   "sea vegetable",
+   "seaweed"
+  ],
   "nutrients": {
    "dha": 0.0,
    "vite": 1.0,
@@ -3642,6 +4132,18 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "bhendi",
+   "bhindi",
+   "gumbo",
+   "lady finger",
+   "ladyfinger",
+   "okro",
+   "vendakkai"
+  ],
+  "tags": [
+   "pod"
+  ],
   "nutrients": {
    "epa": 0.0,
    "dha": 0.0,
@@ -3697,6 +4199,15 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "aubergine",
+   "baingan",
+   "brinjal",
+   "guinea squash"
+  ],
+  "tags": [
+   "nightshade"
+  ],
   "nutrients": {
    "vite": 0.3,
    "niacin": 0.649,
@@ -3752,6 +4263,15 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "button mushroom",
+   "champignon",
+   "khumbi"
+  ],
+  "tags": [
+   "fungi",
+   "mushroom"
+  ],
   "nutrients": {
    "sugar": 1.98,
    "monofat": 0.0,
@@ -3807,6 +4327,15 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "baby bella",
+   "brown mushroom",
+   "cremini"
+  ],
+  "tags": [
+   "fungi",
+   "mushroom"
+  ],
   "nutrients": {
    "vite": 0.01,
    "vitd": 0.1,
@@ -3862,6 +4391,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "portabello",
+   "portobello"
+  ],
+  "tags": [
+   "fungi",
+   "mushroom"
+  ],
   "nutrients": {
    "vitk": 0.0,
    "ala": 0.0,
@@ -3916,6 +4453,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "black forest mushroom",
+   "xiang gu"
+  ],
+  "tags": [
+   "fungi",
+   "mushroom"
+  ],
   "nutrients": {
    "sugar": 2.38,
    "folate": 13.0,
@@ -3959,6 +4504,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "hen of the woods"
+  ],
+  "tags": [
+   "fungi",
+   "mushroom"
+  ],
   "nutrients": {
    "pantothenic": 0.27,
    "monofat": 0.03,
@@ -4014,6 +4566,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "oyster mushroom",
+   "pleurotus"
+  ],
+  "tags": [
+   "fungi",
+   "mushroom"
+  ],
   "nutrients": {
    "copper": 0.244,
    "vita": 2.0,
@@ -4069,6 +4629,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "enokitake",
+   "golden needle"
+  ],
+  "tags": [
+   "fungi",
+   "mushroom"
+  ],
   "nutrients": {
    "polyfat": 0.124,
    "satfat": 0.027,
@@ -4123,6 +4691,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "girolle"
+  ],
+  "tags": [
+   "fungi",
+   "mushroom"
+  ],
   "nutrients": {
    "kcal": 32.0,
    "sugar": 1.16,
@@ -4166,6 +4741,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "gucchi",
+   "morille"
+  ],
+  "tags": [
+   "fungi",
+   "mushroom"
+  ],
   "nutrients": {
    "sugar": 0.6,
    "folate": 9.0,
@@ -4217,6 +4800,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "uv button mushroom"
+  ],
+  "tags": [
+   "fungi",
+   "mushroom"
+  ],
   "nutrients": {
    "fat": 0.34,
    "carbs": 3.26,
@@ -4271,6 +4861,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "uv portobello"
+  ],
+  "tags": [
+   "fungi",
+   "mushroom"
+  ],
   "nutrients": {
    "ala": 0.0,
    "vitk": 0.0,
@@ -4327,6 +4924,12 @@ window.FOODS = [
   ],
   "allergens": [
    "treenut"
+  ],
+  "aka": [
+   "badam"
+  ],
+  "tags": [
+   "nut"
   ],
   "nutrients": {
    "dha": 0.0,
@@ -4387,6 +4990,12 @@ window.FOODS = [
   "allergens": [
    "treenut"
   ],
+  "aka": [
+   "akhrot"
+  ],
+  "tags": [
+   "nut"
+  ],
   "nutrients": {
    "calcium": 98.0,
    "vite": 0.7,
@@ -4443,6 +5052,12 @@ window.FOODS = [
   ],
   "allergens": [
    "treenut"
+  ],
+  "aka": [
+   "pecan"
+  ],
+  "tags": [
+   "nut"
   ],
   "nutrients": {
    "fat": 71.97,
@@ -4501,6 +5116,12 @@ window.FOODS = [
   "allergens": [
    "treenut"
   ],
+  "aka": [
+   "kaju"
+  ],
+  "tags": [
+   "nut"
+  ],
   "nutrients": {
    "vitc": 0.5,
    "thiamin": 0.423,
@@ -4557,6 +5178,12 @@ window.FOODS = [
   "allergens": [
    "treenut"
   ],
+  "aka": [
+   "pista"
+  ],
+  "tags": [
+   "nut"
+  ],
   "nutrients": {
    "folate": 51.0,
    "potassium": 1025.0,
@@ -4612,6 +5239,13 @@ window.FOODS = [
   ],
   "allergens": [
    "treenut"
+  ],
+  "aka": [
+   "brazil nut",
+   "para nut"
+  ],
+  "tags": [
+   "nut"
   ],
   "nutrients": {
    "dha": 0.0,
@@ -4672,6 +5306,13 @@ window.FOODS = [
   "allergens": [
    "treenut"
   ],
+  "aka": [
+   "cobnut",
+   "filbert"
+  ],
+  "tags": [
+   "nut"
+  ],
   "nutrients": {
    "choline": 45.6,
    "monofat": 45.652,
@@ -4729,6 +5370,12 @@ window.FOODS = [
   "allergens": [
    "treenut"
   ],
+  "aka": [
+   "queensland nut"
+  ],
+  "tags": [
+   "nut"
+  ],
   "nutrients": {
    "dha": 0.0,
    "epa": 0.0,
@@ -4782,6 +5429,12 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "chia"
+  ],
+  "tags": [
+   "seed"
+  ],
   "nutrients": {
    "protein": 16.54,
    "fiber": 34.4,
@@ -4830,6 +5483,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "alsi",
+   "linseed"
+  ],
+  "tags": [
+   "seed"
+  ],
   "nutrients": {
    "niacin": 3.08,
    "pantothenic": 0.985,
@@ -4885,6 +5545,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "magaz",
+   "pepita"
+  ],
+  "tags": [
+   "seed"
+  ],
   "nutrients": {
    "vitd": 0.0,
    "carbs": 10.71,
@@ -4942,6 +5609,12 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "sunflower kernel"
+  ],
+  "tags": [
+   "seed"
+  ],
   "nutrients": {
    "vitd": 0.0,
    "thiamin": 1.48,
@@ -4999,6 +5672,14 @@ window.FOODS = [
   "allergens": [
    "sesame"
   ],
+  "aka": [
+   "benne",
+   "gingelly",
+   "til"
+  ],
+  "tags": [
+   "seed"
+  ],
   "nutrients": {
    "dha": 0.0,
    "epa": 0.0,
@@ -5054,6 +5735,12 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "hemp heart"
+  ],
+  "tags": [
+   "seed"
+  ],
   "nutrients": {
    "protein": 31.56,
    "fiber": 4.0,
@@ -5103,6 +5790,16 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "daal",
+   "dal",
+   "masoor",
+   "red lentil"
+  ],
+  "tags": [
+   "legume",
+   "pulse"
+  ],
   "nutrients": {
    "b12": 0.0,
    "cholesterol": 0.0,
@@ -5158,6 +5855,16 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "bengal gram",
+   "chana",
+   "garbanzo",
+   "kabuli chana"
+  ],
+  "tags": [
+   "legume",
+   "pulse"
+  ],
   "nutrients": {
    "epa": 0.0,
    "dha": 0.0,
@@ -5213,6 +5920,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "black turtle bean",
+   "turtle bean"
+  ],
+  "tags": [
+   "legume",
+   "pulse"
+  ],
   "nutrients": {
    "fiber": 15.5,
    "dha": 0.0,
@@ -5268,6 +5983,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "rajma",
+   "red kidney bean"
+  ],
+  "tags": [
+   "legume",
+   "pulse"
+  ],
   "nutrients": {
    "dha": 0.0,
    "epa": 0.0,
@@ -5325,6 +6048,14 @@ window.FOODS = [
   "allergens": [
    "soy"
   ],
+  "aka": [
+   "soya",
+   "soya bean"
+  ],
+  "tags": [
+   "legume",
+   "pulse"
+  ],
   "nutrients": {
    "vitk": 47.0,
    "vita": 1.0,
@@ -5380,6 +6111,14 @@ window.FOODS = [
   "allergens": [
    "soy"
   ],
+  "aka": [
+   "edamame",
+   "green soybean"
+  ],
+  "tags": [
+   "legume",
+   "pulse"
+  ],
   "nutrients": {
    "carbs": 11.05,
    "kcal": 147.0,
@@ -5430,6 +6169,15 @@ window.FOODS = [
   ],
   "allergens": [
    "peanut"
+  ],
+  "aka": [
+   "goober",
+   "groundnut",
+   "moongphali"
+  ],
+  "tags": [
+   "legume",
+   "nut"
   ],
   "nutrients": {
    "vitk": 0.0,
@@ -5488,6 +6236,14 @@ window.FOODS = [
   "allergens": [
    "gluten"
   ],
+  "aka": [
+   "jai",
+   "oatmeal"
+  ],
+  "tags": [
+   "cereal",
+   "grain"
+  ],
   "nutrients": {
    "fiber": 10.6,
    "vita": 0.0,
@@ -5536,6 +6292,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "quinoa"
+  ],
+  "tags": [
+   "grain",
+   "pseudocereal"
+  ],
   "nutrients": {
    "vita": 1.0,
    "fiber": 7.0,
@@ -5589,6 +6352,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "brown rice",
+   "chawal"
+  ],
+  "tags": [
+   "cereal",
+   "grain"
+  ],
   "nutrients": {
    "dha": 0.0,
    "epa": 0.0,
@@ -5646,6 +6417,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "kuttu",
+   "soba"
+  ],
+  "tags": [
+   "grain",
+   "pseudocereal"
+  ],
   "nutrients": {
    "dha": 0.0,
    "epa": 0.0,
@@ -5698,6 +6477,13 @@ window.FOODS = [
   ],
   "allergens": [
    "gluten"
+  ],
+  "aka": [
+   "jau"
+  ],
+  "tags": [
+   "cereal",
+   "grain"
   ],
   "nutrients": {
    "selenium": 37.7,
@@ -5753,6 +6539,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "kagzi nimbu",
+   "key lime",
+   "nimbu"
+  ],
+  "tags": [
+   "citrus"
+  ],
   "nutrients": {
    "epa": 0.0,
    "dha": 0.0,
@@ -5808,6 +6602,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "santra",
+   "satsuma",
+   "tangerine"
+  ],
+  "tags": [
+   "citrus"
+  ],
   "nutrients": {
    "fat": 0.31,
    "sodium": 2.0,
@@ -5863,6 +6665,12 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "clementine"
+  ],
+  "tags": [
+   "citrus"
+  ],
   "nutrients": {
    "sugar": 9.18,
    "selenium": 0.1,
@@ -5910,6 +6718,12 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "cumquat"
+  ],
+  "tags": [
+   "citrus"
+  ],
   "nutrients": {
    "b12": 0.0,
    "vitk": 0.0,
@@ -5965,6 +6779,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "chakotra",
+   "pummelo",
+   "shaddock"
+  ],
+  "tags": [
+   "citrus"
+  ],
   "nutrients": {
    "vita": 0.0,
    "fat": 0.04,
@@ -6007,6 +6829,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "honey melon"
+  ],
+  "tags": [
+   "cucurbit",
+   "gourd",
+   "melon"
+  ],
   "nutrients": {
    "fiber": 0.8,
    "iron": 0.17,
@@ -6062,6 +6892,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "casaba"
+  ],
+  "tags": [
+   "cucurbit",
+   "gourd",
+   "melon"
+  ],
   "nutrients": {
    "water": 91.85,
    "sugar": 5.69,
@@ -6117,6 +6955,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "nectarine"
+  ],
+  "tags": [
+   "drupe",
+   "stone fruit"
+  ],
   "nutrients": {
    "choline": 6.2,
    "potassium": 201.0,
@@ -6172,6 +7017,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "morello",
+   "tart cherry"
+  ],
+  "tags": [
+   "drupe",
+   "stone fruit"
+  ],
   "nutrients": {
    "selenium": 0.0,
    "vite": 0.07,
@@ -6227,6 +7080,12 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "boysenberry"
+  ],
+  "tags": [
+   "berry"
+  ],
   "nutrients": {
    "satfat": 0.009,
    "dha": 0.0,
@@ -6282,6 +7141,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "amla substitute",
+   "goosegog"
+  ],
+  "tags": [
+   "berry"
+  ],
   "nutrients": {
    "dha": 0.0,
    "epa": 0.0,
@@ -6333,6 +7199,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "shahtoot",
+   "shahtut"
+  ],
+  "tags": [
+   "berry"
+  ],
   "nutrients": {
    "satfat": 0.027,
    "dha": 0.0,
@@ -6386,6 +7259,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "elderberry",
+   "sambucus"
+  ],
+  "tags": [
+   "berry"
+  ],
   "nutrients": {
    "dha": 0.0,
    "epa": 0.0,
@@ -6435,6 +7315,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "black currant",
+   "cassis"
+  ],
+  "tags": [
+   "berry"
+  ],
   "nutrients": {
    "vita": 12.0,
    "satfat": 0.034,
@@ -6481,6 +7368,12 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "red currant"
+  ],
+  "tags": [
+   "berry"
+  ],
   "nutrients": {
    "vita": 2.0,
    "dha": 0.0,
@@ -6536,6 +7429,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "goji",
+   "wolfberry"
+  ],
+  "tags": [
+   "berry"
+  ],
   "nutrients": {
    "protein": 14.26,
    "fiber": 13.0,
@@ -6569,6 +7469,14 @@ window.FOODS = [
   ],
   "allergens": [
    "treenut"
+  ],
+  "aka": [
+   "copra",
+   "nariyal"
+  ],
+  "tags": [
+   "nut",
+   "tropical"
   ],
   "nutrients": {
    "dha": 0.0,
@@ -6625,6 +7533,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "granadilla",
+   "krishna phal"
+  ],
+  "tags": [
+   "tropical"
+  ],
   "nutrients": {
    "satfat": 0.059,
    "dha": 0.0,
@@ -6678,6 +7593,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "lichee",
+   "litchi"
+  ],
+  "tags": [
+   "tropical"
+  ],
   "nutrients": {
    "satfat": 0.099,
    "dha": 0.0,
@@ -6732,6 +7654,12 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "rambutan"
+  ],
+  "tags": [
+   "tropical"
+  ],
   "nutrients": {
    "vita": 0.0,
    "fat": 0.21,
@@ -6776,6 +7704,12 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "dragon eye"
+  ],
+  "tags": [
+   "tropical"
+  ],
   "nutrients": {
    "protein": 1.31,
    "fiber": 1.1,
@@ -6816,6 +7750,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "carambola",
+   "kamrakh"
+  ],
+  "tags": [
+   "tropical"
+  ],
   "nutrients": {
    "vita": 3.0,
    "vitk": 0.0,
@@ -6871,6 +7812,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "katahal",
+   "kathal"
+  ],
+  "tags": [
+   "tropical"
+  ],
   "nutrients": {
    "fat": 0.64,
    "niacin": 0.92,
@@ -6924,6 +7872,12 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "durian"
+  ],
+  "tags": [
+   "tropical"
+  ],
   "nutrients": {
    "carbs": 27.09,
    "kcal": 147.0,
@@ -6968,6 +7922,12 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "mangosteen"
+  ],
+  "tags": [
+   "tropical"
+  ],
   "nutrients": {
    "vita": 2.0,
    "protein": 0.41,
@@ -7013,6 +7973,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "graviola",
+   "guanabana",
+   "laxman phal"
+  ],
+  "tags": [
+   "tropical"
+  ],
   "nutrients": {
    "satfat": 0.051,
    "dha": 0.0,
@@ -7067,6 +8035,12 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "breadfruit"
+  ],
+  "tags": [
+   "tropical"
+  ],
   "nutrients": {
    "choline": 9.8,
    "monofat": 0.034,
@@ -7122,6 +8096,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "cooking banana",
+   "kela"
+  ],
+  "tags": [
+   "tropical"
+  ],
   "nutrients": {
    "choline": 13.5,
    "cholesterol": 0.0,
@@ -7179,6 +8160,12 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "imli"
+  ],
+  "tags": [
+   "tropical"
+  ],
   "nutrients": {
    "dha": 0.0,
    "epa": 0.0,
@@ -7233,6 +8220,8 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [],
+  "tags": [],
   "nutrients": {
    "la": 0.107,
    "satfat": 0.104,
@@ -7287,6 +8276,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "dried plum"
+  ],
+  "tags": [
+   "dried",
+   "drupe",
+   "stone fruit"
+  ],
   "nutrients": {
    "choline": 10.1,
    "b12": 0.0,
@@ -7342,6 +8339,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "crisphead lettuce"
+  ],
+  "tags": [
+   "leafy green",
+   "salad"
+  ],
   "nutrients": {
    "vitk": 20.5,
    "sodium": 16.11,
@@ -7374,6 +8378,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "bibb lettuce",
+   "boston lettuce"
+  ],
+  "tags": [
+   "leafy green",
+   "salad"
+  ],
   "nutrients": {
    "monofat": 0.008,
    "polyfat": 0.117,
@@ -7429,6 +8441,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "curly endive",
+   "frisee"
+  ],
+  "tags": [
+   "leafy green",
+   "salad"
+  ],
   "nutrients": {
    "dha": 0.0,
    "epa": 0.0,
@@ -7484,6 +8504,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "italian chicory"
+  ],
+  "tags": [
+   "leafy green",
+   "salad"
+  ],
   "nutrients": {
    "satfat": 0.06,
    "dha": 0.0,
@@ -7539,6 +8566,12 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "dandelion"
+  ],
+  "tags": [
+   "leafy green"
+  ],
   "nutrients": {
    "monofat": 0.014,
    "polyfat": 0.306,
@@ -7594,6 +8627,16 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "gai choy",
+   "mustard leaf",
+   "sarson"
+  ],
+  "tags": [
+   "brassica",
+   "cruciferous",
+   "leafy green"
+  ],
   "nutrients": {
    "vite": 2.01,
    "dha": 0.0,
@@ -7648,6 +8691,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "beet tops",
+   "chukandar leaves"
+  ],
+  "tags": [
+   "leafy green"
+  ],
   "nutrients": {
    "protein": 2.2,
    "vita": 316.0,
@@ -7703,6 +8753,15 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "baby broccoli",
+   "broccoli raab",
+   "rapini"
+  ],
+  "tags": [
+   "brassica",
+   "cruciferous"
+  ],
   "nutrients": {
    "satfat": 0.083,
    "monofat": 0.044,
@@ -7758,6 +8817,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "romanesco broccoli"
+  ],
+  "tags": [
+   "brassica",
+   "cruciferous"
+  ],
   "nutrients": {
    "fiber": 3.2,
    "iron": 0.73,
@@ -7813,6 +8879,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "chinese broccoli",
+   "kai lan"
+  ],
+  "tags": [
+   "brassica",
+   "cruciferous"
+  ],
   "nutrients": {
    "fat": 0.76,
    "carbs": 4.67,
@@ -7862,6 +8936,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "savoy"
+  ],
+  "tags": [
+   "brassica",
+   "cruciferous"
+  ],
   "nutrients": {
    "fiber": 3.1,
    "iron": 0.4,
@@ -7917,6 +8998,15 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "chinese cabbage",
+   "pe-tsai",
+   "wombok"
+  ],
+  "tags": [
+   "brassica",
+   "cruciferous"
+  ],
   "nutrients": {
    "carbs": 3.23,
    "iron": 0.31,
@@ -7972,6 +9062,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "german turnip",
+   "knol khol"
+  ],
+  "tags": [
+   "brassica",
+   "cruciferous"
+  ],
   "nutrients": {
    "dha": 0.0,
    "epa": 0.0,
@@ -8027,6 +9125,12 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "parsnip"
+  ],
+  "tags": [
+   "root"
+  ],
   "nutrients": {
    "selenium": 1.8,
    "vite": 1.49,
@@ -8079,6 +9183,16 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "neep",
+   "swede",
+   "swedish turnip"
+  ],
+  "tags": [
+   "brassica",
+   "cruciferous",
+   "root"
+  ],
   "nutrients": {
    "vite": 0.3,
    "vitk": 0.3,
@@ -8134,6 +9248,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "celery root",
+   "knob celery"
+  ],
+  "tags": [
+   "root"
+  ],
   "nutrients": {
    "satfat": 0.079,
    "dha": 0.0,
@@ -8189,6 +9310,17 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "japanese radish",
+   "mooli",
+   "muli",
+   "white radish"
+  ],
+  "tags": [
+   "brassica",
+   "cruciferous",
+   "root"
+  ],
   "nutrients": {
    "sugar": 2.5,
    "vite": 0.0,
@@ -8244,6 +9376,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "horseradish"
+  ],
+  "tags": [
+   "brassica",
+   "cruciferous",
+   "root"
+  ],
   "nutrients": {
    "dha": 0.0,
    "epa": 0.0,
@@ -8299,6 +9439,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "mexican turnip",
+   "yam bean"
+  ],
+  "tags": [
+   "root",
+   "tuber"
+  ],
   "nutrients": {
    "monofat": 0.005,
    "polyfat": 0.043,
@@ -8354,6 +9502,15 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "jerusalem artichoke",
+   "sunroot",
+   "topinambour"
+  ],
+  "tags": [
+   "root",
+   "tuber"
+  ],
   "nutrients": {
    "vita": 1.0,
    "satfat": 0.0,
@@ -8409,6 +9566,17 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "arbi",
+   "arvi",
+   "dasheen",
+   "eddoe",
+   "kalo"
+  ],
+  "tags": [
+   "root",
+   "tuber"
+  ],
   "nutrients": {
    "dha": 0.0,
    "epa": 0.0,
@@ -8464,6 +9632,16 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "manioc",
+   "mogo",
+   "tapioca root",
+   "yuca"
+  ],
+  "tags": [
+   "root",
+   "tuber"
+  ],
   "nutrients": {
    "dha": 0.0,
    "epa": 0.0,
@@ -8519,6 +9697,16 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "dioscorea",
+   "ratalu",
+   "suran",
+   "true yam"
+  ],
+  "tags": [
+   "root",
+   "tuber"
+  ],
   "nutrients": {
    "sugar": 0.5,
    "dha": 0.0,
@@ -8574,6 +9762,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "bhein",
+   "kamal kakdi",
+   "renkon"
+  ],
+  "tags": [
+   "root"
+  ],
   "nutrients": {
    "fat": 0.1,
    "calcium": 45.0,
@@ -8623,6 +9819,8 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [],
+  "tags": [],
   "nutrients": {
    "carbs": 5.2,
    "kcal": 27.0,
@@ -8678,6 +9876,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "matai",
+   "singhara"
+  ],
+  "tags": [
+   "root"
+  ],
   "nutrients": {
    "monofat": 0.002,
    "polyfat": 0.043,
@@ -8733,6 +9938,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "green onion",
+   "hara pyaz",
+   "spring onion"
+  ],
+  "tags": [
+   "allium"
+  ],
   "nutrients": {
    "sugar": 2.33,
    "vite": 0.55,
@@ -8788,6 +10001,12 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "eschalot"
+  ],
+  "tags": [
+   "allium"
+  ],
   "nutrients": {
    "carbs": 16.8,
    "kcal": 72.0,
@@ -8843,6 +10062,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "chives"
+  ],
+  "tags": [
+   "allium",
+   "herb"
+  ],
   "nutrients": {
    "dha": 0.0,
    "epa": 0.0,
@@ -8898,6 +10124,15 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "crookneck",
+   "summer squash"
+  ],
+  "tags": [
+   "cucurbit",
+   "gourd",
+   "squash"
+  ],
   "nutrients": {
    "vite": 0.13,
    "niacin": 0.448,
@@ -8955,6 +10190,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "vegetable spaghetti"
+  ],
+  "tags": [
+   "cucurbit",
+   "gourd",
+   "squash"
+  ],
   "nutrients": {
    "fiber": 1.5,
    "kcal": 31.0,
@@ -9008,6 +10251,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "des moines squash"
+  ],
+  "tags": [
+   "cucurbit",
+   "gourd",
+   "squash"
+  ],
   "nutrients": {
    "fiber": 1.5,
    "vita": 18.0,
@@ -9057,6 +10308,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "hubbard pumpkin"
+  ],
+  "tags": [
+   "cucurbit",
+   "gourd",
+   "squash"
+  ],
   "nutrients": {
    "carbs": 8.7,
    "kcal": 40.0,
@@ -9112,6 +10371,16 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "chow chow",
+   "christophene",
+   "mirliton",
+   "sayote"
+  ],
+  "tags": [
+   "cucurbit",
+   "gourd"
+  ],
   "nutrients": {
    "epa": 0.0,
    "dha": 0.0,
@@ -9167,6 +10436,16 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "balsam pear",
+   "bitter gourd",
+   "bitter squash",
+   "karela"
+  ],
+  "tags": [
+   "cucurbit",
+   "gourd"
+  ],
   "nutrients": {
    "vita": 24.0,
    "carbs": 3.7,
@@ -9213,6 +10492,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "husk tomato",
+   "tomate verde"
+  ],
+  "tags": [
+   "nightshade"
+  ],
   "nutrients": {
    "dha": 0.0,
    "epa": 0.0,
@@ -9268,6 +10554,15 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "mangetout",
+   "snow pea",
+   "sugar snap"
+  ],
+  "tags": [
+   "legume",
+   "pod"
+  ],
   "nutrients": {
    "sugar": 4.0,
    "vite": 0.39,
@@ -9323,6 +10618,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "finocchio",
+   "saunf bulb"
+  ],
+  "tags": [
+   "stalk"
+  ],
   "nutrients": {
    "fiber": 3.1,
    "carbs": 7.3,
@@ -9378,6 +10680,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "jalapeno chilli"
+  ],
+  "tags": [
+   "nightshade",
+   "pepper"
+  ],
   "nutrients": {
    "b12": 0.0,
    "cholesterol": 0.0,
@@ -9435,6 +10744,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "serrano chilli"
+  ],
+  "tags": [
+   "nightshade",
+   "pepper"
+  ],
   "nutrients": {
    "fat": 0.44,
    "carbs": 6.7,
@@ -9490,6 +10806,15 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "ancho",
+   "pasilla",
+   "poblano chilli"
+  ],
+  "tags": [
+   "nightshade",
+   "pepper"
+  ],
   "nutrients": {
    "vita": 1788.0,
    "niacin": 7.175,
@@ -9536,6 +10861,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "yellow capsicum"
+  ],
+  "tags": [
+   "nightshade",
+   "pepper"
+  ],
   "nutrients": {
    "fiber": 0.9,
    "vita": 10.0,
@@ -9583,6 +10915,15 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "black fungus",
+   "cloud ear",
+   "kikurage"
+  ],
+  "tags": [
+   "fungi",
+   "mushroom"
+  ],
   "nutrients": {
    "vita": 0.0,
    "niacin": 0.07,
@@ -9628,6 +10969,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "paddy straw mushroom"
+  ],
+  "tags": [
+   "fungi",
+   "mushroom"
+  ],
   "nutrients": {
    "vita": 0.0,
    "carbs": 4.64,
@@ -9676,6 +11024,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "pinto"
+  ],
+  "tags": [
+   "legume",
+   "pulse"
+  ],
   "nutrients": {
    "vitc": 6.3,
    "vitk": 5.6,
@@ -9731,6 +11086,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "haricot bean",
+   "pea bean"
+  ],
+  "tags": [
+   "legume",
+   "pulse"
+  ],
   "nutrients": {
    "iron": 5.49,
    "thiamin": 0.775,
@@ -9785,6 +11148,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "fasolia",
+   "white kidney bean"
+  ],
+  "tags": [
+   "legume",
+   "pulse"
+  ],
   "nutrients": {
    "dha": 0.0,
    "epa": 0.0,
@@ -9840,6 +11211,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "great northern"
+  ],
+  "tags": [
+   "legume",
+   "pulse"
+  ],
   "nutrients": {
    "fiber": 20.2,
    "sugar": 2.26,
@@ -9894,6 +11272,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "butter bean",
+   "madagascar bean"
+  ],
+  "tags": [
+   "legume",
+   "pulse"
+  ],
   "nutrients": {
    "epa": 0.0,
    "dha": 0.0,
@@ -9949,6 +11335,15 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "bakla",
+   "broad bean",
+   "faba bean"
+  ],
+  "tags": [
+   "legume",
+   "pulse"
+  ],
   "nutrients": {
    "calcium": 103.0,
    "potassium": 1062.0,
@@ -10004,6 +11399,15 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "green gram",
+   "moong",
+   "mung dal"
+  ],
+  "tags": [
+   "legume",
+   "pulse"
+  ],
   "nutrients": {
    "dha": 0.0,
    "epa": 0.0,
@@ -10059,6 +11463,15 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "aduki",
+   "chori",
+   "red bean"
+  ],
+  "tags": [
+   "legume",
+   "pulse"
+  ],
   "nutrients": {
    "monofat": 0.05,
    "polyfat": 0.113,
@@ -10108,6 +11521,16 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "black eyed bean",
+   "chawli",
+   "cowpea",
+   "lobia"
+  ],
+  "tags": [
+   "legume",
+   "pulse"
+  ],
   "nutrients": {
    "dha": 0.0,
    "epa": 0.0,
@@ -10163,6 +11586,8 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [],
+  "tags": [],
   "nutrients": {
    "vita": 1.0,
    "vitd": 0.0,
@@ -10212,6 +11637,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "matar dal"
+  ],
+  "tags": [
+   "legume",
+   "pulse"
+  ],
   "nutrients": {
    "dha": 0.0,
    "epa": 0.0,
@@ -10269,6 +11701,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "lupini"
+  ],
+  "tags": [
+   "legume",
+   "pulse"
+  ],
   "nutrients": {
    "vitd": 0.0,
    "carbs": 40.37,
@@ -10318,6 +11757,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "borlotti",
+   "roman bean"
+  ],
+  "tags": [
+   "legume",
+   "pulse"
+  ],
   "nutrients": {
    "fiber": 24.7,
    "vita": 0.0,
@@ -10368,6 +11815,14 @@ window.FOODS = [
   ],
   "allergens": [
    "treenut"
+  ],
+  "aka": [
+   "chilgoza",
+   "pignoli",
+   "pine kernel"
+  ],
+  "tags": [
+   "nut"
   ],
   "nutrients": {
    "water": 2.28,
@@ -10427,6 +11882,13 @@ window.FOODS = [
   "allergens": [
    "treenut"
   ],
+  "aka": [
+   "marron",
+   "singhara substitute"
+  ],
+  "tags": [
+   "nut"
+  ],
   "nutrients": {
    "vitd": 0.0,
    "vita": 1.0,
@@ -10474,6 +11936,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "khus khus",
+   "posto"
+  ],
+  "tags": [
+   "seed",
+   "spice"
+  ],
   "nutrients": {
    "cholesterol": 0.0,
    "b12": 0.0,
@@ -10530,6 +12000,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "rai",
+   "sarson"
+  ],
+  "tags": [
+   "seed",
+   "spice"
+  ],
   "nutrients": {
    "b12": 0.0,
    "cholesterol": 0.0,
@@ -10587,6 +12065,8 @@ window.FOODS = [
   "allergens": [
    "treenut"
   ],
+  "aka": [],
+  "tags": [],
   "nutrients": {
    "vita": 2.0,
    "iron": 3.53,
@@ -10633,6 +12113,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "char magaz",
+   "magaz"
+  ],
+  "tags": [
+   "seed"
+  ],
   "nutrients": {
    "vitd": 0.0,
    "vita": 0.0,
@@ -10682,6 +12169,8 @@ window.FOODS = [
   "allergens": [
    "treenut"
   ],
+  "aka": [],
+  "tags": [],
   "nutrients": {
    "epa": 0.0,
    "dha": 0.0,
@@ -10735,6 +12224,8 @@ window.FOODS = [
   "allergens": [
    "treenut"
   ],
+  "aka": [],
+  "tags": [],
   "nutrients": {
    "vita": 0.0,
    "protein": 6.2,
@@ -10782,6 +12273,14 @@ window.FOODS = [
   ],
   "allergens": [
    "gluten"
+  ],
+  "aka": [
+   "gehun",
+   "wheat"
+  ],
+  "tags": [
+   "cereal",
+   "grain"
   ],
   "nutrients": {
    "fiber": 12.2,
@@ -10840,6 +12339,14 @@ window.FOODS = [
   "allergens": [
    "gluten"
   ],
+  "aka": [
+   "cracked wheat",
+   "dalia"
+  ],
+  "tags": [
+   "cereal",
+   "grain"
+  ],
   "nutrients": {
    "dha": 0.0,
    "epa": 0.0,
@@ -10897,6 +12404,13 @@ window.FOODS = [
   "allergens": [
    "gluten"
   ],
+  "aka": [
+   "dinkel"
+  ],
+  "tags": [
+   "cereal",
+   "grain"
+  ],
   "nutrients": {
    "vitk": 3.6,
    "satfat": 0.406,
@@ -10951,6 +12465,13 @@ window.FOODS = [
   "allergens": [
    "gluten"
   ],
+  "aka": [
+   "emmer"
+  ],
+  "tags": [
+   "cereal",
+   "grain"
+  ],
   "nutrients": {
    "carbs": 72.132,
    "protein": 12.639,
@@ -10984,6 +12505,13 @@ window.FOODS = [
   ],
   "allergens": [
    "gluten"
+  ],
+  "aka": [
+   "khorasan wheat"
+  ],
+  "tags": [
+   "cereal",
+   "grain"
   ],
   "nutrients": {
    "zinc": 3.68,
@@ -11037,6 +12565,13 @@ window.FOODS = [
   ],
   "allergens": [
    "gluten"
+  ],
+  "aka": [
+   "rye"
+  ],
+  "tags": [
+   "cereal",
+   "grain"
   ],
   "nutrients": {
    "cholesterol": 0.0,
@@ -11093,6 +12628,15 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "bajra",
+   "proso millet",
+   "ragi substitute"
+  ],
+  "tags": [
+   "cereal",
+   "grain"
+  ],
   "nutrients": {
    "vitk": 0.9,
    "vita": 0.0,
@@ -11144,6 +12688,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "jowar",
+   "milo"
+  ],
+  "tags": [
+   "cereal",
+   "grain"
+  ],
   "nutrients": {
    "protein": 10.62,
    "fiber": 6.7,
@@ -11195,6 +12747,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "teff"
+  ],
+  "tags": [
+   "cereal",
+   "grain"
+  ],
   "nutrients": {
    "fat": 2.38,
    "water": 8.82,
@@ -11244,6 +12803,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "rajgira",
+   "ramdana"
+  ],
+  "tags": [
+   "grain",
+   "pseudocereal"
+  ],
   "nutrients": {
    "choline": 69.8,
    "fiber": 6.7,
@@ -11298,6 +12865,15 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "basmati",
+   "chawal",
+   "jasmine rice"
+  ],
+  "tags": [
+   "cereal",
+   "grain"
+  ],
   "nutrients": {
    "dha": 0.0,
    "epa": 0.0,
@@ -11353,6 +12929,8 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [],
+  "tags": [],
   "nutrients": {
    "cholesterol": 0.0,
    "satfat": 0.14,
@@ -11399,6 +12977,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "wild rice"
+  ],
+  "tags": [
+   "cereal",
+   "grain"
+  ],
   "nutrients": {
    "dha": 0.0,
    "epa": 0.0,
@@ -11454,6 +13039,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "acha",
+   "fonio"
+  ],
+  "tags": [
+   "cereal",
+   "grain"
+  ],
   "nutrients": {
    "carbs": 81.305,
    "protein": 7.169,
@@ -11486,6 +13079,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "makai atta",
+   "polenta"
+  ],
+  "tags": [
+   "cereal",
+   "grain"
+  ],
   "nutrients": {
    "vite": 0.42,
    "choline": 21.6,
@@ -11541,6 +13142,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "sweet basil",
+   "tulsi substitute"
+  ],
+  "tags": [
+   "herb"
+  ],
   "nutrients": {
    "iron": 3.17,
    "vitc": 18.0,
@@ -11596,6 +13204,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "chinese parsley",
+   "coriander leaves",
+   "dhania"
+  ],
+  "tags": [
+   "herb"
+  ],
   "nutrients": {
    "dha": 0.0,
    "epa": 0.0,
@@ -11651,6 +13267,12 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "parsley"
+  ],
+  "tags": [
+   "herb"
+  ],
   "nutrients": {
    "dha": 0.0,
    "epa": 0.0,
@@ -11706,6 +13328,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "peppermint",
+   "pudina"
+  ],
+  "tags": [
+   "herb"
+  ],
   "nutrients": {
    "satfat": 0.246,
    "protein": 3.75,
@@ -11754,6 +13383,12 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "pudina"
+  ],
+  "tags": [
+   "herb"
+  ],
   "nutrients": {
    "fat": 0.73,
    "carbs": 8.41,
@@ -11802,6 +13437,12 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "rosemary"
+  ],
+  "tags": [
+   "herb"
+  ],
   "nutrients": {
    "niacin": 0.912,
    "pantothenic": 0.804,
@@ -11850,6 +13491,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "ajwain substitute",
+   "thyme"
+  ],
+  "tags": [
+   "herb"
+  ],
   "nutrients": {
    "protein": 5.56,
    "fiber": 14.0,
@@ -11898,6 +13546,12 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "oregano"
+  ],
+  "tags": [
+   "herb"
+  ],
   "nutrients": {
    "cholesterol": 0.0,
    "b12": 0.0,
@@ -11954,6 +13608,12 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "sage"
+  ],
+  "tags": [
+   "herb"
+  ],
   "nutrients": {
    "iron": 28.12,
    "magnesium": 428.0,
@@ -12008,6 +13668,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "dill weed",
+   "sowa",
+   "suva"
+  ],
+  "tags": [
+   "herb"
+  ],
   "nutrients": {
    "niacin": 1.57,
    "pantothenic": 0.397,
@@ -12056,6 +13724,12 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "estragon"
+  ],
+  "tags": [
+   "herb"
+  ],
   "nutrients": {
    "thiamin": 0.251,
    "riboflavin": 1.339,
@@ -12106,6 +13780,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "citronella",
+   "sera"
+  ],
+  "tags": [
+   "herb"
+  ],
   "nutrients": {
    "vita": 0.0,
    "cholesterol": 0.0,
@@ -12154,6 +13835,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "curcuma",
+   "haldi"
+  ],
+  "tags": [
+   "root",
+   "spice"
+  ],
   "nutrients": {
    "b12": 0.0,
    "cholesterol": 0.0,
@@ -12210,6 +13899,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "cassia",
+   "dalchini"
+  ],
+  "tags": [
+   "spice"
+  ],
   "nutrients": {
    "cholesterol": 0.0,
    "b12": 0.0,
@@ -12266,6 +13962,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "jeera",
+   "zeera"
+  ],
+  "tags": [
+   "spice"
+  ],
   "nutrients": {
    "protein": 17.81,
    "fiber": 10.5,
@@ -12320,6 +14023,12 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "dhania seed"
+  ],
+  "tags": [
+   "spice"
+  ],
   "nutrients": {
    "fat": 17.77,
    "carbs": 54.99,
@@ -12367,6 +14076,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "kali mirch",
+   "peppercorn"
+  ],
+  "tags": [
+   "spice"
+  ],
   "nutrients": {
    "b12": 0.0,
    "cholesterol": 0.0,
@@ -12423,6 +14139,12 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "laung"
+  ],
+  "tags": [
+   "spice"
+  ],
   "nutrients": {
    "b12": 0.0,
    "cholesterol": 0.0,
@@ -12480,6 +14202,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "elachi",
+   "elaichi"
+  ],
+  "tags": [
+   "spice"
+  ],
   "nutrients": {
    "iron": 13.97,
    "magnesium": 229.0,
@@ -12526,6 +14255,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "methi dana",
+   "methi seed"
+  ],
+  "tags": [
+   "spice"
+  ],
   "nutrients": {
    "fat": 6.41,
    "carbs": 58.35,
@@ -12572,6 +14308,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "paprika"
+  ],
+  "tags": [
+   "nightshade",
+   "pepper",
+   "spice"
+  ],
   "nutrients": {
    "b12": 0.0,
    "cholesterol": 0.0,
@@ -12628,6 +14372,12 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "jaiphal"
+  ],
+  "tags": [
+   "spice"
+  ],
   "nutrients": {
    "protein": 5.84,
    "iron": 3.04,
@@ -12682,6 +14432,15 @@ window.FOODS = [
   ],
   "allergens": [
    "lactose",
+   "milk"
+  ],
+  "aka": [
+   "doodh",
+   "full fat milk",
+   "whole milk"
+  ],
+  "tags": [
+   "dairy",
    "milk"
   ],
   "nutrients": {
@@ -12739,6 +14498,14 @@ window.FOODS = [
   ],
   "allergens": [
    "lactose",
+   "milk"
+  ],
+  "aka": [
+   "semi skimmed",
+   "two percent milk"
+  ],
+  "tags": [
+   "dairy",
    "milk"
   ],
   "nutrients": {
@@ -12800,6 +14567,13 @@ window.FOODS = [
    "lactose",
    "milk"
   ],
+  "aka": [
+   "one percent milk"
+  ],
+  "tags": [
+   "dairy",
+   "milk"
+  ],
   "nutrients": {
    "potassium": 150.0,
    "zinc": 0.42,
@@ -12859,6 +14633,15 @@ window.FOODS = [
    "lactose",
    "milk"
   ],
+  "aka": [
+   "fat free milk",
+   "nonfat milk",
+   "skimmed milk"
+  ],
+  "tags": [
+   "dairy",
+   "milk"
+  ],
   "nutrients": {
    "vitd": 1.0,
    "vita": 61.0,
@@ -12908,6 +14691,13 @@ window.FOODS = [
   ],
   "allergens": [
    "lactose",
+   "milk"
+  ],
+  "aka": [
+   "goat milk"
+  ],
+  "tags": [
+   "dairy",
    "milk"
   ],
   "nutrients": {
@@ -12967,6 +14757,14 @@ window.FOODS = [
    "lactose",
    "milk"
   ],
+  "aka": [
+   "ewe milk",
+   "sheep milk"
+  ],
+  "tags": [
+   "dairy",
+   "milk"
+  ],
   "nutrients": {
    "vita": 44.0,
    "fat": 7.0,
@@ -13015,6 +14813,14 @@ window.FOODS = [
   ],
   "allergens": [
    "lactose",
+   "milk"
+  ],
+  "aka": [
+   "bhains ka doodh",
+   "buffalo milk"
+  ],
+  "tags": [
+   "dairy",
    "milk"
   ],
   "nutrients": {
@@ -13066,6 +14872,13 @@ window.FOODS = [
    "lactose",
    "milk"
   ],
+  "aka": [
+   "evaporated milk"
+  ],
+  "tags": [
+   "dairy",
+   "milk"
+  ],
   "nutrients": {
    "kcal": 134.0,
    "protein": 6.81,
@@ -13113,6 +14926,13 @@ window.FOODS = [
   ],
   "allergens": [
    "lactose",
+   "milk"
+  ],
+  "aka": [
+   "condensed milk"
+  ],
+  "tags": [
+   "dairy",
    "milk"
   ],
   "nutrients": {
@@ -13172,6 +14992,14 @@ window.FOODS = [
    "lactose",
    "milk"
   ],
+  "aka": [
+   "milk powder",
+   "powdered milk"
+  ],
+  "tags": [
+   "dairy",
+   "milk"
+  ],
   "nutrients": {
    "vitk": 0.1,
    "sugar": 51.98,
@@ -13228,6 +15056,16 @@ window.FOODS = [
   "allergens": [
    "lactose",
    "milk"
+  ],
+  "aka": [
+   "curd",
+   "dahi",
+   "yoghurt"
+  ],
+  "tags": [
+   "dairy",
+   "fermented",
+   "yoghurt"
   ],
   "nutrients": {
    "vitk": 0.2,
@@ -13286,6 +15124,15 @@ window.FOODS = [
    "lactose",
    "milk"
   ],
+  "aka": [
+   "greek yoghurt",
+   "strained yoghurt"
+  ],
+  "tags": [
+   "dairy",
+   "fermented",
+   "yoghurt"
+  ],
   "nutrients": {
    "protein": 9.0,
    "epa": 0.0,
@@ -13341,6 +15188,15 @@ window.FOODS = [
    "lactose",
    "milk"
   ],
+  "aka": [
+   "icelandic yoghurt",
+   "skyr"
+  ],
+  "tags": [
+   "dairy",
+   "fermented",
+   "yoghurt"
+  ],
   "nutrients": {
    "water": 85.0,
    "magnesium": 10.7,
@@ -13395,6 +15251,15 @@ window.FOODS = [
   "allergens": [
    "lactose",
    "milk"
+  ],
+  "aka": [
+   "chaas",
+   "chhaas",
+   "cultured buttermilk"
+  ],
+  "tags": [
+   "dairy",
+   "fermented"
   ],
   "nutrients": {
    "dha": 0.0,
@@ -13452,6 +15317,15 @@ window.FOODS = [
   "allergens": [
    "lactose",
    "milk"
+  ],
+  "aka": [
+   "chhena",
+   "cottage cheese (india)",
+   "queso fresco"
+  ],
+  "tags": [
+   "cheese",
+   "dairy"
   ],
   "nutrients": {
    "fiber": 0.0,
@@ -13512,6 +15386,14 @@ window.FOODS = [
    "lactose",
    "milk"
   ],
+  "aka": [
+   "cottage cheese",
+   "curds"
+  ],
+  "tags": [
+   "cheese",
+   "dairy"
+  ],
   "nutrients": {
    "vitd": 0.1,
    "vitk": 0.0,
@@ -13568,6 +15450,13 @@ window.FOODS = [
   "allergens": [
    "lactose",
    "milk"
+  ],
+  "aka": [
+   "ricotta"
+  ],
+  "tags": [
+   "cheese",
+   "dairy"
   ],
   "nutrients": {
    "cholesterol": 49.0,
@@ -13628,6 +15517,15 @@ window.FOODS = [
    "lactose",
    "milk"
   ],
+  "aka": [
+   "farmer cheese",
+   "quark",
+   "tvorog"
+  ],
+  "tags": [
+   "cheese",
+   "dairy"
+  ],
   "nutrients": {
    "sugar": 1.85,
    "fat": 0.29,
@@ -13685,6 +15583,13 @@ window.FOODS = [
    "lactose",
    "milk"
   ],
+  "aka": [
+   "queso blanco"
+  ],
+  "tags": [
+   "cheese",
+   "dairy"
+  ],
   "nutrients": {
    "cholesterol": 70.0,
    "satfat": 13.661,
@@ -13740,6 +15645,14 @@ window.FOODS = [
   "allergens": [
    "lactose",
    "milk"
+  ],
+  "aka": [
+   "fior di latte",
+   "mozzarella"
+  ],
+  "tags": [
+   "cheese",
+   "dairy"
   ],
   "nutrients": {
    "manganese": 0.03,
@@ -13797,6 +15710,14 @@ window.FOODS = [
   "allergens": [
    "lactose",
    "milk"
+  ],
+  "aka": [
+   "cream cheese",
+   "mascarpone"
+  ],
+  "tags": [
+   "cheese",
+   "dairy"
   ],
   "nutrients": {
    "choline": 26.8,
@@ -13857,6 +15778,13 @@ window.FOODS = [
    "lactose",
    "milk"
   ],
+  "aka": [
+   "feta"
+  ],
+  "tags": [
+   "cheese",
+   "dairy"
+  ],
   "nutrients": {
    "vite": 0.18,
    "vitk": 1.8,
@@ -13913,6 +15841,14 @@ window.FOODS = [
   "allergens": [
    "lactose",
    "milk"
+  ],
+  "aka": [
+   "halloumi",
+   "queso anejo"
+  ],
+  "tags": [
+   "cheese",
+   "dairy"
   ],
   "nutrients": {
    "vitk": 2.5,
@@ -13971,6 +15907,13 @@ window.FOODS = [
    "lactose",
    "milk"
   ],
+  "aka": [
+   "brie"
+  ],
+  "tags": [
+   "cheese",
+   "dairy"
+  ],
   "nutrients": {
    "sugar": 0.45,
    "vite": 0.24,
@@ -14027,6 +15970,13 @@ window.FOODS = [
   "allergens": [
    "lactose",
    "milk"
+  ],
+  "aka": [
+   "camembert"
+  ],
+  "tags": [
+   "cheese",
+   "dairy"
   ],
   "nutrients": {
    "vitk": 2.0,
@@ -14085,6 +16035,14 @@ window.FOODS = [
    "lactose",
    "milk"
   ],
+  "aka": [
+   "chevre",
+   "goat cheese"
+  ],
+  "tags": [
+   "cheese",
+   "dairy"
+  ],
   "nutrients": {
    "vitk": 1.8,
    "vite": 0.18,
@@ -14141,6 +16099,13 @@ window.FOODS = [
   "allergens": [
    "lactose",
    "milk"
+  ],
+  "aka": [
+   "munster"
+  ],
+  "tags": [
+   "cheese",
+   "dairy"
   ],
   "nutrients": {
    "vitk": 2.5,
@@ -14199,6 +16164,13 @@ window.FOODS = [
    "lactose",
    "milk"
   ],
+  "aka": [
+   "cheddar"
+  ],
+  "tags": [
+   "cheese",
+   "dairy"
+  ],
   "nutrients": {
    "iron": 0.16,
    "potassium": 77.0,
@@ -14252,6 +16224,13 @@ window.FOODS = [
   "allergens": [
    "lactose",
    "milk"
+  ],
+  "aka": [
+   "gouda"
+  ],
+  "tags": [
+   "cheese",
+   "dairy"
   ],
   "nutrients": {
    "sugar": 2.22,
@@ -14309,6 +16288,15 @@ window.FOODS = [
   "allergens": [
    "lactose",
    "milk"
+  ],
+  "aka": [
+   "emmental",
+   "emmentaler",
+   "swiss cheese"
+  ],
+  "tags": [
+   "cheese",
+   "dairy"
   ],
   "nutrients": {
    "choline": 13.8,
@@ -14369,6 +16357,13 @@ window.FOODS = [
    "lactose",
    "milk"
   ],
+  "aka": [
+   "gruyere"
+  ],
+  "tags": [
+   "cheese",
+   "dairy"
+  ],
   "nutrients": {
    "vitk": 2.7,
    "sugar": 0.36,
@@ -14425,6 +16420,13 @@ window.FOODS = [
   "allergens": [
    "lactose",
    "milk"
+  ],
+  "aka": [
+   "provolone"
+  ],
+  "tags": [
+   "cheese",
+   "dairy"
   ],
   "nutrients": {
    "epa": 0.0,
@@ -14483,6 +16485,13 @@ window.FOODS = [
    "lactose",
    "milk"
   ],
+  "aka": [
+   "monterey jack"
+  ],
+  "tags": [
+   "cheese",
+   "dairy"
+  ],
   "nutrients": {
    "vita": 198.0,
    "vitd": 0.6,
@@ -14539,6 +16548,13 @@ window.FOODS = [
   "allergens": [
    "lactose",
    "milk"
+  ],
+  "aka": [
+   "colby"
+  ],
+  "tags": [
+   "cheese",
+   "dairy"
   ],
   "nutrients": {
    "dha": 0.0,
@@ -14597,6 +16613,13 @@ window.FOODS = [
    "lactose",
    "milk"
   ],
+  "aka": [
+   "fontina"
+  ],
+  "tags": [
+   "cheese",
+   "dairy"
+  ],
   "nutrients": {
    "vitk": 2.6,
    "sugar": 1.55,
@@ -14654,6 +16677,13 @@ window.FOODS = [
    "lactose",
    "milk"
   ],
+  "aka": [
+   "edam"
+  ],
+  "tags": [
+   "cheese",
+   "dairy"
+  ],
   "nutrients": {
    "vitk": 2.3,
    "vite": 0.24,
@@ -14710,6 +16740,15 @@ window.FOODS = [
   "allergens": [
    "milk"
   ],
+  "aka": [
+   "grana",
+   "parmesan",
+   "parmigiano"
+  ],
+  "tags": [
+   "cheese",
+   "dairy"
+  ],
   "nutrients": {
    "dha": 0.0,
    "epa": 0.0,
@@ -14765,6 +16804,14 @@ window.FOODS = [
   ],
   "allergens": [
    "milk"
+  ],
+  "aka": [
+   "pecorino",
+   "romano"
+  ],
+  "tags": [
+   "cheese",
+   "dairy"
   ],
   "nutrients": {
    "vita": 96.0,
@@ -14823,6 +16870,14 @@ window.FOODS = [
    "lactose",
    "milk"
   ],
+  "aka": [
+   "roquefort"
+  ],
+  "tags": [
+   "blue cheese",
+   "cheese",
+   "dairy"
+  ],
   "nutrients": {
    "vita": 294.0,
    "protein": 21.54,
@@ -14872,6 +16927,16 @@ window.FOODS = [
   "allergens": [
    "lactose",
    "milk"
+  ],
+  "aka": [
+   "danish blue",
+   "gorgonzola",
+   "stilton"
+  ],
+  "tags": [
+   "blue cheese",
+   "cheese",
+   "dairy"
   ],
   "nutrients": {
    "dha": 0.0,
@@ -14929,6 +16994,15 @@ window.FOODS = [
   "allergens": [
    "lactose",
    "milk"
+  ],
+  "aka": [
+   "double cream",
+   "malai",
+   "whipping cream"
+  ],
+  "tags": [
+   "cream",
+   "dairy"
   ],
   "nutrients": {
    "fat": 36.08,
@@ -14989,6 +17063,14 @@ window.FOODS = [
    "lactose",
    "milk"
   ],
+  "aka": [
+   "single cream",
+   "table cream"
+  ],
+  "tags": [
+   "cream",
+   "dairy"
+  ],
   "nutrients": {
    "protein": 2.96,
    "phosphorus": 92.0,
@@ -15047,6 +17129,13 @@ window.FOODS = [
   "allergens": [
    "lactose",
    "milk"
+  ],
+  "aka": [
+   "half and half"
+  ],
+  "tags": [
+   "cream",
+   "dairy"
   ],
   "nutrients": {
    "selenium": 3.2,
@@ -15107,6 +17196,15 @@ window.FOODS = [
    "lactose",
    "milk"
   ],
+  "aka": [
+   "smetana",
+   "sour cream"
+  ],
+  "tags": [
+   "cream",
+   "dairy",
+   "fermented"
+  ],
   "nutrients": {
    "iron": 0.07,
    "vitd": 0.0,
@@ -15164,6 +17262,14 @@ window.FOODS = [
   ],
   "allergens": [
    "milk"
+  ],
+  "aka": [
+   "makhan",
+   "unsalted butter"
+  ],
+  "tags": [
+   "dairy",
+   "fat"
   ],
   "nutrients": {
    "sugar": 0.06,
@@ -15223,6 +17329,14 @@ window.FOODS = [
   "allergens": [
    "milk"
   ],
+  "aka": [
+   "makhan",
+   "salted butter"
+  ],
+  "tags": [
+   "dairy",
+   "fat"
+  ],
   "nutrients": {
    "fiber": 0.0,
    "ala": 0.315,
@@ -15281,6 +17395,14 @@ window.FOODS = [
   "allergens": [
    "milk"
   ],
+  "aka": [
+   "clarified butter",
+   "desi ghee"
+  ],
+  "tags": [
+   "dairy",
+   "fat"
+  ],
   "nutrients": {
    "fiber": 0.0,
    "vite": 2.8,
@@ -15337,6 +17459,14 @@ window.FOODS = [
   "allergens": [
    "lactose",
    "milk"
+  ],
+  "aka": [
+   "whey",
+   "whey powder"
+  ],
+  "tags": [
+   "dairy",
+   "protein powder"
   ],
   "nutrients": {
    "epa": 0.0,
@@ -15395,6 +17525,12 @@ window.FOODS = [
    "lactose",
    "milk"
   ],
+  "aka": [
+   "acid whey"
+  ],
+  "tags": [
+   "dairy"
+  ],
   "nutrients": {
    "vita": 17.0,
    "vitk": 0.0,
@@ -15447,6 +17583,16 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "entrecote",
+   "rib eye",
+   "scotch fillet"
+  ],
+  "tags": [
+   "beef",
+   "meat",
+   "red meat"
+  ],
   "nutrients": {
    "sugar": 0.0,
    "calcium": 6.0,
@@ -15496,6 +17642,15 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "rump",
+   "top sirloin"
+  ],
+  "tags": [
+   "beef",
+   "meat",
+   "red meat"
+  ],
   "nutrients": {
    "protein": 22.27,
    "fiber": 0.0,
@@ -15548,6 +17703,15 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "filet mignon",
+   "fillet steak"
+  ],
+  "tags": [
+   "beef",
+   "meat",
+   "red meat"
+  ],
   "nutrients": {
    "choline": 92.1,
    "fat": 5.93,
@@ -15599,6 +17763,14 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "brisket"
+  ],
+  "tags": [
+   "beef",
+   "meat",
+   "red meat"
+  ],
   "nutrients": {
    "dha": 0.0,
    "epa": 0.0,
@@ -15650,6 +17822,15 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "bavette",
+   "flank"
+  ],
+  "tags": [
+   "beef",
+   "meat",
+   "red meat"
+  ],
   "nutrients": {
    "carbs": 0.0,
    "kcal": 149.0,
@@ -15702,6 +17883,17 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "hamburger meat",
+   "keema",
+   "mince",
+   "minced beef"
+  ],
+  "tags": [
+   "beef",
+   "meat",
+   "red meat"
+  ],
   "nutrients": {
    "sugar": 0.0,
    "fiber": 0.0,
@@ -15755,6 +17947,15 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "calf",
+   "veal"
+  ],
+  "tags": [
+   "beef",
+   "meat",
+   "red meat"
+  ],
   "nutrients": {
    "protein": 21.28,
    "fiber": 0.0,
@@ -15801,6 +18002,14 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "pork loin"
+  ],
+  "tags": [
+   "meat",
+   "pork",
+   "red meat"
+  ],
   "nutrients": {
    "vite": 0.18,
    "vitk": 0.0,
@@ -15853,6 +18062,14 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "pork chop"
+  ],
+  "tags": [
+   "meat",
+   "pork",
+   "red meat"
+  ],
   "nutrients": {
    "vitk": 0.0,
    "sugar": 0.0,
@@ -15902,6 +18119,14 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "pork fillet"
+  ],
+  "tags": [
+   "meat",
+   "pork",
+   "red meat"
+  ],
   "nutrients": {
    "sugar": 0.0,
    "monofat": 0.792,
@@ -15956,6 +18181,15 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "pork belly",
+   "samgyeopsal"
+  ],
+  "tags": [
+   "meat",
+   "pork",
+   "red meat"
+  ],
   "nutrients": {
    "epa": 0.0,
    "dha": 0.0,
@@ -16006,6 +18240,15 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "boston butt",
+   "pork shoulder"
+  ],
+  "tags": [
+   "meat",
+   "pork",
+   "red meat"
+  ],
   "nutrients": {
    "vita": 2.0,
    "fat": 7.14,
@@ -16051,6 +18294,15 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "gammon",
+   "ham"
+  ],
+  "tags": [
+   "meat",
+   "pork",
+   "processed meat"
+  ],
   "nutrients": {
    "vitk": 0.0,
    "sugar": 0.0,
@@ -16103,6 +18355,15 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "rashers",
+   "streaky bacon"
+  ],
+  "tags": [
+   "meat",
+   "pork",
+   "processed meat"
+  ],
   "nutrients": {
    "vitc": 0.0,
    "ala": 0.217,
@@ -16157,6 +18418,15 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "lamb chop",
+   "mutton chop"
+  ],
+  "tags": [
+   "lamb",
+   "meat",
+   "red meat"
+  ],
   "nutrients": {
    "monofat": 2.39,
    "polyfat": 0.54,
@@ -16203,6 +18473,14 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "leg of lamb"
+  ],
+  "tags": [
+   "lamb",
+   "meat",
+   "red meat"
+  ],
   "nutrients": {
    "protein": 20.52,
    "fiber": 0.0,
@@ -16249,6 +18527,14 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "lamb shank"
+  ],
+  "tags": [
+   "lamb",
+   "meat",
+   "red meat"
+  ],
   "nutrients": {
    "fiber": 0.0,
    "iron": 1.79,
@@ -16295,6 +18581,15 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "keema",
+   "minced lamb"
+  ],
+  "tags": [
+   "lamb",
+   "meat",
+   "red meat"
+  ],
   "nutrients": {
    "sugar": 0.0,
    "vitk": 3.6,
@@ -16347,6 +18642,15 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "deer",
+   "deer meat"
+  ],
+  "tags": [
+   "game",
+   "meat",
+   "red meat"
+  ],
   "nutrients": {
    "vita": 0.0,
    "vitk": 1.1,
@@ -16396,6 +18700,15 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "american buffalo",
+   "buffalo"
+  ],
+  "tags": [
+   "game",
+   "meat",
+   "red meat"
+  ],
   "nutrients": {
    "selenium": 27.0,
    "protein": 21.62,
@@ -16436,6 +18749,15 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "elk",
+   "wapiti"
+  ],
+  "tags": [
+   "game",
+   "meat",
+   "red meat"
+  ],
   "nutrients": {
    "cholesterol": 55.0,
    "satfat": 0.53,
@@ -16474,6 +18796,16 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "cabrito",
+   "chevon",
+   "mutton (india)"
+  ],
+  "tags": [
+   "game",
+   "meat",
+   "red meat"
+  ],
   "nutrients": {
    "protein": 20.6,
    "fiber": 0.0,
@@ -16516,6 +18848,14 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "wild boar"
+  ],
+  "tags": [
+   "game",
+   "meat",
+   "red meat"
+  ],
   "nutrients": {
    "protein": 21.51,
    "fiber": 0.0,
@@ -16549,6 +18889,14 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "coney",
+   "rabbit"
+  ],
+  "tags": [
+   "game",
+   "meat"
+  ],
   "nutrients": {
    "protein": 21.79,
    "fiber": 0.0,
@@ -16587,6 +18935,15 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "chicken",
+   "murgh"
+  ],
+  "tags": [
+   "meat",
+   "poultry",
+   "white meat"
+  ],
   "nutrients": {
    "vitc": 0.0,
    "fiber": 0.0,
@@ -16641,6 +18998,13 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "chicken thigh"
+  ],
+  "tags": [
+   "meat",
+   "poultry"
+  ],
   "nutrients": {
    "monofat": 1.497,
    "polyfat": 0.94,
@@ -16694,6 +19058,14 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "chicken leg",
+   "drumstick"
+  ],
+  "tags": [
+   "meat",
+   "poultry"
+  ],
   "nutrients": {
    "calcium": 9.0,
    "potassium": 225.0,
@@ -16748,6 +19120,13 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "chicken wings"
+  ],
+  "tags": [
+   "meat",
+   "poultry"
+  ],
   "nutrients": {
    "iron": 0.46,
    "magnesium": 16.0,
@@ -16802,6 +19181,14 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "turkey"
+  ],
+  "tags": [
+   "meat",
+   "poultry",
+   "white meat"
+  ],
   "nutrients": {
    "monofat": 0.264,
    "polyfat": 0.258,
@@ -16856,6 +19243,14 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "minced turkey",
+   "turkey mince"
+  ],
+  "tags": [
+   "meat",
+   "poultry"
+  ],
   "nutrients": {
    "fat": 7.66,
    "water": 72.36,
@@ -16910,6 +19305,13 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "duck meat"
+  ],
+  "tags": [
+   "meat",
+   "poultry"
+  ],
   "nutrients": {
    "choline": 53.6,
    "vitd": 0.1,
@@ -16962,6 +19364,13 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "goose meat"
+  ],
+  "tags": [
+   "meat",
+   "poultry"
+  ],
   "nutrients": {
    "selenium": 16.8,
    "vita": 12.0,
@@ -17009,6 +19418,15 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "bater",
+   "quail"
+  ],
+  "tags": [
+   "game",
+   "meat",
+   "poultry"
+  ],
   "nutrients": {
    "selenium": 17.4,
    "vita": 17.0,
@@ -17056,6 +19474,14 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "pheasant"
+  ],
+  "tags": [
+   "game",
+   "meat",
+   "poultry"
+  ],
   "nutrients": {
    "selenium": 16.2,
    "vita": 50.0,
@@ -17103,6 +19529,15 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "kabootar",
+   "pigeon"
+  ],
+  "tags": [
+   "game",
+   "meat",
+   "poultry"
+  ],
   "nutrients": {
    "selenium": 13.5,
    "vita": 28.0,
@@ -17150,6 +19585,15 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "guinea hen",
+   "pintade"
+  ],
+  "tags": [
+   "game",
+   "meat",
+   "poultry"
+  ],
   "nutrients": {
    "selenium": 17.5,
    "vita": 12.0,
@@ -17197,6 +19641,14 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "ostrich"
+  ],
+  "tags": [
+   "game",
+   "meat",
+   "poultry"
+  ],
   "nutrients": {
    "sugar": 0.0,
    "kcal": 119.0,
@@ -17244,6 +19696,15 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "kaleji",
+   "liver"
+  ],
+  "tags": [
+   "meat",
+   "offal",
+   "organ meat"
+  ],
   "nutrients": {
    "vita": 4968.0,
    "vitc": 1.3,
@@ -17298,6 +19759,15 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "chicken liver",
+   "kaleji"
+  ],
+  "tags": [
+   "meat",
+   "offal",
+   "organ meat"
+  ],
   "nutrients": {
    "vitc": 17.9,
    "vita": 3296.0,
@@ -17352,6 +19822,15 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "gurda",
+   "kidneys"
+  ],
+  "tags": [
+   "meat",
+   "offal",
+   "organ meat"
+  ],
   "nutrients": {
    "fat": 3.09,
    "water": 77.89,
@@ -17404,6 +19883,15 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "dil",
+   "heart"
+  ],
+  "tags": [
+   "meat",
+   "offal",
+   "organ meat"
+  ],
   "nutrients": {
    "water": 77.11,
    "sugar": 0.0,
@@ -17455,6 +19943,15 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "tongue",
+   "zaban"
+  ],
+  "tags": [
+   "meat",
+   "offal",
+   "organ meat"
+  ],
   "nutrients": {
    "satfat": 7.0,
    "monofat": 7.24,
@@ -17502,6 +19999,15 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "sweetbreads",
+   "thymus"
+  ],
+  "tags": [
+   "meat",
+   "offal",
+   "organ meat"
+  ],
   "nutrients": {
    "selenium": 24.7,
    "fat": 18.6,
@@ -17549,6 +20055,15 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "bone marrow",
+   "nalli"
+  ],
+  "tags": [
+   "meat",
+   "offal",
+   "organ meat"
+  ],
   "nutrients": {
    "fat": 84.4,
    "carbs": 0.0,
@@ -17570,6 +20085,15 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "ojri",
+   "tripe"
+  ],
+  "tags": [
+   "meat",
+   "offal",
+   "organ meat"
+  ],
   "nutrients": {
    "choline": 194.8,
    "thiamin": 0.0,
@@ -17623,6 +20147,15 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "gizzards",
+   "pota"
+  ],
+  "tags": [
+   "meat",
+   "offal",
+   "organ meat"
+  ],
   "nutrients": {
    "b12": 1.21,
    "cholesterol": 240.0,
@@ -17674,6 +20207,15 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "brains",
+   "maghaz"
+  ],
+  "tags": [
+   "meat",
+   "offal",
+   "organ meat"
+  ],
   "nutrients": {
    "niacin": 3.55,
    "pantothenic": 2.01,
@@ -17726,6 +20268,15 @@ window.FOODS = [
   "diet": [],
   "allergens": [
    "fish"
+  ],
+  "aka": [
+   "red salmon",
+   "salmon"
+  ],
+  "tags": [
+   "fish",
+   "oily fish",
+   "seafood"
   ],
   "nutrients": {
    "choline": 94.6,
@@ -17783,6 +20334,15 @@ window.FOODS = [
   "allergens": [
    "fish"
   ],
+  "aka": [
+   "king salmon",
+   "salmon"
+  ],
+  "tags": [
+   "fish",
+   "oily fish",
+   "seafood"
+  ],
   "nutrients": {
    "vite": 1.22,
    "fat": 10.43,
@@ -17833,6 +20393,15 @@ window.FOODS = [
   "diet": [],
   "allergens": [
    "fish"
+  ],
+  "aka": [
+   "salmon",
+   "silver salmon"
+  ],
+  "tags": [
+   "fish",
+   "oily fish",
+   "seafood"
   ],
   "nutrients": {
    "sugar": 0.0,
@@ -17887,6 +20456,15 @@ window.FOODS = [
   "diet": [],
   "allergens": [
    "fish"
+  ],
+  "aka": [
+   "farmed salmon",
+   "salmon"
+  ],
+  "tags": [
+   "fish",
+   "oily fish",
+   "seafood"
   ],
   "nutrients": {
    "monofat": 3.77,
@@ -17943,6 +20521,15 @@ window.FOODS = [
   "allergens": [
    "fish"
   ],
+  "aka": [
+   "bangda",
+   "mackerel"
+  ],
+  "tags": [
+   "fish",
+   "oily fish",
+   "seafood"
+  ],
   "nutrients": {
    "monofat": 5.456,
    "polyfat": 3.35,
@@ -17996,6 +20583,15 @@ window.FOODS = [
   "diet": [],
   "allergens": [
    "fish"
+  ],
+  "aka": [
+   "pilchard",
+   "sardines"
+  ],
+  "tags": [
+   "fish",
+   "oily fish",
+   "seafood"
   ],
   "nutrients": {
    "sugar": 0.0,
@@ -18051,6 +20647,14 @@ window.FOODS = [
   "allergens": [
    "fish"
   ],
+  "aka": [
+   "anchovies"
+  ],
+  "tags": [
+   "fish",
+   "oily fish",
+   "seafood"
+  ],
   "nutrients": {
    "vite": 0.57,
    "sugar": 0.0,
@@ -18102,6 +20706,15 @@ window.FOODS = [
   "diet": [],
   "allergens": [
    "fish"
+  ],
+  "aka": [
+   "herring",
+   "kipper"
+  ],
+  "tags": [
+   "fish",
+   "oily fish",
+   "seafood"
   ],
   "nutrients": {
    "vitk": 0.1,
@@ -18156,6 +20769,14 @@ window.FOODS = [
   "diet": [],
   "allergens": [
    "fish"
+  ],
+  "aka": [
+   "rainbow trout"
+  ],
+  "tags": [
+   "fish",
+   "oily fish",
+   "seafood"
   ],
   "nutrients": {
    "sugar": 0.0,
@@ -18213,6 +20834,15 @@ window.FOODS = [
   "allergens": [
    "fish"
   ],
+  "aka": [
+   "tuna",
+   "white tuna"
+  ],
+  "tags": [
+   "fish",
+   "oily fish",
+   "seafood"
+  ],
   "nutrients": {
    "sugar": 0.0,
    "choline": 29.3,
@@ -18266,6 +20896,15 @@ window.FOODS = [
   "diet": [],
   "allergens": [
    "fish"
+  ],
+  "aka": [
+   "maguro",
+   "tuna"
+  ],
+  "tags": [
+   "fish",
+   "oily fish",
+   "seafood"
   ],
   "nutrients": {
    "monofat": 1.6,
@@ -18321,6 +20960,14 @@ window.FOODS = [
   "allergens": [
    "fish"
   ],
+  "aka": [
+   "codfish"
+  ],
+  "tags": [
+   "fish",
+   "seafood",
+   "white fish"
+  ],
   "nutrients": {
    "sugar": 0.0,
    "choline": 65.2,
@@ -18374,6 +21021,14 @@ window.FOODS = [
   "diet": [],
   "allergens": [
    "fish"
+  ],
+  "aka": [
+   "cod"
+  ],
+  "tags": [
+   "fish",
+   "seafood",
+   "white fish"
   ],
   "nutrients": {
    "sugar": 0.0,
@@ -18431,6 +21086,14 @@ window.FOODS = [
   "allergens": [
    "fish"
   ],
+  "aka": [
+   "haddock"
+  ],
+  "tags": [
+   "fish",
+   "seafood",
+   "white fish"
+  ],
   "nutrients": {
    "vitk": 0.1,
    "sugar": 0.0,
@@ -18486,6 +21149,14 @@ window.FOODS = [
   "diet": [],
   "allergens": [
    "fish"
+  ],
+  "aka": [
+   "halibut"
+  ],
+  "tags": [
+   "fish",
+   "seafood",
+   "white fish"
   ],
   "nutrients": {
    "sugar": 0.0,
@@ -18543,6 +21214,15 @@ window.FOODS = [
   "allergens": [
    "fish"
   ],
+  "aka": [
+   "branzino",
+   "sea bass"
+  ],
+  "tags": [
+   "fish",
+   "seafood",
+   "white fish"
+  ],
   "nutrients": {
    "sugar": 0.0,
    "vita": 46.0,
@@ -18597,6 +21277,14 @@ window.FOODS = [
   "allergens": [
    "fish"
   ],
+  "aka": [
+   "red snapper"
+  ],
+  "tags": [
+   "fish",
+   "seafood",
+   "white fish"
+  ],
   "nutrients": {
    "vitk": 0.1,
    "sugar": 0.0,
@@ -18650,6 +21338,16 @@ window.FOODS = [
   "diet": [],
   "allergens": [
    "fish"
+  ],
+  "aka": [
+   "flatfish",
+   "plaice",
+   "sole"
+  ],
+  "tags": [
+   "fish",
+   "seafood",
+   "white fish"
   ],
   "nutrients": {
    "choline": 65.0,
@@ -18707,6 +21405,14 @@ window.FOODS = [
   "allergens": [
    "fish"
   ],
+  "aka": [
+   "grouper"
+  ],
+  "tags": [
+   "fish",
+   "seafood",
+   "white fish"
+  ],
   "nutrients": {
    "vita": 43.0,
    "protein": 19.38,
@@ -18755,6 +21461,13 @@ window.FOODS = [
   "diet": [],
   "allergens": [
    "fish"
+  ],
+  "aka": [
+   "swordfish"
+  ],
+  "tags": [
+   "fish",
+   "seafood"
   ],
   "nutrients": {
    "sugar": 0.0,
@@ -18812,6 +21525,14 @@ window.FOODS = [
   "allergens": [
    "fish"
   ],
+  "aka": [
+   "tilapia"
+  ],
+  "tags": [
+   "fish",
+   "seafood",
+   "white fish"
+  ],
   "nutrients": {
    "calcium": 10.0,
    "potassium": 302.0,
@@ -18867,6 +21588,14 @@ window.FOODS = [
   "allergens": [
    "fish"
   ],
+  "aka": [
+   "catfish"
+  ],
+  "tags": [
+   "fish",
+   "seafood",
+   "white fish"
+  ],
   "nutrients": {
    "vitd": 12.5,
    "vita": 15.0,
@@ -18916,6 +21645,16 @@ window.FOODS = [
   "diet": [],
   "allergens": [
    "crustacean"
+  ],
+  "aka": [
+   "jhinga",
+   "prawn",
+   "prawns"
+  ],
+  "tags": [
+   "crustacean",
+   "seafood",
+   "shellfish"
   ],
   "nutrients": {
    "choline": 80.9,
@@ -18973,6 +21712,14 @@ window.FOODS = [
   "allergens": [
    "crustacean"
   ],
+  "aka": [
+   "maine lobster"
+  ],
+  "tags": [
+   "crustacean",
+   "seafood",
+   "shellfish"
+  ],
   "nutrients": {
    "protein": 16.52,
    "fiber": 0.0,
@@ -19027,6 +21774,14 @@ window.FOODS = [
   "allergens": [
    "crustacean"
   ],
+  "aka": [
+   "rock lobster"
+  ],
+  "tags": [
+   "crustacean",
+   "seafood",
+   "shellfish"
+  ],
   "nutrients": {
    "vita": 5.0,
    "monofat": 0.275,
@@ -19075,6 +21830,14 @@ window.FOODS = [
   "diet": [],
   "allergens": [
    "crustacean"
+  ],
+  "aka": [
+   "blue crab"
+  ],
+  "tags": [
+   "crustacean",
+   "seafood",
+   "shellfish"
   ],
   "nutrients": {
    "vita": 2.0,
@@ -19125,6 +21888,8 @@ window.FOODS = [
   "allergens": [
    "crustacean"
   ],
+  "aka": [],
+  "tags": [],
   "nutrients": {
    "vita": 27.0,
    "protein": 17.41,
@@ -19174,6 +21939,8 @@ window.FOODS = [
   "allergens": [
    "crustacean"
   ],
+  "aka": [],
+  "tags": [],
   "nutrients": {
    "vita": 7.0,
    "protein": 18.29,
@@ -19221,6 +21988,8 @@ window.FOODS = [
   "allergens": [
    "crustacean"
   ],
+  "aka": [],
+  "tags": [],
   "nutrients": {
    "vita": 45.0,
    "fat": 1.18,
@@ -19269,6 +22038,16 @@ window.FOODS = [
   "diet": [],
   "allergens": [
    "crustacean"
+  ],
+  "aka": [
+   "crawdad",
+   "crayfish",
+   "yabby"
+  ],
+  "tags": [
+   "crustacean",
+   "seafood",
+   "shellfish"
   ],
   "nutrients": {
    "vite": 2.85,
@@ -19324,6 +22103,15 @@ window.FOODS = [
   "allergens": [
    "mollusc"
   ],
+  "aka": [
+   "mussels"
+  ],
+  "tags": [
+   "bivalve",
+   "mollusc",
+   "seafood",
+   "shellfish"
+  ],
   "nutrients": {
    "sugar": 0.0,
    "vitk": 0.1,
@@ -19377,6 +22165,16 @@ window.FOODS = [
   "diet": [],
   "allergens": [
    "mollusc"
+  ],
+  "aka": [
+   "clams",
+   "vongole"
+  ],
+  "tags": [
+   "bivalve",
+   "mollusc",
+   "seafood",
+   "shellfish"
   ],
   "nutrients": {
    "choline": 65.0,
@@ -19434,6 +22232,15 @@ window.FOODS = [
   "allergens": [
    "mollusc"
   ],
+  "aka": [
+   "scallops"
+  ],
+  "tags": [
+   "bivalve",
+   "mollusc",
+   "seafood",
+   "shellfish"
+  ],
   "nutrients": {
    "choline": 65.0,
    "dha": 0.061,
@@ -19490,6 +22297,15 @@ window.FOODS = [
   "allergens": [
    "mollusc"
   ],
+  "aka": [
+   "abalone",
+   "paua"
+  ],
+  "tags": [
+   "mollusc",
+   "seafood",
+   "shellfish"
+  ],
   "nutrients": {
    "dha": 0.0,
    "vitk": 23.0,
@@ -19543,6 +22359,14 @@ window.FOODS = [
   "diet": [],
   "allergens": [
    "mollusc"
+  ],
+  "aka": [
+   "sea snail"
+  ],
+  "tags": [
+   "mollusc",
+   "seafood",
+   "shellfish"
   ],
   "nutrients": {
    "vitk": 0.1,
@@ -19598,6 +22422,14 @@ window.FOODS = [
   "allergens": [
    "mollusc"
   ],
+  "aka": [
+   "escargot",
+   "land snail"
+  ],
+  "tags": [
+   "mollusc",
+   "shellfish"
+  ],
   "nutrients": {
    "sugar": 0.0,
    "vite": 5.0,
@@ -19649,6 +22481,15 @@ window.FOODS = [
   "diet": [],
   "allergens": [
    "mollusc"
+  ],
+  "aka": [
+   "calamares",
+   "calamari"
+  ],
+  "tags": [
+   "cephalopod",
+   "seafood",
+   "shellfish"
   ],
   "nutrients": {
    "vite": 1.2,
@@ -19704,6 +22545,14 @@ window.FOODS = [
   "allergens": [
    "mollusc"
   ],
+  "aka": [
+   "octopus"
+  ],
+  "tags": [
+   "cephalopod",
+   "seafood",
+   "shellfish"
+  ],
   "nutrients": {
    "vitk": 0.1,
    "sugar": 0.0,
@@ -19758,6 +22607,14 @@ window.FOODS = [
   "allergens": [
    "mollusc"
   ],
+  "aka": [
+   "sepia"
+  ],
+  "tags": [
+   "cephalopod",
+   "seafood",
+   "shellfish"
+  ],
   "nutrients": {
    "vita": 113.0,
    "protein": 16.24,
@@ -19807,6 +22664,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [
+   "egg"
+  ],
+  "aka": [
+   "anda",
+   "egg",
+   "hen egg"
+  ],
+  "tags": [
    "egg"
   ],
   "nutrients": {
@@ -19867,6 +22732,13 @@ window.FOODS = [
   "allergens": [
    "egg"
   ],
+  "aka": [
+   "albumen",
+   "egg white"
+  ],
+  "tags": [
+   "egg"
+  ],
   "nutrients": {
    "vitc": 0.0,
    "vitk": 0.0,
@@ -19921,6 +22793,13 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [
+   "egg"
+  ],
+  "aka": [
+   "egg yolk",
+   "yolk"
+  ],
+  "tags": [
    "egg"
   ],
   "nutrients": {
@@ -19979,6 +22858,12 @@ window.FOODS = [
   "allergens": [
    "egg"
   ],
+  "aka": [
+   "duck egg"
+  ],
+  "tags": [
+   "egg"
+  ],
   "nutrients": {
    "sugar": 0.93,
    "vite": 1.34,
@@ -20033,6 +22918,12 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [
+   "egg"
+  ],
+  "aka": [
+   "quail egg"
+  ],
+  "tags": [
    "egg"
   ],
   "nutrients": {
@@ -20091,6 +22982,12 @@ window.FOODS = [
   "allergens": [
    "egg"
   ],
+  "aka": [
+   "goose egg"
+  ],
+  "tags": [
+   "egg"
+  ],
   "nutrients": {
    "vitk": 0.4,
    "vite": 1.29,
@@ -20146,6 +23043,13 @@ window.FOODS = [
   ],
   "allergens": [
    "fish"
+  ],
+  "aka": [
+   "sturgeon roe"
+  ],
+  "tags": [
+   "roe",
+   "seafood"
   ],
   "nutrients": {
    "dha": 3.8,
@@ -20203,6 +23107,16 @@ window.FOODS = [
   "allergens": [
    "fish"
   ],
+  "aka": [
+   "ikura",
+   "masago",
+   "roe",
+   "tobiko"
+  ],
+  "tags": [
+   "roe",
+   "seafood"
+  ],
   "nutrients": {
    "vitk": 0.2,
    "sugar": 0.0,
@@ -20255,6 +23169,14 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "beef dripping",
+   "suet"
+  ],
+  "tags": [
+   "animal fat",
+   "fat"
+  ],
   "nutrients": {
    "vitk": 0.0,
    "sugar": 0.0,
@@ -20306,6 +23228,14 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "dripping",
+   "pork fat"
+  ],
+  "tags": [
+   "animal fat",
+   "fat"
+  ],
   "nutrients": {
    "sugar": 0.0,
    "vitk": 0.0,
@@ -20358,6 +23288,13 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "chicken fat"
+  ],
+  "tags": [
+   "animal fat",
+   "fat"
+  ],
   "nutrients": {
    "vitk": 0.0,
    "sugar": 0.0,
@@ -20409,6 +23346,14 @@ window.FOODS = [
   "published": "2019-04-01",
   "diet": [],
   "allergens": [],
+  "aka": [
+   "collagen",
+   "gelatine"
+  ],
+  "tags": [
+   "collagen",
+   "fat"
+  ],
   "nutrients": {
    "dha": 0.0,
    "epa": 0.0,
@@ -20463,6 +23408,14 @@ window.FOODS = [
    "vegetarian"
   ],
   "allergens": [],
+  "aka": [
+   "madhu",
+   "shahad"
+  ],
+  "tags": [
+   "bee",
+   "sweetener"
+  ],
   "nutrients": {
    "dha": 0.0,
    "epa": 0.0,
@@ -20517,6 +23470,15 @@ window.FOODS = [
   "allergens": [
    "mollusc"
   ],
+  "aka": [
+   "oyster"
+  ],
+  "tags": [
+   "bivalve",
+   "mollusc",
+   "seafood",
+   "shellfish"
+  ],
   "nutrients": {
    "fiber": 0.0,
    "iron": 4.61,
@@ -20558,6 +23520,2658 @@ window.FOODS = [
   "portion": {
    "label": "6 medium",
    "grams": 84.0
+  }
+ },
+ {
+  "slug": "bottlegourd",
+  "name": "Bottle gourd (calabash)",
+  "group": "veg",
+  "fdcId": 169232,
+  "usda": "Gourd, white-flowered (calabash), raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "calabash",
+   "dudhi",
+   "lauki",
+   "long melon",
+   "opo squash"
+  ],
+  "tags": [
+   "cucurbit",
+   "gourd"
+  ],
+  "nutrients": {
+   "protein": 0.62,
+   "satfat": 0.002,
+   "iron": 0.2,
+   "magnesium": 11.0,
+   "phosphorus": 13.0,
+   "sodium": 2.0,
+   "copper": 0.026,
+   "manganese": 0.066,
+   "vitc": 10.1,
+   "thiamin": 0.029,
+   "riboflavin": 0.022,
+   "folate": 6.0,
+   "b12": 0.0,
+   "cholesterol": 0.0,
+   "fat": 0.02,
+   "carbs": 3.39,
+   "kcal": 14.0,
+   "water": 95.54,
+   "calcium": 26.0,
+   "potassium": 150.0,
+   "zinc": 0.7,
+   "niacin": 0.32,
+   "pantothenic": 0.152,
+   "b6": 0.04,
+   "monofat": 0.004,
+   "polyfat": 0.009,
+   "fiber": 0.5,
+   "vitd": 0.0,
+   "selenium": 0.2
+  },
+  "portion": {
+   "label": "0.5 cup (1\" pieces)",
+   "grams": 58.0
+  }
+ },
+ {
+  "slug": "ridgegourd",
+  "name": "Ridge gourd (luffa)",
+  "group": "veg",
+  "fdcId": 168414,
+  "usda": "Gourd, dishcloth (towelgourd), raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "luffa",
+   "silk squash",
+   "sponge gourd",
+   "tori",
+   "towel gourd",
+   "turai"
+  ],
+  "tags": [
+   "cucurbit",
+   "gourd"
+  ],
+  "nutrients": {
+   "protein": 1.2,
+   "iron": 0.36,
+   "magnesium": 14.0,
+   "phosphorus": 32.0,
+   "sodium": 3.0,
+   "copper": 0.035,
+   "manganese": 0.092,
+   "satfat": 0.016,
+   "vitc": 12.0,
+   "thiamin": 0.05,
+   "riboflavin": 0.06,
+   "folate": 7.0,
+   "b12": 0.0,
+   "cholesterol": 0.0,
+   "kcal": 20.0,
+   "water": 93.85,
+   "niacin": 0.4,
+   "pantothenic": 0.218,
+   "b6": 0.043,
+   "calcium": 20.0,
+   "potassium": 139.0,
+   "zinc": 0.07,
+   "monofat": 0.037,
+   "polyfat": 0.087,
+   "fat": 0.2,
+   "carbs": 4.35,
+   "sugar": 2.02,
+   "vite": 0.1,
+   "vitk": 0.7,
+   "fiber": 1.1,
+   "vitd": 0.0,
+   "selenium": 0.2
+  },
+  "portion": {
+   "label": "cup (1\" pieces)",
+   "grams": 95.0
+  }
+ },
+ {
+  "slug": "bittergourdleaves",
+  "name": "Bitter gourd leaves",
+  "group": "veg",
+  "fdcId": 168391,
+  "usda": "Balsam-pear (bitter gourd), leafy tips, raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "balsam pear tips",
+   "karela leaves"
+  ],
+  "tags": [
+   "cucurbit",
+   "gourd",
+   "leafy green"
+  ],
+  "nutrients": {
+   "vita": 87.0,
+   "protein": 5.3,
+   "vitc": 88.0,
+   "thiamin": 0.181,
+   "riboflavin": 0.362,
+   "folate": 128.0,
+   "b12": 0.0,
+   "iron": 2.04,
+   "magnesium": 85.0,
+   "phosphorus": 99.0,
+   "sodium": 11.0,
+   "copper": 0.201,
+   "manganese": 0.536,
+   "cholesterol": 0.0,
+   "niacin": 1.11,
+   "pantothenic": 0.063,
+   "b6": 0.803,
+   "fat": 0.69,
+   "carbs": 3.29,
+   "kcal": 30.0,
+   "water": 89.25,
+   "calcium": 84.0,
+   "potassium": 608.0,
+   "zinc": 0.3,
+   "vitd": 0.0,
+   "selenium": 0.9
+  },
+  "portion": {
+   "label": "0.5 cup",
+   "grams": 24.0
+  }
+ },
+ {
+  "slug": "pumpkinflower",
+  "name": "Pumpkin flowers",
+  "group": "veg",
+  "fdcId": 169270,
+  "usda": "Pumpkin flowers, raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "kaddu ka phool",
+   "squash blossom"
+  ],
+  "tags": [
+   "cucurbit",
+   "flower",
+   "gourd"
+  ],
+  "nutrients": {
+   "vita": 97.0,
+   "fat": 0.07,
+   "carbs": 3.28,
+   "kcal": 15.0,
+   "water": 95.15,
+   "calcium": 39.0,
+   "potassium": 173.0,
+   "niacin": 0.69,
+   "monofat": 0.009,
+   "polyfat": 0.004,
+   "vitc": 28.0,
+   "thiamin": 0.042,
+   "riboflavin": 0.075,
+   "folate": 59.0,
+   "b12": 0.0,
+   "iron": 0.7,
+   "magnesium": 24.0,
+   "phosphorus": 49.0,
+   "sodium": 5.0,
+   "protein": 1.03,
+   "satfat": 0.036,
+   "cholesterol": 0.0,
+   "vitd": 0.0,
+   "selenium": 0.7
+  },
+  "portion": {
+   "label": "cup",
+   "grams": 33.0
+  }
+ },
+ {
+  "slug": "drumstickpods",
+  "name": "Drumstick pods (moringa)",
+  "group": "veg",
+  "fdcId": 170483,
+  "usda": "Drumstick pods, raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "moringa pods",
+   "murungakkai",
+   "sahjan",
+   "sajna"
+  ],
+  "tags": [
+   "pod"
+  ],
+  "nutrients": {
+   "vita": 4.0,
+   "fat": 0.2,
+   "carbs": 8.53,
+   "kcal": 37.0,
+   "water": 88.2,
+   "calcium": 30.0,
+   "potassium": 461.0,
+   "zinc": 0.45,
+   "niacin": 0.62,
+   "pantothenic": 0.794,
+   "b6": 0.12,
+   "riboflavin": 0.074,
+   "folate": 44.0,
+   "b12": 0.0,
+   "cholesterol": 0.0,
+   "protein": 2.1,
+   "vitc": 141.0,
+   "thiamin": 0.053,
+   "fiber": 3.2,
+   "iron": 0.36,
+   "magnesium": 45.0,
+   "phosphorus": 50.0,
+   "sodium": 42.0,
+   "copper": 0.084,
+   "manganese": 0.259,
+   "satfat": 0.033,
+   "monofat": 0.102,
+   "polyfat": 0.003,
+   "vitd": 0.0,
+   "selenium": 0.7
+  },
+  "portion": {
+   "label": "cup slices",
+   "grams": 100.0
+  }
+ },
+ {
+  "slug": "drumstickleaves",
+  "name": "Drumstick leaves (moringa)",
+  "group": "veg",
+  "fdcId": 168416,
+  "usda": "Drumstick leaves, raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "moringa leaves",
+   "murungai keerai",
+   "sahjan"
+  ],
+  "tags": [
+   "leafy green"
+  ],
+  "nutrients": {
+   "vita": 378.0,
+   "protein": 9.4,
+   "vitc": 51.7,
+   "thiamin": 0.257,
+   "riboflavin": 0.66,
+   "folate": 40.0,
+   "b12": 0.0,
+   "fiber": 2.0,
+   "iron": 4.0,
+   "phosphorus": 112.0,
+   "sodium": 9.0,
+   "copper": 0.105,
+   "manganese": 1.063,
+   "cholesterol": 0.0,
+   "niacin": 2.22,
+   "pantothenic": 0.125,
+   "b6": 1.2,
+   "fat": 1.4,
+   "carbs": 8.28,
+   "kcal": 64.0,
+   "water": 78.66,
+   "calcium": 185.0,
+   "potassium": 337.0,
+   "zinc": 0.6,
+   "magnesium": 42.0,
+   "vitd": 0.0,
+   "selenium": 0.9
+  },
+  "portion": {
+   "label": "cup, chopped",
+   "grams": 21.0
+  }
+ },
+ {
+  "slug": "amaranthleaves",
+  "name": "Amaranth leaves",
+  "group": "veg",
+  "fdcId": 168385,
+  "usda": "Amaranth leaves, raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "callaloo",
+   "chaulai",
+   "chinese spinach",
+   "cholai",
+   "thotakura"
+  ],
+  "tags": [
+   "leafy green"
+  ],
+  "nutrients": {
+   "carbs": 4.02,
+   "kcal": 23.0,
+   "vitk": 1140.0,
+   "vita": 146.0,
+   "fat": 0.33,
+   "water": 91.69,
+   "calcium": 215.0,
+   "potassium": 611.0,
+   "zinc": 0.9,
+   "niacin": 0.658,
+   "pantothenic": 0.064,
+   "b6": 0.192,
+   "monofat": 0.076,
+   "polyfat": 0.147,
+   "iron": 2.32,
+   "magnesium": 55.0,
+   "phosphorus": 50.0,
+   "sodium": 20.0,
+   "copper": 0.162,
+   "manganese": 0.885,
+   "vitc": 43.3,
+   "thiamin": 0.027,
+   "riboflavin": 0.158,
+   "folate": 85.0,
+   "b12": 0.0,
+   "protein": 2.46,
+   "satfat": 0.091,
+   "cholesterol": 0.0,
+   "vitd": 0.0,
+   "selenium": 0.9
+  },
+  "portion": {
+   "label": "cup",
+   "grams": 28.0
+  }
+ },
+ {
+  "slug": "yardlong",
+  "name": "Yardlong bean",
+  "group": "veg",
+  "fdcId": 169222,
+  "usda": "Yardlong bean, raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "asparagus bean",
+   "barbati",
+   "chori",
+   "long bean",
+   "snake bean"
+  ],
+  "tags": [
+   "legume",
+   "pod"
+  ],
+  "nutrients": {
+   "vita": 43.0,
+   "satfat": 0.105,
+   "cholesterol": 0.0,
+   "protein": 2.8,
+   "vitc": 18.8,
+   "thiamin": 0.107,
+   "riboflavin": 0.11,
+   "folate": 62.0,
+   "b12": 0.0,
+   "iron": 0.47,
+   "magnesium": 44.0,
+   "phosphorus": 59.0,
+   "sodium": 4.0,
+   "copper": 0.048,
+   "manganese": 0.205,
+   "fat": 0.4,
+   "carbs": 8.35,
+   "kcal": 47.0,
+   "water": 87.85,
+   "calcium": 50.0,
+   "potassium": 240.0,
+   "zinc": 0.37,
+   "monofat": 0.036,
+   "polyfat": 0.169,
+   "niacin": 0.41,
+   "pantothenic": 0.055,
+   "b6": 0.024,
+   "vitd": 0.0,
+   "selenium": 1.5
+  },
+  "portion": {
+   "label": "cup slices",
+   "grams": 91.0
+  }
+ },
+ {
+  "slug": "jute",
+  "name": "Jute leaves",
+  "group": "veg",
+  "fdcId": 168419,
+  "usda": "Jute, potherb, raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "molokhia",
+   "mulukhiyah",
+   "nalta jute",
+   "saluyot"
+  ],
+  "tags": [
+   "leafy green"
+  ],
+  "nutrients": {
+   "vita": 278.0,
+   "niacin": 1.26,
+   "pantothenic": 0.072,
+   "b6": 0.6,
+   "fat": 0.25,
+   "carbs": 5.8,
+   "kcal": 34.0,
+   "water": 87.72,
+   "calcium": 208.0,
+   "potassium": 559.0,
+   "zinc": 0.79,
+   "monofat": 0.017,
+   "polyfat": 0.12,
+   "protein": 4.65,
+   "vitc": 37.0,
+   "thiamin": 0.133,
+   "riboflavin": 0.546,
+   "folate": 123.0,
+   "b12": 0.0,
+   "iron": 4.76,
+   "magnesium": 64.0,
+   "phosphorus": 83.0,
+   "sodium": 8.0,
+   "copper": 0.255,
+   "manganese": 0.123,
+   "satfat": 0.038,
+   "cholesterol": 0.0,
+   "vitd": 0.0,
+   "selenium": 0.9
+  },
+  "portion": {
+   "label": "cup",
+   "grams": 28.0
+  }
+ },
+ {
+  "slug": "purslane",
+  "name": "Purslane",
+  "group": "veg",
+  "fdcId": 169274,
+  "usda": "Purslane, raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "kulfa",
+   "pigweed",
+   "verdolaga"
+  ],
+  "tags": [
+   "leafy green"
+  ],
+  "nutrients": {
+   "choline": 12.8,
+   "calcium": 65.0,
+   "potassium": 494.0,
+   "zinc": 0.17,
+   "niacin": 0.48,
+   "pantothenic": 0.036,
+   "b6": 0.073,
+   "iron": 1.99,
+   "magnesium": 68.0,
+   "phosphorus": 44.0,
+   "sodium": 45.0,
+   "copper": 0.113,
+   "manganese": 0.303,
+   "vitc": 21.0,
+   "thiamin": 0.047,
+   "riboflavin": 0.112,
+   "folate": 12.0,
+   "b12": 0.0,
+   "cholesterol": 0.0,
+   "fat": 0.36,
+   "carbs": 3.39,
+   "kcal": 20.0,
+   "water": 92.86,
+   "protein": 2.03,
+   "vitd": 0.0,
+   "selenium": 0.9
+  },
+  "portion": {
+   "label": "cup",
+   "grams": 43.0
+  }
+ },
+ {
+  "slug": "greenplantain",
+  "name": "Green plantain",
+  "group": "veg",
+  "fdcId": 168215,
+  "usda": "Plantains, green, raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "cooking banana",
+   "kachcha kela",
+   "raw banana"
+  ],
+  "tags": [
+   "tropical"
+  ],
+  "nutrients": {
+   "fat": 0.07,
+   "carbs": 36.66,
+   "kcal": 152.0,
+   "water": 61.1,
+   "sugar": 2.29,
+   "calcium": 2.0,
+   "potassium": 431.0,
+   "zinc": 0.18,
+   "niacin": 0.55,
+   "pantothenic": 0.53,
+   "b6": 0.07,
+   "monofat": 0.019,
+   "polyfat": 0.031,
+   "la": 0.025,
+   "protein": 1.25,
+   "fiber": 2.2,
+   "iron": 0.75,
+   "magnesium": 41.0,
+   "phosphorus": 31.0,
+   "sodium": 2.0,
+   "copper": 0.116,
+   "manganese": 0.109,
+   "vitc": 20.2,
+   "thiamin": 0.1,
+   "riboflavin": 0.1,
+   "folate": 28.0,
+   "satfat": 0.121,
+   "dha": 0.0,
+   "epa": 0.0,
+   "ala": 0.006
+  },
+  "portion": {
+   "label": "plantain",
+   "grams": 267.0
+  }
+ },
+ {
+  "slug": "arrowroot",
+  "name": "Arrowroot",
+  "group": "veg",
+  "fdcId": 168490,
+  "usda": "Arrowroot, raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "arrowroot"
+  ],
+  "tags": [
+   "root",
+   "tuber"
+  ],
+  "nutrients": {
+   "carbs": 13.39,
+   "kcal": 65.0,
+   "vita": 1.0,
+   "vitd": 0.0,
+   "fat": 0.2,
+   "water": 80.75,
+   "calcium": 6.0,
+   "potassium": 454.0,
+   "zinc": 0.63,
+   "niacin": 1.693,
+   "pantothenic": 0.292,
+   "b6": 0.266,
+   "monofat": 0.004,
+   "polyfat": 0.092,
+   "protein": 4.24,
+   "fiber": 1.3,
+   "iron": 2.22,
+   "magnesium": 25.0,
+   "phosphorus": 98.0,
+   "sodium": 26.0,
+   "copper": 0.121,
+   "manganese": 0.174,
+   "satfat": 0.039,
+   "vitc": 1.9,
+   "thiamin": 0.143,
+   "riboflavin": 0.059,
+   "folate": 338.0,
+   "b12": 0.0,
+   "cholesterol": 0.0,
+   "selenium": 0.7
+  },
+  "portion": {
+   "label": "cup, sliced",
+   "grams": 120.0
+  }
+ },
+ {
+  "slug": "arrowhead",
+  "name": "Arrowhead",
+  "group": "veg",
+  "fdcId": 169203,
+  "usda": "Arrowhead, raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "chinese arrowhead",
+   "wapato"
+  ],
+  "tags": [
+   "root",
+   "tuber"
+  ],
+  "nutrients": {
+   "vita": 0.0,
+   "fat": 0.29,
+   "carbs": 20.23,
+   "kcal": 99.0,
+   "water": 72.48,
+   "calcium": 10.0,
+   "potassium": 922.0,
+   "zinc": 0.28,
+   "niacin": 1.65,
+   "pantothenic": 0.599,
+   "b6": 0.26,
+   "protein": 5.33,
+   "vitc": 1.1,
+   "thiamin": 0.17,
+   "riboflavin": 0.073,
+   "folate": 14.0,
+   "b12": 0.0,
+   "iron": 2.57,
+   "magnesium": 51.0,
+   "phosphorus": 174.0,
+   "sodium": 22.0,
+   "copper": 0.171,
+   "manganese": 0.36,
+   "cholesterol": 0.0,
+   "vitd": 0.0,
+   "selenium": 0.7
+  },
+  "portion": {
+   "label": "large",
+   "grams": 25.0
+  }
+ },
+ {
+  "slug": "burdock",
+  "name": "Burdock root",
+  "group": "veg",
+  "fdcId": 169974,
+  "usda": "Burdock root, raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "gobo"
+  ],
+  "tags": [
+   "root"
+  ],
+  "nutrients": {
+   "epa": 0.0,
+   "satfat": 0.025,
+   "dha": 0.0,
+   "monofat": 0.037,
+   "polyfat": 0.059,
+   "vita": 0.0,
+   "carbs": 17.34,
+   "kcal": 72.0,
+   "choline": 11.7,
+   "protein": 1.53,
+   "fiber": 3.3,
+   "iron": 0.8,
+   "magnesium": 38.0,
+   "phosphorus": 51.0,
+   "sodium": 5.0,
+   "copper": 0.077,
+   "manganese": 0.232,
+   "cholesterol": 0.0,
+   "vitc": 3.0,
+   "thiamin": 0.01,
+   "riboflavin": 0.03,
+   "folate": 23.0,
+   "b12": 0.0,
+   "fat": 0.15,
+   "water": 80.09,
+   "calcium": 41.0,
+   "potassium": 308.0,
+   "zinc": 0.33,
+   "niacin": 0.3,
+   "pantothenic": 0.321,
+   "b6": 0.24,
+   "vitd": 0.0,
+   "selenium": 0.7,
+   "vite": 0.38,
+   "sugar": 2.9,
+   "vitk": 1.6
+  },
+  "portion": {
+   "label": "cup (1\" pieces)",
+   "grams": 118.0
+  }
+ },
+ {
+  "slug": "cardoon",
+  "name": "Cardoon",
+  "group": "veg",
+  "fdcId": 169981,
+  "usda": "Cardoon, raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "artichoke thistle",
+   "cardoon"
+  ],
+  "tags": [
+   "stalk"
+  ],
+  "nutrients": {
+   "vita": 0.0,
+   "folate": 68.0,
+   "copper": 0.231,
+   "manganese": 0.256,
+   "selenium": 0.2,
+   "pantothenic": 0.338,
+   "b6": 0.116,
+   "carbs": 4.07,
+   "kcal": 17.0,
+   "satfat": 0.011,
+   "cholesterol": 0.0,
+   "b12": 0.0,
+   "vitc": 2.0,
+   "thiamin": 0.02,
+   "riboflavin": 0.03,
+   "protein": 0.7,
+   "fiber": 1.6,
+   "iron": 0.7,
+   "magnesium": 42.0,
+   "phosphorus": 23.0,
+   "sodium": 170.0,
+   "fat": 0.1,
+   "niacin": 0.3,
+   "monofat": 0.018,
+   "polyfat": 0.041,
+   "water": 94.0,
+   "calcium": 70.0,
+   "potassium": 400.0,
+   "zinc": 0.17,
+   "vitd": 0.0
+  },
+  "portion": {
+   "label": "cup, shredded",
+   "grams": 178.0
+  }
+ },
+ {
+  "slug": "rhubarb",
+  "name": "Rhubarb",
+  "group": "veg",
+  "fdcId": 167758,
+  "usda": "Rhubarb, raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "rhubarb"
+  ],
+  "tags": [
+   "stalk"
+  ],
+  "nutrients": {
+   "satfat": 0.053,
+   "dha": 0.0,
+   "epa": 0.0,
+   "monofat": 0.039,
+   "polyfat": 0.099,
+   "vita": 5.0,
+   "sugar": 1.1,
+   "vitk": 29.3,
+   "choline": 6.1,
+   "vite": 0.27,
+   "protein": 0.9,
+   "fiber": 1.8,
+   "iron": 0.22,
+   "magnesium": 12.0,
+   "phosphorus": 14.0,
+   "sodium": 4.0,
+   "copper": 0.021,
+   "manganese": 0.196,
+   "cholesterol": 0.0,
+   "vitc": 8.0,
+   "thiamin": 0.02,
+   "riboflavin": 0.03,
+   "folate": 7.0,
+   "b12": 0.0,
+   "fat": 0.2,
+   "carbs": 4.54,
+   "kcal": 21.0,
+   "water": 93.61,
+   "calcium": 86.0,
+   "potassium": 288.0,
+   "zinc": 0.1,
+   "niacin": 0.3,
+   "pantothenic": 0.085,
+   "b6": 0.024,
+   "vitd": 0.0,
+   "selenium": 1.1
+  },
+  "portion": {
+   "label": "cup, diced",
+   "grams": 122.0
+  }
+ },
+ {
+  "slug": "nopales",
+  "name": "Nopales (cactus pads)",
+  "group": "veg",
+  "fdcId": 168571,
+  "usda": "Nopales, raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "cactus paddle",
+   "cactus pads",
+   "nopal"
+  ],
+  "tags": [
+   "cactus"
+  ],
+  "nutrients": {
+   "fiber": 2.2,
+   "iron": 0.59,
+   "magnesium": 52.0,
+   "phosphorus": 16.0,
+   "sodium": 21.0,
+   "copper": 0.052,
+   "manganese": 0.457,
+   "vitc": 9.3,
+   "thiamin": 0.012,
+   "riboflavin": 0.041,
+   "folate": 3.0,
+   "vitk": 5.3,
+   "water": 94.12,
+   "sugar": 1.15,
+   "calcium": 164.0,
+   "potassium": 257.0,
+   "zinc": 0.25,
+   "fat": 0.09,
+   "niacin": 0.41,
+   "pantothenic": 0.167,
+   "b6": 0.07,
+   "vite": 0.0,
+   "protein": 1.32,
+   "vita": 23.0,
+   "carbs": 3.33,
+   "kcal": 16.0,
+   "choline": 7.3,
+   "satfat": 0.016,
+   "dha": 0.0,
+   "epa": 0.0,
+   "monofat": 0.018,
+   "polyfat": 0.05,
+   "b12": 0.0,
+   "cholesterol": 0.0,
+   "vitd": 0.0,
+   "selenium": 0.7
+  },
+  "portion": {
+   "label": "cup, sliced",
+   "grams": 86.0
+  }
+ },
+ {
+  "slug": "chrysanthemum",
+  "name": "Garland chrysanthemum",
+  "group": "veg",
+  "fdcId": 169995,
+  "usda": "Chrysanthemum, garland, raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "chop suey greens",
+   "garland chrysanthemum",
+   "shungiku",
+   "tong ho"
+  ],
+  "tags": [
+   "leafy green"
+  ],
+  "nutrients": {
+   "vitk": 350.0,
+   "fat": 0.56,
+   "carbs": 3.02,
+   "kcal": 24.0,
+   "water": 91.4,
+   "calcium": 117.0,
+   "potassium": 567.0,
+   "zinc": 0.71,
+   "niacin": 0.531,
+   "pantothenic": 0.221,
+   "b6": 0.176,
+   "riboflavin": 0.144,
+   "folate": 177.0,
+   "vita": 116.0,
+   "protein": 3.36,
+   "fiber": 3.0,
+   "iron": 2.29,
+   "magnesium": 32.0,
+   "phosphorus": 54.0,
+   "sodium": 118.0,
+   "copper": 0.137,
+   "manganese": 0.943,
+   "vitc": 1.4,
+   "thiamin": 0.13,
+   "b12": 0.0,
+   "cholesterol": 0.0,
+   "vitd": 0.0
+  },
+  "portion": {
+   "label": "cup (1\" pieces)",
+   "grams": 25.0
+  }
+ },
+ {
+  "slug": "fiddlehead",
+  "name": "Fiddlehead ferns",
+  "group": "veg",
+  "fdcId": 169405,
+  "usda": "Fiddlehead ferns, raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "ostrich fern"
+  ],
+  "tags": [
+   "leafy green"
+  ],
+  "nutrients": {
+   "carbs": 5.54,
+   "kcal": 34.0,
+   "vita": 181.0,
+   "thiamin": 0.02,
+   "riboflavin": 0.21,
+   "b12": 0.0,
+   "cholesterol": 0.0,
+   "vitc": 26.6,
+   "iron": 1.31,
+   "magnesium": 34.0,
+   "phosphorus": 101.0,
+   "sodium": 1.0,
+   "copper": 0.32,
+   "manganese": 0.51,
+   "protein": 4.55,
+   "water": 88.68,
+   "calcium": 32.0,
+   "potassium": 370.0,
+   "zinc": 0.83,
+   "niacin": 4.98,
+   "fat": 0.4,
+   "vitd": 0.0
+  }
+ },
+ {
+  "slug": "borage",
+  "name": "Borage",
+  "group": "veg",
+  "fdcId": 170481,
+  "usda": "Borage, raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "starflower"
+  ],
+  "tags": [
+   "herb",
+   "leafy green"
+  ],
+  "nutrients": {
+   "vita": 210.0,
+   "niacin": 0.9,
+   "pantothenic": 0.041,
+   "b6": 0.084,
+   "monofat": 0.211,
+   "polyfat": 0.109,
+   "fat": 0.7,
+   "carbs": 3.06,
+   "kcal": 21.0,
+   "water": 93.0,
+   "calcium": 93.0,
+   "potassium": 470.0,
+   "zinc": 0.2,
+   "protein": 1.8,
+   "vitc": 35.0,
+   "thiamin": 0.06,
+   "riboflavin": 0.15,
+   "folate": 13.0,
+   "b12": 0.0,
+   "iron": 3.3,
+   "magnesium": 52.0,
+   "phosphorus": 53.0,
+   "sodium": 80.0,
+   "copper": 0.13,
+   "manganese": 0.349,
+   "satfat": 0.17,
+   "cholesterol": 0.0,
+   "vitd": 0.0,
+   "selenium": 0.9
+  },
+  "portion": {
+   "label": "cup (1\" pieces)",
+   "grams": 89.0
+  }
+ },
+ {
+  "slug": "grapeleaves",
+  "name": "Grape leaves",
+  "group": "veg",
+  "fdcId": 168575,
+  "usda": "Grape leaves, raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "dolma leaves",
+   "vine leaves"
+  ],
+  "tags": [
+   "leafy green"
+  ],
+  "nutrients": {
+   "protein": 5.6,
+   "fiber": 11.0,
+   "magnesium": 95.0,
+   "phosphorus": 91.0,
+   "sodium": 9.0,
+   "copper": 0.415,
+   "thiamin": 0.04,
+   "folate": 83.0,
+   "b12": 0.0,
+   "dha": 0.0,
+   "epa": 0.0,
+   "cholesterol": 0.0,
+   "calcium": 363.0,
+   "potassium": 272.0,
+   "zinc": 0.67,
+   "b6": 0.4,
+   "vitk": 108.6,
+   "sugar": 6.3,
+   "vite": 2.0,
+   "vita": 1376.0,
+   "choline": 12.8,
+   "carbs": 17.31,
+   "kcal": 93.0,
+   "iron": 2.63,
+   "satfat": 0.336,
+   "vitc": 11.1,
+   "riboflavin": 0.354,
+   "manganese": 2.855,
+   "water": 73.32,
+   "niacin": 2.362,
+   "pantothenic": 0.231,
+   "fat": 2.12,
+   "monofat": 0.081,
+   "polyfat": 1.065,
+   "vitd": 0.0,
+   "selenium": 0.9
+  },
+  "portion": {
+   "label": "cup",
+   "grams": 14.0
+  }
+ },
+ {
+  "slug": "salsify",
+  "name": "Salsify",
+  "group": "veg",
+  "fdcId": 169277,
+  "usda": "Salsify, (vegetable oyster), raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "oyster plant",
+   "vegetable oyster"
+  ],
+  "tags": [
+   "root"
+  ],
+  "nutrients": {
+   "vita": 0.0,
+   "fat": 0.2,
+   "carbs": 18.6,
+   "kcal": 82.0,
+   "water": 77.0,
+   "calcium": 60.0,
+   "potassium": 380.0,
+   "zinc": 0.38,
+   "niacin": 0.5,
+   "pantothenic": 0.371,
+   "b6": 0.277,
+   "protein": 3.3,
+   "vitc": 8.0,
+   "thiamin": 0.08,
+   "riboflavin": 0.22,
+   "folate": 26.0,
+   "b12": 0.0,
+   "fiber": 3.3,
+   "iron": 0.7,
+   "magnesium": 23.0,
+   "phosphorus": 75.0,
+   "sodium": 20.0,
+   "copper": 0.089,
+   "manganese": 0.268,
+   "cholesterol": 0.0,
+   "vitd": 0.0,
+   "selenium": 0.8
+  },
+  "portion": {
+   "label": "cup slices",
+   "grams": 133.0
+  }
+ },
+ {
+  "slug": "epazote",
+  "name": "Epazote",
+  "group": "veg",
+  "fdcId": 169398,
+  "usda": "Epazote, raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "mexican tea",
+   "wormseed"
+  ],
+  "tags": [
+   "herb",
+   "leafy green"
+  ],
+  "nutrients": {
+   "sodium": 43.0,
+   "vita": 3.0,
+   "folate": 215.0,
+   "b12": 0.0,
+   "vitc": 3.6,
+   "thiamin": 0.028,
+   "riboflavin": 0.348,
+   "cholesterol": 0.0,
+   "copper": 0.19,
+   "manganese": 3.098,
+   "fiber": 3.8,
+   "iron": 1.88,
+   "magnesium": 121.0,
+   "phosphorus": 86.0,
+   "protein": 0.33,
+   "fat": 0.52,
+   "carbs": 7.44,
+   "kcal": 32.0,
+   "water": 89.21,
+   "calcium": 275.0,
+   "potassium": 633.0,
+   "zinc": 1.1,
+   "niacin": 0.639,
+   "pantothenic": 0.179,
+   "b6": 0.152,
+   "vitd": 0.0,
+   "selenium": 0.9
+  },
+  "portion": {
+   "label": "tbsp",
+   "grams": 0.8
+  }
+ },
+ {
+  "slug": "chicorygreens",
+  "name": "Chicory greens",
+  "group": "veg",
+  "fdcId": 169992,
+  "usda": "Chicory greens, raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "chicory",
+   "curly chicory"
+  ],
+  "tags": [
+   "leafy green",
+   "salad"
+  ],
+  "nutrients": {
+   "dha": 0.0,
+   "epa": 0.0,
+   "kcal": 23.0,
+   "choline": 12.8,
+   "vita": 286.0,
+   "cholesterol": 0.0,
+   "b12": 0.0,
+   "satfat": 0.073,
+   "vitc": 24.0,
+   "thiamin": 0.06,
+   "riboflavin": 0.1,
+   "folate": 110.0,
+   "fiber": 4.0,
+   "iron": 0.9,
+   "magnesium": 30.0,
+   "phosphorus": 47.0,
+   "sodium": 45.0,
+   "copper": 0.295,
+   "manganese": 0.429,
+   "protein": 1.7,
+   "niacin": 0.5,
+   "pantothenic": 1.159,
+   "b6": 0.105,
+   "monofat": 0.006,
+   "polyfat": 0.131,
+   "water": 92.0,
+   "calcium": 100.0,
+   "potassium": 420.0,
+   "zinc": 0.42,
+   "fat": 0.3,
+   "vitd": 0.0,
+   "selenium": 0.3,
+   "vite": 2.26,
+   "sugar": 0.7,
+   "carbs": 4.7,
+   "vitk": 297.6
+  },
+  "portion": {
+   "label": "cup, chopped",
+   "grams": 29.0
+  }
+ },
+ {
+  "slug": "witloof",
+  "name": "Witloof chicory (Belgian endive)",
+  "group": "veg",
+  "fdcId": 170404,
+  "usda": "Chicory, witloof, raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "belgian endive",
+   "chicon"
+  ],
+  "tags": [
+   "leafy green",
+   "salad"
+  ],
+  "nutrients": {
+   "vita": 1.0,
+   "fat": 0.1,
+   "carbs": 4.0,
+   "kcal": 17.0,
+   "water": 94.52,
+   "calcium": 19.0,
+   "potassium": 211.0,
+   "zinc": 0.16,
+   "niacin": 0.16,
+   "pantothenic": 0.145,
+   "b6": 0.042,
+   "monofat": 0.002,
+   "polyfat": 0.044,
+   "fiber": 3.1,
+   "iron": 0.24,
+   "magnesium": 10.0,
+   "protein": 0.9,
+   "phosphorus": 26.0,
+   "sodium": 2.0,
+   "copper": 0.051,
+   "manganese": 0.1,
+   "vitc": 2.8,
+   "thiamin": 0.062,
+   "riboflavin": 0.027,
+   "folate": 37.0,
+   "b12": 0.0,
+   "satfat": 0.024,
+   "cholesterol": 0.0,
+   "vitd": 0.0,
+   "selenium": 0.2
+  },
+  "portion": {
+   "label": "head",
+   "grams": 53.0
+  }
+ },
+ {
+  "slug": "sesbania",
+  "name": "Sesbania flower",
+  "group": "veg",
+  "fdcId": 168459,
+  "usda": "Sesbania flower, raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "agati",
+   "august flower",
+   "hummingbird tree"
+  ],
+  "tags": [
+   "flower"
+  ],
+  "nutrients": {
+   "vita": 0.0,
+   "protein": 1.28,
+   "vitc": 73.0,
+   "thiamin": 0.083,
+   "iron": 0.84,
+   "magnesium": 12.0,
+   "phosphorus": 30.0,
+   "sodium": 15.0,
+   "cholesterol": 0.0,
+   "riboflavin": 0.081,
+   "folate": 102.0,
+   "b12": 0.0,
+   "fat": 0.04,
+   "carbs": 6.73,
+   "kcal": 27.0,
+   "water": 91.58,
+   "calcium": 19.0,
+   "potassium": 184.0,
+   "niacin": 0.43,
+   "vitd": 0.0,
+   "selenium": 0.9
+  },
+  "portion": {
+   "label": "cup flowers",
+   "grams": 20.0
+  }
+ },
+ {
+  "slug": "kelp",
+  "name": "Kelp",
+  "group": "veg",
+  "fdcId": 168457,
+  "usda": "Seaweed, kelp, raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "kombu",
+   "oarweed"
+  ],
+  "tags": [
+   "sea vegetable",
+   "seaweed"
+  ],
+  "nutrients": {
+   "dha": 0.0,
+   "vite": 0.87,
+   "carbs": 9.57,
+   "sugar": 0.6,
+   "vitk": 66.0,
+   "vita": 6.0,
+   "choline": 12.8,
+   "kcal": 43.0,
+   "vitc": 3.0,
+   "fiber": 1.3,
+   "iron": 2.85,
+   "magnesium": 121.0,
+   "phosphorus": 42.0,
+   "sodium": 233.0,
+   "copper": 0.13,
+   "manganese": 0.2,
+   "protein": 1.68,
+   "satfat": 0.247,
+   "thiamin": 0.05,
+   "riboflavin": 0.15,
+   "folate": 180.0,
+   "b12": 0.0,
+   "cholesterol": 0.0,
+   "epa": 0.004,
+   "monofat": 0.098,
+   "polyfat": 0.047,
+   "water": 81.58,
+   "fat": 0.56,
+   "niacin": 0.47,
+   "pantothenic": 0.642,
+   "b6": 0.002,
+   "calcium": 168.0,
+   "potassium": 89.0,
+   "zinc": 1.23,
+   "vitd": 0.0,
+   "selenium": 0.7
+  },
+  "portion": {
+   "label": "2 tbsp (1/8 cup)",
+   "grams": 10.0
+  }
+ },
+ {
+  "slug": "laver",
+  "name": "Laver (nori)",
+  "group": "veg",
+  "fdcId": 168458,
+  "usda": "Seaweed, laver, raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "gim",
+   "nori",
+   "purple laver"
+  ],
+  "tags": [
+   "sea vegetable",
+   "seaweed"
+  ],
+  "nutrients": {
+   "dha": 0.0,
+   "sugar": 0.49,
+   "carbs": 5.11,
+   "vite": 1.0,
+   "kcal": 35.0,
+   "choline": 10.4,
+   "vita": 260.0,
+   "vitk": 4.0,
+   "fat": 0.28,
+   "water": 85.03,
+   "calcium": 70.0,
+   "potassium": 356.0,
+   "zinc": 1.05,
+   "niacin": 1.47,
+   "pantothenic": 0.521,
+   "b6": 0.159,
+   "monofat": 0.025,
+   "polyfat": 0.11,
+   "protein": 5.81,
+   "fiber": 0.3,
+   "iron": 1.8,
+   "magnesium": 2.0,
+   "phosphorus": 58.0,
+   "sodium": 48.0,
+   "copper": 0.264,
+   "manganese": 0.988,
+   "satfat": 0.061,
+   "epa": 0.08,
+   "cholesterol": 0.0,
+   "vitc": 39.0,
+   "thiamin": 0.098,
+   "riboflavin": 0.446,
+   "folate": 146.0,
+   "b12": 0.0,
+   "vitd": 0.0,
+   "selenium": 0.7
+  },
+  "portion": {
+   "label": "10 sheets",
+   "grams": 26.0
+  }
+ },
+ {
+  "slug": "irishmoss",
+  "name": "Irish moss",
+  "group": "veg",
+  "fdcId": 168456,
+  "usda": "Seaweed, irishmoss, raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "carrageen moss"
+  ],
+  "tags": [
+   "sea vegetable",
+   "seaweed"
+  ],
+  "nutrients": {
+   "dha": 0.0,
+   "sugar": 0.61,
+   "carbs": 12.29,
+   "vite": 0.87,
+   "kcal": 49.0,
+   "choline": 12.9,
+   "vitk": 5.0,
+   "vita": 6.0,
+   "vitc": 3.0,
+   "fat": 0.16,
+   "water": 81.34,
+   "calcium": 72.0,
+   "potassium": 63.0,
+   "zinc": 1.95,
+   "niacin": 0.593,
+   "pantothenic": 0.176,
+   "b6": 0.069,
+   "monofat": 0.015,
+   "polyfat": 0.055,
+   "thiamin": 0.015,
+   "riboflavin": 0.466,
+   "folate": 182.0,
+   "b12": 0.0,
+   "satfat": 0.033,
+   "cholesterol": 0.0,
+   "epa": 0.046,
+   "protein": 1.51,
+   "fiber": 1.3,
+   "iron": 8.9,
+   "magnesium": 144.0,
+   "phosphorus": 157.0,
+   "sodium": 67.0,
+   "copper": 0.149,
+   "manganese": 0.37,
+   "vitd": 0.0,
+   "selenium": 0.7
+  },
+  "portion": {
+   "label": "2 tbsp (1/8 cup)",
+   "grams": 10.0
+  }
+ },
+ {
+  "slug": "spirulina",
+  "name": "Spirulina",
+  "group": "veg",
+  "fdcId": 170091,
+  "usda": "Seaweed, spirulina, raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "blue-green algae"
+  ],
+  "tags": [
+   "algae",
+   "seaweed"
+  ],
+  "nutrients": {
+   "vita": 3.0,
+   "protein": 5.92,
+   "iron": 2.79,
+   "magnesium": 19.0,
+   "phosphorus": 11.0,
+   "sodium": 98.0,
+   "copper": 0.597,
+   "manganese": 0.186,
+   "cholesterol": 0.0,
+   "satfat": 0.135,
+   "vitc": 0.9,
+   "thiamin": 0.222,
+   "riboflavin": 0.342,
+   "folate": 9.0,
+   "b12": 0.0,
+   "calcium": 12.0,
+   "potassium": 127.0,
+   "zinc": 0.2,
+   "niacin": 1.196,
+   "pantothenic": 0.325,
+   "b6": 0.034,
+   "monofat": 0.034,
+   "polyfat": 0.106,
+   "fat": 0.39,
+   "carbs": 2.42,
+   "kcal": 26.0,
+   "water": 90.67,
+   "vitd": 0.0,
+   "vite": 0.49,
+   "sugar": 0.3,
+   "choline": 6.5,
+   "vitk": 2.5,
+   "fiber": 0.4,
+   "selenium": 0.7
+  }
+ },
+ {
+  "slug": "hyacinthbean",
+  "name": "Hyacinth beans",
+  "group": "legume",
+  "fdcId": 175210,
+  "usda": "Hyacinth beans, mature seeds, raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "avarai",
+   "lablab",
+   "sem",
+   "val bean"
+  ],
+  "tags": [
+   "legume"
+  ],
+  "nutrients": {
+   "carbs": 60.74,
+   "monofat": 0.076,
+   "polyfat": 0.715,
+   "vita": 0.0,
+   "vitd": 0.0,
+   "b12": 0.0,
+   "cholesterol": 0.0,
+   "fiber": 25.6,
+   "protein": 23.9,
+   "iron": 5.1,
+   "magnesium": 283.0,
+   "phosphorus": 372.0,
+   "sodium": 21.0,
+   "copper": 1.335,
+   "manganese": 1.573,
+   "vitc": 0.0,
+   "thiamin": 1.13,
+   "riboflavin": 0.136,
+   "folate": 23.0,
+   "satfat": 0.288,
+   "fat": 1.69,
+   "kcal": 344.0,
+   "water": 9.38,
+   "calcium": 130.0,
+   "potassium": 1235.0,
+   "zinc": 9.3,
+   "niacin": 1.61,
+   "pantothenic": 1.237,
+   "b6": 0.155,
+   "selenium": 8.2
+  },
+  "portion": {
+   "label": "cup",
+   "grams": 210.0
+  }
+ },
+ {
+  "slug": "wingedbean",
+  "name": "Winged beans",
+  "group": "legume",
+  "fdcId": 170476,
+  "usda": "Winged beans, immature seeds, raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "asparagus pea",
+   "four-angled bean",
+   "goa bean"
+  ],
+  "tags": [
+   "legume",
+   "pod"
+  ],
+  "nutrients": {
+   "fat": 0.87,
+   "carbs": 4.31,
+   "kcal": 49.0,
+   "water": 87.04,
+   "niacin": 0.9,
+   "pantothenic": 0.059,
+   "b6": 0.113,
+   "calcium": 84.0,
+   "potassium": 223.0,
+   "zinc": 0.39,
+   "monofat": 0.25,
+   "polyfat": 0.186,
+   "vitc": 18.3,
+   "thiamin": 0.14,
+   "riboflavin": 0.1,
+   "folate": 66.0,
+   "b12": 0.0,
+   "satfat": 0.238,
+   "cholesterol": 0.0,
+   "protein": 6.95,
+   "iron": 1.5,
+   "magnesium": 34.0,
+   "phosphorus": 37.0,
+   "sodium": 4.0,
+   "copper": 0.051,
+   "manganese": 0.218,
+   "vitd": 0.0,
+   "selenium": 1.5
+  },
+  "portion": {
+   "label": "cup slices",
+   "grams": 44.0
+  }
+ },
+ {
+  "slug": "pigeonpeagreen",
+  "name": "Green pigeon peas",
+  "group": "legume",
+  "fdcId": 170025,
+  "usda": "Pigeonpeas, immature seeds, raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "arhar",
+   "gungo pea",
+   "toor",
+   "tuvar"
+  ],
+  "tags": [
+   "legume"
+  ],
+  "nutrients": {
+   "vitk": 24.0,
+   "sugar": 3.0,
+   "carbs": 23.88,
+   "vite": 0.39,
+   "fiber": 5.1,
+   "dha": 0.0,
+   "epa": 0.0,
+   "vita": 3.0,
+   "kcal": 136.0,
+   "choline": 45.8,
+   "cholesterol": 0.0,
+   "satfat": 0.354,
+   "vitc": 39.0,
+   "thiamin": 0.4,
+   "riboflavin": 0.17,
+   "folate": 173.0,
+   "b12": 0.0,
+   "iron": 1.6,
+   "magnesium": 68.0,
+   "phosphorus": 127.0,
+   "sodium": 5.0,
+   "copper": 0.134,
+   "manganese": 0.574,
+   "protein": 7.2,
+   "fat": 1.64,
+   "calcium": 42.0,
+   "potassium": 552.0,
+   "zinc": 1.04,
+   "water": 65.88,
+   "niacin": 2.2,
+   "pantothenic": 0.68,
+   "b6": 0.068,
+   "monofat": 0.013,
+   "polyfat": 0.873,
+   "vitd": 0.0,
+   "selenium": 1.5
+  },
+  "portion": {
+   "label": "cup",
+   "grams": 154.0
+  }
+ },
+ {
+  "slug": "lotusseed",
+  "name": "Lotus seeds",
+  "group": "nut",
+  "fdcId": 168591,
+  "usda": "Seeds, lotus seeds, raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "fox nut",
+   "makhana",
+   "phool makhana"
+  ],
+  "tags": [
+   "seed"
+  ],
+  "nutrients": {
+   "vitd": 0.0,
+   "vita": 1.0,
+   "niacin": 0.429,
+   "pantothenic": 0.228,
+   "b6": 0.168,
+   "fat": 0.53,
+   "carbs": 17.28,
+   "kcal": 89.0,
+   "water": 77.0,
+   "calcium": 44.0,
+   "potassium": 367.0,
+   "zinc": 0.28,
+   "monofat": 0.104,
+   "polyfat": 0.312,
+   "protein": 4.13,
+   "iron": 0.95,
+   "magnesium": 56.0,
+   "phosphorus": 168.0,
+   "sodium": 1.0,
+   "copper": 0.094,
+   "manganese": 0.621,
+   "vitc": 0.0,
+   "thiamin": 0.171,
+   "riboflavin": 0.04,
+   "folate": 28.0,
+   "b12": 0.0,
+   "cholesterol": 0.0,
+   "satfat": 0.088
+  },
+  "portion": {
+   "label": "oz",
+   "grams": 28.4
+  }
+ },
+ {
+  "slug": "cherimoya",
+  "name": "Cherimoya",
+  "group": "fruit",
+  "fdcId": 173953,
+  "usda": "Cherimoya, raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "custard apple",
+   "sitaphal substitute"
+  ],
+  "tags": [
+   "tropical"
+  ],
+  "nutrients": {
+   "water": 79.39,
+   "sugar": 12.87,
+   "calcium": 10.0,
+   "potassium": 287.0,
+   "zinc": 0.16,
+   "fat": 0.68,
+   "niacin": 0.644,
+   "pantothenic": 0.345,
+   "b6": 0.257,
+   "protein": 1.57,
+   "vitc": 12.6,
+   "thiamin": 0.101,
+   "riboflavin": 0.131,
+   "folate": 23.0,
+   "fiber": 3.0,
+   "iron": 0.27,
+   "magnesium": 17.0,
+   "phosphorus": 26.0,
+   "sodium": 7.0,
+   "copper": 0.069,
+   "manganese": 0.093,
+   "vita": 0.0,
+   "b12": 0.0,
+   "cholesterol": 0.0,
+   "satfat": 0.233,
+   "dha": 0.0,
+   "epa": 0.0,
+   "la": 0.028,
+   "ala": 0.159,
+   "vite": 0.27,
+   "monofat": 0.055,
+   "polyfat": 0.188,
+   "carbs": 17.71,
+   "kcal": 75.0
+  },
+  "portion": {
+   "label": "cup, pieces",
+   "grams": 160.0
+  }
+ },
+ {
+  "slug": "jujube",
+  "name": "Jujube",
+  "group": "fruit",
+  "fdcId": 168151,
+  "usda": "Jujube, raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "ber",
+   "chinese date",
+   "red date"
+  ],
+  "tags": [
+   "tropical"
+  ],
+  "nutrients": {
+   "vita": 2.0,
+   "fat": 0.2,
+   "carbs": 20.23,
+   "kcal": 79.0,
+   "water": 77.86,
+   "calcium": 21.0,
+   "potassium": 250.0,
+   "zinc": 0.05,
+   "niacin": 0.9,
+   "b6": 0.081,
+   "protein": 1.2,
+   "vitc": 69.0,
+   "thiamin": 0.02,
+   "riboflavin": 0.04,
+   "b12": 0.0,
+   "cholesterol": 0.0,
+   "iron": 0.48,
+   "magnesium": 10.0,
+   "phosphorus": 23.0,
+   "sodium": 3.0,
+   "copper": 0.073,
+   "manganese": 0.084
+  }
+ },
+ {
+  "slug": "loquat",
+  "name": "Loquat",
+  "group": "fruit",
+  "fdcId": 169908,
+  "usda": "Loquats, raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "japanese medlar",
+   "loquat"
+  ],
+  "tags": [
+   "tropical"
+  ],
+  "nutrients": {
+   "dha": 0.0,
+   "epa": 0.0,
+   "vita": 76.0,
+   "b12": 0.0,
+   "vitc": 1.0,
+   "thiamin": 0.019,
+   "riboflavin": 0.024,
+   "cholesterol": 0.0,
+   "satfat": 0.04,
+   "fiber": 1.7,
+   "iron": 0.28,
+   "magnesium": 13.0,
+   "phosphorus": 27.0,
+   "sodium": 1.0,
+   "copper": 0.04,
+   "manganese": 0.148,
+   "protein": 0.43,
+   "fat": 0.2,
+   "carbs": 12.14,
+   "kcal": 47.0,
+   "water": 86.73,
+   "calcium": 16.0,
+   "potassium": 266.0,
+   "zinc": 0.05,
+   "niacin": 0.18,
+   "monofat": 0.008,
+   "polyfat": 0.091,
+   "folate": 14.0,
+   "b6": 0.1,
+   "selenium": 0.6
+  },
+  "portion": {
+   "label": "cup, cubed",
+   "grams": 149.0
+  }
+ },
+ {
+  "slug": "quince",
+  "name": "Quince",
+  "group": "fruit",
+  "fdcId": 168163,
+  "usda": "Quinces, raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "quince",
+   "safarjal"
+  ],
+  "tags": [
+   "fruit"
+  ],
+  "nutrients": {
+   "dha": 0.0,
+   "epa": 0.0,
+   "vita": 2.0,
+   "protein": 0.4,
+   "vitc": 15.0,
+   "thiamin": 0.02,
+   "riboflavin": 0.03,
+   "fiber": 1.9,
+   "iron": 0.7,
+   "magnesium": 8.0,
+   "phosphorus": 17.0,
+   "sodium": 4.0,
+   "copper": 0.13,
+   "satfat": 0.01,
+   "b12": 0.0,
+   "cholesterol": 0.0,
+   "fat": 0.1,
+   "carbs": 15.3,
+   "kcal": 57.0,
+   "water": 83.8,
+   "calcium": 11.0,
+   "potassium": 197.0,
+   "niacin": 0.2,
+   "pantothenic": 0.081,
+   "b6": 0.04,
+   "monofat": 0.036,
+   "polyfat": 0.05,
+   "folate": 3.0,
+   "zinc": 0.04,
+   "selenium": 0.6
+  },
+  "portion": {
+   "label": "fruit without refuse",
+   "grams": 92.0
+  }
+ },
+ {
+  "slug": "nativepersimmon",
+  "name": "American persimmon",
+  "group": "fruit",
+  "fdcId": 169943,
+  "usda": "Persimmons, native, raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "american persimmon"
+  ],
+  "tags": [
+   "fruit"
+  ],
+  "nutrients": {
+   "protein": 0.8,
+   "iron": 2.5,
+   "phosphorus": 26.0,
+   "sodium": 1.0,
+   "vitc": 66.0,
+   "b12": 0.0,
+   "cholesterol": 0.0,
+   "fat": 0.4,
+   "carbs": 33.5,
+   "kcal": 127.0,
+   "water": 64.4,
+   "calcium": 27.0,
+   "potassium": 310.0
+  },
+  "portion": {
+   "label": "fruit without refuse",
+   "grams": 25.0
+  }
+ },
+ {
+  "slug": "javaplum",
+  "name": "Java plum (jamun)",
+  "group": "fruit",
+  "fdcId": 168150,
+  "usda": "Java-plum, (jambolan), raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "black plum",
+   "jambolan",
+   "jambul",
+   "jamun"
+  ],
+  "tags": [
+   "tropical"
+  ],
+  "nutrients": {
+   "vita": 0.0,
+   "protein": 0.72,
+   "iron": 0.19,
+   "magnesium": 15.0,
+   "phosphorus": 17.0,
+   "vitc": 14.3,
+   "thiamin": 0.006,
+   "riboflavin": 0.012,
+   "b12": 0.0,
+   "cholesterol": 0.0,
+   "sodium": 14.0,
+   "fat": 0.23,
+   "carbs": 15.56,
+   "kcal": 60.0,
+   "water": 83.13,
+   "calcium": 19.0,
+   "potassium": 79.0,
+   "niacin": 0.26,
+   "b6": 0.038
+  },
+  "portion": {
+   "label": "cup",
+   "grams": 135.0
+  }
+ },
+ {
+  "slug": "sapodilla",
+  "name": "Sapodilla (chikoo)",
+  "group": "fruit",
+  "fdcId": 167759,
+  "usda": "Sapodilla, raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "chikoo",
+   "chiku",
+   "naseberry",
+   "sapota"
+  ],
+  "tags": [
+   "tropical"
+  ],
+  "nutrients": {
+   "monofat": 0.521,
+   "polyfat": 0.011,
+   "satfat": 0.194,
+   "dha": 0.0,
+   "epa": 0.0,
+   "vita": 3.0,
+   "niacin": 0.2,
+   "pantothenic": 0.252,
+   "b6": 0.037,
+   "fat": 1.1,
+   "carbs": 19.96,
+   "kcal": 83.0,
+   "water": 78.0,
+   "calcium": 21.0,
+   "potassium": 193.0,
+   "b12": 0.0,
+   "vitc": 14.7,
+   "thiamin": 0.0,
+   "riboflavin": 0.02,
+   "phosphorus": 12.0,
+   "sodium": 12.0,
+   "fiber": 5.3,
+   "iron": 0.8,
+   "protein": 0.44,
+   "cholesterol": 0.0,
+   "magnesium": 12.0,
+   "copper": 0.086,
+   "folate": 14.0,
+   "zinc": 0.1,
+   "selenium": 0.6
+  },
+  "portion": {
+   "label": "cup, pulp",
+   "grams": 241.0
+  }
+ },
+ {
+  "slug": "mameysapote",
+  "name": "Mamey sapote",
+  "group": "fruit",
+  "fdcId": 167760,
+  "usda": "Sapote, mamey, raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "mamey"
+  ],
+  "tags": [
+   "tropical"
+  ],
+  "nutrients": {
+   "b12": 0.0,
+   "cholesterol": 0.0,
+   "fat": 0.46,
+   "carbs": 32.1,
+   "kcal": 124.0,
+   "water": 64.87,
+   "sugar": 20.14,
+   "calcium": 18.0,
+   "potassium": 454.0,
+   "zinc": 0.19,
+   "vite": 2.11,
+   "niacin": 1.432,
+   "pantothenic": 0.397,
+   "b6": 0.72,
+   "monofat": 0.102,
+   "polyfat": 0.097,
+   "satfat": 0.169,
+   "dha": 0.0,
+   "epa": 0.0,
+   "la": 0.011,
+   "ala": 0.082,
+   "vita": 7.0,
+   "vitc": 23.0,
+   "thiamin": 0.013,
+   "riboflavin": 0.116,
+   "folate": 7.0,
+   "protein": 1.45,
+   "fiber": 5.4,
+   "iron": 0.78,
+   "magnesium": 11.0,
+   "phosphorus": 26.0,
+   "sodium": 7.0,
+   "copper": 0.213,
+   "manganese": 0.204
+  },
+  "portion": {
+   "label": "cup 1\" pieces",
+   "grams": 175.0
+  }
+ },
+ {
+  "slug": "pricklypear",
+  "name": "Prickly pear",
+  "group": "fruit",
+  "fdcId": 167750,
+  "usda": "Prickly pears, raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "cactus pear",
+   "nopal fruit",
+   "tuna"
+  ],
+  "tags": [
+   "cactus"
+  ],
+  "nutrients": {
+   "satfat": 0.067,
+   "dha": 0.0,
+   "epa": 0.0,
+   "monofat": 0.075,
+   "polyfat": 0.213,
+   "copper": 0.08,
+   "folate": 6.0,
+   "zinc": 0.12,
+   "b6": 0.06,
+   "vita": 2.0,
+   "protein": 0.73,
+   "fiber": 3.6,
+   "iron": 0.3,
+   "magnesium": 85.0,
+   "phosphorus": 24.0,
+   "sodium": 5.0,
+   "b12": 0.0,
+   "vitc": 14.0,
+   "thiamin": 0.014,
+   "riboflavin": 0.06,
+   "cholesterol": 0.0,
+   "fat": 0.51,
+   "carbs": 9.57,
+   "kcal": 41.0,
+   "water": 87.55,
+   "calcium": 56.0,
+   "potassium": 220.0,
+   "niacin": 0.46,
+   "selenium": 0.6
+  },
+  "portion": {
+   "label": "cup",
+   "grams": 149.0
+  }
+ },
+ {
+  "slug": "pitanga",
+  "name": "Pitanga (Surinam cherry)",
+  "group": "fruit",
+  "fdcId": 169129,
+  "usda": "Pitanga, (surinam-cherry), raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [],
+  "tags": [],
+  "nutrients": {
+   "vita": 75.0,
+   "iron": 0.2,
+   "magnesium": 12.0,
+   "phosphorus": 11.0,
+   "sodium": 3.0,
+   "protein": 0.8,
+   "vitc": 26.3,
+   "thiamin": 0.03,
+   "riboflavin": 0.04,
+   "b12": 0.0,
+   "cholesterol": 0.0,
+   "fat": 0.4,
+   "carbs": 7.49,
+   "kcal": 33.0,
+   "water": 90.81,
+   "calcium": 9.0,
+   "potassium": 103.0,
+   "niacin": 0.3
+  },
+  "portion": {
+   "label": "cup",
+   "grams": 173.0
+  }
+ },
+ {
+  "slug": "carissa",
+  "name": "Carissa (natal plum)",
+  "group": "fruit",
+  "fdcId": 173952,
+  "usda": "Carissa, (natal-plum), raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "karonda",
+   "natal plum"
+  ],
+  "tags": [
+   "tropical"
+  ],
+  "nutrients": {
+   "vita": 2.0,
+   "protein": 0.5,
+   "vitc": 38.0,
+   "thiamin": 0.04,
+   "riboflavin": 0.06,
+   "b12": 0.0,
+   "cholesterol": 0.0,
+   "iron": 1.31,
+   "magnesium": 16.0,
+   "phosphorus": 7.0,
+   "sodium": 3.0,
+   "copper": 0.21,
+   "fat": 1.3,
+   "carbs": 13.63,
+   "kcal": 62.0,
+   "water": 84.17,
+   "calcium": 11.0,
+   "potassium": 260.0,
+   "niacin": 0.2
+  },
+  "portion": {
+   "label": "cup slices",
+   "grams": 150.0
+  }
+ },
+ {
+  "slug": "acerola",
+  "name": "Acerola (West Indian cherry)",
+  "group": "fruit",
+  "fdcId": 171686,
+  "usda": "Acerola, (west indian cherry), raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "barbados cherry",
+   "west indian cherry"
+  ],
+  "tags": [
+   "berry"
+  ],
+  "nutrients": {
+   "satfat": 0.068,
+   "dha": 0.0,
+   "epa": 0.0,
+   "monofat": 0.082,
+   "copper": 0.086,
+   "folate": 14.0,
+   "zinc": 0.1,
+   "polyfat": 0.09,
+   "vita": 38.0,
+   "fat": 0.3,
+   "carbs": 7.69,
+   "kcal": 32.0,
+   "water": 91.41,
+   "calcium": 12.0,
+   "potassium": 146.0,
+   "niacin": 0.4,
+   "pantothenic": 0.309,
+   "b6": 0.009,
+   "protein": 0.4,
+   "fiber": 1.1,
+   "iron": 0.2,
+   "magnesium": 18.0,
+   "phosphorus": 11.0,
+   "sodium": 7.0,
+   "vitc": 1677.6,
+   "thiamin": 0.02,
+   "riboflavin": 0.06,
+   "cholesterol": 0.0,
+   "b12": 0.0,
+   "selenium": 0.6
+  },
+  "portion": {
+   "label": "cup",
+   "grams": 98.0
+  }
+ },
+ {
+  "slug": "crabapple",
+  "name": "Crabapple",
+  "group": "fruit",
+  "fdcId": 171721,
+  "usda": "Crabapples, raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "crabapple"
+  ],
+  "tags": [
+   "fruit"
+  ],
+  "nutrients": {
+   "vita": 2.0,
+   "fat": 0.3,
+   "carbs": 19.95,
+   "kcal": 76.0,
+   "water": 78.94,
+   "calcium": 18.0,
+   "potassium": 194.0,
+   "niacin": 0.1,
+   "monofat": 0.012,
+   "polyfat": 0.088,
+   "satfat": 0.048,
+   "cholesterol": 0.0,
+   "vitc": 8.0,
+   "thiamin": 0.03,
+   "riboflavin": 0.02,
+   "b12": 0.0,
+   "protein": 0.4,
+   "iron": 0.36,
+   "magnesium": 7.0,
+   "phosphorus": 15.0,
+   "sodium": 1.0,
+   "copper": 0.067,
+   "manganese": 0.115
+  },
+  "portion": {
+   "label": "cup slices",
+   "grams": 110.0
+  }
+ },
+ {
+  "slug": "roselle",
+  "name": "Roselle (hibiscus calyx)",
+  "group": "fruit",
+  "fdcId": 168170,
+  "usda": "Roselle, raw",
+  "published": "2019-04-01",
+  "diet": [
+   "vegan",
+   "vegetarian"
+  ],
+  "allergens": [],
+  "aka": [
+   "gongura",
+   "hibiscus",
+   "sorrel (caribbean)"
+  ],
+  "tags": [
+   "flower",
+   "tropical"
+  ],
+  "nutrients": {
+   "vita": 14.0,
+   "fat": 0.64,
+   "carbs": 11.31,
+   "kcal": 49.0,
+   "water": 86.58,
+   "calcium": 215.0,
+   "potassium": 208.0,
+   "niacin": 0.31,
+   "iron": 1.48,
+   "magnesium": 51.0,
+   "phosphorus": 37.0,
+   "sodium": 6.0,
+   "protein": 0.96,
+   "vitc": 12.0,
+   "thiamin": 0.011,
+   "riboflavin": 0.028,
+   "b12": 0.0,
+   "cholesterol": 0.0
+  },
+  "portion": {
+   "label": "cup, without refuse",
+   "grams": 57.0
   }
  }
 ];

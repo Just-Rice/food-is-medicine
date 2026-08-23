@@ -634,3 +634,16 @@ table.nutrients .dri-type {
 .reveal-card > div { flex: 1 1 260px; }
 .reveal-card .hint { margin: 4px 0 0; max-width: 60ch; }
 .reveal-card .btn { flex: none; }
+
+/* ---- Alternative names and family tags -------------------------------- */
+.also-called {
+  font-size: .88rem; color: var(--ink-soft); margin: 2px 0 8px;
+}
+.tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; }
+.tag.tappable {
+  text-decoration: none; cursor: pointer; border: 1px solid transparent;
+}
+.tag.tappable:hover { border-color: var(--accent); color: var(--accent-ink); }
+.alias-hit {
+  font-size: .78rem; color: var(--accent-ink); margin: 1px 0 3px; font-style: italic;
+}
