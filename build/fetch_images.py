@@ -141,6 +141,12 @@ CURATED_FILE = {
     'groundlamb': 'Kibbeh Nayyeh.jpg',
     'lambshank': 'Lammhaxe mit Kloß Bischofsmühle.jpg',
     'wheyacid': 'Whey powder.jpg',
+    # A previous run illustrated these with a milk-float garage and an NFL
+    # promotional photo. Pinned so it cannot happen again.
+    'milkwhole': 'Milk glass.jpg',
+    'milk2': 'Glass of Milk (33657535532).jpg',
+    'milk1': 'Milk 001.JPG',
+    'milkskim': 'Skim milk.jpg',
     # regional produce and sea vegetables, where the generic lookup drifted to
     # the plant's habitat or to an unrelated dish
     'spirulina': 'Spirulina-powder-shadow.jpg',
@@ -161,6 +167,40 @@ NO_IMAGE = {
     'groundturkey', 'gooseegg', 'clam', 'seabass', 'butter', 'buttersalted',
     'laver', 'pigeonpeagreen',
 }
+
+# Curated foods carry hand-written names a picture search can work with. The
+# bulk-imported ones carry USDA descriptions, and searching Wikimedia for
+# "Pork, fresh, loin, center rib (chops or roasts)" returns whatever it likes --
+# an earlier run illustrated 2% milk with a photograph of a milk-float garage.
+# So a bulk food only gets a photo if its name is short and plain enough to
+# stand a fair chance; the rest show the placeholder tile.
+CURATED_MARKER = '# ---- Bulk import'
+COMPLEX_NAME = re.compile(
+    r'\b(fresh|separable|trimmed|grade|includes|unenriched|enriched|without added|'
+    r'with added|all varieties|mixed species|type of|partially|defatted|low fat|'
+    r'low sodium|whole-grain|glandless|puree)\b', re.I)
+
+
+def load_curated_slugs():
+    path = os.path.join(HERE, 'foods.txt')
+    out = set()
+    if not os.path.exists(path):
+        return out
+    for line in open(path):
+        if line.startswith(CURATED_MARKER):
+            break
+        line = line.strip()
+        if line and not line.startswith('#'):
+            out.add(line.split('|')[1])
+    return out
+
+
+def searchable(name):
+    if len(name) > 26 or name.count(',') > 1:
+        return False
+    if len(name.split(',')[0].split()) > 3:
+        return False
+    return not COMPLEX_NAME.search(name)
 
 
 def get(url, params):
@@ -313,8 +353,16 @@ def main():
         todo = todo[:limit]
     print('%d foods to process' % len(todo))
 
+    curated_slugs = load_curated_slugs()
+
     for i, food in enumerate(todo):
         slug = food['slug']
+        if slug not in curated_slugs and not searchable(food['name']):
+            manifest.pop(slug, None)
+            path = os.path.join(IMG_DIR, slug + '.jpg')
+            if os.path.exists(path):
+                os.remove(path)
+            continue
         if slug in NO_IMAGE:
             manifest.pop(slug, None)
             path = os.path.join(IMG_DIR, slug + '.jpg')

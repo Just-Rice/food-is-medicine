@@ -435,3 +435,589 @@ fruit|carissa|Carissa (natal plum)|173952
 fruit|acerola|Acerola (West Indian cherry)|171686
 fruit|crabapple|Crabapple|171721
 fruit|roselle|Roselle (hibiscus calyx)|168170
+
+
+# ---- Bulk import from USDA FoodData Central -------------------------
+# Selected by build/select_foods.py: whole single-ingredient foods,
+# deduplicated against the curated list above and filtered to entries that
+# actually carry nutrient data. Names and tags are derived from the USDA
+# description by build/name_foods.py.
+veg|seaweedcanadiancultivatedemi|Seaweed, Canadian Cultivated EMI-TSUNOMATA|167602
+fat|flaxseedoilcoldpressed|Flaxseed oil, cold pressed|167702
+dairy|parmesancheeselowsodium|Parmesan cheese, low sodium|167705
+veg|heartsofpalm|Hearts of palm|167714
+dairy|mozzarellacheeselowsodium|Mozzarella cheese, low sodium|167735
+fat|cornoilpeanutandolive|Corn oil, peanut, and olive|167737
+fish|turtlegreen|Turtle, green|167745
+fruit|lemonjuice|Lemon juice|167747
+fruit|lemonpeel|Lemon peel|167749
+fruit|grapefruitjuicepink|Grapefruit juice, pink|167774
+fruit|pearsbartlett|Pears, bartlett|746773
+fruit|pearsredanjou|Pears, red anjou|167777
+fruit|pearsbosc|Pears, bosc|167778
+fruit|pearsgreenanjou|Pears, green anjou|167779
+fruit|abiyuch|Abiyuch|167782
+fruit|rowal|Rowal|167783
+fruit|applesfujiwithskin|Apples, fuji, with skin|167793
+fruit|baobabpowder|Baobab powder|167806
+fruit|raspberriespureewithseeds|Raspberries, puree, with seeds|167809
+meat|porkfreshleghamrumphalf|Pork, fresh, leg (ham), rump half|167816
+meat|porkfreshloincenterloinchops|Pork, fresh, loin, center loin (chops)|167829
+meat|porkfreshloincenterribchopso|Pork, fresh, loin, center rib (chops or roasts)|167833
+meat|porkfreshloinsirloinchopsorr|Pork, fresh, loin, sirloin (chops or roasts)|167837
+meat|porkfreshloinsirloinchopsorr2|Pork, fresh, loin, sirloin (chops or roasts)|167901
+dairy|swisscheeselowsodium|Swiss cheese, low sodium|168124
+fish|jellyfishsalted|Jellyfish, salted|168129
+fish|froglegs|Frog legs|168148
+fruit|jujubechinesefresh|Jujube, Chinese, fresh|168152
+fruit|limejuice|Lime juice|168156
+fruit|blueberriessweetened|Blueberries, sweetened|168158
+fruit|roseapples|Rose-apples|168171
+fruit|sugarapplessweetsop|Sugar-apples, (sweetsop)|168175
+fruit|pearsasian|Pears, asian|168177
+fruit|pineappletraditionalvarietie|Pineapple, traditional varieties|168193
+fruit|pineappleextrasweetvariety|Pineapple, extra sweet variety|168194
+fruit|applesreddeliciouswithskin|Apples, red delicious, with skin|168201
+fruit|applesgoldendeliciouswithski|Apples, golden delicious, with skin|168202
+fruit|applesgrannysmithwithskin|Apples, granny smith, with skin|168203
+fruit|applesgalawithskin|Apples, gala, with skin|168204
+fruit|kiwifruitzesprisungold|Kiwifruit, ZESPRI SunGold|168211
+meat|porkfreshlegham|Pork, fresh, leg (ham)|168224
+meat|porkfreshleghamshankhalf|Pork, fresh, leg (ham), shank half|168228
+meat|porkfreshloinbladechopsorroa|Pork, fresh, loin, blade (chops or roasts)|168234
+meat|porkfreshlointoploinchops|Pork, fresh, loin, top loin (chops)|168251
+meat|porkfreshshoulderarmpicnic|Pork, fresh, shoulder, arm picnic|168258
+meat|porkfreshshoulderbostonbuttb|Pork, fresh, shoulder, (Boston butt), blade (steaks)|168260
+meat|porkfreshloincenterloinchops2|Pork, fresh, loin, center loin (chops)|168263
+meat|porkcuredhamcenterslicecount|Pork, cured, ham, center slice, country-style|168282
+meat|porkfreshloincountrystylerib|Pork, fresh, loin, country-style ribs|168305
+meat|porkfreshlointoploinroasts|Pork, fresh, loin, top loin (roasts)|168315
+meat|porkcuredhamandwaterproductu|Pork, cured, ham and water product, unheated|168328
+meat|porkcuredhamwithnaturaljuice|Pork, cured, ham with natural juices, unheated|168335
+veg|alfalfaseedssprouted|Alfalfa seeds, sprouted|168384
+veg|cowpeasyoungpodswithseeds|Cowpeas, young pods with seeds|168405
+veg|cressgarden|Cress, garden|168407
+veg|pepeao|Pepeao|168418
+veg|lentilssprouted|Lentils, sprouted|168427
+veg|lettuceredleaf|Lettuce, red leaf|168431
+veg|mountainyamhawaii|Mountain yam, hawaii|168432
+veg|mustardspinachtendergreen|Mustard spinach, (tendergreen)|168438
+veg|newzealandspinach|New Zealand spinach|168440
+veg|potatoflour|Potato flour|168446
+veg|taroleaves|Taro leaves|168487
+veg|taroshoots|Taro shoots|168489
+veg|chrysanthemumleaves|Chrysanthemum leaves|168491
+veg|cornsweetwhite|Corn, sweet, white|168538
+veg|mushroomsbrownitalianorcrimi|Mushrooms, brown, italian, or crimini, exposed to ultraviolet light|168557
+veg|squashzucchinibaby|Squash, zucchini, baby|168565
+veg|tomatoessundried|Tomatoes, sun-dried|168567
+veg|carrotsbaby|Carrots, baby|168568
+veg|peppershotchilesundried|Peppers, hot chile, sun-dried|168570
+veg|peppershungarian|Peppers, hungarian|168578
+veg|fungicloudears|Fungi, Cloud ears|168581
+veg|wasabiroot|Wasabi, root|168583
+nut|coconutmeatdrieddesiccatedcr|Coconut meat, dried (desiccated), creamed|168585
+nut|coconutmeatdrieddesiccatedsw|Coconut meat, dried (desiccated), sweetened, shredded|168586
+nut|sisymbriumspseeds|Sisymbrium sp. seeds|168587
+nut|sesamebuttertahinitypeofkern|Sesame butter, tahini, type of kernels unspecified|168604
+meat|beefribshortribs|Beef, rib, shortribs|168614
+meat|beefshortlointbonesteak|Beef, short loin, t-bone steak|168619
+meat|beefribeyesmallendribs1012|Beef, rib eye, small end (ribs 10-12)|168621
+meat|beefshortloinporterhousestea|Beef, short loin, porterhouse steak|168640
+meat|beefchuckunderbladecenterste|Beef, chuck, under blade center steak, Denver Cut|168653
+meat|beefshouldertopbladesteak|Beef, shoulder top blade steak|168655
+meat|beefbrisketflathalfbonelesss|Beef, brisket, flat half, boneless separable lean only|168656
+meat|beefbrisketflathalf|Beef, brisket, flat half|168657
+meat|beefchuckeyeroastamericasbee|Beef, chuck eye roast, America's Beef Roast|168742
+grain|oatbran|Oat bran|168872
+grain|ricebrownparboiledunclebens|Rice, brown, parboiled, UNCLE BEN'S|168876
+grain|ricewhitemediumgrainenriched|Rice, white, medium-grain, enriched|168879
+grain|ricewhiteshortgrainenriched|Rice, white, short-grain, enriched|168881
+grain|ricewhiteglutinousunenriched|Rice, white, glutinous, unenriched|168883
+grain|ryeflourdark|Rye flour, dark|168885
+grain|ryeflourmedium|Rye flour, medium|168886
+grain|ryeflourlight|Rye flour, light|168887
+grain|triticaleflourwholegrain|Triticale flour, whole-grain|168888
+grain|wheatflourwholegrain|Wheat flour, whole-grain|168893
+grain|wheatflourwhiteallpurposeenr|Wheat flour, white, all-purpose, enriched, bleached|168894
+grain|wheatflourwhitebreadenriched|Wheat flour, white, bread, enriched|168896
+grain|riceflourbrown|Rice flour, brown|168898
+grain|pastaglutenfreecorn|Pasta, gluten-free, corn|168899
+grain|macaronivegetableenriched|Macaroni, vegetable, enriched|168903
+grain|noodlesjapanesesoba|Noodles, japanese, soba|168906
+grain|noodlesjapanesesomen|Noodles, japanese, somen|168908
+grain|spaghettispinach|Spaghetti, spinach|168911
+grain|pastawholegrain51wholewheatr|Pasta, whole grain, 51% whole wheat, remaining unenriched semolina|168915
+grain|cornflourwholegrainblueharin|Corn flour, whole-grain, blue (harina de maiz morado)|168921
+grain|pastaunenriched|Pasta, unenriched|168927
+grain|wheatflourwhiteallpurposeenr2|Wheat flour, white, all-purpose, enriched, unbleached|168936
+grain|spaghettiproteinfortifiedenr|Spaghetti, protein-fortified, enriched (n x 6.25)|168937
+grain|sorghumflourwholegrain|Sorghum flour, whole-grain|168943
+grain|wheatflourwholegrainsoftwhea|Wheat flour, whole-grain, soft wheat|168944
+dairy|cottagecheesewithvegetables|Cottage cheese, with vegetables|169078
+fruit|mangosweetened|Mango, sweetened|169091
+fruit|orangejuice|Orange juice|169098
+fruit|orangepeel|Orange peel|169103
+fruit|passionfruitjuicepurple|Passion-fruit juice, purple|169109
+fruit|passionfruitjuiceyellow|Passion-fruit juice, yellow|169110
+fruit|pearssulfured|Pears, sulfured|169121
+veg|beansnavysprouted|Beans, navy, sprouted|169139
+meat|porkcuredhamwateraddedunheat|Pork, cured, ham -- water added, unheated|169149
+meat|porkfreshloinbladechopsorroa2|Pork, fresh, loin, blade (chops or roasts)|169194
+veg|beanskidneysprouted|Beans, kidney, sprouted|169213
+veg|cornsalad|Cornsalad|169219
+veg|cowpeasblackeyes|Cowpeas (blackeyes)|169220
+veg|cowpeasleafytips|Cowpeas, leafy tips|169224
+veg|cucumberpeeled|Cucumber, peeled|169225
+veg|kanpyodriedgourdstrips|Kanpyo, (dried gourd strips)|169241
+veg|lambsquarters|Lambsquarters|169244
+veg|lettuceicebergincludescrisph|Lettuce, iceberg (includes crisphead types)|169248
+veg|lettucegreenleaf|Lettuce, green leaf|169249
+veg|pumpkinleaves|Pumpkin leaves|169272
+veg|seaweedagar|Seaweed, agar|169280
+veg|soybeanssprouted|Soybeans, sprouted|169284
+veg|squashsummerscallop|Squash, summer, scallop|169289
+veg|succotashcornandlimas|Succotash, (corn and limas)|169300
+veg|waterconvolvulus|Water convolvulus|169301
+veg|sweetpotatoleaves|Sweet potato leaves|169303
+veg|tarotahitian|Taro, tahitian|169310
+veg|beanssnapyellow|Beans, snap, yellow|169320
+veg|broccolileaves|Broccoli, leaves|169329
+veg|broccoliflowerclusters|Broccoli, flower clusters|169330
+veg|broccolistalks|Broccoli, stalks|169331
+veg|cabbagecommondanishdomestica|Cabbage, common (danish, domestic, and pointed types), freshly harvest|169335
+veg|cabbagecommondanishdomestica2|Cabbage, common (danish, domestic, and pointed types), stored|169336
+veg|pepperbanana|Pepper, banana|169394
+veg|peppersancho|Peppers, ancho|169396
+veg|fireweedleaves|Fireweed, leaves|169399
+veg|yautiatannier|Yautia (tannier)|169401
+nut|sesamebuttertahinifromunroas|Sesame butter, tahini, from unroasted kernels (non-chemically removed seed coat)|169406
+nut|chestnutsjapanese|Chestnuts, japanese|169413
+nut|sesamebuttertahinifromrawand|Sesame butter, tahini, from raw and stone ground kernels|169410
+nut|sesameseedkernelsdrieddecort|Sesame seed kernels, dried (decorticated)|169412
+meat|beefribeyesmallendribs10122|Beef, rib, eye, small end (ribs 10-12)|169437
+meat|beefshankcrosscuts|Beef, shank crosscuts|169441
+meat|beefchuckunderbladepotroasto|Beef, chuck, under blade pot roast or steak|169446
+meat|beefshoulderpotroastorsteak|Beef, shoulder pot roast or steak|169481
+grain|cornflourmasaenrichedwhite|Corn flour, masa, enriched, white|169694
+grain|cornflouryellowdegermedunenr|Corn flour, yellow, degermed, unenriched|169695
+grain|cornflourmasaunenrichedwhite|Corn flour, masa, unenriched, white|169696
+grain|couscous|Couscous|169699
+grain|ricebrownmediumgrain|Rice, brown, medium-grain|169706
+grain|ricewhitelonggrainprecookedo|Rice, white, long-grain, precooked or instant, enriched|169709
+grain|riceflourwhiteunenriched|Rice flour, white, unenriched|169714
+grain|tapiocapearl|Tapioca, pearl|169717
+grain|wheatflourwhitetortillamixen|Wheat flour, white, tortilla mix, enriched|169724
+grain|noodleseggenriched|Noodles, egg, enriched|169731
+grain|noodleseggspinachenriched|Noodles, egg, spinach, enriched|169733
+grain|pastaenriched|Pasta, enriched|169736
+grain|pastawholewheat|Pasta, whole-wheat|169738
+grain|barleyflourormeal|Barley flour or meal|169739
+grain|barleymaltflour|Barley malt flour|169740
+grain|oatflourpartiallydebranned|Oat flour, partially debranned|169741
+grain|ricenoodles|Rice noodles|169742
+grain|cornflourwholegrainwhite|Corn flour, whole-grain, white|169748
+grain|cornflouryellowmasaenriched|Corn flour, yellow, masa, enriched|169749
+grain|cornmealwholegrainwhite|Cornmeal, whole-grain, white|169750
+grain|wheatflourwhiteallpurposeenr3|Wheat flour, white, all-purpose, enriched, calcium-fortified|169754
+grain|noodleseggunenriched|Noodles, egg, unenriched|169755
+grain|ricewhitemediumgrainunenrich|Rice, white, medium-grain, unenriched|169760
+grain|wheatflourwhiteallpurposeune|Wheat flour, white, all-purpose, unenriched|169761
+fat|cornandcanolaoil|Corn and canola oil|169867
+fruit|mammyapplemamey|Mammy-apple, (mamey)|169909
+fruit|oheloberries|Oheloberries|169915
+fruit|orangescaliforniavalencias|Oranges, California, valencias|169916
+fruit|orangesnavels|Oranges, navels|746771
+fruit|orangesflorida|Oranges, Florida|169918
+fruit|orangeswithpeel|Oranges, with peel|169919
+fruit|tangerinejuice|Tangerine juice|169925
+fruit|peachessulfured|Peaches, sulfured|169934
+veg|mungbeanssprouted|Mung beans, sprouted|169957
+veg|celtuce|Celtuce|169990
+veg|chicoryroots|Chicory roots|169993
+veg|onionswelsh|Onions, welsh|170007
+veg|onionssweet|Onions, sweet|170008
+veg|potatoesrussetfleshandskin|Potatoes, russet, flesh and skin|170027
+veg|potatoeswhitefleshandskin|Potatoes, white, flesh and skin|170028
+veg|potatoesredfleshandskin|Potatoes, red, flesh and skin|170029
+veg|potatoesskin|Potatoes, skin|170032
+veg|turnipgreens|Turnip greens|170061
+veg|waxgourdchinesepreservingmel|Waxgourd, (chinese preserving melon)|170069
+veg|wingedbeantuber|Winged bean tuber|170070
+veg|dock|Dock|170076
+veg|eppaw|Eppaw|170078
+veg|radisheswhiteicicle|Radishes, white icicle|170081
+veg|beanspintosprouted|Beans, pinto, sprouted|170086
+veg|radishseedssprouted|Radish seeds, sprouted|170095
+veg|tomatoesyellow|Tomatoes, yellow|170096
+nut|breadfruitseeds|Breadfruit seeds|170144
+nut|cottonseedflourlowfatglandle|Cottonseed flour, low fat (glandless)|170146
+nut|cottonseedmealpartiallydefat|Cottonseed meal, partially defatted (glandless)|170147
+nut|sesameflourpartiallydefatted|Sesame flour, partially defatted|170153
+nut|sunflowerseedflourpartiallyd|Sunflower seed flour, partially defatted|170156
+nut|acorns|Acorns|170157
+nut|chestnutschinese|Chestnuts, chinese|170164
+nut|chestnutseuropeanpeeled|Chestnuts, european, peeled|170167
+nut|coconutmeatdrieddesiccatedno|Coconut meat, dried (desiccated), not sweetened|170170
+nut|coconutmilkrawliquidexpresse|Coconut milk, raw (liquid expressed from grated meat and water)|170172
+nut|ginkgonuts|Ginkgo nuts|170584
+nut|walnutsblack|Walnuts, black|170186
+nut|sesamebutterpaste|Sesame butter, paste|170191
+nut|sesameflourhighfat|Sesame flour, high-fat|170192
+grain|barleypearled|Barley, pearled|170284
+grain|cornflourwholegrainyellow|Corn flour, whole-grain, yellow|170290
+veg|broadbeans|Broadbeans|170377
+veg|butterburfuki|Butterbur, (fuki)|170385
+veg|peassprouted|Peas, sprouted|170422
+veg|pokeberryshootspoke|Pokeberry shoots, (poke)|170432
+veg|tomatoesgreen|Tomatoes, green|170456
+veg|tomatopowder|Tomato powder|170461
+veg|vinespinachbasella|Vinespinach, (basella)|170474
+veg|wingedbeanleaves|Winged bean leaves|170478
+veg|squashsummerallvarieties|Squash, summer, all varieties|170487
+veg|squashwinterallvarieties|Squash, winter, all varieties|170489
+veg|peppershotchiligreen|Peppers, hot chili, green|170497
+veg|tomatoesorange|Tomatoes, orange|170502
+nut|breadnuttreeseeds|Breadnut tree seeds|170552
+nut|cottonseedflourpartiallydefa|Cottonseed flour, partially defatted (glandless)|170555
+nut|safflowerseedkernels|Safflower seed kernels|170558
+nut|safflowerseedmealpartiallyde|Safflower seed meal, partially defatted|170559
+nut|sesameflourlowfat|Sesame flour, low-fat|170560
+nut|sesamemealpartiallydefatted|Sesame meal, partially defatted|170561
+nut|acornflourfullfat|Acorn flour, full fat|170566
+nut|butternuts|Butternuts|170570
+nut|chestnutseuropeanunpeeled|Chestnuts, european, unpeeled|170574
+nut|chestnutseuropeanunpeeled2|Chestnuts, european, unpeeled|170576
+nut|coconutmeatdrieddesiccatedsw2|Coconut meat, dried (desiccated), sweetened, flaked, packaged|170577
+nut|coconutmeatdrieddesiccatedto|Coconut meat, dried (desiccated), toasted|170579
+nut|coconutcreamrawliquidexpress|Coconut cream, raw (liquid expressed from grated meat)|170580
+nut|pinenutspinyon|Pine nuts, pinyon|170592
+grain|arrowrootflour|Arrowroot flour|170684
+grain|buckwheatflourwholegroat|Buckwheat flour, whole-groat|170687
+meat|beefchuckshortribs|Beef, chuck, short ribs|170783
+meat|beefchuckeyecountrystyleribs|Beef, chuck eye Country-Style ribs|170800
+meat|beefchuckeyesteak|Beef, chuck eye steak|170802
+meat|beefchuckmocktendersteak|Beef, chuck, mock tender steak|170807
+meat|beefribeyesteakroastlipon|Beef, rib eye steak/roast, lip-on|170838
+meat|beefribeyesteakroastlipon2|Beef, rib eye steak/roast, lip-on|170840
+dairy|mozzarellacheesewholemilklow|Mozzarella cheese, whole milk, low moisture|170846
+dairy|mozzarellacheesepartskimmilk|Mozzarella cheese, part skim milk|170847
+dairy|portdesalutcheese|Port de salut cheese|170849
+dairy|tilsitcheese|Tilsit cheese|170852
+dairy|whippedcreamcreamtoppingpres|Whipped cream, cream topping, pressurized|170860
+dairy|filledmilkfluidwithblendofhy|Filled milk, fluid, with blend of hydrogenated vegetable oils|170861
+dairy|filledmilkfluidwithlauricaci|Filled milk, fluid, with lauric acid oil|170862
+dairy|lowsodiummilkfluid|Low sodium milk, fluid|170875
+dairy|wheyacidfluid|Whey, acid, fluid|170885
+dairy|plainyoghurtskimmilk|Plain yoghurt, skim milk|170887
+dairy|eggfrozenpasteurized|Egg, frozen, pasteurized|323604
+dairy|mexicancheesequesocotija|Mexican cheese, queso cotija|170898
+dairy|cheddarcheesesharpsliced|Cheddar cheese, sharp, sliced|170899
+dairy|mozzarellacheeselowmoisturep|Mozzarella cheese, low moisture, part-skim, shredded|170900
+dairy|greekyoghurtfruitwholemilk|Greek yoghurt, fruit, whole milk|170905
+herb|bayleaf|Bay leaf|170917
+herb|carawayseed|Caraway seed|170918
+herb|celeryseed|Celery seed|170920
+herb|corianderleaf|Coriander leaf|170921
+herb|currypowder|Curry powder|170924
+herb|dillseed|Dill seed|170925
+herb|gingerground|Ginger, ground|170926
+herb|maceground|Mace, ground|170927
+herb|marjoram|Marjoram|170928
+herb|pepperredorcayenne|Pepper, red or cayenne|170932
+herb|pepperwhite|Pepper, white|170933
+herb|saffron|Saffron|170934
+herb|savoryground|Savory, ground|170936
+fat|ricebranoil|Rice bran oil|171013
+fat|wheatgermoil|Wheat germ oil|171014
+fat|palmoil|Palm oil|171015
+fat|sesameoilsaladorcooking|Sesame oil, salad or cooking|171016
+fat|cottonseedoilsaladorcooking|Cottonseed oil, salad or cooking|171024
+fat|grapeseedoil|Grapeseed oil|171028
+fat|walnutoil|Walnut oil|171030
+fat|almondoil|Almond oil|171031
+fat|apricotkerneloil|Apricot kernel oil|171032
+poultry|chickenbroilersorfryers|Chicken, broilers or fryers|171052
+poultry|chickenbroilersorfryersdarkm|Chicken, broilers or fryers, dark meat|171067
+poultry|chickenbroilersorfryersback|Chicken, broilers or fryers, back|171073
+poultry|chickenbroilerorfryersbreast|Chicken, broiler or fryers, breast, skinless|171077
+poultry|turkeyneck|Turkey, neck|171086
+poultry|turkeydarkmeat|Turkey, dark meat|171090
+poultry|turkeyback|Turkey, back|171096
+poultry|chickencornishgamehens|Chicken, cornish game hens|171108
+poultry|turkeydrumstickfromwholebird|Turkey, drumstick, from whole bird|171136
+dairy|gjetostcheese|Gjetost cheese|171240
+dairy|limburgercheese|Limburger cheese|171243
+dairy|mozzarellacheeselowmoisturep2|Mozzarella cheese, low moisture, part-skim|171244
+dairy|neufchatelcheese|Neufchatel cheese|171246
+dairy|parmesancheesegrated|Parmesan cheese, grated|171247
+dairy|ricottacheesepartskimmilk|Ricotta cheese, part skim milk|171248
+dairy|sourdressingnonbutterfatcult|Sour dressing, non-butterfat, cultured, filled cream-type|171259
+dairy|milksubstitutesfluidwithlaur|Milk substitutes, fluid, with lauric acid oil|171264
+dairy|producermilkfluid37milkfat|Producer milk, fluid, 3.7% milkfat|171266
+dairy|buttermilkmilk|Buttermilk milk|171274
+dairy|humanmilkmaturefluid|Human milk, mature, fluid|171279
+dairy|wheysweetfluid|Whey, sweet, fluid|171282
+dairy|mexicanblendcheese|Mexican blend cheese|171288
+herb|allspiceground|Allspice, ground|171315
+herb|aniseseed|Anise seed|171316
+herb|chervil|Chervil|171318
+herb|chilipowder|Chili powder|171319
+herb|fennelseed|Fennel seed|171323
+herb|garlicpowder|Garlic powder|171325
+herb|onionpowder|Onion powder|171327
+herb|poultryseasoning|Poultry seasoning|171331
+fat|peanutoilsaladorcooking|Peanut oil, salad or cooking|171410
+fat|soybeanoilsaladorcooking|Soybean oil, salad or cooking|171411
+fat|coconutoil|Coconut oil|171412
+fat|oliveoilsaladorcooking|Olive oil, salad or cooking|171413
+fat|cocoabutteroil|Cocoa butter oil|171421
+fat|vegetableoilpalmkernel|Vegetable oil, palm kernel|171422
+fat|poppyseedoil|Poppyseed oil|171423
+fat|tomatoseedoil|Tomatoseed oil|171424
+fat|soybeanlecithinoil|Soybean lecithin oil|171426
+fat|hazelnutoil|Hazelnut oil|171427
+fat|pamcookingsprayoiloriginal|PAM cooking spray oil, original|171430
+fat|cookingandsaladoilenova80dig|Cooking and salad oil, ENOVA, 80% diglycerides|171433
+poultry|chickenbroilersorfryerslight|Chicken, broilers or fryers, light meat|171464
+poultry|turkey|Turkey|171480
+poultry|turkeywing|Turkey, wing|171497
+poultry|turkeythighfromwholebird|Turkey, thigh, from whole bird|171531
+fruit|acerolajuice|Acerola juice|171687
+fruit|appleswithoutskin|Apples, without skin|171689
+fruit|applessulfured|Apples, sulfured|171691
+fruit|avocadoscalifornia|Avocados, California|171706
+fruit|avocadosflorida|Avocados, Florida|171707
+fruit|cherriestartsweetened|Cherries, tart, sweetened|171708
+fruit|cranberriessweetened|Cranberries, sweetened|171723
+fruit|currantszante|Currants, zante|171724
+fruit|custardapplebullocksheart|Custard-apple, (bullock's-heart)|171725
+meat|beefroundtoproundsteak|Beef, round, top round steak|171758
+meat|beefroundtoproundroast|Beef, round, top round roast|173996
+meat|beefroundeyeofroundroast|Beef, round, eye of round roast|171761
+meat|beefroundeyeofroundsteak|Beef, round, eye of round steak|171763
+meat|beeflointenderloinroast|Beef, loin, tenderloin roast|174000
+meat|beeflointoploinsteaklipoff|Beef, loin, top loin steak, lip off|171766
+meat|beeflointenderloinsteak|Beef, loin, tenderloin steak|171768
+meat|beefribsmallendribs1012|Beef, rib, small end (ribs 10-12)|171802
+meat|beefshortlointoploinsteak|Beef, short loin, top loin steak|171814
+meat|beefroundtoproundsteak2|Beef, round, top round, steak|171820
+meat|beefroundeyeofroundroast2|Beef, round, eye of round, roast|171819
+fish|bassstriped|Bass, striped|171948
+fish|bluefish|Bluefish|171949
+fish|burbot|Burbot|171950
+fish|butterfish|Butterfish|171951
+fish|carp|Carp|171952
+fish|cisco|Cisco|171953
+fish|cusk|Cusk|171958
+fish|mahimahi|Mahimahi|171959
+fish|drumfreshwater|Drum, freshwater|171960
+fish|halibutgreenland|Halibut, Greenland|171965
+grain|milletflour|Millet flour|172023
+grain|pastawholegrain51wholewheatr2|Pasta, whole grain, 51% whole wheat, remaining enriched semolina|172025
+meat|beefplatesteakinsideskirt|Beef, plate steak, inside skirt|172137
+meat|beefplatesteakoutsideskirt|Beef, plate steak, outside skirt|172141
+meat|beefribeyesteaklipoff|Beef, rib eye steak, lip off|173380
+meat|beefribbackribs|Beef, rib, back ribs|172147
+meat|beeflointopsirloincapsteak|Beef, loin, top sirloin cap steak|172174
+dairy|brickcheese|Brick cheese|172176
+dairy|cottagecheesecreamedwithfrui|Cottage cheese, creamed, with fruit|172180
+dairy|eggturkeyfresh|Egg, turkey, fresh|172192
+dairy|goatcheesehardtype|Goat cheese, hard type|172197
+dairy|eggwhitefrozenpasteurized|Egg, white, frozen, pasteurized|172203
+dairy|325milkfatmilkwithoutaddedvi|3.25% milkfat milk, without added vitamin A and vitamin D|172217
+dairy|drywhitecheesequesoseco|Dry white cheese, queso seco|172222
+dairy|buttermilkmilkfluid|Buttermilk milk, fluid|172225
+herb|vinegardistilled|Vinegar, distilled|172237
+herb|vinegarredwine|Vinegar, red wine|172240
+herb|vinegarbalsamic|Vinegar, balsamic|172241
+herb|seasoningmixsazoncorianderan|Seasoning mix, sazon, coriander & annatto|172242
+herb|seasoningmixtacooriginal|Seasoning mix, taco, original|172243
+fat|canolaoil|Canola oil|172336
+fat|mustardoil|Mustard oil|172337
+fat|vegetableoilsoybeanrefined|Vegetable oil, soybean, refined|172370
+poultry|chickenroastinglightmeat|Chicken, roasting, light meat|172398
+poultry|chickenstewing|Chicken, stewing|172402
+poultry|chickenstewingdarkmeat|Chicken, stewing, dark meat|172404
+poultry|pheasantleg|Pheasant, leg|172417
+legume|mothbeans|Mothbeans|172425
+legume|peanutsvalencia|Peanuts, valencia|172432
+legume|peanutsvirginia|Peanuts, virginia|172434
+legume|peanutflourlowfat|Peanut flour, low fat|172435
+legume|soyflourlowfat|Soy flour, low-fat|172444
+legume|soymealdefatted|Soy meal, defatted|172445
+legume|tofufirmpreparedwithcalciums|Tofu, firm, prepared with calcium sulfate|172475
+legume|tofuregularpreparedwithcalci|Tofu, regular, prepared with calcium sulfate|172476
+meat|lambrib|Lamb, rib|172493
+meat|lambcubedforsteworkaboblegan|Lamb, cubed for stew or kabob (leg and shoulder)|172508
+meat|bisontopsirloin|Bison, top sirloin|172564
+meat|bisonribeye|Bison, ribeye|172565
+meat|bisonshoulderclod|Bison, shoulder clod|172566
+meat|vealshankforeandhind|Veal, shank (fore and hind)|172570
+meat|bisonchuckshoulderclod|Bison, chuck, shoulder clod|172598
+meat|bisontopround1steak|Bison, top round, 1" steak|172601
+meat|vealshank|Veal, shank|172645
+poultry|quailbreast|Quail, breast|172829
+poultry|turkeyretailpartsdrumstick|Turkey, retail parts, drumstick|172875
+fruit|grapefruitpinkandredandwhite|Grapefruit, pink and red and white, all areas|173033
+fruit|grapefruitwhiteflorida|Grapefruit, white, Florida|173034
+fruit|grapefruitjuicewhite|Grapefruit juice, white|173039
+fruit|grapesmuscadine|Grapes, muscadine|173040
+fruit|groundcherriescapegooseberri|Groundcherries, (cape-gooseberries or poha)|173043
+fruit|guavasstrawberry|Guavas, strawberry|173045
+meat|beeftoploinpetiteroastfilet|Beef, top loin petite roast/filet|174691
+meat|beeflointopsirloinpetiteroas|Beef, loin, top sirloin petite roast/filet|173408
+meat|beefshortlointoploinsteak2|Beef, short loin, top loin, steak|173116
+meat|beefroundbottomroundroast|Beef, round, bottom round, roast|173122
+meat|beefbottomsirlointritiproast|Beef, bottom sirloin, tri-tip roast|173124
+meat|beefroundtiproundroast|Beef, round, tip round, roast|173126
+grain|sorghumflourrefinedunenriche|Sorghum flour, refined, unenriched|173262
+dairy|carawaycheese|Caraway cheese|173413
+dairy|cheshirecheese|Cheshire cheese|173415
+dairy|eggyolkfrozenpasteurized|Egg, yolk, frozen, pasteurized|173421
+dairy|parmesancheeseshredded|Parmesan cheese, shredded|173431
+dairy|goatcheesesemisofttype|Goat cheese, semisoft type|173433
+dairy|mexicancheesequesoasadero|Mexican cheese, queso asadero|173437
+dairy|mexicancheesequesochihuahua|Mexican cheese, queso chihuahua|173438
+dairy|lowsodiumcheesecheddarorcolb|Low-sodium cheese, cheddar or colby|173440
+dairy|fluidmilk1fatwithoutaddedvit|Fluid milk, 1% fat, without added vitamin A and vitamin D|173441
+dairy|withoutaddedvitamindmilk|Without added vitamin D milk|173454
+herb|salttable|Salt, table|173468
+herb|vinegarcider|Vinegar, cider|173469
+herb|vanillaextract|Vanilla extract|173471
+herb|seasoningmixchilioriginal|Seasoning mix, chili, original|173476
+fat|avocadooil|Avocado oil|173573
+fat|oatoil|Oat oil|173576
+poultry|chickenbroilersorfryersleg|Chicken, broilers or fryers, leg|173619
+poultry|chickenbroilersorfryersneck|Chicken, broilers or fryers, neck|173623
+poultry|chickenbroilersorfryerswing|Chicken, broilers or fryers, wing|173632
+poultry|canadagoosebreastmeatonlyski|Canada Goose, breast meat only, skinless|173634
+poultry|chickenroasting|Chicken, roasting|173636
+poultry|chickenroastingdarkmeat|Chicken, roasting, dark meat|173638
+poultry|chickenstewinglightmeat|Chicken, stewing, light meat|173643
+fish|herringpacific|Herring, Pacific|173669
+fish|ling|Ling|173670
+fish|lingcod|Lingcod|173671
+fish|mackerelpacificandjack|Mackerel, Pacific and jack|173672
+fish|mackerelspanish|Mackerel, spanish|173673
+fish|milkfish|Milkfish|173675
+fish|monkfish|Monkfish|173676
+fish|poutocean|Pout, ocean|173677
+fish|perch|Perch|173678
+fish|pikenorthern|Pike, northern|173680
+fish|pompanoflorida|Pompano, florida|173682
+fish|rockfishpacific|Rockfish, Pacific|173684
+fish|salmonatlanticwild|Salmon, Atlantic, wild|173686
+fish|salmonchum|Salmon, chum|173689
+fish|seatrout|Seatrout|173695
+fish|shadamerican|Shad, american|173696
+fish|shark|Shark|173697
+fish|spot|Spot|173700
+fish|sturgeon|Sturgeon|173701
+fish|tilefish|Tilefish|173705
+fish|turboteuropean|Turbot, european|173710
+fish|whitefish|Whitefish|173711
+fish|whiting|Whiting|173713
+fish|salmoncohofarmed|Salmon, coho, farmed|173715
+fish|pollockalaska|Pollock, Alaska|173725
+legume|beansfrench|Beans, french|173738
+legume|beanskidneycaliforniared|Beans, kidney, california red|173742
+legume|beanspink|Beans, pink|173748
+legume|beanssmallwhite|Beans, small white|173749
+legume|beansyellow|Beans, yellow|173751
+legume|carobflour|Carob flour|173755
+meat|vealloin|Veal, loin|173826
+meat|vealrib|Veal, rib|173828
+meat|vealshoulderbladechop|Veal, shoulder, blade chop|173838
+meat|vealsirloin|Veal, sirloin|173840
+meat|vealcubedforstewlegandshould|Veal, cubed for stew (leg and shoulder)|173843
+fruit|apricotssulfured|Apricots, sulfured|173941
+meat|beeflointoploinsteaklipon|Beef, loin, top loin steak, lip-on|174009
+meat|beefchuckclodroast|Beef, chuck, clod roast|174018
+meat|beefbrisketflathalf2|Beef, brisket, flat half|174057
+meat|beefchuckarmpotroast|Beef, chuck, arm pot roast|174056
+fish|bassfreshwater|Bass, fresh water|174184
+fish|codatlanticdriedandsalted|Cod, Atlantic, dried and salted|174190
+fish|croakeratlantic|Croaker, Atlantic|174192
+fish|eel|Eel|174193
+fish|oysterpacific|Oyster, Pacific|174219
+legume|limabeansthinseededbaby|Lima beans, thin seeded (baby)|174255
+legume|mungobeans|Mungo beans|174259
+legume|peanutsspanish|Peanuts, spanish|174263
+legume|peanutflourdefatted|Peanut flour, defatted|174267
+legume|soyflourfullfat|Soy flour, full-fat|174273
+legume|soyflourdefatted|Soy flour, defatted|174275
+legume|yardlongbeans|Yardlong beans|174281
+legume|lentilspinkorred|Lentils, pink or red|174284
+legume|chickpeaflourbesan|Chickpea flour (besan)|174288
+meat|lamblegwholeshankandsirloin|Lamb, leg, whole (shank and sirloin)|174313
+meat|lamblegsirloinhalf|Lamb, leg, sirloin half|174317
+meat|lambshoulderwholearmandblade|Lamb, shoulder, whole (arm and blade)|174326
+meat|lambshoulderarm|Lamb, shoulder, arm|174330
+meat|lambshoulderblade|Lamb, shoulder, blade|174334
+poultry|duckwildbreast|Duck, wild, breast|174469
+poultry|pheasantbreast|Pheasant, breast|174474
+poultry|turkeyretailpartsbreast|Turkey, retail parts, breast|174515
+poultry|turkeyretailpartswing|Turkey, retail parts, wing|174517
+poultry|turkeyretailpartsthigh|Turkey, retail parts, thigh|174518
+fruit|figs|Figs|174665
+fruit|grapefruitpinkandredcaliforn|Grapefruit, pink and red, California and Arizona|174674
+fruit|grapefruitwhiteallareas|Grapefruit, white, all areas|174676
+fruit|grapefruitwhitecalifornia|Grapefruit, white, California|174677
+fruit|grapesamericantypeslipskin|Grapes, american type (slip skin)|174682
+meat|beefribeyepetiteroastfilet|Beef, ribeye petite roast/filet|174697
+fish|mackerelking|Mackerel, king|175122
+fish|mulletstriped|Mullet, striped|175123
+fish|oceanperchatlantic|Ocean perch, Atlantic|175125
+fish|pikewalleye|Pike, walleye|175128
+fish|pollockatlantic|Pollock, Atlantic|175129
+fish|pollockalaskarawmaycontainad|Pollock, Alaska, raw (may contain additives to retain moisture)|175130
+fish|roughyorange|Roughy, orange|175133
+fish|sablefish|Sablefish|175134
+fish|salmonpink|Salmon, pink|175138
+fish|scup|Scup|175141
+fish|sheepshead|Sheepshead|175144
+fish|smeltrainbow|Smelt, rainbow|175146
+fish|suckerwhite|Sucker, white|175150
+fish|sunfishpumpkinseed|Sunfish, pumpkin seed|175151
+fish|trout2|Trout|175153
+fish|troutrainbowwild|Trout, rainbow, wild|175154
+fish|tunafreshskipjack|Tuna, fresh, skipjack|175156
+fish|tunafreshyellowfin|Tuna, fresh, yellowfin|175159
+fish|wolffishatlantic|Wolffish, Atlantic|175162
+fish|yellowtail|Yellowtail|175163
+fish|catfishchannelfarmed|Catfish, channel, farmed|175165
+fish|crayfishfarmed|Crayfish, farmed|175169
+fish|oystereasternfarmed|Oyster, eastern, farmed|175172
+fish|troutbrooknewyorkstate|Trout, brook, New York State|175181
+legume|beansblackturtle|Beans, black turtle|175186
+legume|beanskidneyalltypes|Beans, kidney, all types|175193
+legume|beanskidneyroyalred|Beans, kidney, royal red|175196
+legume|cowpeascatjang|Cowpeas, catjang|175208
+meat|vealshoulderwholearmandblade|Veal, shoulder, whole (arm and blade)|175280
+meat|vealshoulderarm|Veal, shoulder, arm|175282
+veg|tomatoesgrape|Tomatoes, grape|321360
+fish|pollock|Pollock|333476
+dairy|eggsgradealargeeggwhole|Eggs, Grade A, Large, egg whole|748967
+grain|wheatflourallpurposeenriched|Wheat flour, all-purpose, enriched, bleached|789890
+grain|wheatflourallpurposeenriched2|Wheat flour, all-purpose, enriched, unbleached|789951
+grain|wheatflourallpurposeunenrich|Wheat flour, all-purpose, unenriched, unbleached|790018
+grain|wholewheatflourunenriched|Whole wheat flour, unenriched|790085
+grain|breadflourwhiteenrichedunble|Bread flour, white, enriched, unbleached|790146
+grain|riceflourwhiteunenriched2|Rice flour, white, unenriched|790214
+grain|cornflouryellowfinemealenric|Corn flour, yellow, fine meal, enriched|790276
+veg|onionsred|Onions, red|790577
+veg|onionsyellow|Onions, yellow|790646
+fruit|bananasoverripe|Bananas, overripe|790774
+fruit|bananasripeandslightlyripe|Bananas, ripe and slightly ripe|790991
+legume|soyflourdefatted2|Soy flour, defatted|1104705
+legume|soyflourfullfat2|Soy flour, full-fat|1104766
+grain|riceflourbrown2|Rice flour, brown|1104812
+grain|riceflourglutinous|Rice flour, glutinous|1104867
+grain|pastryflourunenrichedunbleac|Pastry flour, unenriched, unbleached|1104913
+veg|onionswhite|Onions, white|1104962
+fruit|applesreddeliciouswithskin2|Apples, red delicious, with skin|1105430
+fruit|appleshoneycrispwithskin|Apples, honeycrisp, with skin|1105547
+fruit|applesgrannysmithwithskin2|Apples, granny smith, with skin|1105664
+fruit|applesgalawithskin2|Apples, gala, with skin|1105781
+fruit|applesfujiwithskin2|Apples, fuji, with skin|1105897

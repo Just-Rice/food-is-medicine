@@ -7,7 +7,7 @@ sources and honest about how good the evidence actually is.
 
 ## What it does
 
-**Food explorer** — 435 foods across 16 groups: fruits, vegetables, mushrooms, nuts and
+**Food explorer** — 1,004 foods across 16 groups: fruits, vegetables, mushrooms, nuts and
 seeds, legumes, grains, herbs and spices, dairy, meat, poultry, offal, fish, shellfish,
 eggs and roe, animal fats and bee products. Up to 38 nutrients each — energy, protein,
 carbohydrate, fibre, sugars, the full fat breakdown including ALA, EPA and DHA, 13 vitamins
@@ -80,6 +80,23 @@ directly. The tags are derived in the build script, not hand-maintained.
 
 **Sources** — all 58, tiered by kind, with a note on each explaining what it contributes.
 
+### How the food list was assembled
+
+The first 435 foods were curated by hand. The rest come from mining the USDA
+releases exhaustively with `build/select_foods.py`, which keeps whole
+single-ingredient foods and rejects three things that would turn a reference into
+a junk drawer: prepared dishes, branded and institutional products, and
+preparation variants of something already listed. USDA structures categories very
+differently — produce is one row per plant, while beef is one row per cut per trim
+level per grade per country of origin — so the rules are per category. Names and
+family tags for the imported foods are derived from the USDA description by
+`build/name_foods.py`, then deduplicated against the curated list with a guard so
+that genuinely different plant parts (turnip greens versus turnips, breadfruit
+seeds versus breadfruit) survive.
+
+Anything without a usable nutrient profile is dropped rather than shown as an
+empty page.
+
 ## The data is generated, not typed
 
 `data/foods.js` is built by `build/build_foods.py` from the USDA FoodData Central SR Legacy
@@ -103,6 +120,12 @@ To add a food, append `group|slug|display name|fdc_id` to `build/foods.txt` and 
 script fails loudly if an ID has no USDA record, so a typo cannot produce an empty food.
 
 ### Photographs
+
+Only foods whose names a picture search can actually resolve get a photograph.
+Curated names like "Okra" work; USDA descriptions like "Pork, fresh, loin, center
+rib (chops or roasts)" do not, and an early run illustrated 2% milk with a
+photograph of a milk-float garage. So 718 foods carry a photo and 286 show a
+placeholder tile, which is the honest outcome.
 
 `build/fetch_images.py` pulls one photograph per food from Wikimedia Commons and records the
 author and licence of each file in `data/images.js`, which the food pages display. Commons
@@ -177,8 +200,11 @@ data/sources.js       every citation, keyed by id
 data/i18n.js          four languages, with the localisation reasoning
 data/growth.js        GENERATED CDC BMI-for-age parameters
 js/growth.js          BMI-for-age percentile maths
-img/                  427 food photographs from Wikimedia Commons
+img/                  718 food photographs from Wikimedia Commons
 build/build_foods.py  the nutrition generator
+build/select_foods.py bulk selector: whole ingredients, per-category rules
+build/name_foods.py   names, slugs and family tags from USDA descriptions
+build/auto_tags.txt   GENERATED family tags for bulk-imported foods
 build/build_growth.py CDC growth-chart generator
 build/aliases.txt     other names and family tags, hand-maintained
 build/fetch_images.py the photo fetcher

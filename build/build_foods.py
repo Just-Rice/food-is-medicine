@@ -40,6 +40,7 @@ NUTRIENTS = {
 SUFFIX = re.compile(r"\s*\(Includes foods for USDA's Food Distribution Program\)\s*$")
 
 ALIASES = os.path.join(HERE, 'aliases.txt')
+AUTO_TAGS = os.path.join(HERE, 'auto_tags.txt')
 
 
 def load_aliases():
@@ -52,9 +53,16 @@ def load_aliases():
     USDA description.
     """
     aka, tags = {}, {}
-    if not os.path.exists(ALIASES):
-        return aka, tags
-    with open(ALIASES) as fh:
+    # Auto-derived tags load first so that hand-written entries in aliases.txt
+    # override them rather than the other way round.
+    for path in (AUTO_TAGS, ALIASES):
+        if os.path.exists(path):
+            _read_alias_file(path, aka, tags)
+    return aka, tags
+
+
+def _read_alias_file(path, aka, tags):
+    with open(path) as fh:
         for line in fh:
             line = line.strip()
             if not line or line.startswith('#'):
@@ -69,7 +77,6 @@ def load_aliases():
                 aka[slug] = sorted(set(names))
             if tag_list:
                 tags[slug] = sorted(set(tag_list))
-    return aka, tags
 
 # ---------------------------------------------------------------------------
 # Dietary classification.
@@ -345,6 +352,37 @@ def main():
             entry['serving'] = {'label': serve['label'], 'grams': round(serve['grams'], 1)}
         out.append(entry)
 
+    # Two USDA records can reduce to the same display name -- either because the
+    # same food appears in both releases, or because a real distinction (bone-in
+    # versus boneless) lives in a part of the description the name dropped.
+    # Disambiguate where the descriptions genuinely differ, drop where they do not.
+    by_name = {}
+    for e in out:
+        by_name.setdefault(e['name'], []).append(e)
+
+    dropped_dupes = []
+    for name, group in by_name.items():
+        if len(group) < 2:
+            continue
+        group.sort(key=lambda e: -len(e['nutrients']))
+        token_sets = []
+        for e in group:
+            toks = set(re.findall(r"[a-z0-9-]+", (e.get('usda') or '').lower()))
+            token_sets.append(toks)
+        for i, e in enumerate(group):
+            others = set().union(*(token_sets[:i] + token_sets[i + 1:]))
+            unique = [t for t in sorted(token_sets[i] - others)
+                      if len(t) > 2 and t not in ('raw', 'the', 'and', 'with')]
+            if unique:
+                e['name'] = '%s (%s)' % (name, ', '.join(unique[:2]))
+            elif i > 0:
+                dropped_dupes.append(e['slug'])
+
+    if dropped_dupes:
+        out = [e for e in out if e['slug'] not in dropped_dupes]
+        print('dropped %d entries that duplicated another exactly: %s'
+              % (len(dropped_dupes), ', '.join(dropped_dupes[:6])))
+
     with open(OUT, 'w') as fh:
         fh.write('// GENERATED FILE -- do not edit by hand.\n')
         fh.write('// Built by build/build_foods.py from USDA FoodData Central\n')
@@ -352,7 +390,9 @@ def main():
         fh.write('// the site can link back to the source record. Values are per 100 g,\n')
         fh.write('// edible portion. Dietary and allergen tags are derived in the build script.\n')
         fh.write('window.FOODS = ')
-        json.dump(out, fh, indent=1)
+        # Written compactly: at a thousand foods the pretty-printing was adding
+        # about half a megabyte of whitespace to a file that blocks first paint.
+        json.dump(out, fh, separators=(',', ':'))
         fh.write(';\n')
 
     thin = [o['slug'] for o in out if len(o['nutrients']) < 15]
