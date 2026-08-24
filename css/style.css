@@ -741,3 +741,15 @@ ul.basket li + li { border-top: 1px solid color-mix(in srgb, var(--card-edge) 55
   border: 1px solid var(--card-edge); border-radius: 8px;
   background: var(--card); color: var(--ink); cursor: pointer;
 }
+
+/* ---- Long grids -------------------------------------------------------- */
+/* With a thousand foods the browser was laying out and painting every card,
+   including the several hundred below the fold. content-visibility lets it skip
+   the off-screen ones until they are scrolled to; the intrinsic size keeps the
+   scrollbar honest in the meantime. */
+.food-card, .herb-card {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 280px;
+}
+
+.show-all { margin: 22px 0 0; text-align: center; }

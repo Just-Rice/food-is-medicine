@@ -124,7 +124,7 @@ script fails loudly if an ID has no USDA record, so a typo cannot produce an emp
 Only foods whose names a picture search can actually resolve get a photograph.
 Curated names like "Okra" work; USDA descriptions like "Pork, fresh, loin, center
 rib (chops or roasts)" do not, and an early run illustrated 2% milk with a
-photograph of a milk-float garage. So 691 foods carry a photo and 311 show a
+photograph of a milk-float garage. So 698 foods carry a photo and 317 show a
 placeholder tile, which is the honest outcome.
 
 The fetcher also rejects digitised print. Wikimedia holds a great many scanned
@@ -205,7 +205,7 @@ data/sources.js       every citation, keyed by id
 data/i18n.js          four languages, with the localisation reasoning
 data/growth.js        GENERATED CDC BMI-for-age parameters
 js/growth.js          BMI-for-age percentile maths
-img/                  691 food photographs from Wikimedia Commons
+img/                  698 food photographs from Wikimedia Commons
 build/build_foods.py  the nutrition generator
 build/select_foods.py bulk selector: whole ingredients, per-category rules
 build/name_foods.py   names, slugs and family tags from USDA descriptions

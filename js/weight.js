@@ -71,6 +71,29 @@
       blocked: false
     };
 
+    // The age gate comes first, before any goal branch. It used to sit further
+    // down, so the maintain and recompose branches returned an unblocked plan
+    // for a twelve-year-old -- the view guarded separately, but a module should
+    // not depend on its caller to enforce a safety rule.
+    if (profile.age < 18) {
+      result.warnings.push({
+        level: 'danger',
+        title: 'These numbers do not apply under 18',
+        body: 'Children and adolescents are still growing, and adult BMI categories do not ' +
+              'apply to them — paediatric assessment uses age-and-sex percentile charts ' +
+              'instead. Deliberate calorie restriction during growth can affect height, bone ' +
+              'density and puberty. Please talk to a doctor rather than using this page.'
+      });
+      result.blocked = true;
+      result.targetBmi = result.currentBmi;
+      result.dailyAdjust = 0;
+      result.targetIntake = null;
+      result.weeklyChange = 0;
+      result.weeks = null;
+      addUniversalWarnings(result, profile);
+      return result;
+    }
+
     // Redistribution ("body recomposition"): losing fat and gaining muscle at
     // roughly stable weight. It is handled separately because the whole point
     // is that the scale is the wrong instrument -- there is no weekly target to
@@ -145,18 +168,6 @@
     result.deltaKg = Math.round(deltaKg * 10) / 10;
 
     // ---- safety checks, ordered most serious first ----------------------
-
-    if (profile.age < 18) {
-      result.warnings.push({
-        level: 'danger',
-        title: 'These numbers do not apply under 18',
-        body: 'Children and adolescents are still growing, and adult BMI categories do not ' +
-              'apply to them — paediatric assessment uses age-and-sex percentile charts ' +
-              'instead. Deliberate calorie restriction during growth can affect height, bone ' +
-              'density and puberty. Please talk to a doctor rather than using this page.'
-      });
-      result.blocked = true;
-    }
 
     if (plan.goal === 'lose' && currentBmi < 18.5) {
       result.warnings.push({

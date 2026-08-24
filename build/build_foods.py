@@ -21,6 +21,11 @@ LIST = os.path.join(HERE, 'foods.txt')
 # USDA nutrient id -> (key used on the site, unit)
 NUTRIENTS = {
     '1008': ('kcal', 'kcal'), '1003': ('protein', 'g'), '1004': ('fat', 'g'),
+    # Foundation Foods reports energy under the Atwater factor nutrients rather
+    # than 1008. Reading only 1008 silently left those foods with no energy
+    # value at all, which is what the site keys almost everything off.
+    '2048': ('kcal_atwater_specific', 'kcal'),
+    '2047': ('kcal_atwater_general', 'kcal'),
     '1005': ('carbs', 'g'), '1079': ('fiber', 'g'), '2000': ('sugar', 'g'),
     '1051': ('water', 'g'),
     '1258': ('satfat', 'g'), '1292': ('monofat', 'g'), '1293': ('polyfat', 'g'),
@@ -337,6 +342,17 @@ def main():
         opts = portions.get(fdc, [])
         best = choose_portion(opts)
         serve = choose_serving(opts)
+        nutrients = c.get('n', {})
+        # Prefer the direct energy measure; fall back to Atwater specific
+        # factors, then general, which is the order USDA itself prefers.
+        if nutrients.get('kcal') is None:
+            for alt in ('kcal_atwater_specific', 'kcal_atwater_general'):
+                if nutrients.get(alt) is not None:
+                    nutrients['kcal'] = nutrients[alt]
+                    break
+        nutrients.pop('kcal_atwater_specific', None)
+        nutrients.pop('kcal_atwater_general', None)
+
         diet, allergens = classify(c['group'], c['slug'])
         entry = {
             'slug': c['slug'], 'name': c['name'], 'group': c['group'],
@@ -344,7 +360,7 @@ def main():
             'diet': diet, 'allergens': allergens,
             'aka': aka.get(c['slug'], []),
             'tags': tags.get(c['slug'], []),
-            'nutrients': c.get('n', {}),
+            'nutrients': nutrients,
         }
         if best:
             entry['portion'] = {'label': best['label'], 'grams': round(best['grams'], 1)}

@@ -329,8 +329,6 @@ poppyseedoil||fat,oil
 tomatoseedoil||fat,nightshade,oil
 soybeanlecithinoil||fat,legume,oil,pulse
 hazelnutoil||fat,nut,oil
-pamcookingsprayoiloriginal||fat,oil
-cookingandsaladoilenova80dig||fat,oil
 chickenbroilersorfryerslight||cereal,grain,meat,poultry
 turkey||meat,poultry
 turkeywing||meat,poultry
@@ -377,7 +375,6 @@ cottagecheesecreamedwithfrui||cheese,dairy
 eggturkeyfresh||dairy,meat,poultry
 goatcheesehardtype||cereal,cheese,dairy,grain
 eggwhitefrozenpasteurized||dairy
-325milkfatmilkwithoutaddedvi||dairy
 drywhitecheesequesoseco||cheese,dairy
 buttermilkmilkfluid||dairy
 vinegardistilled||spice
@@ -432,8 +429,6 @@ goatcheesesemisofttype||cereal,cheese,dairy,grain
 mexicancheesequesoasadero||cheese,dairy
 mexicancheesequesochihuahua||cheese,dairy
 lowsodiumcheesecheddarorcolb||cheese,dairy
-fluidmilk1fatwithoutaddedvit||dairy
-withoutaddedvitamindmilk||dairy
 salttable||spice
 vinegarcider||spice
 vanillaextract||spice
@@ -573,3 +568,19 @@ appleshoneycrispwithskin||fruit
 applesgrannysmithwithskin2||fruit
 applesgalawithskin2||fruit
 applesfujiwithskin2||fruit
+00flour||cereal,grain
+speltflourwholegrain||cereal,grain
+almondflour||cereal,grain,nut
+amaranthflour||cereal,grain
+quinoaflour||cereal,grain
+cassavaflour||cereal,grain,root
+chestnutflour||cereal,grain,nut
+coconutflour||cereal,grain,nut
+oatswholegrainrolledoldfashi||cereal,grain
+oatswholegrainsteelcut||cereal,grain
+riceblackunenriched||cereal,grain
+riceredunenriched||cereal,grain
+einkorngrain||grain
+sorghumbranwhiteunenriched||cereal,grain
+oaxacacheesesolid||cheese,dairy
+cornflourmasaharinawhiteorye||cereal,grain

@@ -3,6 +3,12 @@
 // Every image is from Wikimedia Commons under a free licence; the author
 // and licence below are reproduced from the Commons file metadata.
 window.IMAGE_CREDITS = {
+ "00flour": {
+  "author": "Anderson",
+  "file": "Railroad Avenue looking northeast, Seattle, ca 1900 (MOHAI 3092).jpg",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:Railroad_Avenue_looking_northeast,_Seattle,_ca_1900_(MOHAI_3092).jpg"
+ },
  "abalone": {
   "author": "Sharktopus",
   "file": "LivingAbalone.JPG",
@@ -69,11 +75,23 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 4.0",
   "page": "https://commons.wikimedia.org/wiki/File:Almonds_-_in_shell,_shell_cracked_open,_shelled,_blanched.jpg"
  },
+ "almondflour": {
+  "author": "Yun Huang Yong",
+  "file": "Almond_meal_by_hand.jpg",
+  "license": "CC BY-SA 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Almond_meal_by_hand.jpg"
+ },
  "amaranth": {
   "author": "Kurt St\u00fcber [1]",
   "file": "Amaranthus_tricolor0.jpg",
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Amaranthus_tricolor0.jpg"
+ },
+ "amaranthflour": {
+  "author": "Atlas of Medical Foreign Bodies",
+  "file": "Quinoa Seeds Grains - Colon (50083575198).jpg",
+  "license": "CC BY-SA 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Quinoa_Seeds_Grains_-_Colon_(50083575198).jpg"
  },
  "amaranthleaves": {
   "author": "KWOJNG ekwiuel AWAN",
@@ -699,6 +717,12 @@ window.IMAGE_CREDITS = {
   "license": "Public domain",
   "page": "https://commons.wikimedia.org/wiki/File:Manihot_esculenta_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-090.jpg"
  },
+ "cassavaflour": {
+  "author": "sjludwig@gmail.com",
+  "file": "Drying Manioc.jpg",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Drying_Manioc.jpg"
+ },
  "catfish": {
   "author": "authors of the images used: HalbsH\u00e4nnile Thomsonmg2000 Guillermo Enrique Ter\u00e1n, Juliano Ferrer, Mauricio Benitez, Felipe",
   "file": "Siluriformes.png",
@@ -950,6 +974,12 @@ window.IMAGE_CREDITS = {
   "file": "Cocos_nucifera_-_K\u00f6hler\u2013s_Medizinal-Pflanzen-187.jpg",
   "license": "Public domain",
   "page": "https://commons.wikimedia.org/wiki/File:Cocos_nucifera_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-187.jpg"
+ },
+ "coconutflour": {
+  "author": "mangostaniko",
+  "file": "Vegan Cheese Happy Cheese Cashew 2.jpg",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Vegan_Cheese_Happy_Cheese_Cashew_2.jpg"
  },
  "coconutmeatdrieddesiccatedsw": {
   "author": "jeffreyw",
@@ -1274,6 +1304,12 @@ window.IMAGE_CREDITS = {
   "file": "Raw_egg.jpg",
   "license": "Public domain",
   "page": "https://commons.wikimedia.org/wiki/File:Raw_egg.jpg"
+ },
+ "einkorngrain": {
+  "author": "Kahn, Arthur and Fritz",
+  "file": "Arthur and Fritz Kahn Collection 1889-1932 (20153936069).jpg",
+  "license": "No restrictions",
+  "page": "https://commons.wikimedia.org/wiki/File:Arthur_and_Fritz_Kahn_Collection_1889-1932_(20153936069).jpg"
  },
  "elderberryfruit": {
   "author": "Edal Anton Lefterov",
@@ -2408,6 +2444,12 @@ window.IMAGE_CREDITS = {
   "file": "AvenaSativa3.jpg",
   "license": "CC BY-SA 4.0",
   "page": "https://commons.wikimedia.org/wiki/File:AvenaSativa3.jpg"
+ },
+ "oaxacacheesesolid": {
+  "author": "No machine-readable author provided. Jo\u00e3o Sousa assumed (based on copyright claims).",
+  "file": "MonteAlbanWest.jpg",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:MonteAlbanWest.jpg"
  },
  "oceanperchatlantic": {
   "author": "Unknown",

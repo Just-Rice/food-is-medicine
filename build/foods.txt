@@ -823,7 +823,6 @@ dairy|cottagecheesecreamedwithfrui|Cottage cheese, creamed, with fruit|172180
 dairy|eggturkeyfresh|Egg, turkey, fresh|172192
 dairy|goatcheesehardtype|Goat cheese, hard type|172197
 dairy|eggwhitefrozenpasteurized|Egg, white, frozen, pasteurized|172203
-dairy|325milkfatmilkwithoutaddedvi|3.25% milkfat milk, without added vitamin A and vitamin D|172217
 dairy|drywhitecheesequesoseco|Dry white cheese, queso seco|172222
 dairy|buttermilkmilkfluid|Buttermilk milk, fluid|172225
 herb|vinegardistilled|Vinegar, distilled|172237
@@ -878,8 +877,6 @@ dairy|goatcheesesemisofttype|Goat cheese, semisoft type|173433
 dairy|mexicancheesequesoasadero|Mexican cheese, queso asadero|173437
 dairy|mexicancheesequesochihuahua|Mexican cheese, queso chihuahua|173438
 dairy|lowsodiumcheesecheddarorcolb|Low-sodium cheese, cheddar or colby|173440
-dairy|fluidmilk1fatwithoutaddedvit|Fluid milk, 1% fat, without added vitamin A and vitamin D|173441
-dairy|withoutaddedvitamindmilk|Without added vitamin D milk|173454
 herb|salttable|Salt, table|173468
 herb|vinegarcider|Vinegar, cider|173469
 herb|vanillaextract|Vanilla extract|173471
@@ -1019,3 +1016,19 @@ fruit|appleshoneycrispwithskin|Apples, honeycrisp, with skin|1105547
 fruit|applesgrannysmithwithskin2|Apples, granny smith, with skin|1105664
 fruit|applesgalawithskin2|Apples, gala, with skin|1105781
 fruit|applesfujiwithskin2|Apples, fuji, with skin|1105897
+grain|00flour|00 flour|2003586
+grain|speltflourwholegrain|Spelt flour, whole grain|2003587
+nut|almondflour|Almond flour|2261420
+grain|amaranthflour|Amaranth flour|2512371
+grain|quinoaflour|Quinoa flour|2512372
+veg|cassavaflour|Cassava flour|2512377
+nut|chestnutflour|Chestnut flour|2515377
+nut|coconutflour|Coconut flour|2515382
+grain|oatswholegrainrolledoldfashi|Oats, whole grain, rolled, old fashioned|2346396
+grain|oatswholegrainsteelcut|Oats, whole grain, steel cut|2346397
+grain|riceblackunenriched|Rice, black, unenriched|2710825
+grain|riceredunenriched|Rice, red, unenriched|2710838
+grain|einkorngrain|Einkorn, grain|2710827
+grain|sorghumbranwhiteunenriched|Sorghum bran, white, unenriched|2710839
+dairy|oaxacacheesesolid|Oaxaca cheese, solid|2647441
+grain|cornflourmasaharinawhiteorye|Corn flour, masa harina, white or yellow|2710835

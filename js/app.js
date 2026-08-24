@@ -234,6 +234,12 @@
   // ======================================================================
   var foodState = { q: '', group: 'all', sort: 'name' };
 
+  // Building a thousand cards costs the best part of a second, most of it spent
+  // on rows nobody has scrolled to. Render a page at a time and let the reader
+  // ask for the rest; a search that narrows below the cap shows everything.
+  var PAGE_SIZE = 240;
+  var showAllFoods = false;
+
   function viewFoods() {
     var ref = referenceSet();
     var sortKeys = ['protein', 'fiber', 'vitc', 'vitk', 'folate', 'iron', 'calcium',
@@ -264,18 +270,29 @@
       }).join('') + '</div>' +
 
       '<p class="result-count" id="foodCount"></p>' +
-      '<div class="grid" id="foodGrid"></div>';
+      '<div class="grid" id="foodGrid"></div>' +
+      '<div class="show-all" id="showAllWrap"></div>';
 
     document.getElementById('foodSort').value = foodState.sort;
 
+    // Repainting a grid of a thousand cards on every keystroke costs a few
+    // hundred milliseconds each time, which reads as a stutter while typing.
+    // Coalesce the keystrokes and paint once the typing pauses.
     var search = document.getElementById('foodSearch');
-    search.addEventListener('input', function () { foodState.q = search.value; paint(); });
+    var typingTimer = null;
+    search.addEventListener('input', function () {
+      foodState.q = search.value;
+      showAllFoods = false;
+      if (typingTimer) clearTimeout(typingTimer);
+      typingTimer = setTimeout(function () { typingTimer = null; paint(); }, 130);
+    });
     document.getElementById('foodSort').addEventListener('change', function (ev) {
       foodState.sort = ev.target.value; paint();
     });
     main.querySelectorAll('.chip[data-group]').forEach(function (btn) {
       btn.addEventListener('click', function () {
         foodState.group = btn.dataset.group;
+        showAllFoods = false;
         main.querySelectorAll('.chip[data-group]').forEach(function (b) {
           b.setAttribute('aria-pressed', b.dataset.group === foodState.group ? 'true' : 'false');
         });
@@ -308,17 +325,24 @@
       }
 
       var count = list.length === 1 ? t('one_food') : t('n_foods', { n: list.length });
+      var capped = !showAllFoods && list.length > PAGE_SIZE;
+      var shown = capped ? list.slice(0, PAGE_SIZE) : list;
+
       document.getElementById('foodCount').innerHTML = esc(count) +
         (hidden ? ' <span class="dim">· ' + esc(t('hidden_by_diet', { n: hidden })) +
-          ' <a href="#/settings">' + esc(t('nav_settings')) + '</a></span>' : '');
+          ' <a href="#/settings">' + esc(t('nav_settings')) + '</a></span>' : '') +
+        (capped ? ' <span class="dim">· ' +
+          esc(t('showing_some', { n: PAGE_SIZE, total: list.length })) + '</span>' : '');
 
       var grid = document.getElementById('foodGrid');
       if (!list.length) {
         grid.innerHTML = '<p class="empty">' + esc(t('no_match')) + '</p>';
+        var more0 = document.getElementById('showAllWrap');
+        if (more0) more0.innerHTML = '';
         return;
       }
 
-      grid.innerHTML = list.map(function (f) {
+      grid.innerHTML = shown.map(function (f) {
         var hs = highlights(f, ref, 3);
         return '<a class="food-card" href="#/food/' + esc(f.slug) + '">' +
           foodImage(f, 'thumb') +
@@ -339,6 +363,21 @@
               '</span></div>') +
           '</div></a>';
       }).join('');
+
+      var wrap = document.getElementById('showAllWrap');
+      if (wrap) {
+        wrap.innerHTML = capped
+          ? '<button class="btn ghost" type="button" id="showAllBtn">' +
+            esc(t('show_all', { total: list.length })) + '</button>'
+          : '';
+        var btn = document.getElementById('showAllBtn');
+        if (btn) {
+          btn.addEventListener('click', function () {
+            showAllFoods = true;
+            paint();
+          });
+        }
+      }
     }
   }
 
@@ -1162,7 +1201,47 @@
         });
       }
     } catch (e) { /* ignore */ }
-    return base;
+    var clean = sanitiseRecipeState(base);
+    // Write the repaired state straight back, so a corrupt blob is fixed on
+    // disk rather than re-cleaned on every single page load.
+    try {
+      localStorage.setItem(RECIPE_STORE, JSON.stringify({
+        basket: clean.basket, cuisine: clean.cuisine, servings: clean.servings,
+        notes: clean.notes, result: clean.result
+      }));
+    } catch (e) { /* private mode */ }
+    return clean;
+  }
+
+  // A basket saved in an earlier session can hold slugs that no longer exist:
+  // the food list is regenerated from USDA and entries do get renamed or
+  // dropped. Left alone those rows render as a raw slug, contribute nothing to
+  // the nutrition totals, and get sent to the model as gibberish. Everything
+  // restored from storage is therefore checked against the current data.
+  function sanitiseRecipeState(st) {
+    var known = {};
+    FOODS.forEach(function (f) { known[f.slug] = f; });
+
+    st.basket = (Array.isArray(st.basket) ? st.basket : [])
+      .filter(function (item) { return item && known[item.slug]; })
+      .map(function (item) {
+        var food = known[item.slug];
+        var amount = Number(item.amount);
+        if (!(amount > 0) || amount > 20000) {
+          amount = food.portion ? Math.round(food.portion.grams) : 100;
+        }
+        var qty = Number(item.qty);
+        if (!food.portion || !(qty > 0)) qty = food.portion ? 1 : null;
+        return { slug: item.slug, amount: Math.round(amount), qty: qty };
+      });
+
+    if (CUISINES.indexOf(st.cuisine) < 0) st.cuisine = 'any';
+    var servings = Number(st.servings);
+    st.servings = (servings >= 1 && servings <= 12) ? Math.round(servings) : 2;
+    if (typeof st.notes !== 'string') st.notes = '';
+    if (typeof st.result !== 'string') st.result = '';
+    st.error = '';
+    return st;
   }
 
   var recipeState = loadRecipeState();

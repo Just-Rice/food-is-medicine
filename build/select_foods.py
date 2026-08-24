@@ -123,6 +123,7 @@ FAT_EXTRA = re.compile(r'\b(mayonnaise|fish oil|cod liver|contains added|'
     r'cupu assu|babassu|ucuhuba|tea ?seed|nutmeg butter|sheanut|'
     r'vegetable oil-butter spread)\b', re.I)
 DAIRY_EXTRA = re.compile(r'\b(dessert topping|dulce de leche|milk shake|malted)\b'
+    r"|without added vitamin"
     r'|egg, (whole|white|yolk), dried', re.I)
 
 CATEGORY_RULES = {

@@ -60,6 +60,7 @@
       sort_highest: '(highest)', sort_prefix: 'Sort: ',
       filter_group: 'Filter by food group',
       no_match: 'Nothing matches that search.',
+      showing_some: 'Showing the first {n} of {total}.', show_all: 'Show all {total}',
       n_foods: '{n} foods', one_food: '1 food',
       hidden_by_diet: '{n} hidden by your dietary filters',
 
@@ -191,6 +192,7 @@
       sort_highest: '(mayor)', sort_prefix: 'Orden: ',
       filter_group: 'Filtrar por grupo de alimentos',
       no_match: 'No hay resultados para esa búsqueda.',
+      showing_some: 'Mostrando los primeros {n} de {total}.', show_all: 'Mostrar los {total}',
       n_foods: '{n} alimentos', one_food: '1 alimento',
       hidden_by_diet: '{n} ocultos por tus filtros dietéticos',
 
@@ -322,6 +324,7 @@
       sort_highest: '(सर्वाधिक)', sort_prefix: 'क्रम: ',
       filter_group: 'श्रेणी से छाँटें',
       no_match: 'इस खोज से कुछ नहीं मिला।',
+      showing_some: '{total} में से पहले {n} दिखाए जा रहे हैं।', show_all: 'सभी {total} दिखाएँ',
       n_foods: '{n} खाद्य पदार्थ', one_food: '1 खाद्य पदार्थ',
       hidden_by_diet: 'आपके आहार फ़िल्टर से {n} छिपाए गए',
 
@@ -453,6 +456,7 @@
       sort_highest: '(ಅತ್ಯಧಿಕ)', sort_prefix: 'ಕ್ರಮ: ',
       filter_group: 'ಗುಂಪಿನ ಪ್ರಕಾರ ಸೋಸಿ',
       no_match: 'ಈ ಹುಡುಕಾಟಕ್ಕೆ ಏನೂ ಸಿಗಲಿಲ್ಲ.',
+      showing_some: '{total} ರಲ್ಲಿ ಮೊದಲ {n} ತೋರಿಸಲಾಗುತ್ತಿದೆ.', show_all: 'ಎಲ್ಲಾ {total} ತೋರಿಸಿ',
       n_foods: '{n} ಆಹಾರಗಳು', one_food: '1 ಆಹಾರ',
       hidden_by_diet: 'ನಿಮ್ಮ ಆಹಾರ ಸೋಸುಗಳಿಂದ {n} ಮರೆಮಾಡಲಾಗಿದೆ',
 
