@@ -69,12 +69,6 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 4.0",
   "page": "https://commons.wikimedia.org/wiki/File:Almonds_-_in_shell,_shell_cracked_open,_shelled,_blanched.jpg"
  },
- "almondoil": {
-  "author": "Jmarconi",
-  "file": "Alfenins.jpg",
-  "license": "CC BY-SA 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Alfenins.jpg"
- },
  "amaranth": {
   "author": "Kurt St\u00fcber [1]",
   "file": "Amaranthus_tricolor0.jpg",

@@ -169,6 +169,10 @@ CURATED_FILE = {
 # resolved to a tin of cat food, acid whey to a scan of a 1920s dairy-board
 # report. A blank tile is honest; a picture of the wrong thing is not.
 NO_IMAGE = {
+    # Commons offers only a branded product shot for almond oil, and a search
+    # without it returns Alfenins, a Portuguese sugar sculpture. A blank tile
+    # beats advertising a brand on a non-commercial reference.
+    'almondoil',
     'groundturkey', 'gooseegg', 'clam', 'seabass', 'butter', 'buttersalted',
     'laver', 'pigeonpeagreen',
 }
