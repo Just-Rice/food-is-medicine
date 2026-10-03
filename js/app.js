@@ -22,6 +22,21 @@
     });
   }
 
+  // Views re-render by replacing main's HTML, which drops keyboard focus back
+  // to the page. Re-focus the control that had it, matched by its data-*
+  // attribute, so keyboard and screen-reader users keep their place.
+  function keepFocus(render) {
+    var a = document.activeElement, sel = null;
+    if (a && main.contains(a)) {
+      var d = [].filter.call(a.attributes, function (x) { return x.name.indexOf('data-') === 0; })[0];
+      if (d) sel = '[' + d.name + '="' + d.value.replace(/["\\]/g, '\\$&') + '"]';
+      else if (a.id) sel = '#' + a.id;
+    }
+    render();
+    var n = sel && main.querySelector(sel);
+    if (n) n.focus({ preventScroll: true });
+  }
+
   function fmt(v) {
     if (v == null || isNaN(v)) return '—';
     var a = Math.abs(v);
@@ -848,7 +863,7 @@
       '<div id="profileResults"></div>';
 
     main.querySelectorAll('[data-unit]').forEach(function (btn) {
-      btn.addEventListener('click', function () { unitState = btn.dataset.unit; viewProfile(); });
+      btn.addEventListener('click', function () { unitState = btn.dataset.unit; keepFocus(viewProfile); });
     });
 
     var clearBtn = document.getElementById('clearProfile');
@@ -1524,7 +1539,7 @@
     item.qty = qty;
     item.amount = Math.round(qty * food.portion.grams);
     saveRecipeState();
-    viewRecipes();
+    keepFocus(viewRecipes);
   }
 
   function basketNutritionBlock() {
@@ -1774,7 +1789,7 @@
 
       '<div class="setting-row"><div><strong>' + esc(t('high_contrast')) + '</strong>' +
       '<p class="hint">' + esc(t('high_contrast_hint')) + '</p></div>' +
-      toggle('contrast', prefs.contrast) + '</div>' +
+      toggle('contrast', prefs.contrast, t('high_contrast')) + '</div>' +
 
       '<div class="setting-row"><div><strong>' + esc(t('text_size')) + '</strong></div>' +
       '<div class="chips">' + [['normal', 'text_normal'], ['large', 'text_large'], ['larger', 'text_larger']]
@@ -1785,7 +1800,7 @@
 
       '<div class="setting-row"><div><strong>' + esc(t('reduce_motion')) + '</strong>' +
       '<p class="hint">' + esc(t('reduce_motion_hint')) + '</p></div>' +
-      toggle('reduceMotion', prefs.reduceMotion) + '</div></div>' +
+      toggle('reduceMotion', prefs.reduceMotion, t('reduce_motion')) + '</div></div>' +
 
       '<h2 class="section">' + esc(t('api_key')) + '</h2>' +
       keyBar() +
@@ -1813,9 +1828,10 @@
 
       '<p class="result-count" id="filterCount" style="margin-top:16px"></p></div>';
 
-    function toggle(key, on) {
+    function toggle(key, on, label) {
       return '<button class="switch" type="button" data-toggle="' + key + '" role="switch" ' +
-        'aria-checked="' + (on ? 'true' : 'false') + '"><span></span></button>';
+        'aria-checked="' + (on ? 'true' : 'false') + '" aria-label="' + esc(label) + '">' +
+        '<span></span></button>';
     }
 
     main.querySelectorAll('[data-lang]').forEach(function (b) {
@@ -1826,13 +1842,13 @@
         I18N.set(b.dataset.lang);
         renderChrome('settings');
         renderStrip();
-        viewSettings();
+        keepFocus(viewSettings);
         window.scrollTo(0, y);
       });
     });
     function rerender() {
       var y = window.pageYOffset;
-      viewSettings();
+      keepFocus(viewSettings);
       window.scrollTo(0, y);
     }
     main.querySelectorAll('[data-theme]').forEach(function (b) {
