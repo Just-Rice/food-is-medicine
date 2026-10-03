@@ -490,6 +490,11 @@
         portionState[slug] = Number(btn.dataset.portion);
         viewFood(slug);
         window.scrollTo(0, 0);
+        // The view is redrawn from the top, so put focus there too: keyboard
+        // and screen-reader users land on the food's name, not on <body>.
+        var h1 = main.querySelector('h1');
+        h1.setAttribute('tabindex', '-1');
+        h1.focus({ preventScroll: true });
       });
     });
   }
