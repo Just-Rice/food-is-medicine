@@ -3,12 +3,6 @@
 // Every image is from Wikimedia Commons under a free licence; the author
 // and licence below are reproduced from the Commons file metadata.
 window.IMAGE_CREDITS = {
- "00flour": {
-  "author": "Anderson",
-  "file": "Railroad Avenue looking northeast, Seattle, ca 1900 (MOHAI 3092).jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Railroad_Avenue_looking_northeast,_Seattle,_ca_1900_(MOHAI_3092).jpg"
- },
  "abalone": {
   "author": "Sharktopus",
   "file": "LivingAbalone.JPG",
@@ -123,12 +117,6 @@ window.IMAGE_CREDITS = {
   "license": "CC BY 4.0",
   "page": "https://commons.wikimedia.org/wiki/File:Bad_apple-_Gala_apple_showing_liquefying_rot_03.jpg"
  },
- "applesgoldendeliciouswithski": {
-  "author": "Bountiful Ridge Nurseries.; Henry G. Gilbert Nursery and Seed Trade Catalog Collection.",
-  "file": "Planting guide (15752771644).jpg",
-  "license": "CC BY 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Planting_guide_(15752771644).jpg"
- },
  "applesgrannysmithwithskin": {
   "author": "fir0002 flagstaffotos [at] gmail.com Canon 20D + Sigma 150mm f/2.8",
   "file": "Granny_smith_and_cross_section.jpg",
@@ -140,12 +128,6 @@ window.IMAGE_CREDITS = {
   "file": "Beauty Treatments for Finer Fruit - DPLA - 7c85268baccf2915e437e1bc4b96ba52.jpg",
   "license": "Public domain",
   "page": "https://commons.wikimedia.org/wiki/File:Beauty_Treatments_for_Finer_Fruit_-_DPLA_-_7c85268baccf2915e437e1bc4b96ba52.jpg"
- },
- "appleswithoutskin": {
-  "author": "Coxe, William, 1762-1831. [from old catalog]",
-  "file": "A view of the cultivation of fruit trees, and the management of orchards and cider; with accurate descriptions of the most estimable varieties of native and foreign apples, pears, peaches, plums, and (14753748156).jpg",
-  "license": "No restrictions",
-  "page": "https://commons.wikimedia.org/wiki/File:A_view_of_the_cultivation_of_fruit_trees,_and_the_management_of_orchards_and_cider;_with_accurate_descriptions_of_the_most_estimable_varieties_of_native_and_foreign_apples,_pears,_peaches,_plums,_and_(14753748156).jpg"
  },
  "apricot": {
   "author": "Fir0002",
@@ -218,12 +200,6 @@ window.IMAGE_CREDITS = {
   "file": "Collected papers on tropical fruits in California (20655790672).jpg",
   "license": "No restrictions",
   "page": "https://commons.wikimedia.org/wiki/File:Collected_papers_on_tropical_fruits_in_California_(20655790672).jpg"
- },
- "avocadosflorida": {
-  "author": "Internet Archive Book Images",
-  "file": "The Cuba review (1907-1931) (20616771210).jpg",
-  "license": "No restrictions",
-  "page": "https://commons.wikimedia.org/wiki/File:The_Cuba_review_(1907-1931)_(20616771210).jpg"
  },
  "bacon": {
   "author": "Made20rder555",
@@ -885,18 +861,6 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Gram_flour_AvL.jpg"
  },
- "chicorygreens": {
-  "author": "Henry G. Gilbert Nursery and Seed Trade Catalog Collection.; Peter Henderson &amp; Co.",
-  "file": "Everything for the garden (16389149001).jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Everything_for_the_garden_(16389149001).jpg"
- },
- "chicoryroots": {
-  "author": "A. Currie &amp; Company.; Henry G. Gilbert Nursery and Seed Trade Catalog Collection.",
-  "file": "Farm and garden annual (16201102140).jpg",
-  "license": "CC BY 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Farm_and_garden_annual_(16201102140).jpg"
- },
  "chilipepper": {
   "author": "purdman1",
   "file": "Accras_et_sauce_chili.jpg",
@@ -1059,12 +1023,6 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Cottagecheese200px.jpg"
  },
- "cottagecheesewithvegetables": {
-  "author": "Internet Archive Book Images",
-  "file": "An encyclop\u00e6dia of agriculture (electronic resource) - comprising the theory and practice of the valuation, transfer, laying out, improvement, and management of landed property, and the cultivation (21269620746).jpg",
-  "license": "No restrictions",
-  "page": "https://commons.wikimedia.org/wiki/File:An_encyclop%C3%A6dia_of_agriculture_(electronic_resource)_-_comprising_the_theory_and_practice_of_the_valuation,_transfer,_laying_out,_improvement,_and_management_of_landed_property,_and_the_cultivation_(21269620746).jpg"
- },
  "couscous": {
   "author": "Lmmima",
   "file": "Moroccan_cuscus,_from_Casablanca,_September_2018.jpg",
@@ -1113,12 +1071,6 @@ window.IMAGE_CREDITS = {
   "license": "Public domain",
   "page": "https://commons.wikimedia.org/wiki/File:Paranephrops.jpg"
  },
- "crayfishfarmed": {
-  "author": "USFWS Mountain Prairie",
-  "file": "Jill Shannon, -ScienceWoman (16035053554).jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Jill_Shannon,_-ScienceWoman_(16035053554).jpg"
- },
  "crimini": {
   "author": "Jerzy Opio\u0142a",
   "file": "Agaricus bisporus G4.JPG",
@@ -1136,12 +1088,6 @@ window.IMAGE_CREDITS = {
   "file": "ARS_cucumber.jpg",
   "license": "Public domain",
   "page": "https://commons.wikimedia.org/wiki/File:ARS_cucumber.jpg"
- },
- "cucumberpeeled": {
-  "author": "Department of Foreign Affairs and Trade",
-  "file": "A vegetable seller peels a cucumber in Koral slum, Dhaka. (10664181053).jpg",
-  "license": "CC BY 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:A_vegetable_seller_peels_a_cucumber_in_Koral_slum,_Dhaka._(10664181053).jpg"
  },
  "cumin": {
   "author": "Franz Eugen K\u00f6hler, K\u00f6hler's Medizinal-Pflanzen",
@@ -1173,12 +1119,6 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Curry_powder_in_the_spice-bazaar_in_Istanbul.jpg"
  },
- "cusk": {
-  "author": "Unknown",
-  "file": "Brosme_brosme_dis.png",
-  "license": "CC BY-SA 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Brosme_brosme_dis.png"
- },
  "cuttlefish": {
   "author": "Diego Delso",
   "file": "Sepia_com\u00fan_(Sepia_officinalis),_Parque_natural_de_la_Arr\u00e1bida,_Portugal,_2020-07-21,_DD_62.jpg",
@@ -1208,18 +1148,6 @@ window.IMAGE_CREDITS = {
   "file": "Illustration_Anethum_graveolens_clean.jpg",
   "license": "Public domain",
   "page": "https://commons.wikimedia.org/wiki/File:Illustration_Anethum_graveolens_clean.jpg"
- },
- "dillseed": {
-  "author": "Henry G. Gilbert Nursery and Seed Trade Catalog Collection.; J. Manns &amp; Co.",
-  "file": "Manns' superior seeds (16204165587).jpg",
-  "license": "CC BY 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Manns%27_superior_seeds_(16204165587).jpg"
- },
- "dock": {
-  "author": "John Workman",
-  "file": "Cruise_ship_dock_in_St_Maarten.JPG",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Cruise_ship_dock_in_St_Maarten.JPG"
  },
  "drumfreshwater": {
   "author": "Drawing by Dunana Raver",
@@ -1448,12 +1376,6 @@ window.IMAGE_CREDITS = {
   "file": "Pseudopleuronectes_americanus.jpg",
   "license": "Public domain",
   "page": "https://commons.wikimedia.org/wiki/File:Pseudopleuronectes_americanus.jpg"
- },
- "fonio": {
-  "author": "Gabbri.gabbri",
-  "file": "Fonio Grains (Digitaria Exilis).jpg",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Fonio_Grains_(Digitaria_Exilis).jpg"
  },
  "fontina": {
   "author": "Luigi Chiesa",
@@ -2037,12 +1959,6 @@ window.IMAGE_CREDITS = {
   "license": "CC BY 2.0",
   "page": "https://commons.wikimedia.org/wiki/File:Lettuce_Mini_Heads_(7331119710).jpg"
  },
- "lightcream": {
-  "author": "m01229",
-  "file": "Dairy Queen Blizzard.jpg",
-  "license": "CC BY 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Dairy_Queen_Blizzard.jpg"
- },
  "lima": {
   "author": "Howard F. Schwartz, Colorado State University, Bugwood.org",
   "file": "Phaseoulus_lunatus.jpg",
@@ -2217,12 +2133,6 @@ window.IMAGE_CREDITS = {
   "license": "Public domain",
   "page": "https://commons.wikimedia.org/wiki/File:Philly_cream_cheese.jpg"
  },
- "mexicanblendcheese": {
-  "author": "@fightfor15",
-  "file": "Government_cheese.jpg",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Government_cheese.jpg"
- },
  "milk1": {
   "author": "H. Zell",
   "file": "Milk 001.JPG",
@@ -2258,12 +2168,6 @@ window.IMAGE_CREDITS = {
   "file": "Grain_millet,_early_grain_fill,_Tifton,_7-3-02.jpg",
   "license": "Public domain",
   "page": "https://commons.wikimedia.org/wiki/File:Grain_millet,_early_grain_fill,_Tifton,_7-3-02.jpg"
- },
- "milletflour": {
-  "author": "Rijksmuseum",
-  "file": "Het koren, RP-P-OB-203.613.jpg",
-  "license": "CC0",
-  "page": "https://commons.wikimedia.org/wiki/File:Het_koren,_RP-P-OB-203.613.jpg"
  },
  "mint": {
   "author": "Unknown",
@@ -2444,12 +2348,6 @@ window.IMAGE_CREDITS = {
   "file": "AvenaSativa3.jpg",
   "license": "CC BY-SA 4.0",
   "page": "https://commons.wikimedia.org/wiki/File:AvenaSativa3.jpg"
- },
- "oaxacacheesesolid": {
-  "author": "No machine-readable author provided. Jo\u00e3o Sousa assumed (based on copyright claims).",
-  "file": "MonteAlbanWest.jpg",
-  "license": "CC BY-SA 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:MonteAlbanWest.jpg"
  },
  "oceanperchatlantic": {
   "author": "Unknown",
@@ -2673,12 +2571,6 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Owoce_Brzoskwinia.jpg"
  },
- "peachessulfured": {
-  "author": "Bountiful Ridge Nurseries.; Henry G. Gilbert Nursery and Seed Trade Catalog Collection.",
-  "file": "Planting guide (16187600718).jpg",
-  "license": "CC BY 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Planting_guide_(16187600718).jpg"
- },
  "peanut": {
   "author": "Undeka 11",
   "file": "Raw peanuts with skin on white plate.jpg",
@@ -2721,12 +2613,6 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 4.0",
   "page": "https://commons.wikimedia.org/wiki/File:Four_pears.jpg"
  },
- "pearssulfured": {
-  "author": "Henry G. Gilbert Nursery and Seed Trade Catalog Collection.; J. Manns &amp; Co.",
-  "file": "Manns' superior seeds (16364099656).jpg",
-  "license": "CC BY 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Manns%27_superior_seeds_(16364099656).jpg"
- },
  "peassprouted": {
   "author": "Tarquin Binary",
   "file": "Full English breakfast with bubble and squeak, sausage, bacon, grilled tomatoes, and eggs.jpg",
@@ -2750,12 +2636,6 @@ window.IMAGE_CREDITS = {
   "file": "Eggplant, banana peppers and giant okra.jpg",
   "license": "CC BY 2.0",
   "page": "https://commons.wikimedia.org/wiki/File:Eggplant,_banana_peppers_and_giant_okra.jpg"
- },
- "pepperredorcayenne": {
-  "author": "Henry G. Gilbert Nursery and Seed Trade Catalog Collection.; J. Manns &amp; Co.",
-  "file": "Manns' superior seeds (16202651590).jpg",
-  "license": "CC BY 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Manns%27_superior_seeds_(16202651590).jpg"
  },
  "peppersancho": {
   "author": "WhisperToMe",
@@ -2840,12 +2720,6 @@ window.IMAGE_CREDITS = {
   "file": "Pinoli.jpg",
   "license": "CC BY-SA 2.0 de",
   "page": "https://commons.wikimedia.org/wiki/File:Pinoli.jpg"
- },
- "pinenutspinyon": {
-  "author": "Didier Descouens",
-  "file": "Ponte dei Pignoli (Venice).jpg",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Ponte_dei_Pignoli_(Venice).jpg"
  },
  "pinto": {
   "author": "Sanjay Acharya",
@@ -2949,12 +2823,6 @@ window.IMAGE_CREDITS = {
   "license": "CC BY 2.0",
   "page": "https://commons.wikimedia.org/wiki/File:Pork_chops_167541218.jpg"
  },
- "porkcuredhamandwaterproductu": {
-  "author": "Sylvain Raybaud",
-  "file": "Making_fish_paste_Cambodia.jpg",
-  "license": "CC BY 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Making_fish_paste_Cambodia.jpg"
- },
  "porkcuredhamcenterslicecount": {
   "author": "Deathworm at English Wikipedia",
   "file": "ProsciuttoSeaSalt.JPG",
@@ -2978,18 +2846,6 @@ window.IMAGE_CREDITS = {
   "file": "Food_Sundanese_Restaurant,_Jakarta.jpg",
   "license": "CC BY 2.0",
   "page": "https://commons.wikimedia.org/wiki/File:Food_Sundanese_Restaurant,_Jakarta.jpg"
- },
- "porkfreshloincenterloinchops": {
-  "author": "Jjron",
-  "file": "07._Camel_Profile,_near_Silverton,_NSW,_07.07.2007.jpg",
-  "license": "CC BY-SA 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:07._Camel_Profile,_near_Silverton,_NSW,_07.07.2007.jpg"
- },
- "porkfreshshoulderbostonbuttb": {
-  "author": "Kagor",
-  "file": "Cucina_012.jpg",
-  "license": "CC BY-SA 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Cucina_012.jpg"
  },
  "porkloin": {
   "author": "Father.Jack from Coventry, UK",
@@ -3429,12 +3285,6 @@ window.IMAGE_CREDITS = {
   "license": "CC BY 2.0",
   "page": "https://commons.wikimedia.org/wiki/File:Corl0207_(28225976491).jpg"
  },
- "sheepmilk": {
-  "author": "Schaeferhof",
-  "file": "Sheepparlour.jpg",
-  "license": "CC BY-SA 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Sheepparlour.jpg"
- },
  "sheepshead": {
   "author": "Unknown",
   "file": "Sheepshead.jpg",
@@ -3458,18 +3308,6 @@ window.IMAGE_CREDITS = {
   "file": "Steak_frites_-_yummy.jpg",
   "license": "CC BY-SA 4.0",
   "page": "https://commons.wikimedia.org/wiki/File:Steak_frites_-_yummy.jpg"
- },
- "sisymbriumspseeds": {
-  "author": "SSamadi15",
-  "file": "Food sources of magnesium (magnesium-rich foods).jpg",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Food_sources_of_magnesium_(magnesium-rich_foods).jpg"
- },
- "skyr": {
-  "author": "Willem van de Poll",
-  "file": "De_Duitse_journaliste_Anita_Joachim_geniet_van_een_portie_skyr,_Bestanddeelnr_190-0483.jpg",
-  "license": "CC0",
-  "page": "https://commons.wikimedia.org/wiki/File:De_Duitse_journaliste_Anita_Joachim_geniet_van_een_portie_skyr,_Bestanddeelnr_190-0483.jpg"
  },
  "smeltrainbow": {
   "author": "Bex Goreham",
@@ -3735,12 +3573,6 @@ window.IMAGE_CREDITS = {
   "license": "CC BY 2.5",
   "page": "https://commons.wikimedia.org/wiki/File:Tamarindus_indica_pods.JPG"
  },
- "tangerinejuice": {
-  "author": "Internet Archive Book Images",
-  "file": "The Cuba review (1907-1931) (20811273151).jpg",
-  "license": "No restrictions",
-  "page": "https://commons.wikimedia.org/wiki/File:The_Cuba_review_(1907-1931)_(20811273151).jpg"
- },
  "tapiocapearl": {
   "author": "36Lilis",
   "file": "Tepung_casava.jpg",
@@ -3891,12 +3723,6 @@ window.IMAGE_CREDITS = {
   "license": "Public domain",
   "page": "https://commons.wikimedia.org/wiki/File:Salmo_trutta.jpg"
  },
- "turboteuropean": {
-  "author": "John William Edy",
-  "file": "Town of Molde (JW Edy plate 78).jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Town_of_Molde_(JW_Edy_plate_78).jpg"
- },
  "turkey": {
   "author": "Bob Embleton",
   "file": "Ledbury Christmas Auction of Dressed Poultry - geograph.org.uk - 297272.jpg",
@@ -3914,12 +3740,6 @@ window.IMAGE_CREDITS = {
   "file": "Thanksgiving_Turkey.jpg",
   "license": "CC BY 2.0",
   "page": "https://commons.wikimedia.org/wiki/File:Thanksgiving_Turkey.jpg"
- },
- "turkeywing": {
-  "author": "L. Prang &amp; Co.",
-  "file": "Poultry_of_the_world.jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Poultry_of_the_world.jpg"
  },
  "turmericroot": {
   "author": "SKsiddhartthan",
@@ -4124,12 +3944,6 @@ window.IMAGE_CREDITS = {
   "file": "Psophocarpus_tetragonolobus_Blanco2.293.png",
   "license": "Public domain",
   "page": "https://commons.wikimedia.org/wiki/File:Psophocarpus_tetragonolobus_Blanco2.293.png"
- },
- "witloof": {
-  "author": "Henry G. Gilbert Nursery and Seed Trade Catalog Collection.; J. Manns &amp; Co.",
-  "file": "Manns' superior seeds (16204136177).jpg",
-  "license": "CC BY 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Manns%27_superior_seeds_(16204136177).jpg"
  },
  "wolffishatlantic": {
   "author": "Norm Despres (photographer); original uploader was Wapoo at en.wikipedia",

@@ -175,6 +175,18 @@ NO_IMAGE = {
     'almondoil',
     'groundturkey', 'gooseegg', 'clam', 'seabass', 'butter', 'buttersalted',
     'laver', 'pigeonpeagreen',
+    # Found by eye in October 2026: the search returned the wrong subject --
+    # a 1900 railyard for 00 flour, a camel for pork loin, a map for cusk, a
+    # Venice canal for pine nuts, and scanned newspaper pages for several.
+    '00flour', 'applesgoldendeliciouswithski', 'appleswithoutskin',
+    'avocadosflorida', 'chicorygreens', 'chicoryroots',
+    'cottagecheesewithvegetables', 'crayfishfarmed', 'cucumberpeeled', 'cusk',
+    'dillseed', 'dock', 'fonio', 'lightcream', 'mexicanblendcheese',
+    'milletflour', 'oaxacacheesesolid', 'peachessulfured', 'pearssulfured',
+    'pepperredorcayenne', 'pinenutspinyon', 'porkcuredhamandwaterproductu',
+    'porkfreshloincenterloinchops', 'porkfreshshoulderbostonbuttb',
+    'sheepmilk', 'sisymbriumspseeds', 'skyr', 'tangerinejuice',
+    'turboteuropean', 'turkeywing', 'witloof',
 }
 
 # Curated foods carry hand-written names a picture search can work with. The
