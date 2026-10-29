@@ -9,12 +9,6 @@ window.IMAGE_CREDITS = {
   "license": "Public domain",
   "page": "https://commons.wikimedia.org/wiki/File:Railroad_Avenue_looking_northeast,_Seattle,_ca_1900_(MOHAI_3092).jpg"
  },
- "abalone": {
-  "author": "Sharktopus",
-  "file": "LivingAbalone.JPG",
-  "license": "CC BY-SA 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:LivingAbalone.JPG"
- },
  "abiyuch": {
   "author": "Francisco Manuel Blanco (O.S.A.)",
   "file": "Crateva_religiosa_Blanco1.176-cropped.jpg",
@@ -57,12 +51,6 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 4.0",
   "page": "https://commons.wikimedia.org/wiki/File:HK_%E7%B4%85%E8%B1%86_Red_Adzuki_beans_with_water_June_2019_SSG_02.jpg"
  },
- "albacore": {
-  "author": "Hugues Evano (IFREMER, D\u00e9l\u00e9gation oc\u00e9an Indien (DOI), D\u00e9partement Ressources Biologiques et Environnement (RBE), F-97420",
-  "file": "Thon_germon_(Thunnus_alalunga)_(Ifremer_00764-87615).jpg",
-  "license": "CC BY 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Thon_germon_(Thunnus_alalunga)_(Ifremer_00764-87615).jpg"
- },
  "allspiceground": {
   "author": "Franz Eugen K\u00f6hler, K\u00f6hler's Medizinal-Pflanzen",
   "file": "Pimenta_dioica_-_K\u00f6hler\u2013s_Medizinal-Pflanzen-239.jpg",
@@ -98,12 +86,6 @@ window.IMAGE_CREDITS = {
   "file": "HK food Amaranthus mangostanus \u83a7\u83dc vegetable April 2021 SS2.jpg",
   "license": "CC BY-SA 4.0",
   "page": "https://commons.wikimedia.org/wiki/File:HK_food_Amaranthus_mangostanus_%E8%8E%A7%E8%8F%9C_vegetable_April_2021_SS2.jpg"
- },
- "anchovy": {
-  "author": "Unknown",
-  "file": "Anchovy_closeup.jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Anchovy_closeup.jpg"
  },
  "aniseseed": {
   "author": "Franz Eugen K\u00f6hler, K\u00f6hler's Medizinal-Pflanzen",
@@ -195,12 +177,6 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Asparagus-Bundle.jpg"
  },
- "atlanticsalmon": {
-  "author": "User:Wolfgang Striewski",
-  "file": "Wst_atlantischer_lachs_stoer_001.jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Wst_atlantischer_lachs_stoer_001.jpg"
- },
  "avocado": {
   "author": "B.navez",
   "file": "Persea_americana_fruit_2.JPG",
@@ -224,12 +200,6 @@ window.IMAGE_CREDITS = {
   "file": "The Cuba review (1907-1931) (20616771210).jpg",
   "license": "No restrictions",
   "page": "https://commons.wikimedia.org/wiki/File:The_Cuba_review_(1907-1931)_(20616771210).jpg"
- },
- "bacon": {
-  "author": "Made20rder555",
-  "file": "Made20bacon.png",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Made20bacon.png"
  },
  "bambooshoot": {
   "author": "Haragayato",
@@ -272,12 +242,6 @@ window.IMAGE_CREDITS = {
   "file": "Ocimum_basilicum_8zz.jpg",
   "license": "CC BY-SA 4.0",
   "page": "https://commons.wikimedia.org/wiki/File:Ocimum_basilicum_8zz.jpg"
- },
- "bassstriped": {
-  "author": "Timothy Knepp",
-  "file": "Striped bass FWS 1.jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Striped_bass_FWS_1.jpg"
  },
  "bayleaf": {
   "author": "Miansari66",
@@ -327,24 +291,6 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 4.0",
   "page": "https://commons.wikimedia.org/wiki/File:Opengebarsten_vrucht_van_beuk_(Fagus_sylvatica)_(d.j.b.)_01.jpg"
  },
- "beefliver": {
-  "author": "FotoosVanRobin from Netherlands",
-  "file": "Pig's_liver_with_sauteed_onion.jpg",
-  "license": "CC BY-SA 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Pig%27s_liver_with_sauteed_onion.jpg"
- },
- "beefribshortribs": {
-  "author": "takaokun",
-  "file": "Hawaiian-dishes-01.jpg",
-  "license": "CC BY 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Hawaiian-dishes-01.jpg"
- },
- "beefshortlointbonesteak": {
-  "author": "JoeSmack at en.wikipedia",
-  "file": "BeefCutRound.png",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:BeefCutRound.png"
- },
  "beet": {
   "author": "BriannaWalther",
   "file": "Detroitdarkredbeets.png",
@@ -362,12 +308,6 @@ window.IMAGE_CREDITS = {
   "file": "Green-Yellow-Red-Pepper-2009.jpg",
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Green-Yellow-Red-Pepper-2009.jpg"
- },
- "bison": {
-  "author": "Jack Dykinga",
-  "file": "American_bison_k5680-1.jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:American_bison_k5680-1.jpg"
  },
  "bittergourdleaves": {
   "author": "Imbo.Namnama",
@@ -423,30 +363,6 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 4.0",
   "page": "https://commons.wikimedia.org/wiki/File:A_Gongonzola_from_Baci.jpg"
  },
- "bluecrab": {
-  "author": "Unknown",
-  "file": "The_Childrens_Museum_of_Indianapolis_-_Atlantic_blue_crab.jpg",
-  "license": "CC BY-SA 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:The_Childrens_Museum_of_Indianapolis_-_Atlantic_blue_crab.jpg"
- },
- "bluefin": {
-  "author": "Unknown authorUnknown author",
-  "file": "Bluefin-big.jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Bluefin-big.jpg"
- },
- "bluefish": {
-  "author": "Unknown authorUnknown author",
-  "file": "Pomatomus_saltatrix.png",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Pomatomus_saltatrix.png"
- },
- "boar": {
-  "author": "Valentin Panzirsch",
-  "file": "Wildschwein,_N\u00e4he_Pulverstampftor_(cropped).jpg",
-  "license": "CC BY-SA 3.0 at",
-  "page": "https://commons.wikimedia.org/wiki/File:Wildschwein,_N%C3%A4he_Pulverstampftor_(cropped).jpg"
- },
  "bokchoy": {
   "author": "spurekar",
   "file": "Bok_Choy_(49553125456).jpg",
@@ -471,12 +387,6 @@ window.IMAGE_CREDITS = {
   "license": "GFDL 1.2",
   "page": "https://commons.wikimedia.org/wiki/File:Boysenberries.jpg"
  },
- "brain": {
-  "author": "Scott",
-  "file": "Calf Brains.jpg",
-  "license": "CC BY-SA 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Calf_Brains.jpg"
- },
  "brazilnut": {
   "author": "Lior Golgher (upper left photo and upper middle photo), U.S. Department of Agriculture (upper right photo), mauroguanand",
   "file": "Bertholletia_excelsa_compose.jpg",
@@ -500,12 +410,6 @@ window.IMAGE_CREDITS = {
   "file": "Brie_01.jpg",
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Brie_01.jpg"
- },
- "brisket": {
-  "author": "Josh Evnin from Chicago, IL, USA",
-  "file": "Brisketphoto.jpg",
-  "license": "CC BY-SA 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Brisketphoto.jpg"
  },
  "broccoli": {
   "author": "Fir0002",
@@ -561,12 +465,6 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Bulgur.jpg"
  },
- "burbot": {
-  "author": "Unknown",
-  "file": "Tr\u00fcsche_Walchensee.jpg",
-  "license": "CC BY-SA 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Tr%C3%BCsche_Walchensee.jpg"
- },
  "burdock": {
   "author": "Epukas",
   "file": "Villtakjas_2008.jpg",
@@ -578,12 +476,6 @@ window.IMAGE_CREDITS = {
   "file": "FukiJI1.jpg",
   "license": "CC BY 2.0",
   "page": "https://commons.wikimedia.org/wiki/File:FukiJI1.jpg"
- },
- "butterfish": {
-  "author": "Unknown",
-  "file": "Poronotus triacanthus.jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Poronotus_triacanthus.jpg"
  },
  "butterhead": {
   "author": "en:User:Geographer",
@@ -681,12 +573,6 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Ceratonia_siliqua_Keciboynuzu_1370984_Nevit.jpg"
  },
- "carp": {
-  "author": "Walter, Emil",
-  "file": "Unsere_S\u00fc\u00dfwasserfische_(Tafel_33)_(6102602781).jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Unsere_S%C3%BC%C3%9Fwasserfische_(Tafel_33)_(6102602781).jpg"
- },
  "carrot": {
   "author": "Evan-Amos",
   "file": "Vegetable-Carrot-Bundle-wStalks.jpg",
@@ -723,23 +609,11 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Drying_Manioc.jpg"
  },
- "catfish": {
-  "author": "authors of the images used: HalbsH\u00e4nnile Thomsonmg2000 Guillermo Enrique Ter\u00e1n, Juliano Ferrer, Mauricio Benitez, Felipe",
-  "file": "Siluriformes.png",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Siluriformes.png"
- },
  "cauliflower": {
   "author": "Coyau",
   "file": "Chou-fleur_02.jpg",
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Chou-fleur_02.jpg"
- },
- "caviar": {
-  "author": "THOR",
-  "file": "Caviar_spoons.jpg",
-  "license": "CC BY 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Caviar_spoons.jpg"
  },
  "celeriac": {
   "author": "DocteurCosmos",
@@ -825,53 +699,11 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 4.0",
   "page": "https://commons.wikimedia.org/wiki/File:Seed_of_chia_(Salvia_hispanica)Salvia_hispanica_group.jpg"
  },
- "chickenbreast": {
-  "author": "Dnor",
-  "file": "Kycklingfil\u00e9.jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Kycklingfil%C3%A9.jpg"
- },
- "chickencornishgamehens": {
-  "author": "Hoyabird8",
-  "file": "Rock_Cornish_Hen.jpg",
-  "license": "CC BY-SA 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Rock_Cornish_Hen.jpg"
- },
- "chickendrumstick": {
-  "author": "Geoff Peters from Vancouver, BC, Canada",
-  "file": "Raw chicken drumsticks (3312851753).jpg",
-  "license": "CC BY 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Raw_chicken_drumsticks_(3312851753).jpg"
- },
  "chickenegg": {
   "author": "Photos public domain.com",
   "file": "Brown-eggs.jpg",
   "license": "Public domain",
   "page": "https://commons.wikimedia.org/wiki/File:Brown-eggs.jpg"
- },
- "chickenliver": {
-  "author": "Poupou l'quourouce",
-  "file": "Preparing Chicken Liver 01.JPG",
-  "license": "CC BY 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Preparing_Chicken_Liver_01.JPG"
- },
- "chickenroasting": {
-  "author": "PattayaPatrol",
-  "file": "DFC 2423 Whole roasted chickens rotate on metal spits at a small street-side food stall as a vendor tends to the cooking area.jpg",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:DFC_2423_Whole_roasted_chickens_rotate_on_metal_spits_at_a_small_street-side_food_stall_as_a_vendor_tends_to_the_cooking_area.jpg"
- },
- "chickenthigh": {
-  "author": "gran",
-  "file": "Raw chicken thighs.jpg",
-  "license": "CC BY 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Raw_chicken_thighs.jpg"
- },
- "chickenwing": {
-  "author": "ProjectManhattan",
-  "file": "Raw chicken wings.jpg",
-  "license": "CC BY-SA 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Raw_chicken_wings.jpg"
  },
  "chickpea": {
   "author": "Prathyush Thomas",
@@ -909,12 +741,6 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:BolivianChilePowder2.JPG"
  },
- "chinook": {
-  "author": "A. Hoen and Co.",
-  "file": "Chinook_Salmon_Adult_Male.jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Chinook_Salmon_Adult_Male.jpg"
- },
  "chives": {
   "author": "Ivar Leidus",
   "file": "Allium_schoenoprasum_-_Bombus_lapidarius_-_Tootsi.jpg",
@@ -944,12 +770,6 @@ window.IMAGE_CREDITS = {
   "file": "Cinnamomum_verum_spices.jpg",
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Cinnamomum_verum_spices.jpg"
- },
- "cisco": {
-  "author": "Painting by Ellen Edmonson",
-  "file": "Cisco.jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Cisco.jpg"
  },
  "clementine": {
   "author": "carol",
@@ -992,18 +812,6 @@ window.IMAGE_CREDITS = {
   "file": "Coconut_and_oil.jpg",
   "license": "CC BY-SA 2.0",
   "page": "https://commons.wikimedia.org/wiki/File:Coconut_and_oil.jpg"
- },
- "cod": {
-  "author": "Wilhelm Thomas Fiege",
-  "file": "Atlantic_Cod,_Atlantischer_Kabeljau_(Gadus_morhua).jpg",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Atlantic_Cod,_Atlantischer_Kabeljau_(Gadus_morhua).jpg"
- },
- "coho": {
-  "author": "Paul Harrison",
-  "file": "Young Coho Salmon Oncorhynchus kisutch.jpg",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Young_Coho_Salmon_Oncorhynchus_kisutch.jpg"
  },
  "colby": {
   "author": "Jeff the quiet",
@@ -1107,29 +915,11 @@ window.IMAGE_CREDITS = {
   "license": "CC0",
   "page": "https://commons.wikimedia.org/wiki/File:Roman_beans.jpg"
  },
- "crawfish": {
-  "author": "Gusmonkeyboy at English Wikipedia",
-  "file": "Paranephrops.jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Paranephrops.jpg"
- },
- "crayfishfarmed": {
-  "author": "USFWS Mountain Prairie",
-  "file": "Jill Shannon, -ScienceWoman (16035053554).jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Jill_Shannon,_-ScienceWoman_(16035053554).jpg"
- },
  "crimini": {
   "author": "Jerzy Opio\u0142a",
   "file": "Agaricus bisporus G4.JPG",
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Agaricus_bisporus_G4.JPG"
- },
- "croakeratlantic": {
-  "author": "Unknown",
-  "file": "Micropogonias undulatus (line art).jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Micropogonias_undulatus_(line_art).jpg"
  },
  "cucumber": {
   "author": "Stephen Ausmus, USDA ARS",
@@ -1173,18 +963,6 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Curry_powder_in_the_spice-bazaar_in_Istanbul.jpg"
  },
- "cusk": {
-  "author": "Unknown",
-  "file": "Brosme_brosme_dis.png",
-  "license": "CC BY-SA 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Brosme_brosme_dis.png"
- },
- "cuttlefish": {
-  "author": "Diego Delso",
-  "file": "Sepia_com\u00fan_(Sepia_officinalis),_Parque_natural_de_la_Arr\u00e1bida,_Portugal,_2020-07-21,_DD_62.jpg",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Sepia_com%C3%BAn_(Sepia_officinalis),_Parque_natural_de_la_Arr%C3%A1bida,_Portugal,_2020-07-21,_DD_62.jpg"
- },
  "daikon": {
   "author": "KimYunmi",
   "file": "Different_kinds_of_White_Radish.png",
@@ -1221,12 +999,6 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 4.0",
   "page": "https://commons.wikimedia.org/wiki/File:Cruise_ship_dock_in_St_Maarten.JPG"
  },
- "drumfreshwater": {
-  "author": "Drawing by Dunana Raver",
-  "file": "Freshwaterdrum.png",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Freshwaterdrum.png"
- },
  "drumstickleaves": {
   "author": "Subhashish Panigrahi",
   "file": "Samba dasami ghanta.jpg",
@@ -1245,23 +1017,11 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:PowderedMilk.jpg"
  },
- "duck": {
-  "author": "Mdf",
-  "file": "Bucephala-albeola-010.jpg",
-  "license": "CC BY-SA 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Bucephala-albeola-010.jpg"
- },
  "duckegg": {
   "author": "Simon Royal Free Photo Library",
   "file": "Duck Egg (4055112201).jpg",
   "license": "CC BY 2.0",
   "page": "https://commons.wikimedia.org/wiki/File:Duck_Egg_(4055112201).jpg"
- },
- "dungeness": {
-  "author": "Dan Boone",
-  "file": "DungenessCrab.jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:DungenessCrab.jpg"
  },
  "durian": {
   "author": "\u0645\u0627\u0646\u0641\u06cc",
@@ -1280,12 +1040,6 @@ window.IMAGE_CREDITS = {
   "file": "Edamame_by_Zesmerelda_in_Chicago.jpg",
   "license": "CC BY-SA 2.0",
   "page": "https://commons.wikimedia.org/wiki/File:Edamame_by_Zesmerelda_in_Chicago.jpg"
- },
- "eel": {
-  "author": "Charles J. Sharp",
-  "file": "New_Zealand_longfin_eel_(Anguilla_dieffenbachii)_Piha.jpg",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:New_Zealand_longfin_eel_(Anguilla_dieffenbachii)_Piha.jpg"
  },
  "eggplant": {
   "author": "Joydeep",
@@ -1316,12 +1070,6 @@ window.IMAGE_CREDITS = {
   "file": "Sambucus-berries.jpg",
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Sambucus-berries.jpg"
- },
- "elk": {
-  "author": "Neeta Lind",
-  "file": "Grilled Elk rib chops-01.jpg",
-  "license": "CC BY 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Grilled_Elk_rib_chops-01.jpg"
  },
  "endive": {
   "author": "Oceancetaceen - Alice Chodura",
@@ -1419,18 +1167,6 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 4.0",
   "page": "https://commons.wikimedia.org/wiki/File:%E0%B4%85%E0%B4%AA%E0%B5%8D%E0%B4%AA%E0%B5%82%E0%B4%AA%E0%B5%8D%E0%B4%AA%E0%B5%BB%E0%B4%A4%E0%B4%BE%E0%B4%9F%E0%B4%BF.jpg"
  },
- "fishroe": {
-  "author": "Puschinka",
-  "file": "Lachskaviar, Salmon roe, Red caviar, \u041a\u0440\u0430\u0441\u043d\u0430\u044f \u0438\u043a\u0440\u0430 003.JPG",
-  "license": "CC BY-SA 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Lachskaviar,_Salmon_roe,_Red_caviar,_%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%B0%D1%8F_%D0%B8%D0%BA%D1%80%D0%B0_003.JPG"
- },
- "flanksteak": {
-  "author": "insatiablemunch",
-  "file": "Classic_steak_tartare.jpg",
-  "license": "CC BY 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Classic_steak_tartare.jpg"
- },
  "flax": {
   "author": "Brandt, Wilhelm; G\u00fcrke, M.; K\u00f6hler, F. E.; Pabst, G.; Schellenberg, G.; Vogtherr, Max.",
   "file": "K\u00f6hler's_Medizinal-Pflanzen_in_naturgetreuen_Abbildungen_mit_kurz_erl\u00e4uterndem_Texte_(Plate_16)_BHL303594.jpg",
@@ -1443,12 +1179,6 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:From_flax_to_linseed_oil..JPG"
  },
- "flounder": {
-  "author": "Unknown",
-  "file": "Pseudopleuronectes_americanus.jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Pseudopleuronectes_americanus.jpg"
- },
  "fonio": {
   "author": "Gabbri.gabbri",
   "file": "Fonio Grains (Digitaria Exilis).jpg",
@@ -1460,12 +1190,6 @@ window.IMAGE_CREDITS = {
   "file": "Fontina_DOP.jpg",
   "license": "CC BY 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Fontina_DOP.jpg"
- },
- "froglegs": {
-  "author": "Anagoria",
-  "file": "2012_Froschschenkel_anagoria.JPG",
-  "license": "CC BY 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:2012_Froschschenkel_anagoria.JPG"
  },
  "fungicloudears": {
   "author": "Eric Guinther",
@@ -1491,12 +1215,6 @@ window.IMAGE_CREDITS = {
   "license": "CC BY 2.0",
   "page": "https://commons.wikimedia.org/wiki/File:Ground-Garlic_31534-480x360_(4904476773).jpg"
  },
- "gelatin": {
-  "author": "Danielle dk",
-  "file": "Gelatine.png",
-  "license": "CC BY-SA 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Gelatine.png"
- },
  "ghee": {
   "author": "Nobby Nobody",
   "file": "Clarified-butter.jpg",
@@ -1521,12 +1239,6 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:GINKGOBAUM-2.jpg"
  },
- "gizzard": {
-  "author": "Bjferstern",
-  "file": "Gizzard_of_Chicken.JPG",
-  "license": "CC BY-SA 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Gizzard_of_Chicken.JPG"
- },
  "gjetostcheese": {
   "author": "Unknown",
   "file": "Brunost.jpg",
@@ -1539,12 +1251,6 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 2.0 fr",
   "page": "https://commons.wikimedia.org/wiki/File:Marche-aux-puces-Lausanne-004.jpg"
  },
- "goatmeat": {
-  "author": "Kalungi Nathan",
-  "file": "Goat_meat.jpg",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Goat_meat.jpg"
- },
  "goatmilk": {
   "author": "MOs810",
   "file": "Liqueur_from_goat_milk,_Fuerteventura.JPG",
@@ -1556,12 +1262,6 @@ window.IMAGE_CREDITS = {
   "file": "Lycium_barbarum_-_Wolfberries_China_7-05.jpg",
   "license": "Public domain",
   "page": "https://commons.wikimedia.org/wiki/File:Lycium_barbarum_-_Wolfberries_China_7-05.jpg"
- },
- "goose": {
-  "author": "Piotr Kuczynski",
-  "file": "Anser_anser_1_(Piotr_Kuczynski)_(cropped).jpg",
-  "license": "CC BY-SA 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Anser_anser_1_(Piotr_Kuczynski)_(cropped).jpg"
  },
  "gooseberry": {
   "author": "Unknown",
@@ -1647,24 +1347,6 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Mangu_dominicano_--Contenido-_-Lonjas_de_salami_fritas_-Lonjas_de_queso_blanco_-Mangu_o_pur%C3%A9_de_pl%C3%A1tano_verde_-Mantequilla_--Este_es_un_plato_t%C3%ADpico_en_el_desayuno_dominicano_--Rep%C3%BAblica_Dominicana_-_2013-10-08_14-28.jpg"
  },
- "groundbeef": {
-  "author": "No machine-readable author provided. Rainer Zenz assumed (based on copyright claims).",
-  "file": "Hackfleisch-1.jpg",
-  "license": "CC BY-SA 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Hackfleisch-1.jpg"
- },
- "groundlamb": {
-  "author": "122589423KM at English Wikipedia",
-  "file": "Kibbeh Nayyeh.jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Kibbeh_Nayyeh.jpg"
- },
- "grouper": {
-  "author": "Jarek Tuszy\u0144ski",
-  "file": "Baltimore_Aquarium_-_Mycteroperca_microlepis_-_05.jpg",
-  "license": "CC BY 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Baltimore_Aquarium_-_Mycteroperca_microlepis_-_05.jpg"
- },
  "gruyere": {
   "author": "Gruyere alpage",
   "file": "Gruyere_alpage_th_wa.jpg",
@@ -1683,47 +1365,17 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Guava_ID.jpg"
  },
- "guineafowl": {
-  "author": "Bob",
-  "file": "Numida_meleagris_-Serengeti_National_Park,_Tanzania-8_(1).jpg",
-  "license": "CC BY 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Numida_meleagris_-Serengeti_National_Park,_Tanzania-8_(1).jpg"
- },
- "haddock": {
-  "author": "Steven G. Johnson",
-  "file": "Haddock,_Boston_Aquarium.JPG",
-  "license": "CC BY-SA 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Haddock,_Boston_Aquarium.JPG"
- },
  "halfandhalf": {
   "author": "John White from San Francisco",
   "file": "Berkeley Farms Fat-Free Half & Half.jpg",
   "license": "CC BY 2.0",
   "page": "https://commons.wikimedia.org/wiki/File:Berkeley_Farms_Fat-Free_Half_%26_Half.jpg"
  },
- "halibut": {
-  "author": "Unknown",
-  "file": "Hippoglossus_hippoglossus.jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Hippoglossus_hippoglossus.jpg"
- },
- "halibutgreenland": {
-  "author": "Unknown",
-  "file": "Rehip u0.gif",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Rehip_u0.gif"
- },
  "halloumi": {
   "author": "Halloumislicefresh.jpg: J.P.Lon derivative work: Zlerman (talk)",
   "file": "Halloumislice_zoom.jpg",
   "license": "Public domain",
   "page": "https://commons.wikimedia.org/wiki/File:Halloumislice_zoom.jpg"
- },
- "ham": {
-  "author": "Renee Comet (Photographer)",
-  "file": "Ham_(4).jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Ham_(4).jpg"
  },
  "hazelnut": {
   "author": "Ivar Leidus",
@@ -1736,12 +1388,6 @@ window.IMAGE_CREDITS = {
   "file": "Yepes-bodegon dulces.jpg",
   "license": "Public domain",
   "page": "https://commons.wikimedia.org/wiki/File:Yepes-bodegon_dulces.jpg"
- },
- "heart": {
-  "author": "donza",
-  "file": "Beef heart 3.jpg",
-  "license": "CC BY 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Beef_heart_3.jpg"
  },
  "heartsofpalm": {
   "author": "mhoenig",
@@ -1760,18 +1406,6 @@ window.IMAGE_CREDITS = {
   "file": "La_Roche_Jagu_chanvre_1.JPG",
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:La_Roche_Jagu_chanvre_1.JPG"
- },
- "herring": {
-  "author": "Gervais et Boulart, 1877",
-  "file": "Clupea_harengus_Gervais.flipped.jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Clupea_harengus_Gervais.flipped.jpg"
- },
- "herringpacific": {
-  "author": "Unknown",
-  "file": "Clupea pallasii by OpenCage.jpg",
-  "license": "CC BY-SA 2.5",
-  "page": "https://commons.wikimedia.org/wiki/File:Clupea_pallasii_by_OpenCage.jpg"
  },
  "hickory": {
   "author": "Bruce Marlin",
@@ -1839,12 +1473,6 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 4.0",
   "page": "https://commons.wikimedia.org/wiki/File:Java_plum_(Syzygium_cumini).jpg"
  },
- "jellyfishsalted": {
-  "author": "Ken Lund from Reno, Nevada, USA",
-  "file": "Ripley's Aquarium of Canada, Toronto, Ontario (30003232395).jpg",
-  "license": "CC BY-SA 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Ripley%27s_Aquarium_of_Canada,_Toronto,_Ontario_(30003232395).jpg"
- },
  "jicama": {
   "author": "Francisco Manuel Blanco (O.S.A.)",
   "file": "Pachyrhizus_erosus_Blanco2.249.png",
@@ -1893,23 +1521,11 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Kelp_In_Freycinet_Tasmania.jpg"
  },
- "kidney": {
-  "author": "Kagor",
-  "file": "BeefKidney-nyrky.jpg",
-  "license": "CC BY-SA 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:BeefKidney-nyrky.jpg"
- },
  "kidneybean": {
   "author": "Prathyush Thomas",
   "file": "Red_Rajma_BNC.jpg",
   "license": "GFDL 1.2",
   "page": "https://commons.wikimedia.org/wiki/File:Red_Rajma_BNC.jpg"
- },
- "kingcrab": {
-  "author": "NOAA",
-  "file": "Neolithodes_agassizii_eating.jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Neolithodes_agassizii_eating.jpg"
  },
  "kiwi": {
   "author": "Crowhurst et al.",
@@ -1935,41 +1551,11 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 4.0",
   "page": "https://commons.wikimedia.org/wiki/File:Kumquat_from_Spain.jpg"
  },
- "lambchop": {
-  "author": "Revital Salomon",
-  "file": "Lamb Chops.JPG",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Lamb_Chops.JPG"
- },
- "lamblegs": {
-  "author": "I would appreciate being notified if you use my work outside Wikimedia. Do not copy this image illegally by ignoring the",
-  "file": "Lamb_meat_(1).jpg",
-  "license": "CC BY-SA 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Lamb_meat_(1).jpg"
- },
- "lambrib": {
-  "author": "Unknown",
-  "file": "Pork_chops_served.jpg",
-  "license": "CC BY-SA 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Pork_chops_served.jpg"
- },
- "lambshank": {
-  "author": "Benreis",
-  "file": "Lammhaxe mit Klo\u00df Bischofsm\u00fchle.jpg",
-  "license": "CC BY 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Lammhaxe_mit_Klo%C3%9F_Bischofsm%C3%BChle.jpg"
- },
  "lambsquarters": {
   "author": "Pabs004",
   "file": "Hojashuau.jpg",
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Hojashuau.jpg"
- },
- "lard": {
-  "author": "No machine-readable author provided. Peter G Werner~commonswiki assumed (based on copyright claims).",
-  "file": "Homelard.jpg",
-  "license": "CC BY 2.5",
-  "page": "https://commons.wikimedia.org/wiki/File:Homelard.jpg"
  },
  "leek": {
   "author": "Amada44",
@@ -2067,24 +1653,6 @@ window.IMAGE_CREDITS = {
   "license": "Public domain",
   "page": "https://commons.wikimedia.org/wiki/File:Sweet_lime_juice.jpg"
  },
- "ling": {
-  "author": "UBC Library Digitization Centre",
-  "file": "Great and Small Ling fish (14476932739).jpg",
-  "license": "No restrictions",
-  "page": "https://commons.wikimedia.org/wiki/File:Great_and_Small_Ling_fish_(14476932739).jpg"
- },
- "lingcod": {
-  "author": "Unknown authorUnknown author",
-  "file": "Ophiodon_elongatus.png",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Ophiodon_elongatus.png"
- },
- "lobster": {
-  "author": "Bart Braun",
-  "file": "KreeftbijDenOsse.jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:KreeftbijDenOsse.jpg"
- },
  "longan": {
   "author": "Pouletic",
   "file": "Longan_tree_at_Pine_Island_Nursery.jpg",
@@ -2133,36 +1701,6 @@ window.IMAGE_CREDITS = {
   "license": "CC BY 2.5",
   "page": "https://commons.wikimedia.org/wiki/File:Machine-made_Shmura_Matzo.jpg"
  },
- "mackerel": {
-  "author": "Mikael Nyman",
-  "file": "Scomber_scombrus_217326414.jpg",
-  "license": "CC BY 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Scomber_scombrus_217326414.jpg"
- },
- "mackerelking": {
-  "author": "Stephen Ewen",
-  "file": "King Mackerel.JPG",
-  "license": "CC BY-SA 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:King_Mackerel.JPG"
- },
- "mackerelpacificandjack": {
-  "author": "Unknown",
-  "file": "Trachurus symmetricus baitball.jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Trachurus_symmetricus_baitball.jpg"
- },
- "mackerelspanish": {
-  "author": "Kevin Poh",
-  "file": "Narrow-barred Spanish Mackerel.jpg",
-  "license": "CC BY 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Narrow-barred_Spanish_Mackerel.jpg"
- },
- "mahimahi": {
-  "author": "gendereuphorbia",
-  "file": "Common_Dolphinfish_Monterey_Bay.jpg",
-  "license": "CC0",
-  "page": "https://commons.wikimedia.org/wiki/File:Common_Dolphinfish_Monterey_Bay.jpg"
- },
  "maitake": {
   "author": "Lukas from London, England",
   "file": "Grifola_frondosa_(29715305790).jpg",
@@ -2205,12 +1743,6 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Origanum_majorana_002.JPG"
  },
- "marrow": {
-  "author": "Simon Doggett from London, UK",
-  "file": "Roast Bone Marrow & Parsley Salad (3512154149).jpg",
-  "license": "CC BY 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Roast_Bone_Marrow_%26_Parsley_Salad_(3512154149).jpg"
- },
  "mascarpone": {
   "author": "Renee Comet (photographer)",
   "file": "Philly_cream_cheese.jpg",
@@ -2234,12 +1766,6 @@ window.IMAGE_CREDITS = {
   "file": "Glass of Milk (33657535532).jpg",
   "license": "CC BY 2.0",
   "page": "https://commons.wikimedia.org/wiki/File:Glass_of_Milk_(33657535532).jpg"
- },
- "milkfish": {
-  "author": "Hectonichus",
-  "file": "Chanidae_-_Chanos_chanos.JPG",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Chanidae_-_Chanos_chanos.JPG"
  },
  "milkskim": {
   "author": "Kim Piper Werker from Vancouver, BC, Canada",
@@ -2270,12 +1796,6 @@ window.IMAGE_CREDITS = {
   "file": "Pfefferminze_natur_peppermint.jpg",
   "license": "CC BY 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Pfefferminze_natur_peppermint.jpg"
- },
- "monkfish": {
-  "author": "Unknown",
-  "file": "Monkfish.jpg",
-  "license": "CC BY-SA 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Monkfish.jpg"
  },
  "montereyjack": {
   "author": "Frank Schulenburg",
@@ -2313,12 +1833,6 @@ window.IMAGE_CREDITS = {
   "license": "CC BY 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Morus_alba_FrJPG.jpg"
  },
- "mulletstriped": {
-  "author": "Hugh McCormick Smith",
-  "file": "FMIB 51401 Striped Mullet; Jumping Mullet Mugil cephalus.jpeg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:FMIB_51401_Striped_Mullet;_Jumping_Mullet_Mugil_cephalus.jpeg"
- },
  "mung": {
   "author": "Ivar Leidus",
   "file": "Mung_beans_(Vigna_radiata).jpg",
@@ -2342,12 +1856,6 @@ window.IMAGE_CREDITS = {
   "file": "Sparrige_Sch\u00fcppling_(Pholiota_squarrosa).jpg",
   "license": "CC BY 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Sparrige_Sch%C3%BCppling_(Pholiota_squarrosa).jpg"
- },
- "mussel": {
-  "author": "Rainer Zenz",
-  "file": "Miesmuscheln-2.jpg",
-  "license": "CC BY-SA 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Miesmuscheln-2.jpg"
  },
  "mustardgreens": {
   "author": "Walther Otto M\u00fcller",
@@ -2451,18 +1959,6 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:MonteAlbanWest.jpg"
  },
- "oceanperchatlantic": {
-  "author": "Unknown",
-  "file": "Faroese stamp 541 deepwater redfish.jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Faroese_stamp_541_deepwater_redfish.jpg"
- },
- "octopus": {
-  "author": "albert kok",
-  "file": "Octopus2.jpg",
-  "license": "CC BY-SA 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Octopus2.jpg"
- },
  "oheloberries": {
   "author": "Forest &amp; Kim Starr",
   "file": "Starr 011003-0144 Vaccinium reticulatum.jpg",
@@ -2559,35 +2055,11 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Origanum_vulgare_-_harilik_pune.jpg"
  },
- "ostrich": {
-  "author": "Nicole Eitzinger",
-  "file": "Strau\u00dfensteak.JPG",
-  "license": "CC BY-SA 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Strau%C3%9Fensteak.JPG"
- },
  "oyster": {
   "author": "Photograph by Aaron Sherman",
   "file": "Oyster_mushoom_fells.jpg",
   "license": "CC BY 2.5",
   "page": "https://commons.wikimedia.org/wiki/File:Oyster_mushoom_fells.jpg"
- },
- "oysterpacific": {
-  "author": "Unknown authorUnknown author",
-  "file": "FMIB 33791 Pacific Oyster, Ostrea turida.jpeg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:FMIB_33791_Pacific_Oyster,_Ostrea_turida.jpeg"
- },
- "oysters": {
-  "author": "David Monniaux",
-  "file": "Crassostrea_gigas_p1040848.jpg",
-  "license": "CC BY-SA 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Crassostrea_gigas_p1040848.jpg"
- },
- "pacificcod": {
-  "author": "Unknown authorUnknown author",
-  "file": "Gadus_macrocephalus.png",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Gadus_macrocephalus.png"
  },
  "palmoil": {
   "author": "Achim Raschka",
@@ -2781,41 +2253,17 @@ window.IMAGE_CREDITS = {
   "license": "CC BY 4.0",
   "page": "https://commons.wikimedia.org/wiki/File:Plants_and_herbs_from_Culpeper%27s_%27The_Complete_Herbal...%27_Wellcome_L0034813.jpg"
  },
- "perch": {
-  "author": "Originally uploaded to English Wikipedia by en:User:Hadal",
-  "file": "YellowPerch.jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:YellowPerch.jpg"
- },
  "persimmon": {
   "author": "Frank Schulenburg",
   "file": "Fuyu_persimmon_fruits,_one_cut_open.jpg",
   "license": "CC BY-SA 4.0",
   "page": "https://commons.wikimedia.org/wiki/File:Fuyu_persimmon_fruits,_one_cut_open.jpg"
  },
- "pheasant": {
-  "author": "gary noon",
-  "file": "Pheasant.jpg",
-  "license": "CC BY-SA 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Pheasant.jpg"
- },
  "pigeonpea": {
   "author": "Francisco Manuel Blanco (O.S.A.)",
   "file": "Cajanus_cajan_Blanco1.167-cropped.jpg",
   "license": "Public domain",
   "page": "https://commons.wikimedia.org/wiki/File:Cajanus_cajan_Blanco1.167-cropped.jpg"
- },
- "pikenorthern": {
-  "author": "Unknown",
-  "file": "Hecht.jpg",
-  "license": "CC BY-SA 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Hecht.jpg"
- },
- "pikewalleye": {
-  "author": "Engbretson, Eric / U.S. Fish and Wildlife Service",
-  "file": "Sander vitreus.jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Sander_vitreus.jpg"
  },
  "pilinut": {
   "author": "Lance Catedral from Quezon City, Metro Manila, Philippines",
@@ -2889,24 +2337,6 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 4.0",
   "page": "https://commons.wikimedia.org/wiki/File:Pokeweed_bush_in_Northumberland_County,_Pennsylvania.JPG"
  },
- "pollock": {
-  "author": "This illustration was made by Citron You must credit this : Citron / CC-BY-SA-3.0",
-  "file": "Pollachius_pollachius_aquarium.jpg",
-  "license": "CC BY-SA 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Pollachius_pollachius_aquarium.jpg"
- },
- "pollockalaska": {
-  "author": "National Oceanic and Atmospheric Administration",
-  "file": "Walleye pollock.jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Walleye_pollock.jpg"
- },
- "pollockatlantic": {
-  "author": "Tino Strauss",
-  "file": "Pollachius pollachius 02.jpg",
-  "license": "CC BY-SA 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Pollachius_pollachius_02.jpg"
- },
  "pomegranate": {
   "author": "Jebulon",
   "file": "Punica granatum fruit Grenade.jpg",
@@ -2919,12 +2349,6 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 4.0",
   "page": "https://commons.wikimedia.org/wiki/File:Pomelo_fruit.jpg"
  },
- "pompanoflorida": {
-  "author": "Barton Warren Evermann / Millard Caleb Marsh",
-  "file": "FMIB 38132 Trachinotus carolinus (Linnaeus) Common Pompano; Pampano.jpeg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:FMIB_38132_Trachinotus_carolinus_(Linnaeus)_Common_Pompano;_Pampano.jpeg"
- },
  "poppyseed": {
   "author": "Odedr",
   "file": "Poppy_seeds.jpg",
@@ -2936,78 +2360,6 @@ window.IMAGE_CREDITS = {
   "file": "Beckers_A_poppyseed_oil_3.jpg",
   "license": "CC BY 4.0",
   "page": "https://commons.wikimedia.org/wiki/File:Beckers_A_poppyseed_oil_3.jpg"
- },
- "porkbelly": {
-  "author": "Rainer Zenz",
-  "file": "Schweinebauch-2.jpg",
-  "license": "CC BY-SA 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Schweinebauch-2.jpg"
- },
- "porkchop": {
-  "author": "penny from Oakland, California, USA",
-  "file": "Pork_chops_167541218.jpg",
-  "license": "CC BY 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Pork_chops_167541218.jpg"
- },
- "porkcuredhamandwaterproductu": {
-  "author": "Sylvain Raybaud",
-  "file": "Making_fish_paste_Cambodia.jpg",
-  "license": "CC BY 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Making_fish_paste_Cambodia.jpg"
- },
- "porkcuredhamcenterslicecount": {
-  "author": "Deathworm at English Wikipedia",
-  "file": "ProsciuttoSeaSalt.JPG",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:ProsciuttoSeaSalt.JPG"
- },
- "porkfreshlegham": {
-  "author": "Harald the Bard",
-  "file": "Chicken_breasts_and_wing_quarters.jpg",
-  "license": "CC0",
-  "page": "https://commons.wikimedia.org/wiki/File:Chicken_breasts_and_wing_quarters.jpg"
- },
- "porkfreshleghamrumphalf": {
-  "author": "Michael C. Berch, aka MCB at en.wikipedia",
-  "file": "Standing-rib-roast.jpg",
-  "license": "CC BY-SA 2.5",
-  "page": "https://commons.wikimedia.org/wiki/File:Standing-rib-roast.jpg"
- },
- "porkfreshleghamshankhalf": {
-  "author": "Zul Rosle from Kuala Lumpur, Malaysia",
-  "file": "Food_Sundanese_Restaurant,_Jakarta.jpg",
-  "license": "CC BY 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Food_Sundanese_Restaurant,_Jakarta.jpg"
- },
- "porkfreshloincenterloinchops": {
-  "author": "Jjron",
-  "file": "07._Camel_Profile,_near_Silverton,_NSW,_07.07.2007.jpg",
-  "license": "CC BY-SA 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:07._Camel_Profile,_near_Silverton,_NSW,_07.07.2007.jpg"
- },
- "porkfreshshoulderbostonbuttb": {
-  "author": "Kagor",
-  "file": "Cucina_012.jpg",
-  "license": "CC BY-SA 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Cucina_012.jpg"
- },
- "porkloin": {
-  "author": "Father.Jack from Coventry, UK",
-  "file": "Pork_loin_(1027276219).jpg",
-  "license": "CC BY 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Pork_loin_(1027276219).jpg"
- },
- "porkshoulder": {
-  "author": "Mark Miller",
-  "file": "Boston butt , boneless, tied.jpg",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Boston_butt_,_boneless,_tied.jpg"
- },
- "porktenderloin": {
-  "author": "Julo",
-  "file": "Poledwiczka_wieprzowa.JPG",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Poledwiczka_wieprzowa.JPG"
  },
  "portabella": {
   "author": "0x010C",
@@ -3032,12 +2384,6 @@ window.IMAGE_CREDITS = {
   "file": "Soy_powder.jpg",
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Soy_powder.jpg"
- },
- "poutocean": {
-  "author": "Steven G. Johnson",
-  "file": "Ocean pout, Boston Aquarium.jpg",
-  "license": "CC BY-SA 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Ocean_pout,_Boston_Aquarium.jpg"
  },
  "pricklypear": {
   "author": "Tom\u00e1s Castelazo",
@@ -3087,12 +2433,6 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 2.0",
   "page": "https://commons.wikimedia.org/wiki/File:Purslane_(4600243417).jpg"
  },
- "quail": {
-  "author": "Duncan Wright",
-  "file": "Brown_Quail.jpg",
-  "license": "CC BY-SA 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Brown_Quail.jpg"
- },
  "quailegg": {
   "author": "Douglas Perkins",
   "file": "Jiro with quail eggs.jpg",
@@ -3122,12 +2462,6 @@ window.IMAGE_CREDITS = {
   "file": "Reismelde.jpg",
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Reismelde.jpg"
- },
- "rabbit": {
-  "author": "JM Ligero Loarte",
-  "file": "Oryctolagus_cuniculus_Rcdo.jpg",
-  "license": "CC BY 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Oryctolagus_cuniculus_Rcdo.jpg"
  },
  "radicchio": {
   "author": "Kasteelhoeve Puth at English Wikipedia",
@@ -3164,12 +2498,6 @@ window.IMAGE_CREDITS = {
   "file": "Rheum_rhabarbarum.2006-04-27.uellue.jpg",
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Rheum_rhabarbarum.2006-04-27.uellue.jpg"
- },
- "ribeye": {
-  "author": "Jon Sullivan",
-  "file": "Steak_with_shitaki_mushrooms.jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Steak_with_shitaki_mushrooms.jpg"
  },
  "ricebranoil": {
   "author": "Dennis Sylvester Hurd",
@@ -3219,12 +2547,6 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Luffa_aegyptica.jpg"
  },
- "rockfishpacific": {
-  "author": "Jlikes2Fish",
-  "file": "Black Rockfish Sea Bass closeup.JPG",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Black_Rockfish_Sea_Bass_closeup.JPG"
- },
  "romaine": {
   "author": "Forest &amp; Kim Starr",
   "file": "Starr_070730-7911_Lactuca_sativa.jpg",
@@ -3261,12 +2583,6 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 4.0",
   "page": "https://commons.wikimedia.org/wiki/File:Rosemary_in_bloom.JPG"
  },
- "roughyorange": {
-  "author": "Unknown",
-  "file": "Orange roughy.png",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Orange_roughy.png"
- },
  "rowal": {
   "author": "Francisco Manuel Blanco (O.S.A.)",
   "file": "Pangium_edule_Blanco2.391.jpg",
@@ -3291,12 +2607,6 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Mint_bread_kvas.jpg"
  },
- "sablefish": {
-  "author": "Bloopityboop",
-  "file": "Sablefish_(Anoplopoma_fimbria)_01_(cropped).jpg",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Sablefish_(Anoplopoma_fimbria)_01_(cropped).jpg"
- },
  "saffron": {
   "author": "Shaharbano",
   "file": "Saffron_-_premium_spice.jpg",
@@ -3309,18 +2619,6 @@ window.IMAGE_CREDITS = {
   "license": "CC BY 2.0",
   "page": "https://commons.wikimedia.org/wiki/File:Spices_22078028.jpg"
  },
- "salmonchum": {
-  "author": "Knepp Timothy, U.S. Fish and Wildlife Service",
-  "file": "Salmon chum fish oncorhynchus keta.jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Salmon_chum_fish_oncorhynchus_keta.jpg"
- },
- "salmonpink": {
-  "author": "Timothy Knepp",
-  "file": "Pink salmon FWS.jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Pink_salmon_FWS.jpg"
- },
  "salsify": {
   "author": "Sarah Stierch",
   "file": "Purple Salsify - Stierch.jpg",
@@ -3332,12 +2630,6 @@ window.IMAGE_CREDITS = {
   "file": "\u0d38\u0d2a\u0d4d\u0d2a\u0d4b\u0d1f\u0d4d\u0d1f.jpg",
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:%E0%B4%B8%E0%B4%AA%E0%B5%8D%E0%B4%AA%E0%B5%8B%E0%B4%9F%E0%B5%8D%E0%B4%9F.jpg"
- },
- "sardine": {
-  "author": "TANAKA Juuyoh (\u7530\u4e2d\u5341\u6d0b)",
-  "file": "Sardines_-_\u9c2f(\u3044\u308f\u3057).jpg",
-  "license": "CC BY 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Sardines_-_%E9%B0%AF(%E3%81%84%E3%82%8F%E3%81%97).jpg"
  },
  "savoryground": {
   "author": "F.W. Bolgiano &amp; Co.; Henry G. Gilbert Nursery and Seed Trade Catalog Collection.",
@@ -3356,30 +2648,6 @@ window.IMAGE_CREDITS = {
   "file": "CSA-Red-Spring-Onions.jpg",
   "license": "Public domain",
   "page": "https://commons.wikimedia.org/wiki/File:CSA-Red-Spring-Onions.jpg"
- },
- "scallop": {
-  "author": "Rachael Norris and Marina Freudzon / Mayscallop at en.wikipedia",
-  "file": "Argopecten_irradians.jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Argopecten_irradians.jpg"
- },
- "schmaltz": {
-  "author": "Rainer Zenz",
-  "file": "Gaenseschmalz-1.jpg",
-  "license": "CC BY-SA 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Gaenseschmalz-1.jpg"
- },
- "scup": {
-  "author": "Smithsonian Environmental Research Center",
-  "file": "Stenotomus_chrysops_(S0568)_(12592129064).jpg",
-  "license": "CC BY 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Stenotomus_chrysops_(S0568)_(12592129064).jpg"
- },
- "seatrout": {
-  "author": "SEFSC Pascagoula Laboratory; Collection of Brandi Noble, NOAA/NMFS/SEFSC",
-  "file": "Cynoscion arenarius.jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Cynoscion_arenarius.jpg"
  },
  "seaweed": {
   "author": "Grubio--1",
@@ -3411,23 +2679,11 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 4.0",
   "page": "https://commons.wikimedia.org/wiki/File:Sesbania_grandiflora_flower_and_fruit.jpg"
  },
- "shadamerican": {
-  "author": "Unknown",
-  "file": "Dorosoma cepedianum GLERL.jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Dorosoma_cepedianum_GLERL.jpg"
- },
  "shallot": {
   "author": "No machine-readable author provided. Charles P. assumed (based on copyright claims).",
   "file": "Shallots_-_sliced_and_whole.jpg",
   "license": "Public domain",
   "page": "https://commons.wikimedia.org/wiki/File:Shallots_-_sliced_and_whole.jpg"
- },
- "shark": {
-  "author": "NOAA Photo Library",
-  "file": "Corl0207_(28225976491).jpg",
-  "license": "CC BY 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Corl0207_(28225976491).jpg"
  },
  "sheepmilk": {
   "author": "Schaeferhof",
@@ -3435,29 +2691,11 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Sheepparlour.jpg"
  },
- "sheepshead": {
-  "author": "Unknown",
-  "file": "Sheepshead.jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Sheepshead.jpg"
- },
  "shiitake": {
   "author": "frankenstoen from Portland, Oregon",
   "file": "Shiitakegrowing.jpg",
   "license": "CC BY 2.0",
   "page": "https://commons.wikimedia.org/wiki/File:Shiitakegrowing.jpg"
- },
- "shrimp": {
-  "author": "Etrusko25",
-  "file": "Palaemon_serratus_Croazia.jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Palaemon_serratus_Croazia.jpg"
- },
- "sirloin": {
-  "author": "LuvsMG481",
-  "file": "Steak_frites_-_yummy.jpg",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Steak_frites_-_yummy.jpg"
  },
  "sisymbriumspseeds": {
   "author": "SSamadi15",
@@ -3471,41 +2709,11 @@ window.IMAGE_CREDITS = {
   "license": "CC0",
   "page": "https://commons.wikimedia.org/wiki/File:De_Duitse_journaliste_Anita_Joachim_geniet_van_een_portie_skyr,_Bestanddeelnr_190-0483.jpg"
  },
- "smeltrainbow": {
-  "author": "Bex Goreham",
-  "file": "Osmerus mordax 364847421.jpg",
-  "license": "CC BY 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Osmerus_mordax_364847421.jpg"
- },
- "snail": {
-  "author": "Restaurante Granero",
-  "file": "Caracoles-del-restaurante-granero.jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Caracoles-del-restaurante-granero.jpg"
- },
  "snappea": {
   "author": "Brianga",
   "file": "Sugar_Snap_Pea.JPG",
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Sugar_Snap_Pea.JPG"
- },
- "snapper": {
-  "author": "Unknown authorUnknown author",
-  "file": "Lutjanus campechanus.png",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Lutjanus_campechanus.png"
- },
- "snowcrab": {
-  "author": "Unknown",
-  "file": "Chionoecetes_bairdi.jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Chionoecetes_bairdi.jpg"
- },
- "sockeye": {
-  "author": "Milton Love, Marine Science Institute, University of California, Santa Barbara, CA 93106",
-  "file": "Sockeye_salmon_swimming_right.jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Sockeye_salmon_swimming_right.jpg"
  },
  "sorghum": {
   "author": "No machine-readable author provided. Pethan assumed (based on copyright claims).",
@@ -3579,12 +2787,6 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Spinacia_oleracea_Spinazie_bloeiend.jpg"
  },
- "spinylobster": {
-  "author": "No machine-readable author provided. DrKjaergaard assumed (based on copyright claims).",
-  "file": "California_spiny_lobster.JPG",
-  "license": "CC BY-SA 2.5",
-  "page": "https://commons.wikimedia.org/wiki/File:California_spiny_lobster.JPG"
- },
  "spirulina": {
   "author": "Music4thekids",
   "file": "Spirulina-powder-shadow.jpg",
@@ -3597,18 +2799,6 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Split_pea.jpg"
  },
- "spot": {
-  "author": "NOAA's Fisheries Collection; Collection of Brandi Noble",
-  "file": "Spot_(_Leiostomus_xanthurus_).jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Spot_(_Leiostomus_xanthurus_).jpg"
- },
- "squab": {
-  "author": "Rod Waddington from Kergunyah, Australia",
-  "file": "Trussed Squab (7276586328).jpg",
-  "license": "CC BY-SA 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Trussed_Squab_(7276586328).jpg"
- },
  "squashsummerscallop": {
   "author": "F Delventhal from Outside Washington, D.C., US",
   "file": "Cucurbita pepo scallop summer squash Clagett Farm Share Sept. 21 and 25, 2010.jpg",
@@ -3620,12 +2810,6 @@ window.IMAGE_CREDITS = {
   "file": "TwinZucchini.jpg",
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:TwinZucchini.jpg"
- },
- "squid": {
-  "author": "Nhobgood Nick Hobgood",
-  "file": "Sepioteuthis_sepioidea_(Caribbean_Reef_Squid).jpg",
-  "license": "CC BY-SA 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Sepioteuthis_sepioidea_(Caribbean_Reef_Squid).jpg"
  },
  "starfruit": {
   "author": "Unknown",
@@ -3645,18 +2829,6 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 4.0",
   "page": "https://commons.wikimedia.org/wiki/File:Garden_strawberry_(Fragaria_%C3%97_ananassa)_single2.jpg"
  },
- "sturgeon": {
-  "author": "Chris Light",
-  "file": "Sturgeon Viewing 2517.jpg",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Sturgeon_Viewing_2517.jpg"
- },
- "suckerwhite": {
-  "author": "Brian Gratwicke",
-  "file": "White Sucker, Catostomus commersonii.jpg",
-  "license": "CC BY 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:White_Sucker,_Catostomus_commersonii.jpg"
- },
  "sugarapplessweetsop": {
   "author": "Muhammad Mahdi Karim",
   "file": "Sugar apple with cross section.jpg",
@@ -3669,23 +2841,11 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Sunroot_top.jpg"
  },
- "sunfishpumpkinseed": {
-  "author": "Charles Harvey Bollman",
-  "file": "FMIB 33397 Lepomis Gibbosus.jpeg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:FMIB_33397_Lepomis_Gibbosus.jpeg"
- },
  "sunflowerseed": {
   "author": "Kaldari",
   "file": "Sunflower_Seeds_Kaldari.jpg",
   "license": "Public domain",
   "page": "https://commons.wikimedia.org/wiki/File:Sunflower_Seeds_Kaldari.jpg"
- },
- "sweetbread": {
-  "author": "GordonBennett",
-  "file": "Cut of veal sweetbreads.png",
-  "license": "CC BY-SA 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Cut_of_veal_sweetbreads.png"
  },
  "sweetpotato": {
   "author": "Llez",
@@ -3716,18 +2876,6 @@ window.IMAGE_CREDITS = {
   "file": "DairyProductsGermany.jpg",
   "license": "CC0",
   "page": "https://commons.wikimedia.org/wiki/File:DairyProductsGermany.jpg"
- },
- "swordfish": {
-  "author": "Naturalis Biodiversity Center",
-  "file": "Xiphias_gladius_Linnaeus,_1758_2599925021.jpg",
-  "license": "CC0",
-  "page": "https://commons.wikimedia.org/wiki/File:Xiphias_gladius_Linnaeus,_1758_2599925021.jpg"
- },
- "tallow": {
-  "author": "FotoosvanRobin",
-  "file": "Tallow-beef_suet_after_rendering.jpg",
-  "license": "CC BY-SA 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Tallow-beef_suet_after_rendering.jpg"
  },
  "tamarind": {
   "author": "B.navez",
@@ -3783,29 +2931,11 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Teff_pluim_Eragrostis_tef.jpg"
  },
- "tenderloin": {
-  "author": "JoeSmack at English Wikipedia",
-  "file": "BeefCutTenderloin.png",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:BeefCutTenderloin.png"
- },
  "thyme": {
   "author": "Evan-Amos",
   "file": "Thyme-Bundle.jpg",
   "license": "CC0",
   "page": "https://commons.wikimedia.org/wiki/File:Thyme-Bundle.jpg"
- },
- "tilapia": {
-  "author": "Bj\u00f8rn Christian T\u00f8rrissen",
-  "file": "Oreochromis-niloticus-Nairobi.JPG",
-  "license": "CC BY-SA 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Oreochromis-niloticus-Nairobi.JPG"
- },
- "tilefish": {
-  "author": "Izuzuki",
-  "file": "RandallTFya.jpg",
-  "license": "CC BY-SA 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:RandallTFya.jpg"
  },
  "tilsitcheese": {
   "author": "Jon Sullivan",
@@ -3861,65 +2991,11 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 4.0",
   "page": "https://commons.wikimedia.org/wiki/File:Spicy_tomato_mezhukuvaratti.JPG"
  },
- "tongue": {
-  "author": "The original uploader was Mind meal at English Wikipedia.",
-  "file": "Beef tongue preparation.jpg",
-  "license": "CC BY-SA 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Beef_tongue_preparation.jpg"
- },
- "tripe": {
-  "author": "Lucarelli",
-  "file": "Trippa.jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Trippa.jpg"
- },
  "triticaleflourwholegrain": {
   "author": "File:Les_plantes_cultivades._Cereals_(2008).djvu: Miquel Pujol Palol derivative work: Joancreus (talk)",
   "file": "Les_Plantes_Cultivades._Cereals._Imatge_119.jpg",
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Les_Plantes_Cultivades._Cereals._Imatge_119.jpg"
- },
- "trout": {
-  "author": "Engbretson Eric, U.S. Fish and Wildlife Service",
-  "file": "Close_up_of_rainbow_trout_fish_underwater_oncorhynchus_mykiss.jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Close_up_of_rainbow_trout_fish_underwater_oncorhynchus_mykiss.jpg"
- },
- "trout2": {
-  "author": "Eric Engbretson for U.S. Fish and Wildlife Service",
-  "file": "Salmo_trutta.jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Salmo_trutta.jpg"
- },
- "turboteuropean": {
-  "author": "John William Edy",
-  "file": "Town of Molde (JW Edy plate 78).jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Town_of_Molde_(JW_Edy_plate_78).jpg"
- },
- "turkey": {
-  "author": "Bob Embleton",
-  "file": "Ledbury Christmas Auction of Dressed Poultry - geograph.org.uk - 297272.jpg",
-  "license": "CC BY-SA 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Ledbury_Christmas_Auction_of_Dressed_Poultry_-_geograph.org.uk_-_297272.jpg"
- },
- "turkeyback": {
-  "author": "Tom\u00e1s Castelazo",
-  "file": "Chickens in market.jpg",
-  "license": "CC BY-SA 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Chickens_in_market.jpg"
- },
- "turkeybreast": {
-  "author": "Patrick Fitzgerald from Atlanta, GA, USA",
-  "file": "Thanksgiving_Turkey.jpg",
-  "license": "CC BY 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Thanksgiving_Turkey.jpg"
- },
- "turkeywing": {
-  "author": "L. Prang &amp; Co.",
-  "file": "Poultry_of_the_world.jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Poultry_of_the_world.jpg"
  },
  "turmericroot": {
   "author": "SKsiddhartthan",
@@ -3939,12 +3015,6 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 2.0",
   "page": "https://commons.wikimedia.org/wiki/File:Orecchiette_con_cime_di_rapa_-_The_Grill,_Grossi_Florentino_AUD32_main_(4800088661).jpg"
  },
- "turtlegreen": {
-  "author": "USFWS",
-  "file": "Green sea turtle FWS 12029.JPG",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Green_sea_turtle_FWS_12029.JPG"
- },
  "uvportabella": {
   "author": "0x010C",
   "file": "2016-01 Agaricus bisporus 06.jpg",
@@ -3963,29 +3033,11 @@ window.IMAGE_CREDITS = {
   "license": "Public domain",
   "page": "https://commons.wikimedia.org/wiki/File:VanillaExtract.png"
  },
- "veal": {
-  "author": "Gatorfan252525",
-  "file": "A tray of breaded veal cutlets.jpg",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:A_tray_of_breaded_veal_cutlets.jpg"
- },
- "vealshank": {
-  "author": "Hongreddotbrewhouse",
-  "file": "RedDot_Burger.jpg",
-  "license": "CC BY-SA 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:RedDot_Burger.jpg"
- },
  "vegetableoilpalmkernel": {
   "author": "Yemisi Ogbe",
   "file": "Separating Kernels from Chaff LM.jpg",
   "license": "CC BY-SA 4.0",
   "page": "https://commons.wikimedia.org/wiki/File:Separating_Kernels_from_Chaff_LM.jpg"
- },
- "venison": {
-  "author": "FotoosVanRobin from Netherlands",
-  "file": "Venison_Steaks.jpg",
-  "license": "CC BY-SA 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Venison_Steaks.jpg"
  },
  "vinegarbalsamic": {
   "author": "E4024",
@@ -4071,12 +3123,6 @@ window.IMAGE_CREDITS = {
   "license": "Public domain",
   "page": "https://commons.wikimedia.org/wiki/File:WheatgermOil.png"
  },
- "whelk": {
-  "author": "me",
-  "file": "Whelks_at_a_fish_market_in_Japan.jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Whelks_at_a_fish_market_in_Japan.jpg"
- },
  "wheyacid": {
   "author": "Adrem68 at Dutch Wikipedia",
   "file": "Whey powder.jpg",
@@ -4089,12 +3135,6 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Soured_milk_whey.avrs-56.jpg"
  },
- "whitefish": {
-  "author": "fir0002 flagstaffotos [at] gmail.com Canon 20D + Tamron 28-75mm f/2.8",
-  "file": "Elephant shark melb aquarium.jpg",
-  "license": "GFDL 1.2",
-  "page": "https://commons.wikimedia.org/wiki/File:Elephant_shark_melb_aquarium.jpg"
- },
  "whitemushroom": {
   "author": "chris_73",
   "file": "ChampignonMushroom.jpg",
@@ -4106,12 +3146,6 @@ window.IMAGE_CREDITS = {
   "file": "Half_a_cup_of_rice._Brown_rice_is_the_best_choice.JPG",
   "license": "CC BY-SA 4.0",
   "page": "https://commons.wikimedia.org/wiki/File:Half_a_cup_of_rice._Brown_rice_is_the_best_choice.JPG"
- },
- "whiting": {
-  "author": "Georges Jansoone (JoJan) -",
-  "file": "Wijting002.jpg",
-  "license": "CC BY 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Wijting002.jpg"
  },
  "wildrice": {
   "author": "Matt Lavin from Bozeman, Montana, USA",
@@ -4130,12 +3164,6 @@ window.IMAGE_CREDITS = {
   "file": "Manns' superior seeds (16204136177).jpg",
   "license": "CC BY 2.0",
   "page": "https://commons.wikimedia.org/wiki/File:Manns%27_superior_seeds_(16204136177).jpg"
- },
- "wolffishatlantic": {
-  "author": "Norm Despres (photographer); original uploader was Wapoo at en.wikipedia",
-  "file": "Anarhichas lupus head.jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Anarhichas_lupus_head.jpg"
  },
  "woodear": {
   "author": "Stu's Images",
@@ -4172,12 +3200,6 @@ window.IMAGE_CREDITS = {
   "file": "Yellow squash DSC01080.jpg",
   "license": "CC BY-SA 1.0",
   "page": "https://commons.wikimedia.org/wiki/File:Yellow_squash_DSC01080.jpg"
- },
- "yellowtail": {
-  "author": "Utagawa Hiroshige",
-  "file": "Hiroshige A Shoal of Fishes Fugu Yellowtail.jpg",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Hiroshige_A_Shoal_of_Fishes_Fugu_Yellowtail.jpg"
  },
  "yogurtplain": {
   "author": "No machine-readable author provided. Rainer Zenz assumed (based on copyright claims).",

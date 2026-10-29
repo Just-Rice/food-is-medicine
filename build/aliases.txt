@@ -458,3 +458,50 @@ lard|pork fat,dripping|fat,animal fat
 schmaltz|chicken fat|fat,animal fat
 gelatin|gelatine,collagen|fat,collagen
 honey|shahad,madhu|bee,sweetener
+
+# ---- cooked staples (vegetarian fork) -----------------------------------
+ricewhitecooked|chawal,steamed rice,boiled rice,plain rice,annam,anna|cooked,grain,cereal
+ricebrowncooked|brown chawal|cooked,grain,cereal
+pastacooked|spaghetti,penne,macaroni,noodles|cooked,grain
+pastawholewheatcooked|wholemeal pasta|cooked,grain
+oatmealcooked|porridge,oats porridge,daliya|cooked,grain,cereal
+quinoacooked||cooked,grain,pseudocereal
+couscouscooked||cooked,grain
+bulgurcooked|bulgur wheat,dalia|cooked,grain
+milletcooked|bajra,ragi|cooked,grain,cereal
+barleycooked|jau|cooked,grain,cereal
+ricenoodlescooked|rice vermicelli,pho noodles,sevai|cooked,grain
+sobacooked|buckwheat noodles|cooked,grain
+breadwholewheat|brown bread,wholemeal bread,toast|bread,grain
+breadwhite|sandwich bread,toast|bread,grain
+pita|pitta|bread,grain
+naan|nan|bread,grain
+chapati|roti,phulka,fulka,chapathi|bread,grain
+tortillaflour|wrap|bread,grain
+tortillacorn||bread,grain
+lentilscooked|dal,daal,dhal,masoor dal|cooked,legume,pulse
+chickpeascooked|chana,chole,garbanzo|cooked,legume,pulse
+kidneybeanscooked|rajma|cooked,legume,pulse
+blackbeanscooked|frijoles negros|cooked,legume,pulse
+pintobeanscooked|refried beans|cooked,legume,pulse
+mungbeanscooked|moong,moong dal,green gram|cooked,legume,pulse
+toordalcooked|toor dal,arhar dal,tuvar,sambar dal|cooked,legume,pulse
+hummus|houmous,hommus|legume,pulse
+tofufried|fried tofu,tofu puffs|soy,legume
+peanutbutter|groundnut butter|legume
+potatoboiled|aloo,boiled potato|cooked,tuber,nightshade
+potatobaked|jacket potato,baked potato|cooked,tuber,nightshade
+sweetpotatobaked|shakarkandi|cooked,root,tuber
+broccolicooked||cooked,brassica,cruciferous
+spinachcooked|palak|cooked,leafy green
+cauliflowercooked|gobi,phool gobi|cooked,brassica,cruciferous
+carrotscooked|gajar|cooked,root
+greenbeanscooked|french beans,string beans|cooked,legume,pod
+peascooked|matar|cooked,legume,pod
+cornsweetcooked|corn,makai,bhutta|cooked,grain
+eggplantcooked|brinjal,baingan|cooked,nightshade
+okracooked|bhindi,ladyfinger|cooked,pod
+mushroomscooked|khumbi|cooked,mushroom,fungi
+eggboiled|boiled egg,anda|egg,cooked
+eggfried|fried egg,anda|egg,cooked
+eggscrambled|scrambled eggs,bhurji,anda bhurji|egg,cooked

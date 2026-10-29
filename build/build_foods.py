@@ -99,14 +99,15 @@ TREE_NUTS = {
     'almond', 'walnut', 'pecan', 'cashew', 'pistachio', 'brazilnut', 'hazelnut',
     'macadamia', 'pinenut', 'chestnut', 'pilinut', 'hickory', 'beechnut', 'coconut',
 }
-PEANUTS = {'peanut'}
+PEANUTS = {'peanut', 'peanutbutter'}
 SOY = {'soybean', 'edamame'}
-SESAME = {'sesame'}
+SESAME = {'sesame', 'hummus'}   # hummus is made with tahini
 # Gluten-containing grains. Oats are gluten-free botanically but are so routinely
 # cross-contaminated in milling that coeliac guidance treats them as suspect
 # unless certified, so they are flagged.
 GLUTEN = {
     'oats', 'barley', 'wheatberry', 'bulgur', 'spelt', 'farro', 'kamut', 'rye', 'freekeh',
+    'tortillaflour',
 }
 CRUSTACEAN = {
     'shrimp', 'lobster', 'spinylobster', 'bluecrab', 'dungeness', 'kingcrab',
@@ -114,13 +115,75 @@ CRUSTACEAN = {
 }
 # Rendered animal fats and gelatin sit in the `fat` group but are not vegan.
 ANIMAL_FATS = {'tallow', 'lard', 'schmaltz', 'gelatin'}
+# Fish roe sits in the `egg` group beside hens' eggs, but it is fish: an
+# unfertilised egg from a hen is vegetarian, caviar is not.
+ROE = {'caviar', 'fishroe'}
+
+# This fork is a vegetarian site: anything the classifier does not tag
+# vegetarian is left out of data/foods.js altogether rather than filtered at
+# runtime. Pass --all to build the full omnivore list instead.
+VEGETARIAN_ONLY = '--all' not in sys.argv
+
+# The auto-tagger in select_foods.py matches words in the USDA description, so
+# kidney beans come out as "organ meat", lambsquarters as "lamb" and scallop
+# squash as "shellfish". Whatever the classifier has called vegetarian cannot
+# belong to an animal-flesh family, so those tags are dropped here.
+FLESH_TAGS = {'meat', 'red meat', 'offal', 'organ meat', 'poultry', 'lamb', 'pork',
+              'beef', 'game', 'fish', 'seafood', 'shellfish', 'mollusc', 'crustacean'}
 
 
-def classify(group, slug):
-    """Return (dietary flags, allergen tags) for one food."""
+def clean_tags(group, diet, found):
+    out = list(found)
+    if 'vegetarian' in diet:
+        out = [t for t in out if t not in FLESH_TAGS]
+    if group == 'egg':
+        out = [t for t in out if t != 'dairy']
+        if 'egg' not in out:
+            out.append('egg')
+    return sorted(out)
+
+
+# The slug sets above only cover the hand-curated foods. The bulk import added
+# hundreds more -- wheat flours, pastas, tofu, tahini, raw peanuts -- whose
+# slugs no list could anticipate, and which were reaching the allergen filter
+# untagged. These patterns read the USDA description as well. They err towards
+# tagging: refined peanut and soybean oils are exempt from allergen labelling,
+# but cold-pressed ones are not and the description cannot always tell which.
+ALLERGEN_PATTERNS = {
+    'soy': re.compile(r'\b(soy|soya|soybeans?|tofu|tempeh|miso|natto|edamame)\b'),
+    'gluten': re.compile(r'\b(wheat|barley|rye|spelt|semolina|bulgur|couscous|farro|'
+                         r'freekeh|triticale|kamut|durum|seitan|bread|pasta|spaghetti|'
+                         r'macaroni|soba|naan|pita|chapati|roti|oats?|oatmeal)\b'),
+    'peanut': re.compile(r'\bpeanuts?\b'),
+    'sesame': re.compile(r'\b(sesame|tahini)\b'),
+    'treenut': re.compile(r'\b(almonds?|walnuts?|pecans?|cashews?|pistachios?|hazelnuts?|'
+                          r'filberts?|macadamias?|brazil ?nuts?|pine ?nuts?|chestnuts?)\b'),
+}
+# Words that look like an allergen and are not one: spaghetti squash is a
+# squash, and a pasta labelled gluten-free has been made without wheat.
+NOT_GLUTEN = re.compile(r'gluten-free|\bsquash\b')
+# Water chestnut is a sedge corm, not a nut.
+NOT_TREENUT = re.compile(r'water ?chestnut')
+
+# Prepared foods whose USDA recipe carries an allergen the name does not show:
+# the SR scrambled egg is made with milk and butter, and commercial naan with
+# milk or yoghurt.
+EXTRA_ALLERGENS = {
+    'eggscrambled': {'milk', 'lactose'},
+    'naan': {'milk', 'lactose'},
+}
+
+
+def classify(group, slug, text=''):
+    """Return (dietary flags, allergen tags) for one food.
+
+    `text` is the display name and USDA description, used to catch allergens
+    in foods that no hand-maintained slug list names.
+    """
     diet, allergens = set(), set()
+    text = text.lower()
 
-    if group in ANIMAL_FLESH or slug in ANIMAL_FATS:
+    if group in ANIMAL_FLESH or slug in ANIMAL_FATS or slug in ROE:
         pass  # neither vegetarian nor vegan
     elif group == 'dairy':
         diet.add('vegetarian')
@@ -138,9 +201,9 @@ def classify(group, slug):
         # lactose-free. Both still carry milk protein, so `milk` stays.
         if slug in {'ghee', 'butter', 'buttersalted', 'parmesan', 'pecorino'}:
             allergens.discard('lactose')
-    if group == 'egg' and slug != 'caviar' and slug != 'fishroe':
+    if group == 'egg' and slug not in ROE:
         allergens.add('egg')
-    if slug in {'caviar', 'fishroe'} or group == 'fish':
+    if slug in ROE or group == 'fish':
         allergens.add('fish')
     if group == 'shellfish':
         allergens.add('crustacean' if slug in CRUSTACEAN else 'mollusc')
@@ -154,6 +217,19 @@ def classify(group, slug):
         allergens.add('sesame')
     if slug in GLUTEN:
         allergens.add('gluten')
+
+    for tag, pattern in ALLERGEN_PATTERNS.items():
+        if pattern.search(text):
+            if tag == 'gluten' and NOT_GLUTEN.search(text):
+                continue
+            if tag == 'treenut' and NOT_TREENUT.search(text):
+                continue
+            allergens.add(tag)
+    allergens.update(EXTRA_ALLERGENS.get(slug, ()))
+    # A plant-group food made with milk or egg -- naan, say -- is still
+    # vegetarian but cannot be vegan.
+    if allergens & {'milk', 'egg'}:
+        diet.discard('vegan')
 
     return sorted(diet), sorted(allergens)
 
@@ -303,8 +379,9 @@ def read_dataset(directory, wanted_ids, foods, portions, pub):
 
 
 def main():
-    sr_dir = sys.argv[1] if len(sys.argv) > 1 else None
-    fnd_dir = sys.argv[2] if len(sys.argv) > 2 else None
+    args = [a for a in sys.argv[1:] if not a.startswith('--')]
+    sr_dir = args[0] if len(args) > 0 else None
+    fnd_dir = args[1] if len(args) > 1 else None
     if not sr_dir:
         sys.exit('usage: build_foods.py <sr_legacy_dir> [foundation_dir]')
 
@@ -353,13 +430,13 @@ def main():
         nutrients.pop('kcal_atwater_specific', None)
         nutrients.pop('kcal_atwater_general', None)
 
-        diet, allergens = classify(c['group'], c['slug'])
+        diet, allergens = classify(c['group'], c['slug'], c['name'] + ' ' + foods[fdc])
         entry = {
             'slug': c['slug'], 'name': c['name'], 'group': c['group'],
             'fdcId': int(fdc), 'usda': foods[fdc], 'published': pub[fdc],
             'diet': diet, 'allergens': allergens,
             'aka': aka.get(c['slug'], []),
-            'tags': tags.get(c['slug'], []),
+            'tags': clean_tags(c['group'], diet, tags.get(c['slug'], [])),
             'nutrients': nutrients,
         }
         if best:
@@ -398,6 +475,11 @@ def main():
         out = [e for e in out if e['slug'] not in dropped_dupes]
         print('dropped %d entries that duplicated another exactly: %s'
               % (len(dropped_dupes), ', '.join(dropped_dupes[:6])))
+
+    if VEGETARIAN_ONLY:
+        before = len(out)
+        out = [o for o in out if 'vegetarian' in o['diet']]
+        print('vegetarian only: kept %d of %d foods' % (len(out), before))
 
     with open(OUT, 'w') as fh:
         fh.write('// GENERATED FILE -- do not edit by hand.\n')

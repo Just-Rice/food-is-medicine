@@ -152,8 +152,7 @@
   }
 
   var GROUPS = ['all', 'fruit', 'veg', 'mushroom', 'nut', 'legume', 'grain',
-                'herb', 'dairy', 'meat', 'poultry', 'offal', 'fish',
-                'shellfish', 'egg', 'fat', 'bee'];
+                'herb', 'dairy', 'egg', 'fat', 'bee'];
 
   function groupLabel(id) { return t('g_' + id); }
 
@@ -244,7 +243,7 @@
     var ref = referenceSet();
     var sortKeys = ['protein', 'fiber', 'vitc', 'vitk', 'folate', 'iron', 'calcium',
                     'magnesium', 'potassium', 'zinc', 'selenium', 'vitd', 'vita',
-                    'b12', 'ala', 'epa', 'dha'];
+                    'b12', 'ala'];
 
     main.innerHTML =
       '<div class="page-head"><h1>' + esc(t('foods_title')) + '</h1>' +
@@ -1188,7 +1187,7 @@
     'British', 'German', 'Polish', 'Russian', 'Scandinavian'
   ];
 
-  var RECIPE_STORE = 'fim.recipe.v1';
+  var RECIPE_STORE = 'veg.recipe.v1';
 
   function loadRecipeState() {
     var base = { basket: [], cuisine: 'any', servings: 2, notes: '', result: '', error: '' };
@@ -1324,9 +1323,13 @@
   function restrictionSentences() {
     var prefs = Prefs.get();
     var out = [];
-    if (prefs.diet && prefs.diet !== 'none') {
-      out.push('the cook is ' + prefs.diet);
-    }
+    // Spelled out, because "vegetarian" alone is read differently in different
+    // places -- in much of India it excludes eggs, elsewhere it allows fish
+    // sauce or gelatin without a second thought.
+    out.push(prefs.diet === 'vegan'
+      ? 'the cook is vegan: no meat, fish, dairy, eggs, honey or any other animal product'
+      : 'the cook is vegetarian (lacto-ovo): no meat, poultry, fish, shellfish, ' +
+        'gelatin, fish sauce, animal stock or animal fat; dairy, eggs and honey are fine');
     (prefs.allergens || []).forEach(function (a) {
       out.push('must contain no ' + t('a_' + a).toLowerCase() +
         (a === 'lactose' ? ' (intolerance)' : ' (allergy)'));
@@ -1794,7 +1797,8 @@
 
       '<h2 class="section">' + esc(t('dietary_title')) + '</h2>' +
       '<div class="card pad">' +
-      '<p class="hint" style="margin-top:0">' + esc(t('dietary_hint')) + '</p>' +
+      '<p class="hint" style="margin-top:0">' + esc(t('dietary_hint')) + ' ' +
+      esc(t('no_eggs_hint')) + '</p>' +
       '<div class="chips" style="margin-bottom:20px">' + Prefs.DIETS.map(function (d) {
         return '<button class="chip" type="button" data-diet="' + d + '" aria-pressed="' +
           (prefs.diet === d ? 'true' : 'false') + '">' + esc(t('diet_' + d)) + '</button>';
@@ -1808,7 +1812,7 @@
 
       '<div class="field"><label for="customExcl">' + esc(t('custom_excl')) + '</label>' +
       '<input id="customExcl" type="text" value="' + esc(prefs.customExclude) + '" ' +
-      'placeholder="mushroom, cilantro, shellfish">' +
+      'placeholder="mushroom, cilantro, onion">' +
       '<span class="hint">' + esc(t('custom_excl_hint')) + '</span></div>' +
 
       '<p class="result-count" id="filterCount" style="margin-top:16px"></p></div>';

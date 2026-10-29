@@ -820,7 +820,7 @@ meat|beefribbackribs|Beef, rib, back ribs|172147
 meat|beeflointopsirloincapsteak|Beef, loin, top sirloin cap steak|172174
 dairy|brickcheese|Brick cheese|172176
 dairy|cottagecheesecreamedwithfrui|Cottage cheese, creamed, with fruit|172180
-dairy|eggturkeyfresh|Egg, turkey, fresh|172192
+egg|eggturkeyfresh|Turkey egg|172192
 dairy|goatcheesehardtype|Goat cheese, hard type|172197
 dairy|eggwhitefrozenpasteurized|Egg, white, frozen, pasteurized|172203
 dairy|drywhitecheesequesoseco|Dry white cheese, queso seco|172222
@@ -1032,3 +1032,56 @@ grain|einkorngrain|Einkorn, grain|2710827
 grain|sorghumbranwhiteunenriched|Sorghum bran, white, unenriched|2710839
 dairy|oaxacacheesesolid|Oaxaca cheese, solid|2647441
 grain|cornflourmasaharinawhiteorye|Corn flour, masa harina, white or yellow|2710835
+
+
+# ---- Cooked staples (vegetarian fork) ------------------------------------
+# The rest of this list is raw or dry, which is right for a reference table and
+# wrong for a food log: cooked rice is about 130 kcal per 100 g against 365 dry,
+# and people weigh their plate, not the packet. These are the cooked and
+# ready-to-eat forms of the foods a vegetarian plate is mostly made of, and the
+# targets the photo estimator matches dishes to.
+grain|ricewhitecooked|White rice, cooked|168878
+grain|ricebrowncooked|Brown rice, cooked|169704
+grain|pastacooked|Pasta, cooked|169737
+grain|pastawholewheatcooked|Whole-wheat pasta, cooked|168910
+grain|oatmealcooked|Oatmeal (porridge, made with water)|173905
+grain|quinoacooked|Quinoa, cooked|168917
+grain|couscouscooked|Couscous, cooked|169700
+grain|bulgurcooked|Bulgur, cooked|170287
+grain|milletcooked|Millet, cooked|168871
+grain|barleycooked|Pearl barley, cooked|170285
+grain|ricenoodlescooked|Rice noodles, cooked|168914
+grain|sobacooked|Soba noodles, cooked|168907
+grain|breadwholewheat|Whole-wheat bread|172688
+grain|breadwhite|White bread|174924
+grain|pita|Pita bread|174915
+grain|naan|Naan|171845
+grain|chapati|Chapati (whole wheat roti)|174075
+grain|tortillaflour|Flour tortilla|173242
+grain|tortillacorn|Corn tortilla|175036
+legume|lentilscooked|Lentils, cooked|172421
+legume|chickpeascooked|Chickpeas, cooked|173757
+legume|kidneybeanscooked|Kidney beans, cooked|173740
+legume|blackbeanscooked|Black beans, cooked|173735
+legume|pintobeanscooked|Pinto beans, cooked|175200
+legume|mungbeanscooked|Mung beans, cooked|174257
+legume|toordalcooked|Pigeon peas (toor dal), cooked|172437
+legume|hummus|Hummus|174289
+legume|tofufried|Tofu, fried|172451
+nut|peanutbutter|Peanut butter (smooth)|172470
+veg|potatoboiled|Potato, boiled|170438
+veg|potatobaked|Potato, baked|170093
+veg|sweetpotatobaked|Sweet potato, baked|168483
+veg|broccolicooked|Broccoli, cooked|169967
+veg|spinachcooked|Spinach, cooked|168463
+veg|cauliflowercooked|Cauliflower, cooked|170397
+veg|carrotscooked|Carrots, cooked|170394
+veg|greenbeanscooked|Green beans, cooked|169141
+veg|peascooked|Green peas, cooked|170420
+veg|cornsweetcooked|Sweet corn, cooked|169999
+veg|eggplantcooked|Aubergine, cooked|169229
+veg|okracooked|Okra, cooked|169261
+mushroom|mushroomscooked|Mushrooms, cooked|169252
+egg|eggboiled|Egg, hard-boiled|173424
+egg|eggfried|Egg, fried|173423
+egg|eggscrambled|Egg, scrambled|172187

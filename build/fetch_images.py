@@ -73,6 +73,28 @@ QUERY_OVERRIDES = {
     'turmericroot': 'Turmeric', 'cinnamonspice': 'Cinnamon',
     'blackpepper': 'Black pepper', 'coriander seed': 'Coriander',
     'mustardseed': 'Mustard seed', 'poppyseed': 'Poppy seed',
+    # Cooked staples added in the vegetarian fork.
+    'ricewhitecooked': 'Cooked rice', 'ricebrowncooked': 'Brown rice',
+    'pastacooked': 'Spaghetti', 'pastawholewheatcooked': 'Whole wheat pasta',
+    'oatmealcooked': 'Porridge', 'quinoacooked': 'Quinoa',
+    'couscouscooked': 'Couscous', 'bulgurcooked': 'Bulgur',
+    'milletcooked': 'Pearl millet', 'barleycooked': 'Pearl barley',
+    'ricenoodlescooked': 'Rice noodles', 'sobacooked': 'Soba',
+    'breadwholewheat': 'Whole wheat bread', 'breadwhite': 'White bread',
+    'pita': 'Pita', 'naan': 'Naan', 'chapati': 'Chapati',
+    'tortillaflour': 'Flour tortilla', 'tortillacorn': 'Corn tortilla',
+    'lentilscooked': 'Dal', 'chickpeascooked': 'Chana masala',
+    'kidneybeanscooked': 'Rajma', 'blackbeanscooked': 'Black beans',
+    'pintobeanscooked': 'Pinto bean', 'mungbeanscooked': 'Mung bean',
+    'toordalcooked': 'Pigeon pea', 'hummus': 'Hummus', 'tofufried': 'Fried tofu',
+    'peanutbutter': 'Peanut butter', 'potatoboiled': 'Boiled potato',
+    'potatobaked': 'Baked potato', 'sweetpotatobaked': 'Sweet potato',
+    'broccolicooked': 'Broccoli', 'spinachcooked': 'Spinach',
+    'cauliflowercooked': 'Cauliflower', 'carrotscooked': 'Carrot',
+    'greenbeanscooked': 'Green bean', 'peascooked': 'Pea',
+    'cornsweetcooked': 'Corn on the cob', 'eggplantcooked': 'Eggplant',
+    'okracooked': 'Okra', 'mushroomscooked': 'Agaricus bisporus',
+    'eggboiled': 'Boiled egg', 'eggfried': 'Fried egg', 'eggscrambled': 'Scrambled eggs',
 }
 
 

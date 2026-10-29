@@ -1,20 +1,28 @@
 // Display and dietary preferences. Everything is stored in localStorage on this
 // device; nothing is transmitted.
+//
+// The store is prefixed `veg.` rather than `fim.`: GitHub Pages serves this
+// fork from the same origin as Food is Medicine, and the two must not
+// overwrite each other's diet settings.
 
 (function () {
   'use strict';
 
-  var KEY = 'fim.prefs.v1';
+  var KEY = 'veg.prefs.v1';
 
   var DEFAULTS = {
     theme: 'system',        // 'system' | 'light' | 'dark'
     contrast: false,        // high-contrast palette
     textSize: 'normal',     // 'normal' | 'large' | 'larger'
     reduceMotion: false,
-    diet: 'none',           // 'none' | 'vegetarian' | 'vegan' | 'pescatarian'
+    diet: 'vegetarian',     // 'vegetarian' (lacto-ovo) | 'vegan'
     allergens: [],          // keys matching the tags in data/foods.js
     customExclude: ''       // free text, comma separated
   };
+
+  // Every food in data/foods.js is already vegetarian; the only choice left is
+  // whether to go further and drop dairy, eggs and honey too.
+  var DIETS = ['vegetarian', 'vegan'];
 
   var listeners = [];
   var prefs = load();
@@ -29,6 +37,7 @@
         Object.keys(DEFAULTS).forEach(function (k) {
           if (saved[k] !== undefined) out[k] = saved[k];
         });
+        if (DIETS.indexOf(out.diet) < 0) out.diet = DEFAULTS.diet;
       }
     } catch (e) { /* private mode or corrupt value: fall back to defaults */ }
     return out;
@@ -66,12 +75,6 @@
     root.toggleAttribute('data-reduce-motion', !!prefs.reduceMotion);
   }
 
-  // ---- dietary filtering -------------------------------------------------
-
-  var DIET_REQUIRES = {
-    vegetarian: 'vegetarian',
-    vegan: 'vegan'
-  };
 
   function customTerms() {
     return prefs.customExclude
@@ -86,16 +89,8 @@
    */
   function excludedReason(food) {
     var diet = prefs.diet;
-    if (diet === 'pescatarian') {
-      // Fish and shellfish are fine; other animal flesh is not.
-      var flesh = ['meat', 'poultry', 'offal'];
-      if (flesh.indexOf(food.group) >= 0 || (food.group === 'fat' && food.diet.length === 0)) {
-        return { reason: 'diet', detail: diet };
-      }
-    } else if (DIET_REQUIRES[diet]) {
-      if ((food.diet || []).indexOf(DIET_REQUIRES[diet]) < 0) {
-        return { reason: 'diet', detail: diet };
-      }
+    if ((food.diet || []).indexOf(diet) < 0) {
+      return { reason: 'diet', detail: diet };
     }
 
     for (var i = 0; i < prefs.allergens.length; i++) {
@@ -115,7 +110,7 @@
   }
 
   function isFiltering() {
-    return prefs.diet !== 'none' || prefs.allergens.length > 0 || customTerms().length > 0;
+    return prefs.diet !== 'vegetarian' || prefs.allergens.length > 0 || customTerms().length > 0;
   }
 
   apply();
@@ -125,8 +120,7 @@
     onChange: function (fn) { listeners.push(fn); },
     excludedReason: excludedReason,
     isFiltering: isFiltering,
-    ALLERGENS: ['milk', 'lactose', 'egg', 'fish', 'crustacean', 'mollusc',
-                'treenut', 'peanut', 'soy', 'gluten', 'sesame'],
-    DIETS: ['none', 'vegetarian', 'vegan', 'pescatarian']
+    ALLERGENS: ['milk', 'lactose', 'egg', 'treenut', 'peanut', 'soy', 'gluten', 'sesame'],
+    DIETS: DIETS
   };
 })();

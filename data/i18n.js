@@ -29,7 +29,7 @@
   var STRINGS = {
     en: {
       _name: 'English', _dir: 'ltr',
-      brand: 'Food <em>is</em> Medicine',
+      brand: 'Food <em>is</em> Medicine <span class="brand-veg">Veg</span>',
       nav_foods: 'Foods', nav_medicinal: 'Medicinal', nav_you: 'Your profile',
       nav_weight: 'Weight', nav_settings: 'Settings', nav_sources: 'Sources',
       nav_recipes: 'Recipes',
@@ -52,7 +52,7 @@
       checking_models: 'Checking which models your key can use…',
 
       foods_title: 'What is actually in your food',
-      foods_lede_count: '{n} foods — fruits, vegetables, mushrooms, nuts, legumes, grains, herbs, dairy, meat, fish and eggs — with their full nutrient profile per 100 g, taken directly from the USDA’s reference database.',
+      foods_lede_count: '{n} vegetarian foods — fruits, vegetables, mushrooms, nuts, legumes, grains, herbs, dairy and eggs — with their full nutrient profile per 100 g, taken directly from the USDA’s reference database.',
       foods_lede_personal: 'Percentages are measured against <a href="#/you">your own daily targets</a>.',
       foods_lede_generic: '<a href="#/you">Add your height, weight, sex and age</a> and every percentage on the site switches from a generic food label to your own requirement.',
       search_foods: 'Search foods…',
@@ -68,7 +68,7 @@
       g_mushroom: 'Mushrooms', g_nut: 'Nuts & seeds', g_legume: 'Legumes',
       g_grain: 'Grains', g_herb: 'Herbs & spices', g_dairy: 'Dairy',
       g_meat: 'Meat', g_poultry: 'Poultry', g_offal: 'Offal',
-      g_fish: 'Fish', g_shellfish: 'Shellfish', g_egg: 'Eggs & roe',
+      g_fish: 'Fish', g_shellfish: 'Shellfish', g_egg: 'Eggs',
       g_fat: 'Fats & oils', g_bee: 'Bee products',
 
       all_foods: 'All foods', per100: 'per 100 g', show: 'Show:',
@@ -122,8 +122,9 @@
       reduce_motion_hint: 'Removes transitions and hover movement.',
       dietary_title: 'Dietary restrictions',
       dietary_hint: 'Foods you exclude are hidden from lists and flagged if you open them directly.',
-      diet_none: 'No restrictions', diet_vegetarian: 'Vegetarian',
-      diet_vegan: 'Vegan', diet_pescatarian: 'Pescatarian',
+      diet_vegetarian: 'Vegetarian (with dairy, eggs and honey)',
+      diet_vegan: 'Vegan',
+      no_eggs_hint: 'Vegetarian here means lacto-ovo. If you do not eat eggs, tick Egg under allergies below and they disappear too.',
       allergens_title: 'Allergies & intolerances',
       a_milk: 'Milk', a_lactose: 'Lactose', a_egg: 'Egg', a_fish: 'Fish',
       a_crustacean: 'Crustacean shellfish', a_mollusc: 'Molluscs',
@@ -161,7 +162,7 @@
 
     es: {
       _name: 'Español', _dir: 'ltr',
-      brand: 'La comida <em>es</em> medicina',
+      brand: 'La comida <em>es</em> medicina <span class="brand-veg">Veg</span>',
       nav_foods: 'Alimentos', nav_medicinal: 'Medicinal', nav_you: 'Tu perfil',
       nav_weight: 'Peso', nav_settings: 'Ajustes', nav_sources: 'Fuentes',
       nav_recipes: 'Recetas',
@@ -184,7 +185,7 @@
       checking_models: 'Comprobando qué modelos puede usar tu clave…',
 
       foods_title: 'Qué contienen realmente tus alimentos',
-      foods_lede_count: '{n} alimentos — frutas, verduras, setas, frutos secos, legumbres, cereales, hierbas, lácteos, carne, pescado y huevos — con su perfil nutricional completo por 100 g, tomado directamente de la base de datos de referencia del USDA.',
+      foods_lede_count: '{n} alimentos vegetarianos — frutas, verduras, setas, frutos secos, legumbres, cereales, hierbas, lácteos y huevos — con su perfil nutricional completo por 100 g, tomado directamente de la base de datos de referencia del USDA.',
       foods_lede_personal: 'Los porcentajes se calculan sobre <a href="#/you">tus propios objetivos diarios</a>.',
       foods_lede_generic: '<a href="#/you">Introduce tu estatura, peso, sexo y edad</a> y todos los porcentajes del sitio pasarán de una etiqueta genérica a tu necesidad real.',
       search_foods: 'Buscar alimentos…',
@@ -200,7 +201,7 @@
       g_mushroom: 'Setas', g_nut: 'Frutos secos y semillas', g_legume: 'Legumbres',
       g_grain: 'Cereales', g_herb: 'Hierbas y especias', g_dairy: 'Lácteos',
       g_meat: 'Carne', g_poultry: 'Aves', g_offal: 'Casquería',
-      g_fish: 'Pescado', g_shellfish: 'Marisco', g_egg: 'Huevos y huevas',
+      g_fish: 'Pescado', g_shellfish: 'Marisco', g_egg: 'Huevos',
       g_fat: 'Grasas y aceites', g_bee: 'Productos apícolas',
 
       all_foods: 'Todos los alimentos', per100: 'por 100 g', show: 'Mostrar:',
@@ -254,8 +255,8 @@
       reduce_motion_hint: 'Elimina las transiciones y el movimiento al pasar el cursor.',
       dietary_title: 'Restricciones alimentarias',
       dietary_hint: 'Los alimentos que excluyas se ocultan de las listas y se señalan si los abres directamente.',
-      diet_none: 'Sin restricciones', diet_vegetarian: 'Vegetariano',
-      diet_vegan: 'Vegano', diet_pescatarian: 'Pescetariano',
+      diet_vegetarian: 'Vegetariano (con lácteos, huevos y miel)',
+      diet_vegan: 'Vegano',
       allergens_title: 'Alergias e intolerancias',
       a_milk: 'Leche', a_lactose: 'Lactosa', a_egg: 'Huevo', a_fish: 'Pescado',
       a_crustacean: 'Crustáceos', a_mollusc: 'Moluscos',
@@ -293,7 +294,7 @@
 
     hi: {
       _name: 'हिन्दी', _dir: 'ltr',
-      brand: 'अन्नं <em>औषधम्</em>',
+      brand: 'अन्नं <em>औषधम्</em> <span class="brand-veg">शाकाहारी</span>',
       nav_foods: 'खाद्य पदार्थ', nav_medicinal: 'औषधीय गुण', nav_you: 'आपकी जानकारी',
       nav_weight: 'वज़न', nav_settings: 'सेटिंग्स', nav_sources: 'स्रोत',
       nav_recipes: 'व्यंजन',
@@ -316,7 +317,7 @@
       checking_models: 'देख रहे हैं कि आपकी कुंजी कौन-से मॉडल चला सकती है…',
 
       foods_title: 'आपके भोजन में वास्तव में क्या है',
-      foods_lede_count: '{n} खाद्य पदार्थ — फल, सब्ज़ियाँ, मशरूम, मेवे, दालें, अनाज, जड़ी-बूटियाँ, दुग्ध उत्पाद, माँस, मछली और अंडे — प्रति 100 ग्राम पूरा पोषण विवरण, सीधे USDA के संदर्भ डेटाबेस से।',
+      foods_lede_count: '{n} शाकाहारी खाद्य पदार्थ — फल, सब्ज़ियाँ, मशरूम, मेवे, दालें, अनाज, जड़ी-बूटियाँ, दुग्ध उत्पाद और अंडे — प्रति 100 ग्राम पूरा पोषण विवरण, सीधे USDA के संदर्भ डेटाबेस से।',
       foods_lede_personal: 'प्रतिशत <a href="#/you">आपके अपने दैनिक लक्ष्यों</a> के अनुसार दिखाए गए हैं।',
       foods_lede_generic: '<a href="#/you">अपनी लंबाई, वज़न, लिंग और उम्र भरें</a> — फिर हर प्रतिशत सामान्य लेबल के बजाय आपकी अपनी ज़रूरत के हिसाब से दिखेगा।',
       search_foods: 'खाद्य पदार्थ खोजें…',
@@ -386,8 +387,8 @@
       reduce_motion_hint: 'ट्रांज़िशन और हिलने-डुलने के प्रभाव हटा देता है।',
       dietary_title: 'आहार संबंधी प्रतिबंध',
       dietary_hint: 'जो आप छोड़ते हैं वे सूची से छिप जाते हैं, और सीधे खोलने पर चेतावनी दिखती है।',
-      diet_none: 'कोई प्रतिबंध नहीं', diet_vegetarian: 'शाकाहारी',
-      diet_vegan: 'शुद्ध शाकाहारी (वीगन)', diet_pescatarian: 'मछली सहित शाकाहारी',
+      diet_vegetarian: 'शाकाहारी (दूध, अंडे और शहद सहित)',
+      diet_vegan: 'शुद्ध शाकाहारी (वीगन)',
       allergens_title: 'एलर्जी और असहिष्णुता',
       a_milk: 'दूध', a_lactose: 'लैक्टोज़', a_egg: 'अंडा', a_fish: 'मछली',
       a_crustacean: 'झींगा-केकड़ा', a_mollusc: 'शंख-सीप',
@@ -425,7 +426,7 @@
 
     kn: {
       _name: 'ಕನ್ನಡ', _dir: 'ltr',
-      brand: 'ಆಹಾರವೇ <em>ಔಷಧ</em>',
+      brand: 'ಆಹಾರವೇ <em>ಔಷಧ</em> <span class="brand-veg">ಸಸ್ಯಾಹಾರಿ</span>',
       nav_foods: 'ಆಹಾರಗಳು', nav_medicinal: 'ಔಷಧೀಯ ಗುಣ', nav_you: 'ನಿಮ್ಮ ವಿವರ',
       nav_weight: 'ತೂಕ', nav_settings: 'ಸಂಯೋಜನೆ', nav_sources: 'ಆಕರಗಳು',
       nav_recipes: 'ಪಾಕವಿಧಾನ',
@@ -448,7 +449,7 @@
       checking_models: 'ನಿಮ್ಮ ಕೀ ಯಾವ ಮಾದರಿಗಳನ್ನು ಬಳಸಬಹುದೆಂದು ಪರಿಶೀಲಿಸಲಾಗುತ್ತಿದೆ…',
 
       foods_title: 'ನಿಮ್ಮ ಆಹಾರದಲ್ಲಿ ನಿಜಕ್ಕೂ ಏನಿದೆ',
-      foods_lede_count: '{n} ಆಹಾರಗಳು — ಹಣ್ಣುಗಳು, ತರಕಾರಿಗಳು, ಅಣಬೆಗಳು, ಬೀಜಗಳು, ಬೇಳೆಕಾಳುಗಳು, ಧಾನ್ಯಗಳು, ಗಿಡಮೂಲಿಕೆಗಳು, ಹಾಲಿನ ಉತ್ಪನ್ನಗಳು, ಮಾಂಸ, ಮೀನು ಮತ್ತು ಮೊಟ್ಟೆ — 100 ಗ್ರಾಂಗೆ ಪೂರ್ಣ ಪೋಷಕಾಂಶ ವಿವರ, ನೇರವಾಗಿ USDA ಆಕರ ದತ್ತಸಂಚಯದಿಂದ.',
+      foods_lede_count: '{n} ಸಸ್ಯಾಹಾರಿ ಆಹಾರಗಳು — ಹಣ್ಣುಗಳು, ತರಕಾರಿಗಳು, ಅಣಬೆಗಳು, ಬೀಜಗಳು, ಬೇಳೆಕಾಳುಗಳು, ಧಾನ್ಯಗಳು, ಗಿಡಮೂಲಿಕೆಗಳು, ಹಾಲಿನ ಉತ್ಪನ್ನಗಳು ಮತ್ತು ಮೊಟ್ಟೆ — 100 ಗ್ರಾಂಗೆ ಪೂರ್ಣ ಪೋಷಕಾಂಶ ವಿವರ, ನೇರವಾಗಿ USDA ಆಕರ ದತ್ತಸಂಚಯದಿಂದ.',
       foods_lede_personal: 'ಶೇಕಡಾವಾರು <a href="#/you">ನಿಮ್ಮದೇ ದೈನಂದಿನ ಗುರಿಗಳ</a> ಆಧಾರದ ಮೇಲೆ ತೋರಿಸಲಾಗಿದೆ.',
       foods_lede_generic: '<a href="#/you">ನಿಮ್ಮ ಎತ್ತರ, ತೂಕ, ಲಿಂಗ ಮತ್ತು ವಯಸ್ಸು ಸೇರಿಸಿ</a> — ಆಗ ಪ್ರತಿ ಶೇಕಡಾವಾರೂ ಸಾಮಾನ್ಯ ಲೇಬಲ್ ಬದಲು ನಿಮ್ಮ ನಿಜವಾದ ಅಗತ್ಯಕ್ಕೆ ತಕ್ಕಂತೆ ಬದಲಾಗುತ್ತದೆ.',
       search_foods: 'ಆಹಾರ ಹುಡುಕಿ…',
@@ -518,8 +519,8 @@
       reduce_motion_hint: 'ಪರಿವರ್ತನೆ ಮತ್ತು ಚಲನೆಯ ಪರಿಣಾಮಗಳನ್ನು ತೆಗೆದುಹಾಕುತ್ತದೆ.',
       dietary_title: 'ಆಹಾರ ನಿರ್ಬಂಧಗಳು',
       dietary_hint: 'ನೀವು ಹೊರಗಿಟ್ಟ ಆಹಾರಗಳು ಪಟ್ಟಿಯಿಂದ ಮರೆಯಾಗುತ್ತವೆ; ನೇರವಾಗಿ ತೆರೆದರೆ ಎಚ್ಚರಿಕೆ ಕಾಣಿಸುತ್ತದೆ.',
-      diet_none: 'ನಿರ್ಬಂಧವಿಲ್ಲ', diet_vegetarian: 'ಸಸ್ಯಾಹಾರಿ',
-      diet_vegan: 'ಸಂಪೂರ್ಣ ಸಸ್ಯಾಹಾರಿ (ವೀಗನ್)', diet_pescatarian: 'ಮೀನು ಸೇವಿಸುವ ಸಸ್ಯಾಹಾರಿ',
+      diet_vegetarian: 'ಸಸ್ಯಾಹಾರಿ (ಹಾಲು, ಮೊಟ್ಟೆ, ಜೇನು ಸಹಿತ)',
+      diet_vegan: 'ಸಂಪೂರ್ಣ ಸಸ್ಯಾಹಾರಿ (ವೀಗನ್)',
       allergens_title: 'ಅಲರ್ಜಿ ಮತ್ತು ಅಸಹಿಷ್ಣುತೆ',
       a_milk: 'ಹಾಲು', a_lactose: 'ಲ್ಯಾಕ್ಟೋಸ್', a_egg: 'ಮೊಟ್ಟೆ', a_fish: 'ಮೀನು',
       a_crustacean: 'ಸಿಗಡಿ-ಏಡಿ', a_mollusc: 'ಚಿಪ್ಪುಜೀವಿ',
