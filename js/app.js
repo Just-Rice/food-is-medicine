@@ -455,6 +455,13 @@
           '<div class="l">' + esc(nutrientLabel(k)) + '</div></div>';
       }).join('') + '</div>' +
 
+      '<div class="food-log-add" id="foodLogAdd">' +
+      '<input type="number" min="1" max="5000" step="1" id="foodLogGrams" value="' +
+      esc(Math.round(choices[chosen].grams)) + '" aria-label="' + esc(t('amount_g')) + '"> g ' +
+      mealSelect('foodLogMeal', Tracker.guessMeal()) +
+      '<button class="btn" type="button" id="foodLogBtn">' + esc(t('add_to_today')) + '</button>' +
+      '<span class="hint" id="foodLogDone" aria-live="polite"></span></div>' +
+
       '<p class="result-count">' + (ref.personal ? t('pct_personal') : t('pct_generic')) + '</p>' +
 
       '<div class="table-scroll"><table class="nutrients">' +
@@ -475,6 +482,16 @@
         viewFood(slug);
         window.scrollTo(0, 0);
       });
+    });
+
+    document.getElementById('foodLogBtn').addEventListener('click', function () {
+      var g = Number(document.getElementById('foodLogGrams').value);
+      if (!(g > 0)) return;
+      var meal = document.getElementById('foodLogMeal').value;
+      Tracker.add(Tracker.today(), { food: food, grams: g, meal: meal });
+      document.getElementById('foodLogDone').innerHTML =
+        esc(t('added_to_log', { grams: fmt(g), meal: mealLabel(meal).toLowerCase() })) +
+        ' <a href="#/log">' + esc(t('nav_log')) + ' &rarr;</a>';
     });
   }
 
@@ -1566,7 +1583,7 @@
     return '<div class="card pad recipe">' + renderMarkdown(recipeState.result) + '</div>' +
       '<p class="hint">Written by Gemini from your ingredient list. Unlike the rest of this ' +
       'site it is not drawn from a checked source, so treat cooking times and food-safety ' +
-      'steps — especially for meat, fish and eggs — as a starting point rather than an ' +
+      'steps — especially for eggs — as a starting point rather than an ' +
       'authority. ' + englishMark() + '</p>';
   }
 
@@ -1746,6 +1763,709 @@
         });
       });
     }
+  }
+
+  // ======================================================================
+  // View: food log
+  // ======================================================================
+  var Tracker = window.Tracker;
+  var FOOD_BY_SLUG = {};
+  FOODS.forEach(function (f) { FOOD_BY_SLUG[f.slug] = f; });
+
+  var logState = { date: null, pick: null, pickGrams: null, meal: null, photo: null, hint: '' };
+
+  function mealLabel(m) { return t('meal_' + m); }
+
+  function dayLabel(key) {
+    var today = Tracker.today();
+    if (key === today) return t('today');
+    if (key === Tracker.shift(today, -1)) return t('yesterday');
+    var p = key.split('-').map(Number);
+    try {
+      return new Date(p[0], p[1] - 1, p[2], 12).toLocaleDateString(I18N.get(), {
+        weekday: 'long', day: 'numeric', month: 'long'
+      });
+    } catch (e) { return key; }
+  }
+
+  // The daily energy figure, or null where the site deliberately offers none.
+  // It is maintenance energy (Mifflin-St Jeor times activity), not a diet
+  // target: the weight page is where a deficit is worked out, with its safety
+  // checks, and under 18 there is no calorie number at all.
+  function logEnergyTarget() {
+    var p = Profile.get();
+    if (!p || !DRI.energyApplies(p.age)) return null;
+    return Profile.energy().tdee;
+  }
+
+  function kcalText(lo, hi) {
+    lo = Math.round(lo); hi = Math.round(hi);
+    if (Math.abs(hi - lo) < 5) return String(Math.round((lo + hi) / 2));
+    return lo + '–' + hi;
+  }
+
+  // Foods a photo item might be. The model's own name for it is tried whole
+  // first, then its short search words; cooked foods are preferred when the
+  // plate is cooked, because the raw and dry records here are two to three
+  // times as energy-dense as what is actually on a plate.
+  function photoMatches(item) {
+    var queries = [];
+    function addQ(q, bonus) {
+      q = q.trim().toLowerCase();
+      if (q.length >= 3 && !queries.some(function (x) { return x.q === q; })) {
+        queries.push({ q: q, bonus: bonus });
+      }
+    }
+    addQ(item.name, 10);
+    addQ(item.name.split(',')[0], 5);
+    addQ(item.search || '', 0);
+    (item.search || '').split(/[\s,]+/).forEach(function (w) { addQ(w, -15); });
+
+    var COOKED = /\b(cooked|boiled|baked|fried|scrambled|porridge)\b/;
+    return FOODS.map(function (f) {
+      var hay = haystack(f), best = -Infinity;
+      queries.forEach(function (x) {
+        if (hay.indexOf(x.q) >= 0) best = Math.max(best, relevance(f, x.q) + x.bonus);
+      });
+      if (best === -Infinity) return null;
+      var isCooked = (f.tags || []).indexOf('cooked') >= 0 || COOKED.test(f.name.toLowerCase());
+      if (item.cooked && isCooked) best += 15;
+      if (!item.cooked && isCooked) best -= 10;
+      // Plain names beat long USDA-style descriptions at equal relevance.
+      best -= Math.min(10, f.name.length / 8);
+      return { slug: f.slug, score: best };
+    }).filter(Boolean).sort(function (a, b) { return b.score - a.score; }).slice(0, 6);
+  }
+
+  // Search order for the log. The plain relevance order suits the reference
+  // list, where "rice" should open on rice; in a log, someone typing "rice" has
+  // just eaten some, so cooked and ready-to-eat foods come before rice flour,
+  // rice bran oil and the dry grain.
+  var NOT_EATEN_AS_IS = /\b(flour|oil|meal|bran|powder|frozen|dry|dried|defatted|lecithin|seasoning|mix)\b/;
+  function logRank(f, q) {
+    var r = relevance(f, q);
+    if ((f.tags || []).indexOf('cooked') >= 0 || (f.tags || []).indexOf('bread') >= 0) r += 12;
+    if (NOT_EATEN_AS_IS.test(f.name.toLowerCase())) r -= 15;
+    return r;
+  }
+
+  function preparePhotoItems(items) {
+    return items.map(function (it) {
+      var m = photoMatches(it);
+      return {
+        name: it.name, cooked: it.cooked, vegetarian: it.vegetarian,
+        confidence: it.confidence, kcalPer100: it.kcalPer100,
+        grams: it.grams, gramsLow: it.gramsLow, gramsHigh: it.gramsHigh,
+        candidates: m.map(function (x) { return x.slug; }),
+        // Nothing on this site is meat or fish, so for a dish the model thinks
+        // contains some, any match is wrong -- "chicken tikka" would otherwise
+        // land on "Chicken egg". The candidates stay in the menu regardless.
+        slug: m.length && m[0].score >= 40 && it.vegetarian ? m[0].slug : null,
+        include: true
+      };
+    });
+  }
+
+  function photoItemPer100(it) {
+    if (it.slug && FOOD_BY_SLUG[it.slug]) return FOOD_BY_SLUG[it.slug].nutrients.kcal || 0;
+    return it.kcalPer100 || 0;
+  }
+
+  // ---- the page ----------------------------------------------------------
+  function viewLog() {
+    if (!logState.date) logState.date = Tracker.today();
+    var date = logState.date;
+    var entries = Tracker.day(date);
+    var totals = Tracker.totals(date);
+    var target = logEnergyTarget();
+    var ref = referenceSet();
+    var prof = Profile.get();
+
+    main.innerHTML =
+      '<div class="page-head"><h1>' + esc(t('log_title')) + '</h1>' +
+      '<p>' + esc(t('log_lede')) + '</p></div>' +
+
+      '<div class="log-date">' +
+      '<button class="btn ghost" type="button" id="dayPrev" aria-label="' +
+      esc(t('previous_day')) + '">&larr;</button>' +
+      '<div class="log-date-mid"><strong>' + esc(dayLabel(date)) + '</strong>' +
+      '<input type="date" id="dayPick" value="' + esc(date) + '" max="' +
+      esc(Tracker.today()) + '" aria-label="' + esc(t('choose_day')) + '"></div>' +
+      '<button class="btn ghost" type="button" id="dayNext" aria-label="' +
+      esc(t('next_day')) + '"' + (date >= Tracker.today() ? ' disabled' : '') +
+      '>&rarr;</button></div>' +
+
+      logSummary(totals, target, ref, prof) +
+
+      '<h2 class="section">' + esc(t('add_food')) + '</h2>' +
+      '<div class="log-add">' +
+      photoCard() +
+      '<div class="card pad">' +
+      '<strong>' + esc(t('search_add')) + '</strong>' +
+      '<div class="ingredient-add" style="margin-top:10px">' +
+      '<input class="search" id="logSearch" type="search" placeholder="' +
+      esc(t('search_foods')) + '" autocomplete="off" aria-label="' + esc(t('search_foods')) + '">' +
+      '<div class="suggest" id="logSuggest" hidden></div></div>' +
+      pickPanel() +
+      recentChips(date) +
+      manualForm() +
+      '</div></div>' +
+
+      '<h2 class="section">' + esc(t('eaten_on', {
+        day: date >= Tracker.shift(Tracker.today(), -1) ? dayLabel(date).toLowerCase() : dayLabel(date)
+      })) + '</h2>' +
+      (entries.length
+        ? Tracker.MEALS.map(function (meal) { return mealBlock(meal, entries, date); }).join('')
+        : '<p class="empty" style="padding:24px 0">' + esc(t('log_empty')) + '</p>') +
+
+      '<h2 class="section">' + esc(t('last_7_days')) + '</h2>' +
+      '<div class="card pad">' + weekChart(date, target) + '</div>' +
+
+      supportNote();
+
+    bindLogEvents();
+  }
+
+  function logSummary(totals, target, ref, prof) {
+    var hasRange = Math.round(totals.kcalHigh) - Math.round(totals.kcalLow) >= 5;
+    var macro = function (k) {
+      var v = totals[k] || 0;
+      var tgt = k === 'kcal' ? null : ref.personal && ref.values[k];
+      return '<div class="macro"><div class="v">' +
+        (k === 'kcal' && hasRange ? esc(kcalText(totals.kcalLow, totals.kcalHigh)) : fmt(v)) +
+        '<span class="u"> ' + (k === 'kcal' ? 'kcal' : 'g') + '</span></div>' +
+        '<div class="l">' + esc(nutrientLabel(k)) +
+        (tgt ? ' · ' + Math.round(v / tgt * 100) + '%' : '') + '</div></div>';
+    };
+
+    var energy = '';
+    if (target) {
+      var pct = totals.kcal / target * 100;
+      var left = target - totals.kcal;
+      energy = '<div class="log-energy">' +
+        '<div class="bar log-bar"><span style="width:' + Math.min(100, Math.round(pct)) +
+        '%"></span></div>' +
+        '<p class="hint">' + esc(t('kcal_of_target', {
+          n: Math.round(totals.kcal), target: target
+        })) + ' ' + esc(left >= 0
+          ? t('kcal_left', { n: Math.round(left) })
+          : t('kcal_over', { n: Math.round(-left) })) +
+        ' <a href="#/you">' + esc(t('how_estimated')) + '</a></p></div>';
+    } else if (prof && !DRI.energyApplies(prof.age)) {
+      energy = '<p class="hint">' + esc(t('log_under18')) +
+        ' <a href="#/weight">' + esc(t('growing_title')) + '</a></p>';
+    } else if (!prof) {
+      energy = '<p class="hint">' + esc(t('log_no_profile')) +
+        ' <a href="#/you">' + esc(t('profile_title')) + ' &rarr;</a></p>';
+    }
+
+    return '<div class="card pad log-summary">' +
+      '<div class="macro-row">' + ['kcal', 'protein', 'carbs', 'fat', 'fiber'].map(macro).join('') +
+      '</div>' + energy +
+      (hasRange ? '<p class="hint">' + esc(t('range_note')) + '</p>' : '') +
+      '</div>';
+  }
+
+  function mealBlock(meal, entries, date) {
+    var list = entries.filter(function (e) { return e.meal === meal; });
+    if (!list.length) return '';
+    var lo = 0, hi = 0;
+    list.forEach(function (e) { var r = Tracker.kcalRange(e); lo += r[0]; hi += r[1]; });
+    return '<div class="card pad log-meal">' +
+      '<div class="log-meal-head"><h3>' + esc(mealLabel(meal)) + '</h3>' +
+      '<span class="dim">' + esc(kcalText(lo, hi)) + ' kcal</span></div>' +
+      '<ul class="log-list">' + list.map(function (e) {
+        var n = Tracker.nutrientsOf(e);
+        var r = Tracker.kcalRange(e);
+        var food = e.slug && FOOD_BY_SLUG[e.slug];
+        return '<li>' +
+          '<span class="l-name">' +
+          (food ? '<a href="#/food/' + esc(e.slug) + '">' + esc(e.name) + '</a>' : esc(e.name)) +
+          (e.source === 'photo' ? ' <span class="tag photo-tag">' + esc(t('from_photo')) + '</span>' : '') +
+          (e.source === 'manual' ? ' <span class="tag">' + esc(t('typed_in')) + '</span>' : '') +
+          (e.label && e.label.toLowerCase() !== e.name.toLowerCase()
+            ? '<span class="l-sub">' + esc(t('photo_saw', { name: e.label })) + '</span>' : '') +
+          // An unmatched photo item has only the model's energy guess; showing
+          // "0 g protein" for it would be a claim, not a blank.
+          (e.per100 && !e.slug
+            ? '<span class="l-sub">' + esc(t('energy_only')) + '</span>'
+            : '<span class="l-sub">' + fmt(n.protein) + ' g ' + esc(t('n_protein').toLowerCase()) +
+              ' · ' + fmt(n.carbs) + ' g ' + esc(t('n_carbs').toLowerCase()) +
+              ' · ' + fmt(n.fat) + ' g ' + esc(t('n_fat').toLowerCase()) + '</span>') +
+          '</span>' +
+          (e.fixed
+            ? '<span class="l-amt"></span>'
+            : '<span class="l-amt"><input type="number" min="1" max="5000" step="1" ' +
+              'class="amt" data-entry="' + esc(e.id) + '" value="' + esc(Math.round(e.grams)) +
+              '" aria-label="' + esc(t('amount_g')) + '"> g</span>') +
+          '<span class="l-kcal">' + esc(kcalText(r[0], r[1])) + ' kcal</span>' +
+          '<button class="chip" type="button" data-del="' + esc(e.id) + '" aria-label="' +
+          esc(t('remove') + ' ' + e.name) + '">&times;</button></li>';
+      }).join('') + '</ul></div>';
+  }
+
+  function mealSelect(id, current) {
+    return '<select id="' + id + '" aria-label="' + esc(t('meal')) + '">' +
+      Tracker.MEALS.map(function (m) {
+        return '<option value="' + m + '"' + (m === current ? ' selected' : '') + '>' +
+          esc(mealLabel(m)) + '</option>';
+      }).join('') + '</select>';
+  }
+
+  function currentMeal() {
+    return logState.meal || Tracker.guessMeal();
+  }
+
+  // The panel that opens once a food is picked from search: how much, and
+  // which meal. Portion and serving sizes are offered as one-tap choices
+  // because almost nobody knows their roti weighs 43 g.
+  function pickPanel() {
+    var food = logState.pick && FOOD_BY_SLUG[logState.pick];
+    if (!food) return '';
+    var opts = [];
+    if (food.portion) opts.push({ label: '1 ' + food.portion.label, grams: food.portion.grams });
+    if (food.serving && (!food.portion ||
+        Math.abs(food.serving.grams - food.portion.grams) > 1)) {
+      opts.push({ label: '1 ' + food.serving.label, grams: food.serving.grams });
+    }
+    opts.push({ label: '100 g', grams: 100 });
+    var grams = logState.pickGrams || opts[0].grams;
+    var excluded = Prefs.excludedReason(food);
+
+    return '<div class="pick-panel">' +
+      '<div class="pick-head"><strong>' + esc(food.name) + '</strong> ' +
+      '<span class="dim">' + fmt(food.nutrients.kcal) + ' kcal / 100 g</span></div>' +
+      (excluded
+        ? '<p class="hint warn-text">' + esc(t('excluded_warning')) + '</p>'
+        : '') +
+      '<div class="chips" style="margin:10px 0">' + opts.map(function (o) {
+        return '<button class="chip" type="button" data-pick-grams="' + o.grams + '"' +
+          ' aria-pressed="' + (Math.abs(o.grams - grams) < 0.5 ? 'true' : 'false') + '">' +
+          esc(o.label) + (o.label === '100 g' ? '' : ' (' + fmt(o.grams) + ' g)') + '</button>';
+      }).join('') + '</div>' +
+      '<div class="field-row">' +
+      '<div class="field"><label for="pickGrams">' + esc(t('amount_g')) + '</label>' +
+      '<input id="pickGrams" type="number" min="1" max="5000" step="1" value="' +
+      esc(Math.round(grams)) + '"></div>' +
+      '<div class="field"><label for="pickMeal">' + esc(t('meal')) + '</label>' +
+      mealSelect('pickMeal', currentMeal()) + '</div>' +
+      '<div class="field"><label>&nbsp;</label><span class="pick-kcal" id="pickKcal">' +
+      Math.round(food.nutrients.kcal * grams / 100) + ' kcal</span></div></div>' +
+      '<div class="btn-row"><button class="btn" type="button" id="pickAdd">' +
+      esc(t('add_to_log')) + '</button>' +
+      '<button class="btn ghost" type="button" id="pickCancel">' + esc(t('cancel')) +
+      '</button></div></div>';
+  }
+
+  // One-tap re-logging of foods eaten in the last fortnight. Most days are
+  // built from the same couple of dozen foods.
+  function recentChips(date) {
+    var seen = {}, recent = [];
+    for (var i = 0; i < 14 && recent.length < 10; i++) {
+      Tracker.day(Tracker.shift(date, -i)).slice().reverse().forEach(function (e) {
+        if (e.slug && !seen[e.slug] && FOOD_BY_SLUG[e.slug] && recent.length < 10) {
+          seen[e.slug] = true;
+          recent.push(e);
+        }
+      });
+    }
+    if (!recent.length || logState.pick) return '';
+    return '<div class="recent"><span class="label">' + esc(t('recent')) + '</span>' +
+      '<div class="chips">' + recent.map(function (e) {
+        return '<button class="chip" type="button" data-again="' + esc(e.slug) + '" ' +
+          'data-again-grams="' + esc(e.grams) + '">' + esc(e.name) +
+          ' <span class="dim">' + fmt(e.grams) + ' g</span></button>';
+      }).join('') + '</div></div>';
+  }
+
+  function manualForm() {
+    return '<details class="manual"><summary>' + esc(t('manual_entry')) + '</summary>' +
+      '<p class="hint">' + esc(t('manual_hint')) + '</p>' +
+      '<div class="field"><label for="manName">' + esc(t('food_name')) + '</label>' +
+      '<input id="manName" type="text" maxlength="120"></div>' +
+      '<div class="field-row" style="margin-top:12px">' +
+      ['kcal', 'protein', 'carbs', 'fat'].map(function (k) {
+        return '<div class="field"><label for="man_' + k + '">' + esc(nutrientLabel(k)) +
+          ' (' + (k === 'kcal' ? 'kcal' : 'g') + ')</label>' +
+          '<input id="man_' + k + '" type="number" min="0" step="1"></div>';
+      }).join('') +
+      '<div class="field"><label for="manMeal">' + esc(t('meal')) + '</label>' +
+      mealSelect('manMeal', currentMeal()) + '</div></div>' +
+      '<button class="btn" type="button" id="manAdd">' + esc(t('add_to_log')) + '</button>' +
+      '</details>';
+  }
+
+  // ---- photo -------------------------------------------------------------
+  function photoCard() {
+    var ph = logState.photo;
+    var head = '<strong>' + esc(t('snap_title')) + '</strong>' +
+      '<p class="hint" style="margin:4px 0 12px">' + esc(t('snap_lede')) + '</p>';
+
+    if (!window.Recipes.hasKey()) {
+      return '<div class="card pad photo-card">' + head +
+        '<p class="hint">' + esc(t('snap_needs_key')) + ' ' +
+        '<a href="#/settings">' + esc(t('nav_settings')) + ' &rarr;</a> · ' +
+        '<a href="' + esc(window.Recipes.STUDIO_URL) + '" rel="noopener" target="_blank">' +
+        esc(t('get_free_key')) + '</a></p></div>';
+    }
+
+    if (ph && ph.status === 'busy') {
+      return '<div class="card pad photo-card">' + head +
+        '<div class="photo-row"><img class="photo-thumb" src="' + esc(ph.dataUrl || '') +
+        '" alt="">' + '<p>' + esc(t('snap_busy')) + '</p></div></div>';
+    }
+
+    if (ph && ph.status === 'review') return photoReview(ph);
+
+    return '<div class="card pad photo-card">' + head +
+      (ph && ph.status === 'error'
+        ? '<div class="note danger"><p>' + esc(ph.error) + '</p></div>'
+        : '') +
+      '<div class="field" style="margin-bottom:12px"><label for="photoHint">' +
+      esc(t('snap_hint_label')) + '</label>' +
+      '<input id="photoHint" type="text" maxlength="200" value="' + esc(logState.hint) +
+      '" placeholder="' + esc(t('snap_hint_placeholder')) + '"></div>' +
+      '<div class="btn-row">' +
+      '<label class="btn file-btn">' + esc(t('take_photo')) +
+      '<input type="file" accept="image/*" capture="environment" id="photoCam" hidden></label>' +
+      '<label class="btn ghost file-btn">' + esc(t('choose_photo')) +
+      '<input type="file" accept="image/*" id="photoFile" hidden></label></div>' +
+      '<p class="hint" style="margin-top:10px">' + esc(t('snap_privacy')) + '</p></div>';
+  }
+
+  function photoReview(ph) {
+    var lo = 0, hi = 0, mid = 0;
+    ph.items.forEach(function (it) {
+      if (!it.include) return;
+      var k = photoItemPer100(it) / 100;
+      lo += k * it.gramsLow; hi += k * it.gramsHigh; mid += k * it.grams;
+    });
+    var nonVeg = ph.items.some(function (it) { return it.include && !it.vegetarian; });
+
+    return '<div class="card pad photo-card">' +
+      '<strong>' + esc(t('snap_review')) + '</strong>' +
+      '<div class="photo-row" style="margin-top:10px">' +
+      '<img class="photo-thumb" src="' + esc(ph.dataUrl) + '" alt="">' +
+      '<div><div class="photo-total">' + esc(kcalText(lo, hi)) + ' <span class="u">kcal</span></div>' +
+      '<p class="hint" style="margin:2px 0 0">' + esc(t('snap_best_guess', { n: Math.round(mid) })) +
+      '</p>' +
+      (ph.notes ? '<p class="hint" style="margin:6px 0 0">' + esc(ph.notes) + '</p>' : '') +
+      '</div></div>' +
+      (nonVeg ? '<div class="note warn"><p>' + esc(t('snap_not_veg')) + '</p></div>' : '') +
+      (ph.items.length
+        ? '<ul class="photo-items">' + ph.items.map(photoItemRow).join('') + '</ul>'
+        : '<p class="empty" style="padding:16px 0">' + esc(t('snap_nothing')) + '</p>') +
+      '<div class="field-row" style="margin-top:14px">' +
+      '<div class="field"><label for="photoMeal">' + esc(t('meal')) + '</label>' +
+      mealSelect('photoMeal', currentMeal()) + '</div></div>' +
+      '<div class="btn-row">' +
+      '<button class="btn" type="button" id="photoAdd"' +
+      (ph.items.some(function (it) { return it.include; }) ? '' : ' disabled') + '>' +
+      esc(t('add_to_log')) + '</button>' +
+      '<button class="btn ghost" type="button" id="photoDiscard">' + esc(t('discard')) +
+      '</button></div>' +
+      '<p class="hint" style="margin-top:12px">' + esc(t('snap_accuracy')) + '</p></div>';
+  }
+
+  function photoItemRow(it, i) {
+    var per100 = photoItemPer100(it);
+    var food = it.slug && FOOD_BY_SLUG[it.slug];
+    // A matched food whose energy density is far from what the model expected
+    // is usually the wrong form of the right food -- dry lentils for cooked dal.
+    var mismatch = food && it.kcalPer100 &&
+      (per100 / it.kcalPer100 > 2.2 || it.kcalPer100 / per100 > 2.2);
+
+    return '<li class="' + (it.include ? '' : 'off') + '">' +
+      '<label class="p-inc"><input type="checkbox" data-pinc="' + i + '"' +
+      (it.include ? ' checked' : '') + ' aria-label="' + esc(t('include')) + '"></label>' +
+      '<div class="p-main">' +
+      '<div class="p-name">' + esc(it.name) +
+      (it.confidence === 'low' ? ' <span class="tag warn-tag">' + esc(t('unsure')) + '</span>' : '') +
+      (!it.vegetarian ? ' <span class="tag warn-tag">' + esc(t('not_veg_tag')) + '</span>' : '') +
+      '</div>' +
+      '<select data-pmatch="' + i + '" aria-label="' + esc(t('match_as')) + '">' +
+      it.candidates.map(function (s) {
+        var f = FOOD_BY_SLUG[s];
+        return '<option value="' + esc(s) + '"' + (s === it.slug ? ' selected' : '') + '>' +
+          esc(f.name) + ' — ' + fmt(f.nutrients.kcal) + ' kcal/100 g</option>';
+      }).join('') +
+      '<option value=""' + (it.slug ? '' : ' selected') + '>' +
+      esc(t('model_estimate', { n: it.kcalPer100 ? Math.round(it.kcalPer100) : '?' })) +
+      '</option></select>' +
+      (mismatch
+        ? '<p class="hint warn-text">' + esc(t('snap_mismatch', {
+            usda: Math.round(per100), model: Math.round(it.kcalPer100)
+          })) + '</p>'
+        : '') +
+      (!it.slug ? '<p class="hint">' + esc(t('snap_no_match')) + '</p>' : '') +
+      '</div>' +
+      '<div class="p-amt"><span class="p-g"><input type="number" min="1" max="2000" step="1" ' +
+      'data-pgrams="' + i + '" value="' + esc(it.grams) + '" aria-label="' + esc(t('amount_g')) +
+      '"> g</span>' +
+      (it.gramsHigh > it.gramsLow
+        ? '<span class="l-sub">' + esc(it.gramsLow + '–' + it.gramsHigh + ' g') + '</span>'
+        : '') + '</div>' +
+      '<div class="p-kcal">' + esc(kcalText(per100 * it.gramsLow / 100, per100 * it.gramsHigh / 100)) +
+      ' kcal</div></li>';
+  }
+
+  function startPhoto(file) {
+    if (!file) return;
+    var hintEl = document.getElementById('photoHint');
+    if (hintEl) logState.hint = hintEl.value;
+    logState.photo = { status: 'busy', dataUrl: '' };
+    // Show the picture straight away so the wait has something to look at.
+    window.Photo.prepare(file).then(function (img) {
+      if (logState.photo && logState.photo.status === 'busy') {
+        logState.photo.dataUrl = img.dataUrl;
+        if (currentRoute() === 'log') viewLog();
+      }
+    }, function () { /* analyse() reports the same error */ });
+    viewLog();
+
+    window.Photo.analyse(file, { hint: logState.hint }).then(function (res) {
+      logState.photo = {
+        status: 'review', dataUrl: res.dataUrl, notes: res.notes,
+        items: preparePhotoItems(res.items)
+      };
+    }).catch(function (err) {
+      logState.photo = { status: 'error', error: err && err.message ? err.message : String(err) };
+    }).then(function () {
+      if (currentRoute() === 'log') viewLog();
+    });
+  }
+
+  function currentRoute() {
+    return (location.hash.replace(/^#\/?/, '').split(/[/?#]/)[0]) || 'foods';
+  }
+
+  // ---- 7-day chart --------------------------------------------------------
+  // Plain HTML bars rather than SVG, so the labels stay at reading size on a
+  // phone instead of shrinking with a scaled drawing. Colours come from the
+  // theme tokens, so light, dark and high contrast need nothing extra.
+  function weekChart(endDate, target) {
+    var days = Tracker.history(endDate, 7);
+    var max = Math.max.apply(null, days.map(function (d) { return d.kcal; }).concat([target || 0, 1]));
+    var pct = function (v) { return (v / max * 100).toFixed(1) + '%'; };
+    var cols = days.map(function (d) {
+      var p = d.date.split('-').map(Number);
+      var wd = new Date(p[0], p[1] - 1, p[2], 12).toLocaleDateString(I18N.get(), { weekday: 'short' });
+      var sel = d.date === endDate ? ' sel' : '';
+      return '<div class="wk-col' + sel + '" title="' +
+        esc(dayLabel(d.date) + ': ' + Math.round(d.kcal) + ' kcal') + '">' +
+        '<div class="wk-plot">' +
+        (d.kcal > 0
+          ? '<span class="wk-bar" style="height:' + pct(d.kcal) + '">' +
+            '<span class="wk-val">' + Math.round(d.kcal) + '</span></span>'
+          : '<span class="wk-bar wk-none"></span>') +
+        '</div><span class="wk-day">' + esc(wd) + '</span></div>';
+    }).join('');
+    var logged = days.filter(function (d) { return d.count; });
+    var avg = logged.length
+      ? logged.reduce(function (s, d) { return s + d.kcal; }, 0) / logged.length : 0;
+    return '<div class="week-chart" role="img" aria-label="' + esc(t('last_7_days') + ': ' +
+        days.map(function (d) { return dayLabel(d.date) + ' ' + Math.round(d.kcal) + ' kcal'; })
+          .join(', ')) + '">' +
+      (target ? '<span class="wk-target" style="--f:' + (target / max).toFixed(3) +
+        '"></span>' : '') +
+      cols + '</div>' +
+      '<p class="hint" style="margin:8px 0 0">' +
+      (logged.length
+        ? esc(t('week_avg', { n: Math.round(avg), days: logged.length }))
+        : esc(t('week_none'))) +
+      (target ? ' ' + esc(t('week_line', { n: target })) : '') + '</p>';
+  }
+
+  // ---- events --------------------------------------------------------------
+  function bindLogEvents() {
+    function go(date) {
+      logState.date = date > Tracker.today() ? Tracker.today() : date;
+      logState.pick = null;
+      viewLog();
+    }
+    document.getElementById('dayPrev').addEventListener('click', function () {
+      go(Tracker.shift(logState.date, -1));
+    });
+    document.getElementById('dayNext').addEventListener('click', function () {
+      go(Tracker.shift(logState.date, 1));
+    });
+    document.getElementById('dayPick').addEventListener('change', function (ev) {
+      if (/^\d{4}-\d{2}-\d{2}$/.test(ev.target.value)) go(ev.target.value);
+    });
+
+    // Search to add.
+    var search = document.getElementById('logSearch');
+    var suggest = document.getElementById('logSuggest');
+    search.addEventListener('input', function () {
+      var q = search.value.trim().toLowerCase();
+      if (!q) { suggest.hidden = true; suggest.innerHTML = ''; return; }
+      var hits = FOODS
+        .filter(function (f) { return !Prefs.excludedReason(f) && haystack(f).indexOf(q) >= 0; })
+        .sort(function (a, b) {
+          var d = logRank(b, q) - logRank(a, q);
+          return d !== 0 ? d : a.name.length - b.name.length || a.name.localeCompare(b.name);
+        })
+        .slice(0, 10);
+      suggest.hidden = !hits.length;
+      suggest.innerHTML = hits.map(function (f) {
+        return '<button type="button" data-pick="' + esc(f.slug) + '">' + esc(f.name) +
+          '<span class="dim"> · ' + fmt(f.nutrients.kcal) + ' kcal/100 g</span></button>';
+      }).join('');
+      suggest.querySelectorAll('[data-pick]').forEach(function (b) {
+        b.addEventListener('click', function () {
+          logState.pick = b.dataset.pick;
+          logState.pickGrams = null;
+          viewLog();
+          var g = document.getElementById('pickGrams');
+          if (g) g.focus();
+        });
+      });
+    });
+
+    main.querySelectorAll('[data-pick-grams]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        rememberMeal('pickMeal');
+        logState.pickGrams = Number(b.dataset.pickGrams);
+        viewLog();
+      });
+    });
+    var pg = document.getElementById('pickGrams');
+    if (pg) {
+      pg.addEventListener('input', function () {
+        var food = FOOD_BY_SLUG[logState.pick];
+        var g = Number(pg.value) || 0;
+        document.getElementById('pickKcal').textContent =
+          Math.round(food.nutrients.kcal * g / 100) + ' kcal';
+      });
+      pg.addEventListener('keydown', function (ev) {
+        if (ev.key === 'Enter') document.getElementById('pickAdd').click();
+      });
+    }
+    var pickAdd = document.getElementById('pickAdd');
+    if (pickAdd) {
+      pickAdd.addEventListener('click', function () {
+        var food = FOOD_BY_SLUG[logState.pick];
+        var g = Number(document.getElementById('pickGrams').value);
+        if (!food || !(g > 0)) return;
+        rememberMeal('pickMeal');
+        Tracker.add(logState.date, { food: food, grams: g, meal: logState.meal });
+        logState.pick = null;
+        logState.pickGrams = null;
+        viewLog();
+      });
+      document.getElementById('pickCancel').addEventListener('click', function () {
+        logState.pick = null;
+        viewLog();
+      });
+    }
+
+    main.querySelectorAll('[data-again]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var food = FOOD_BY_SLUG[b.dataset.again];
+        if (!food) return;
+        Tracker.add(logState.date, {
+          food: food, grams: Number(b.dataset.againGrams), meal: currentMeal()
+        });
+        viewLog();
+      });
+    });
+
+    var manAdd = document.getElementById('manAdd');
+    manAdd.addEventListener('click', function () {
+      var name = document.getElementById('manName').value.trim();
+      var kcal = Number(document.getElementById('man_kcal').value);
+      if (!name || !(kcal >= 0) || document.getElementById('man_kcal').value === '') {
+        document.getElementById(name ? 'man_kcal' : 'manName').focus();
+        return;
+      }
+      var fixed = {};
+      ['kcal', 'protein', 'carbs', 'fat'].forEach(function (k) {
+        fixed[k] = Number(document.getElementById('man_' + k).value) || 0;
+      });
+      rememberMeal('manMeal');
+      Tracker.add(logState.date, { name: name, fixed: fixed, meal: logState.meal });
+      viewLog();
+    });
+
+    // Entries.
+    main.querySelectorAll('[data-del]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        Tracker.remove(logState.date, b.dataset.del);
+        viewLog();
+      });
+    });
+    main.querySelectorAll('input[data-entry]').forEach(function (inp) {
+      inp.addEventListener('change', function () {
+        var g = Number(inp.value);
+        if (g > 0) Tracker.update(logState.date, inp.dataset.entry, { grams: g });
+        viewLog();
+      });
+    });
+
+    // Photo.
+    ['photoCam', 'photoFile'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) el.addEventListener('change', function () { startPhoto(el.files && el.files[0]); });
+    });
+    var ph = logState.photo;
+    main.querySelectorAll('[data-pinc]').forEach(function (cb) {
+      cb.addEventListener('change', function () {
+        rememberMeal('photoMeal');
+        ph.items[Number(cb.dataset.pinc)].include = cb.checked;
+        viewLog();
+      });
+    });
+    main.querySelectorAll('[data-pmatch]').forEach(function (sel) {
+      sel.addEventListener('change', function () {
+        rememberMeal('photoMeal');
+        ph.items[Number(sel.dataset.pmatch)].slug = sel.value || null;
+        viewLog();
+      });
+    });
+    main.querySelectorAll('[data-pgrams]').forEach(function (inp) {
+      inp.addEventListener('change', function () {
+        var it = ph.items[Number(inp.dataset.pgrams)];
+        var g = Math.round(Number(inp.value));
+        if (g > 0) {
+          // A weight the person typed is theirs, not a guess: the range goes.
+          it.grams = it.gramsLow = it.gramsHigh = Math.min(g, 2000);
+        }
+        rememberMeal('photoMeal');
+        viewLog();
+      });
+    });
+    var photoAdd = document.getElementById('photoAdd');
+    if (photoAdd) {
+      photoAdd.addEventListener('click', function () {
+        rememberMeal('photoMeal');
+        ph.items.forEach(function (it) {
+          if (!it.include) return;
+          var food = it.slug && FOOD_BY_SLUG[it.slug];
+          var base = {
+            grams: it.grams, gramsLow: it.gramsLow, gramsHigh: it.gramsHigh,
+            meal: logState.meal, source: 'photo', label: it.name
+          };
+          if (food) base.food = food;
+          else {
+            base.name = it.name;
+            base.per100 = { kcal: it.kcalPer100 || 0 };
+          }
+          Tracker.add(logState.date, base);
+        });
+        logState.photo = null;
+        logState.hint = '';
+        viewLog();
+      });
+      document.getElementById('photoDiscard').addEventListener('click', function () {
+        logState.photo = null;
+        viewLog();
+      });
+    }
+  }
+
+  function rememberMeal(id) {
+    var el = document.getElementById(id);
+    if (el && Tracker.MEALS.indexOf(el.value) >= 0) logState.meal = el.value;
   }
 
   // ======================================================================
@@ -2027,6 +2747,7 @@
     else if (top === 'medicinal') viewMedicinal();
     else if (top === 'you') viewProfile();
     else if (top === 'weight') viewWeight();
+    else if (top === 'log') viewLog();
     else if (top === 'recipes') viewRecipes();
     else if (top === 'settings') viewSettings();
     else if (top === 'sources') viewSources(anchor);
@@ -2041,7 +2762,7 @@
   function renderChrome(top) {
     document.querySelector('.brand-text').innerHTML = t('brand');
     var nav = document.getElementById('nav');
-    var items = [['foods', 'nav_foods'], ['recipes', 'nav_recipes'],
+    var items = [['foods', 'nav_foods'], ['log', 'nav_log'], ['recipes', 'nav_recipes'],
                  ['medicinal', 'nav_medicinal'], ['you', 'nav_you'],
                  ['weight', 'nav_weight'], ['settings', 'nav_settings'],
                  ['sources', 'nav_sources']];

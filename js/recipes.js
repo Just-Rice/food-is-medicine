@@ -251,32 +251,42 @@
       if (!opts.ingredients || !opts.ingredients.length) {
         throw new Error('Add at least one ingredient first.');
       }
-      // Make sure the model has been chosen from the live list before asking.
-      if (getPreference() === AUTO && !resolvedAuto) {
-        return resolveAuto().then(function () { return callModel(opts); });
-      }
       return callModel(opts);
     });
   }
 
   function callModel(opts) {
-    var key = getKey();
-    var body = {
+    return request({
       contents: [{ role: 'user', parts: [{ text: buildPrompt(opts) }] }],
       generationConfig: {
         // A little variety, so "regenerate" actually produces something new.
         temperature: opts.regenerating ? 1.0 : 0.8,
         maxOutputTokens: 2048
       }
-    };
+    }, { cutOff: 'The reply was cut off before any text arrived. Try fewer ingredients.' });
+  }
 
-    return withTimeout(
-      fetch(API + '/models/' + encodeURIComponent(getModel()) +
-            ':generateContent?key=' + encodeURIComponent(key), {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(body)
-      }), 60000, 'The request to Google timed out after 60 seconds.')
+  /**
+   * Send one generateContent request with the stored key and model, and
+   * resolve to the reply text. Shared by recipes and the photo estimator so
+   * both get the same timeout, error messages and model choice.
+   */
+  function request(body, opts) {
+    opts = opts || {};
+    return Promise.resolve().then(function () {
+      if (!getKey()) throw new Error('No API key set.');
+      if (getPreference() === AUTO && !resolvedAuto) return resolveAuto();
+    }).then(function () {
+      return withTimeout(
+        fetch(API + '/models/' + encodeURIComponent(getModel()) +
+              ':generateContent?key=' + encodeURIComponent(getKey()), {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(body)
+        }), opts.timeout || 60000,
+        'The request to Google timed out after ' + Math.round((opts.timeout || 60000) / 1000) +
+        ' seconds.');
+    })
       .then(readJson)
       .then(function (d) {
         var cand = (d.candidates || [])[0];
@@ -290,7 +300,7 @@
         var text = parts.map(function (p) { return p.text || ''; }).join('').trim();
         if (!text) {
           throw new Error(cand.finishReason === 'MAX_TOKENS'
-            ? 'The reply was cut off before any text arrived. Try fewer ingredients.'
+            ? (opts.cutOff || 'The reply was cut off before any text arrived.')
             : 'The model returned an empty reply.');
         }
         return text;
@@ -302,7 +312,7 @@
     getModel: getModel, setModel: setModel, getPreference: getPreference,
     listModels: listModels, resolveAuto: resolveAuto,
     pickBest: pickBest, scoreModel: scoreModel,
-    generate: generate, buildPrompt: buildPrompt,
+    generate: generate, buildPrompt: buildPrompt, request: request,
     resolved: function () { return resolvedAuto; },
     AUTO: AUTO, DEFAULT_MODEL: DEFAULT_MODEL,
     STUDIO_URL: 'https://aistudio.google.com/apikey'

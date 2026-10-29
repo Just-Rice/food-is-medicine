@@ -157,7 +157,57 @@
       ed_help: 'If food or your body feels like it is taking up too much of your thinking, that is worth talking to someone about. It is common, it is treatable, and asking early makes it easier.',
       ed_help_link: 'What eating disorders are, and how to get help',
       under18_title: 'These calculations are for adults',
-      not_medical_advice: 'This site is not medical advice.'
+      not_medical_advice: 'This site is not medical advice.',
+
+      // Food log and photo estimates (vegetarian fork).
+      nav_log: 'Food log',
+      log_title: 'Food log',
+      log_lede: 'What you ate and roughly how much energy it held. Weighed foods use the USDA figures on this site; photo estimates are shown as a range, because that is what they are.',
+      today: 'Today', yesterday: 'Yesterday',
+      previous_day: 'Previous day', next_day: 'Next day', choose_day: 'Choose a day',
+      meal: 'Meal', meal_breakfast: 'Breakfast', meal_lunch: 'Lunch',
+      meal_dinner: 'Dinner', meal_snack: 'Snacks',
+      add_food: 'Add food', search_add: 'Search the food list',
+      add_to_log: 'Add to log', add_to_today: 'Add to today’s log', cancel: 'Cancel',
+      added_to_log: 'Added {grams} g to {meal}.',
+      eaten_on: 'Eaten {day}',
+      log_empty: 'Nothing logged for this day yet.',
+      recent: 'Recent',
+      manual_entry: 'Type in something that is not on the list',
+      manual_hint: 'For a packaged food, copy the figures from its label. Only energy is required.',
+      food_name: 'What was it',
+      kcal_of_target: '{n} of about {target} kcal.',
+      kcal_left: 'Roughly {n} kcal below your estimated daily need.',
+      kcal_over: 'Roughly {n} kcal above your estimated daily need.',
+      how_estimated: 'How this is estimated',
+      log_no_profile: 'Add your height, weight, age and activity to see this next to an estimate of your daily energy need.',
+      log_under18: 'Totals only: this site shows no calorie target under 18, for the reasons on the growing page.',
+      range_note: 'Some of today’s entries came from a photo, so the energy is shown as a range. Correct a weight and its range goes.',
+      last_7_days: 'Last 7 days',
+      week_avg: 'Average {n} kcal over the {days} logged days.',
+      week_none: 'Nothing logged this week.',
+      week_line: 'The line is your estimated daily need of {n} kcal.',
+      from_photo: 'photo', typed_in: 'typed in',
+      photo_saw: 'Photo: {name}',
+      snap_title: 'Snap a meal',
+      snap_lede: 'Take a photo and get an estimate of what is on the plate and how much. You check it before anything is logged.',
+      snap_needs_key: 'Photo estimates use your own free Gemini API key, the same one the recipe page uses. Add one in Settings.',
+      snap_hint_label: 'Anything the photo does not show? (optional)',
+      snap_hint_placeholder: 'e.g. cooked in a tablespoon of ghee, small side plate',
+      take_photo: 'Take a photo', choose_photo: 'Choose a photo',
+      snap_privacy: 'The photo is shrunk on your device and sent to Google with your key. It is not stored here or anywhere else by this site.',
+      snap_busy: 'Looking at your plate…',
+      snap_review: 'Check this before it is logged',
+      snap_best_guess: 'Best guess about {n} kcal.',
+      snap_not_veg: 'Something here looks as though it may contain meat or fish. Untick it if so, or correct the match if it is a vegetarian look-alike.',
+      snap_nothing: 'No food was recognised in that photo.',
+      snap_no_match: 'No close match in the food list, so this uses the model’s own energy estimate, which is less reliable.',
+      snap_mismatch: 'USDA gives {usda} kcal/100 g for this match, but the model expected about {model}. Check it is the right form — cooked rather than dry, say.',
+      snap_accuracy: 'Photo estimates are rough. Portion size is hard to judge from a picture, and oil, ghee and sauces hide a lot of energy — expect the true figure to be anywhere from a third lower to a third higher, sometimes more. Weighing is more accurate when it matters.',
+      include: 'Include', unsure: 'unsure', not_veg_tag: 'not vegetarian?',
+      match_as: 'Match to food', discard: 'Discard',
+      model_estimate: 'No match — model estimate, ~{n} kcal/100 g',
+      energy_only: 'Energy only — the model’s estimate, not USDA data'
     },
 
     es: {
@@ -289,7 +339,8 @@
       ed_help: 'Si la comida o tu cuerpo ocupan demasiado espacio en tu cabeza, merece la pena hablarlo con alguien. Es frecuente, tiene tratamiento, y pedir ayuda pronto lo hace más fácil.',
       ed_help_link: 'Qué son los trastornos alimentarios y cómo pedir ayuda',
       under18_title: 'Estos cálculos son para personas adultas',
-      not_medical_advice: 'Este sitio no es consejo médico.'
+      not_medical_advice: 'Este sitio no es consejo médico.',
+      nav_log: 'Diario', log_title: 'Diario de comidas', today: 'Hoy', yesterday: 'Ayer', meal: 'Comida', meal_breakfast: 'Desayuno', meal_lunch: 'Almuerzo', meal_dinner: 'Cena', meal_snack: 'Tentempiés'
     },
 
     hi: {
@@ -421,7 +472,8 @@
       ed_help: 'अगर खाना या अपना शरीर आपके मन में ज़रूरत से ज़्यादा जगह लेने लगे, तो इस बारे में किसी से बात करना ज़रूरी है। यह आम बात है, इसका इलाज होता है, और जल्दी बात करने से यह आसान हो जाता है।',
       ed_help_link: 'खान-पान संबंधी विकार क्या हैं और मदद कैसे लें',
       under18_title: 'ये गणनाएँ वयस्कों के लिए हैं',
-      not_medical_advice: 'यह साइट चिकित्सकीय सलाह नहीं है।'
+      not_medical_advice: 'यह साइट चिकित्सकीय सलाह नहीं है।',
+      nav_log: 'भोजन डायरी', log_title: 'भोजन डायरी', today: 'आज', yesterday: 'कल', meal: 'भोजन', meal_breakfast: 'नाश्ता', meal_lunch: 'दोपहर का खाना', meal_dinner: 'रात का खाना', meal_snack: 'बीच का नाश्ता'
     },
 
     kn: {
@@ -553,7 +605,8 @@
       ed_help: 'ಆಹಾರ ಅಥವಾ ನಿಮ್ಮ ದೇಹ ನಿಮ್ಮ ಮನಸ್ಸಿನಲ್ಲಿ ಅಗತ್ಯಕ್ಕಿಂತ ಹೆಚ್ಚು ಜಾಗ ಆಕ್ರಮಿಸುತ್ತಿದೆ ಎನಿಸಿದರೆ, ಅದನ್ನು ಯಾರೊಂದಿಗಾದರೂ ಮಾತನಾಡುವುದು ಒಳ್ಳೆಯದು. ಇದು ಸಾಮಾನ್ಯ, ಇದಕ್ಕೆ ಚಿಕಿತ್ಸೆ ಇದೆ, ಮತ್ತು ಬೇಗ ಕೇಳಿದರೆ ಸುಲಭವಾಗುತ್ತದೆ.',
       ed_help_link: 'ಆಹಾರ ಸಂಬಂಧಿ ಅಸ್ವಸ್ಥತೆಗಳು ಏನು ಮತ್ತು ಸಹಾಯ ಹೇಗೆ ಪಡೆಯುವುದು',
       under18_title: 'ಈ ಲೆಕ್ಕಾಚಾರಗಳು ವಯಸ್ಕರಿಗಾಗಿ',
-      not_medical_advice: 'ಈ ತಾಣ ವೈದ್ಯಕೀಯ ಸಲಹೆಯಲ್ಲ.'
+      not_medical_advice: 'ಈ ತಾಣ ವೈದ್ಯಕೀಯ ಸಲಹೆಯಲ್ಲ.',
+      nav_log: 'ಆಹಾರ ದಿನಚರಿ', log_title: 'ಆಹಾರ ದಿನಚರಿ', today: 'ಇಂದು', yesterday: 'ನಿನ್ನೆ', meal: 'ಊಟ', meal_breakfast: 'ಉಪಾಹಾರ', meal_lunch: 'ಮಧ್ಯಾಹ್ನದ ಊಟ', meal_dinner: 'ರಾತ್ರಿ ಊಟ', meal_snack: 'ತಿಂಡಿ'
     }
   };
 

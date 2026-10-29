@@ -370,6 +370,11 @@ dl.facts dd { margin: 4px 0 0; color: var(--ink-soft); font-size: .93rem; }
   :root:not([data-theme="dark"]) .btn { color: #fff; }
 }
 .btn:hover { filter: brightness(1.06); }
+/* The theme rules above set the text colour of every .btn, and outrank
+   .btn.ghost; without this, ghost buttons were white text on a transparent
+   background in the light theme. */
+:root:not([data-ghost]) .btn.ghost { color: var(--ink-soft); }
+:root:not([data-ghost]) .btn.ghost:hover { color: var(--ink); }
 .btn.ghost { background: transparent; color: var(--ink-soft); border-color: var(--card-edge); }
 .btn.ghost:hover { color: var(--ink); border-color: var(--ink-faint); filter: none; }
 
@@ -753,3 +758,142 @@ ul.basket li + li { border-top: 1px solid color-mix(in srgb, var(--card-edge) 55
 }
 
 .show-all { margin: 22px 0 0; text-align: center; }
+
+/* ======================================================================
+   Vegetarian fork: food log and photo estimates
+   ====================================================================== */
+.brand-veg {
+  font-family: var(--sans); font-size: .68rem; font-weight: 600; letter-spacing: .05em;
+  text-transform: uppercase; padding: 2px 8px; border-radius: 999px;
+  background: var(--accent-wash); color: var(--accent-ink); vertical-align: 2px;
+}
+
+/* Shared look for the small inputs and selects in log rows. */
+.log-list input, .photo-items input[type="number"], .photo-items select,
+.food-log-add input, .food-log-add select, .log-date input, .pick-panel select {
+  padding: 6px 9px; font-size: .92rem; font-family: inherit;
+  border: 1px solid var(--card-edge); border-radius: 8px;
+  background: var(--bg); color: var(--ink);
+}
+.log-list input, .photo-items input[type="number"], .food-log-add input {
+  width: 78px; text-align: right;
+}
+
+/* ---- Day navigation ---------------------------------------------------- */
+.log-date { display: flex; align-items: center; gap: 10px; margin: 0 0 16px; }
+.log-date .btn { padding-inline: 14px; }
+.log-date .btn[disabled] { opacity: .4; cursor: default; }
+.log-date-mid { flex: 1; display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; }
+.log-date-mid strong { font-family: var(--serif); font-size: 1.15rem; }
+
+/* ---- Day summary ------------------------------------------------------- */
+.log-summary .macro-row { margin-bottom: 4px; }
+.log-energy { margin-top: 12px; }
+.bar.log-bar { height: 10px; }
+.log-energy .hint { margin: 8px 0 0; }
+
+/* ---- Adding food ------------------------------------------------------- */
+.log-add { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); align-items: start; }
+.pick-panel {
+  margin-top: 14px; padding: 14px; border-radius: 10px;
+  background: var(--accent-wash);
+}
+.pick-head { display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
+.pick-kcal { padding: 7px 0; font-weight: 600; font-variant-numeric: tabular-nums; }
+.pick-panel .field-row { margin-bottom: 10px; }
+.recent { margin-top: 16px; }
+.recent .label { display: block; font-size: .78rem; color: var(--ink-faint); text-transform: uppercase; letter-spacing: .04em; margin-bottom: 6px; }
+.manual { margin-top: 18px; border-top: 1px solid var(--card-edge); padding-top: 12px; }
+.manual summary { cursor: pointer; color: var(--ink-soft); font-size: .92rem; }
+.manual[open] summary { margin-bottom: 8px; }
+.warn-text { color: var(--amber); }
+
+/* ---- Meals ------------------------------------------------------------- */
+.log-meal { margin-bottom: 12px; }
+.log-meal-head { display: flex; justify-content: space-between; align-items: baseline; }
+.log-meal-head h3 { margin: 0; font-size: 1rem; }
+ul.log-list { list-style: none; margin: 8px 0 0; padding: 0; }
+ul.log-list li {
+  display: flex; gap: 12px; align-items: center; flex-wrap: wrap; padding: 9px 0;
+}
+ul.log-list li + li { border-top: 1px solid color-mix(in srgb, var(--card-edge) 55%, transparent); }
+.l-name { flex: 1 1 200px; font-weight: 500; }
+.l-name a { color: inherit; }
+.l-sub { display: block; font-size: .78rem; font-weight: 400; color: var(--ink-faint); }
+.l-amt { display: flex; align-items: center; gap: 5px; color: var(--ink-faint); font-size: .88rem; }
+.l-kcal { min-width: 84px; text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; }
+.tag.photo-tag { background: var(--blue-wash); color: var(--blue); }
+.tag.warn-tag { background: var(--amber-wash); color: var(--amber); }
+
+/* ---- Food page quick add ----------------------------------------------- */
+.food-log-add { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin: 6px 0 16px; color: var(--ink-faint); }
+.food-log-add .hint a { font-weight: 500; }
+
+/* ---- Photo ------------------------------------------------------------- */
+.file-btn { cursor: pointer; }
+.file-btn:focus-within { outline: 2px solid var(--accent); outline-offset: 2px; }
+.photo-row { display: flex; gap: 14px; align-items: center; }
+.photo-thumb {
+  width: 112px; height: 112px; object-fit: cover; border-radius: 10px; flex: none;
+  background: var(--bg-sunk); border: 1px solid var(--card-edge);
+}
+.photo-total { font-size: 1.5rem; font-weight: 600; font-variant-numeric: tabular-nums; }
+.photo-total .u { font-size: .6em; font-weight: 500; opacity: .65; }
+ul.photo-items { list-style: none; margin: 12px 0 0; padding: 0; }
+ul.photo-items li {
+  display: grid; grid-template-columns: auto 1fr auto auto; gap: 6px 12px;
+  align-items: start; padding: 10px 0;
+}
+ul.photo-items li + li { border-top: 1px solid color-mix(in srgb, var(--card-edge) 55%, transparent); }
+ul.photo-items li.off .p-main, ul.photo-items li.off .p-amt, ul.photo-items li.off .p-kcal { opacity: .45; }
+.p-inc { padding-top: 3px; }
+.p-inc input { width: 18px; height: 18px; accent-color: var(--accent); }
+.p-name { font-weight: 500; margin-bottom: 5px; }
+.p-main select { width: 100%; max-width: 100%; }
+.p-main .hint { margin: 5px 0 0; font-size: .8rem; }
+.p-amt { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; color: var(--ink-faint); font-size: .88rem; white-space: nowrap; }
+.p-amt .p-g { display: flex; align-items: center; gap: 5px; }
+.p-kcal { min-width: 76px; text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; padding-top: 6px; }
+
+@media (max-width: 560px) {
+  ul.photo-items li { grid-template-columns: auto 1fr; }
+  .p-amt, .p-kcal { grid-column: 2; align-items: flex-start; text-align: left; padding-top: 0; }
+  .p-amt { flex-direction: row; align-items: center; gap: 8px; }
+  .photo-thumb { width: 84px; height: 84px; }
+  .l-kcal { min-width: 0; }
+}
+
+/* ---- Week chart -------------------------------------------------------- */
+.week-chart {
+  --plot-h: 150px;
+  position: relative; display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px;
+  padding-top: 18px;
+}
+.wk-col { display: flex; flex-direction: column; align-items: stretch; min-width: 0; }
+.wk-plot {
+  height: var(--plot-h); display: flex; flex-direction: column; justify-content: flex-end;
+  align-items: center;
+}
+.wk-bar {
+  position: relative; width: 100%; max-width: 72px; border-radius: 5px 5px 2px 2px; min-height: 2px;
+  background: color-mix(in srgb, var(--accent) 45%, transparent);
+}
+.wk-col.sel .wk-bar { background: var(--accent); }
+.wk-bar.wk-none { height: 2px; background: var(--card-edge); }
+.wk-val {
+  position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); margin-bottom: 3px;
+  font-size: .74rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; white-space: nowrap;
+}
+.wk-day { text-align: center; font-size: .78rem; line-height: 1.4; color: var(--ink-faint); margin-top: 6px; }
+.wk-col.sel .wk-day { color: var(--ink); font-weight: 600; }
+/* The dashed estimated-need line. --f is its height as a fraction of the plot;
+   the day labels under the plot are 6px plus one .78rem line high. */
+.wk-target {
+  position: absolute; left: 0; right: 0; height: 0; z-index: 1; pointer-events: none;
+  border-top: 1.5px dashed var(--amber);
+  bottom: calc(var(--plot-h) * var(--f) + 6px + .78rem * 1.4);
+}
+@media (max-width: 560px) {
+  .week-chart { gap: 4px; --plot-h: 120px; }
+  .wk-val { font-size: .66rem; }
+}

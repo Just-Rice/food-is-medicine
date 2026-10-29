@@ -1,15 +1,65 @@
-# Food is Medicine
+# Food is Medicine · Vegetarian
 
-A reference site for the nutritional and medicinal properties of food, built on primary
-sources and honest about how good the evidence actually is.
+A vegetarian fork of [Food is Medicine](https://github.com/Just-Rice/food-is-medicine):
+the same primary-source nutrition reference, cut down to vegetarian food, with a daily
+calorie log and photo-based meal estimates added.
 
-**Live:** https://just-rice.github.io/food-is-medicine/
+"Vegetarian" here means lacto-ovo: dairy, eggs and honey are in; meat, poultry, offal,
+fish, shellfish, roe, gelatin and animal fats are out — not hidden by a filter, but absent
+from the data. A vegan setting goes further, and anyone who does not eat eggs can tick
+*Egg* under allergies to drop them too.
+
+## What this fork adds
+
+**Food log** — log what you eat by day and by meal: search the food list (with the same
+alias search, so *rajma*, *chana* and *roti* all work), pick a portion or type a weight,
+re-add recent foods in one tap, or type in a packaged food from its label. Each day shows
+energy, protein, carbohydrate, fat and fibre, with a seven-day chart. With a profile, the
+day sits next to your estimated maintenance energy (Mifflin-St Jeor × activity, the same
+figure the rest of the site uses). The log does not set diet targets — that stays on the
+weight page with its safety checks — and under 18 it shows totals only, for the reasons
+the weight page gives. Everything is stored in your browser.
+
+**Snap a meal** — take or choose a photo and get an estimate of what is on the plate. The
+model (Gemini, through your own key, as on the recipe page) is asked only *what* the foods
+are and *roughly how much* of each, as a range. The calories are then worked out from the
+USDA figures on this site by matching each item to a food here — cooked rice to cooked
+rice, not to dry rice at nearly three times the energy. You review every item before
+anything is logged: untick it, change the match, or correct the weight. Items with no
+match fall back to the model's own energy guess and are labelled as such; a match whose
+energy density is far from what the model expected is flagged as probably the wrong form
+of the food. Photo entries stay a range in the log until you correct their weight. The
+photo is shrunk in the browser, sent to Google with your key, and not stored.
+
+Photo estimates are rough. Portion size is the weak link — a photo has no depth — and oil,
+ghee and sauces hide a lot of energy, so the page asks the model to list cooking fat as
+its own item and says plainly that the true figure may be a third higher or lower.
+
+**Cooked staples** — the original list is raw and dry foods, which is right for a reference
+and wrong for a log: people weigh their plate, not the packet. 45 cooked and ready-to-eat
+USDA records were added — rice, pasta, oats, quinoa, millet, breads (roti, naan, pita,
+tortillas), cooked lentils, toor dal, chickpeas, rajma, moong, hummus, tofu, cooked
+vegetables and boiled, fried and scrambled eggs.
+
+### Data fixes made along the way
+
+These also apply to the original site:
+
+- Sturgeon caviar and fish roe were tagged vegetarian because they sit in the egg group.
+- A turkey egg was filed under dairy, so it carried milk and lactose tags and no egg tag.
+- Allergen tags were keyed to hand-written slug lists, so the bulk-imported foods — wheat
+  flours, pastas, tofu, raw peanuts, tahini, tree-nut flours and oils — reached the allergy
+  filter untagged. Allergens are now also read from the USDA description.
+- Keyword auto-tagging had given kidney beans the tag *organ meat*, lambsquarters *lamb*
+  and scallop squash *shellfish*.
+- Ghost buttons ("Show all", "Remove key") had white text on a transparent background in
+  the light theme, because a theme rule outranked the ghost style.
 
 ## What it does
 
-**Food explorer** — 1,002 foods across 16 groups: fruits, vegetables, mushrooms, nuts and
-seeds, legumes, grains, herbs and spices, dairy, meat, poultry, offal, fish, shellfish,
-eggs and roe, animal fats and bee products. Up to 38 nutrients each — energy, protein,
+**Food explorer** — 783 vegetarian foods across 11 groups: fruits, vegetables, mushrooms,
+nuts and seeds, legumes, grains, herbs and spices, dairy, eggs, plant fats and oils, and
+honey. Up to 38 nutrients each — energy, protein,
 carbohydrate, fibre, sugars, the full fat breakdown including ALA, EPA and DHA, 13 vitamins
 and 10 minerals. Search, filter by group, or sort by any nutrient to find its best sources.
 Every food carries a photograph and links back to the USDA record it came from.
@@ -65,7 +115,7 @@ Google. Free keys come from [Google AI Studio](https://aistudio.google.com/apike
 key in localStorage is normal for a client-side app but readable by anything running on the
 page, so don't save one on a shared computer.
 
-**Medicinal properties** — 40 herbs, spices, mushrooms and foods, each claim graded on a
+**Medicinal properties** — 35 herbs, spices, mushrooms and foods, each claim graded on a
 five-point scale from *established* down to *ineffective*, with mechanism, safety and drug
 interactions. Several popular remedies are graded *ineffective* because large trials looked
 carefully and found nothing.
@@ -73,8 +123,8 @@ carefully and found nothing.
 **Settings & accessibility** — language (English, Spanish, Hindi, Kannada), light/dark/system
 theme, a high-contrast mode, three text sizes, reduced motion, and dietary restrictions.
 
-**Dietary restrictions** — vegetarian, vegan or pescatarian, plus the major allergens (milk,
-lactose, egg, fish, crustacean, mollusc, tree nut, peanut, soy, gluten, sesame) and a free-text
+**Dietary restrictions** — vegetarian or vegan, plus the major allergens that can occur in
+vegetarian food (milk, lactose, egg, tree nut, peanut, soy, gluten, sesame) and a free-text
 list of anything else. Excluded foods drop out of every list and are flagged if you open one
 directly. The tags are derived in the build script, not hand-maintained.
 
@@ -116,6 +166,13 @@ python3 build/build_foods.py sr/FoodData_Central_sr_legacy_food_csv_2018-04/ \
                              fnd/FoodData_Central_foundation_food_csv_2025-04-24/
 ```
 
+In this fork the script writes vegetarian foods only. Add `--all` to build the full list.
+
+Settings, the saved recipe basket and the food log are stored under `veg.*` keys, because
+GitHub Pages serves every repository of an account from one origin and this fork must not
+overwrite the original's diet setting. Your profile, language and Gemini key use the
+original's keys, so they are shared between the two sites on purpose.
+
 To add a food, append `group|slug|display name|fdc_id` to `build/foods.txt` and re-run. The
 script fails loudly if an ID has no USDA record, so a typo cannot produce an empty food.
 
@@ -124,8 +181,10 @@ script fails loudly if an ID has no USDA record, so a typo cannot produce an emp
 Only foods whose names a picture search can actually resolve get a photograph.
 Curated names like "Okra" work; USDA descriptions like "Pork, fresh, loin, center
 rib (chops or roasts)" do not, and an early run illustrated 2% milk with a
-photograph of a milk-float garage. So 698 foods carry a photo and 317 show a
-placeholder tile, which is the honest outcome.
+photograph of a milk-float garage. So 535 foods carry a photo and 248 show a
+placeholder tile, which is the honest outcome. That includes every cooked staple: their
+encyclopedia photos already belong to the raw foods, and a picture of raw grain on a
+page about cooked millet would be wrong.
 
 The fetcher also rejects digitised print. Wikimedia holds a great many scanned
 seed catalogues and agricultural yearbooks whose filenames match food searches
@@ -197,6 +256,8 @@ js/prefs.js           display and dietary preferences
 js/profile.js         profile storage and the personal maths
 js/weight.js          weight-change arithmetic and its safety checks
 js/recipes.js         Gemini client, prompt construction, key storage
+js/tracker.js         the food log: storage, totals, history
+js/photo.js           meal photo -> foods and portion ranges, via Gemini
 data/foods.js         GENERATED from USDA — do not edit by hand
 data/images.js        GENERATED photo credits — do not edit by hand
 data/dri.js           reference intakes, upper limits, energy equations
@@ -205,7 +266,7 @@ data/sources.js       every citation, keyed by id
 data/i18n.js          four languages, with the localisation reasoning
 data/growth.js        GENERATED CDC BMI-for-age parameters
 js/growth.js          BMI-for-age percentile maths
-img/                  698 food photographs from Wikimedia Commons
+img/                  535 food photographs from Wikimedia Commons
 build/build_foods.py  the nutrition generator
 build/select_foods.py bulk selector: whole ingredients, per-category rules
 build/name_foods.py   names, slugs and family tags from USDA descriptions
