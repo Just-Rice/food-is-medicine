@@ -436,7 +436,10 @@
           esc(t('photo_credit', { author: credit.author, license: credit.license })) +
           ' · <a href="' + esc(credit.page) + '" rel="noopener" target="_blank">file</a></span>'
         : '') +
-      '</p></div></div>' +
+      '</p>' +
+      '<p class="log-this"><a href="../food-log/#/today?add=' + encodeURIComponent(food.slug) + '">' +
+      esc(t('log_this')) + ' &rarr;</a></p>' +
+      '</div></div>' +
 
       (choices.length > 1
         ? '<div class="portion-toggle"><span class="label">' + esc(t('show')) + '</span>' +
@@ -2047,7 +2050,9 @@
         (it[0] === 'medicinal' && top === 'herb');
       return '<a href="#/' + it[0] + '"' + (active ? ' class="active"' : '') + '>' +
         esc(t(it[1])) + '</a>';
-    }).join('');
+    }).join('') +
+      // The companion diary, built on this site's data and sharing its profile.
+      '<a href="../food-log/">' + esc(t('nav_foodlog')) + ' &nearr;</a>';
     document.getElementById('disclaimerLead').textContent = t('not_medical_advice');
   }
 
