@@ -561,6 +561,12 @@ window.IMAGE_CREDITS = {
   "license": "CC BY-SA 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Bulgur.jpg"
  },
+ "bulgurcooked": {
+  "author": "Unknown",
+  "file": "Pigeons_food_cereals_mix.jpg",
+  "license": "see Commons",
+  "page": ""
+ },
  "burbot": {
   "author": "Unknown",
   "file": "Tr\u00fcsche_Walchensee.jpg",

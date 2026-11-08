@@ -372,6 +372,11 @@ dl.facts dd { margin: 4px 0 0; color: var(--ink-soft); font-size: .93rem; }
 .btn:hover { filter: brightness(1.06); }
 .btn.ghost { background: transparent; color: var(--ink-soft); border-color: var(--card-edge); }
 .btn.ghost:hover { color: var(--ink); border-color: var(--ink-faint); filter: none; }
+/* The theme rules above set the text colour of every .btn, and outrank
+   .btn.ghost; without this, ghost buttons were white text on a transparent
+   background in the light theme. */
+:root:not([data-ghost]) .btn.ghost { color: var(--ink-soft); }
+:root:not([data-ghost]) .btn.ghost:hover { color: var(--ink); }
 
 .btn-row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-top: 4px; }
 

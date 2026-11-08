@@ -7,7 +7,7 @@ sources and honest about how good the evidence actually is.
 
 ## What it does
 
-**Food explorer** — 1,002 foods across 16 groups: fruits, vegetables, mushrooms, nuts and
+**Food explorer** — 1,067 foods across 16 groups: fruits, vegetables, mushrooms, nuts and
 seeds, legumes, grains, herbs and spices, dairy, meat, poultry, offal, fish, shellfish,
 eggs and roe, animal fats and bee products. Up to 38 nutrients each — energy, protein,
 carbohydrate, fibre, sugars, the full fat breakdown including ALA, EPA and DHA, 13 vitamins
@@ -97,6 +97,17 @@ seeds versus breadfruit) survive.
 Anything without a usable nutrient profile is dropped rather than shown as an
 empty page.
 
+The list is raw and dry foods, which is right for a reference. 52 cooked and
+ready-to-eat records sit alongside them — rice, pasta, oats, roti, naan, cooked
+dal and beans, hummus, tofu, cooked vegetables, eggs, chicken, beef, salmon and
+shrimp — tagged `cooked`, because people weigh their plate, not the packet.
+
+Allergens are read from each food's USDA description as well as from hand-kept
+slug lists, so bulk-imported flours, pastas, tofu and tahini are tagged. Family
+tags that the keyword tagger got wrong (kidney beans as *organ meat*,
+lambsquarters as *lamb*) are dropped from anything classed vegetarian, and fish
+roe is no longer counted as vegetarian.
+
 ## The data is generated, not typed
 
 `data/foods.js` is built by `build/build_foods.py` from the USDA FoodData Central SR Legacy
@@ -178,6 +189,14 @@ supplement seller or a wellness site.
 | Photographs | [Wikimedia Commons](https://commons.wikimedia.org/), freely licensed, credited per file |
 
 The full annotated list is on the site's Sources page and in `data/sources.js`.
+
+## Data used by other sites
+
+[Food Log](https://just-rice.github.io/food-log/) loads `data/foods.js`,
+`data/images.js`, `data/dri.js` and `data/growth.js` straight from this site, and
+reads the profile and preferences saved under `fim.profile.v1` and `fim.prefs.v1`.
+Keep those paths, the `window.FOODS` / `window.IMAGE_CREDITS` / `window.DRI`
+globals and those storage keys stable, or change both sites together.
 
 ## Running it
 
