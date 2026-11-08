@@ -221,11 +221,14 @@
     var p = Profile.get();
     if (!p) { strip.hidden = true; strip.innerHTML = ''; return; }
     var e = Profile.energy();
+    var stage = DRI.stageOf && DRI.stageOf(p);
     strip.hidden = false;
     strip.innerHTML = '<div class="wrap">' +
       '<span>' + esc(p.age) + ' · ' + esc(t(p.sex)) + ' · ' +
       fmt(p.heightCm) + '&nbsp;cm · ' + fmt(p.weightKg) + '&nbsp;kg</span>' +
-      '<span><strong>' + e.tdee + '</strong>&nbsp;kcal/' + esc(t('daily_total').toLowerCase()) + '</span>' +
+      (stage
+        ? '<span>' + (stage === 'pregnant' ? 'Pregnant' : 'Breastfeeding') + '</span>'
+        : '<span><strong>' + e.tdee + '</strong>&nbsp;kcal/' + esc(t('daily_total').toLowerCase()) + '</span>') +
       '<a href="#/you">' + esc(t('nav_you')) + '</a></div>';
   }
 
@@ -775,6 +778,10 @@
   // ======================================================================
   var unitState = 'metric';
 
+  function foodLogSyncOn() {
+    try { return localStorage.getItem('foodlog.sync.v1') === '1'; } catch (e) { return false; }
+  }
+
   function viewProfile() {
     var p = Profile.get();
     var imperial = unitState === 'imperial';
@@ -795,7 +802,11 @@
       'than he did at 30. Fill this in and every percentage on the site is recalculated ' +
       'against your own reference intakes.</p></div>' +
 
-      '<div class="note"><p>' + t('privacy_note') + '</p></div>' +
+      '<div class="note"><p>' + t('privacy_note') +
+      // Food Log, on the same site, can sync this profile to its own account.
+      (foodLogSyncOn() ? ' <strong>Food Log’s sync is on in this browser</strong>, so these details — including ' +
+        'whether you are pregnant or breastfeeding — are also kept in your Food Log account, readable only ' +
+        'by you; “Delete my synced data” in Food Log’s settings removes them. ' + englishMark() : '') + '</p></div>' +
 
       '<div class="card form-card">' +
       '<div class="unit-switch chips" role="group" aria-label="Units">' +
@@ -814,6 +825,16 @@
       '<option value="female"' + (p && p.sex === 'female' ? ' selected' : '') + '>' + esc(t('female')) + '</option>' +
       '<option value="male"' + (p && p.sex === 'male' ? ' selected' : '') + '>' + esc(t('male')) + '</option>' +
       '</select></div></div>' +
+
+      // Only offered where NASEM gives pregnancy and lactation values.
+      '<div class="field" id="stageField" style="margin-bottom:18px' +
+      (p && p.sex === 'female' && p.age >= 14 && p.age <= 50 ? '' : ';display:none') + '">' +
+      '<label for="pStage">Pregnant or breastfeeding?</label>' +
+      '<select id="pStage">' + [['', 'No'], ['pregnant', 'Pregnant'], ['breastfeeding', 'Breastfeeding']].map(function (o) {
+        return '<option value="' + o[0] + '"' + ((p && (p.stage || '')) === o[0] ? ' selected' : '') + '>' + o[1] + '</option>';
+      }).join('') + '</select>' +
+      '<p class="hint" style="margin-top:4px">Both raise several reference intakes — iron to 27 mg a day in ' +
+      'pregnancy, folate to 600 µg. With either, the site shows no calorie figure or weight plan.</p></div>' +
 
       '<div class="field-row">' +
       (imperial
@@ -854,6 +875,15 @@
       btn.addEventListener('click', function () { unitState = btn.dataset.unit; viewProfile(); });
     });
 
+    function toggleStage() {
+      var age = Number(document.getElementById('pAge').value);
+      // An inline style: the [hidden] attribute loses to .field's display rule.
+      document.getElementById('stageField').style.display =
+        document.getElementById('pSex').value === 'female' && age >= 14 && age <= 50 ? '' : 'none';
+    }
+    document.getElementById('pSex').addEventListener('change', toggleStage);
+    document.getElementById('pAge').addEventListener('input', toggleStage);
+
     var clearBtn = document.getElementById('clearProfile');
     if (clearBtn) {
       clearBtn.addEventListener('click', function () {
@@ -881,6 +911,8 @@
         heightCm: Math.round(heightCm * 10) / 10,
         weightKg: Math.round(weightKg * 10) / 10
       };
+      var stage = document.getElementById('pStage').value;
+      if (stage && document.getElementById('stageField').style.display !== 'none') next.stage = stage;
       if (!Profile.save(next)) return;
       renderStrip();
       viewProfile();
@@ -900,6 +932,19 @@
         .filter(function (k) { return targets[k]; });
 
       var minor = !DRI.energyApplies(prof.age);
+      var stage = DRI.stageOf && DRI.stageOf(prof);
+      var stageBlock = stage
+        ? '<h2 class="section">' + (stage === 'pregnant' ? 'Pregnancy' : 'Breastfeeding') + '</h2>' +
+          '<div class="note"><p>The targets below are the National Academies’ values for ' +
+          (stage === 'pregnant' ? 'pregnancy' : 'breastfeeding') + ' at your age — ' +
+          (stage === 'pregnant'
+            ? 'iron rises to 27 mg a day, folate to 600 µg, and protein to 1.1 g per kilogram.'
+            : 'vitamin A rises to 1,300 µg a day (1,200 µg under 19), vitamin C to 120 mg, and protein to 1.3 g per kilogram.') +
+          ' This site shows no calorie figure and no weight plan while you are ' +
+          (stage === 'pregnant' ? 'pregnant' : 'breastfeeding') + ': energy needs change week by week, and ' +
+          'what you eat and weigh is worth talking through with your midwife or doctor, who may also advise ' +
+          'supplements (folic acid and vitamin D are common) that food alone does not replace. ' + englishMark() + '</p></div>'
+        : '';
 
       document.getElementById('profileResults').innerHTML =
         (minor
@@ -917,8 +962,9 @@
             'because encouraging teenagers to diet is one of the few things in this whole area ' +
             'with good evidence of harm. Eating enough of the right things is the goal at your ' +
             'age. ' + englishMark() + '</p></div>' +
-            bmiForAgeBlock(prof) +
+            bmiForAgeBlock(prof) + stageBlock +
             supportNote()
+          : stage ? stageBlock
           : '<h2 class="section">' + esc(t('energy_needs')) + '</h2>' +
             '<div class="energy-row">' +
             '<div class="macro"><div class="v">' + e.bmr + '<span class="u"> kcal</span></div>' +
@@ -950,9 +996,11 @@
             }).join(', ') + '</td></tr>';
         }).join('') + '</tbody></table></div>' +
 
-        '<div class="note warn"><p>These targets describe a healthy general population. They ' +
-        'do not account for pregnancy or breastfeeding, which raise several requirements ' +
-        'substantially; for smoking, which raises the vitamin C requirement by 35&nbsp;mg a ' +
+        '<div class="note warn"><p>These targets describe a healthy general population' +
+        (stage ? ', with the values for ' + (stage === 'pregnant' ? 'pregnancy' : 'breastfeeding') + '. They do not account '
+          : '. They do not account for pregnancy or breastfeeding unless you say so above, which raise several ' +
+            'requirements substantially; ') +
+        'for smoking, which raises the vitamin C requirement by 35&nbsp;mg a ' +
         'day; for a vegan diet, whose iron requirement the Food and Nutrition Board sets ' +
         'roughly 1.8&times; higher because non-haem iron is absorbed less well; or for any ' +
         'medical condition or medication. If any of those apply to you, the right numbers ' +
@@ -1035,6 +1083,20 @@
 
         '<p class="result-count"><a href="#/you">' + esc(t('your_targets')) + ' &rarr;</a> · ' +
         '<a href="#/foods">' + esc(t('all_foods')) + ' &rarr;</a></p>';
+      return;
+    }
+
+    if (DRI.stageOf && DRI.stageOf(p)) {
+      var preg = DRI.stageOf(p) === 'pregnant';
+      main.innerHTML =
+        '<div class="page-head"><h1>' + esc(t('weight_title')) + '</h1></div>' +
+        '<div class="note warn"><p><strong>Not while you are ' + (preg ? 'pregnant' : 'breastfeeding') + '.</strong> ' +
+        'Energy needs change week by week through pregnancy and breastfeeding, and eating less ' +
+        'than you need during either can affect your baby' + (preg ? '’s growth' : ' and your milk supply') + '. ' +
+        'This page does not plan weight change then — no deficit, no target, no time-to-goal. ' +
+        'Your midwife, health visitor or doctor can talk it through with you. ' + englishMark() + '</p></div>' +
+        '<p class="result-count"><a href="#/you">' + esc(t('your_targets')) + ' &rarr;</a> · ' +
+        '<a href="#/foods">' + esc(t('all_foods')) + ' &rarr;</a></p>' + supportNote();
       return;
     }
 
@@ -1547,7 +1609,7 @@
       '<p class="result-count">Whole basket, raw, from USDA data. Per serving at ' +
       servings + ': <strong>' + fmt((totals.kcal || 0) / servings) + ' kcal</strong>, ' +
       fmt((totals.protein || 0) / servings) + ' g protein' +
-      (ref.personal
+      (ref.personal && !(DRI.stageOf && DRI.stageOf(Profile.get())) && DRI.energyApplies(Profile.get().age)
         ? ' — ' + Math.round(((totals.kcal || 0) / servings) /
             (Profile.energy().tdee / 3) * 100) + '% of a third of your daily energy'
         : '') +

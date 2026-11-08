@@ -30,13 +30,21 @@ iron RDA is more than twice a man's at the same age; a man's vitamin B6 requirem
 a third at 51. Protein is calculated from body weight and the fibre target from estimated
 energy needs, because that is how the DRIs define them.
 
+**Pregnancy and breastfeeding** — women aged 14 to 50 can say they are pregnant or
+breastfeeding, and every target switches to the NASEM values for that stage and age (iron
+27 mg a day in pregnancy, folate 600 µg; vitamin A 1,300 µg while breastfeeding), with
+protein at 1.1 or 1.3 g per kilogram. Upper limits do not change. While either applies the
+site shows no calorie figure and the weight page plans nothing: energy needs change week by
+week, and weight then is for a midwife or doctor.
+
 **Weight change** — the daily calorie deficit or surplus a goal implies, the time it would
 take at an evidence-supported rate, and BMI against the WHO categories. There is also a
 *redistribute* goal for losing fat and gaining muscle at stable weight, which reports a
 protein range and a training requirement rather than a weekly target, because the scale is
 the wrong instrument for it. The page refuses to produce a plan where doing so would be
 harmful: not for someone already underweight, nor for a target below a healthy BMI, nor for
-a rate that would push intake under a safe floor, nor for anyone under 18. No meal plans,
+a rate that would push intake under a safe floor, nor for anyone under 18, pregnant or
+breastfeeding. No meal plans,
 no macro splits.
 
 **For under-18s** — reference intakes are correct for their age, BMI is replaced by

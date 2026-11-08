@@ -94,6 +94,26 @@
       return result;
     }
 
+    // Pregnancy and breastfeeding: no deficit, surplus or target weight. Energy
+    // needs change through both, and weight is for a midwife or doctor.
+    if (window.DRI.stageOf && window.DRI.stageOf(profile)) {
+      result.warnings.push({
+        level: 'danger',
+        title: 'Not during pregnancy or breastfeeding',
+        body: 'Energy needs change week by week while you are pregnant or breastfeeding, and ' +
+              'dieting during either can affect your baby. This page does not plan weight change ' +
+              'then: please talk to your midwife, health visitor or doctor.'
+      });
+      result.blocked = true;
+      result.targetBmi = result.currentBmi;
+      result.dailyAdjust = 0;
+      result.targetIntake = null;
+      result.weeklyChange = 0;
+      result.weeks = null;
+      addUniversalWarnings(result, profile);
+      return result;
+    }
+
     // Redistribution ("body recomposition"): losing fat and gaining muscle at
     // roughly stable weight. It is handled separately because the whole point
     // is that the scale is the wrong instrument -- there is no weekly target to

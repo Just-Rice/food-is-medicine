@@ -121,6 +121,75 @@
     female: [19, 25, 26, 26, 25, 25, 21, 21]
   };
 
+  // Pregnancy and lactation, for the 14-18, 19-30 and 31-50 bands, from the
+  // NASEM DRI summary tables (Dietary Reference Intakes for Sodium and
+  // Potassium, 2019, Appendix J). They replace the ordinary female values for
+  // anyone who says on the profile that they are pregnant or breastfeeding.
+  // The RDA/AI type of each nutrient is the same as for everyone else.
+  // Upper limits do not change in pregnancy or lactation.
+  //                    14-18  19-30  31-50
+  var STAGES = {
+    pregnant: {
+      vita:        [750,   770,   770],
+      vitc:        [80,    85,    85],
+      vitd:        [15,    15,    15],
+      vite:        [15,    15,    15],
+      vitk:        [75,    90,    90],
+      thiamin:     [1.4,   1.4,   1.4],
+      riboflavin:  [1.4,   1.4,   1.4],
+      niacin:      [18,    18,    18],
+      b6:          [1.9,   1.9,   1.9],
+      folate:      [600,   600,   600],
+      b12:         [2.6,   2.6,   2.6],
+      pantothenic: [6,     6,     6],
+      choline:     [450,   450,   450],
+      calcium:     [1300,  1000,  1000],
+      copper:      [1.0,   1.0,   1.0],
+      iron:        [27,    27,    27],
+      magnesium:   [400,   350,   360],
+      manganese:   [2.0,   2.0,   2.0],
+      phosphorus:  [1250,  700,   700],
+      selenium:    [60,    60,    60],
+      zinc:        [12,    11,    11],
+      potassium:   [2600,  2900,  2900],
+      fiber: 28, proteinPerKg: 1.1
+    },
+    breastfeeding: {
+      vita:        [1200,  1300,  1300],
+      vitc:        [115,   120,   120],
+      vitd:        [15,    15,    15],
+      vite:        [19,    19,    19],
+      vitk:        [75,    90,    90],
+      thiamin:     [1.4,   1.4,   1.4],
+      riboflavin:  [1.6,   1.6,   1.6],
+      niacin:      [17,    17,    17],
+      b6:          [2.0,   2.0,   2.0],
+      folate:      [500,   500,   500],
+      b12:         [2.8,   2.8,   2.8],
+      pantothenic: [7,     7,     7],
+      choline:     [550,   550,   550],
+      calcium:     [1300,  1000,  1000],
+      copper:      [1.3,   1.3,   1.3],
+      iron:        [10,    9,     9],
+      magnesium:   [360,   310,   320],
+      manganese:   [2.6,   2.6,   2.6],
+      phosphorus:  [1250,  700,   700],
+      selenium:    [70,    70,    70],
+      zinc:        [13,    12,    12],
+      potassium:   [2500,  2800,  2800],
+      fiber: 29, proteinPerKg: 1.3
+    }
+  };
+
+  /**
+   * 'pregnant', 'breastfeeding' or null. Only for women aged 14 to 50, the
+   * ages NASEM gives pregnancy and lactation values for.
+   */
+  function stageOf(p) {
+    if (!p || p.sex !== 'female' || !(p.age >= 14 && p.age <= 50)) return null;
+    return STAGES[p.stage] ? p.stage : null;
+  }
+
   // Tolerable Upper Intake Levels, banded by age. A child's limits are far
   // lower than an adult's -- selenium is 90 micrograms at age 1-3 against 400
   // for an adult -- so showing adult limits to a child would be actively
@@ -214,17 +283,33 @@
       };
     });
 
+    var stage = stageOf(p), st = stage && STAGES[stage], si = p.age <= 18 ? 0 : (p.age <= 30 ? 1 : 2);
+    if (st) {
+      Object.keys(out).forEach(function (key) {
+        if (st[key]) {
+          out[key].value = st[key][si];
+          out[key].basis = 'NASEM DRI tables (2019), ' + (stage === 'pregnant' ? 'pregnancy' : 'lactation');
+        }
+      });
+    }
+
     // Protein is the one RDA expressed per kilogram of body weight, so it is
     // genuinely personal rather than looked up from a band. Requirements per
-    // kilogram fall as growth slows.
-    var perKg = p.age <= 3 ? 1.05 : (p.age <= 13 ? 0.95 : (p.age <= 18 ? 0.85 : 0.8));
+    // kilogram fall as growth slows, and rise in pregnancy (1.1 g/kg) and
+    // lactation (1.3 g/kg; NASEM DRI for macronutrients, 2005).
+    var perKg = st ? st.proteinPerKg : p.age <= 3 ? 1.05 : (p.age <= 13 ? 0.95 : (p.age <= 18 ? 0.85 : 0.8));
     out.protein = {
       label: 'Protein', unit: 'g', type: 'RDA',
       value: Math.round(perKg * p.weightKg * 10) / 10,
       basis: perKg + ' g per kg body weight (NASEM DRI for macronutrients, 2005)'
     };
 
-    if (p.age >= 19) {
+    if (st) {
+      out.fiber = {
+        label: 'Fibre', unit: 'g', type: 'AI', value: st.fiber,
+        basis: 'Published Adequate Intake for ' + (stage === 'pregnant' ? 'pregnancy' : 'lactation') + ' (NASEM DRI, 2005)'
+      };
+    } else if (p.age >= 19) {
       // The adult fibre AI is defined as 14 g per 1,000 kcal, so it tracks
       // energy needs and can be personalised.
       var energy = energyFor(p);
@@ -279,6 +364,8 @@
     energyFor: energyFor,
     energyApplies: energyApplies,
     upperLimitsFor: upperLimitsFor,
+    stageOf: stageOf,
+    stages: STAGES,
     // Adult limits, kept for callers that have no age to hand.
     upperLimits: upperLimitsFor(30)
   };
