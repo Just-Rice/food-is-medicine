@@ -98,6 +98,8 @@ QUERY_OVERRIDES = {
     'chickenbreastroasted': 'Roast chicken', 'chickenthighroasted': 'Roast chicken',
     'groundbeefcooked': 'Ground beef', 'porkchopcooked': 'Pork chop',
     'salmoncooked': 'Salmon as food', 'codcooked': 'Cod as food', 'shrimpcooked': 'Shrimp and prawn as food',
+    'bakedbeans': 'Baked beans', 'frenchfries': 'French fries',
+    'bloodsausage': 'Black pudding', 'porksausagecooked': 'Sausage',
 }
 
 
@@ -187,6 +189,9 @@ CURATED_FILE = {
     'roselle': 'Roselle, Hibiscus sabdariffa, 2014 01.JPG',
     'acerola': 'Malpighia glabra acerola fruit green.jpg',
     'cherimoya': 'Cherimoya cut hg.jpg',
+    # The "Sausage" article leads with a German cold-cut platter -- egg, cheese,
+    # ham, sliced blood and liver sausage -- not a cooked pork sausage.
+    'porksausagecooked': 'Breakfast Sausage.jpg',
 }
 
 # Foods for which Commons has no photograph that is actually of the food. The

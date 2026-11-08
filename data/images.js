@@ -231,6 +231,12 @@ window.IMAGE_CREDITS = {
   "license": "Public domain",
   "page": "https://commons.wikimedia.org/wiki/File:Made20bacon.png"
  },
+ "bakedbeans": {
+  "author": "Mk2010",
+  "file": "Baked_beans_in_tomato_sauce.jpg",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Baked_beans_in_tomato_sauce.jpg"
+ },
  "bambooshoot": {
   "author": "Haragayato",
   "file": "Bamboo_sprout2.JPG",
@@ -404,6 +410,12 @@ window.IMAGE_CREDITS = {
   "file": "Piper_nigrum_-_K\u00f6hler\u2013s_Medizinal-Pflanzen-107.jpg",
   "license": "Public domain",
   "page": "https://commons.wikimedia.org/wiki/File:Piper_nigrum_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-107.jpg"
+ },
+ "bloodsausage": {
+  "author": "Alexbrn",
+  "file": "Stornoway_Black_Pudding.jpg",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Stornoway_Black_Pudding.jpg"
  },
  "blueberriessweetened": {
   "author": "Alpha",
@@ -1466,6 +1478,12 @@ window.IMAGE_CREDITS = {
   "file": "Fontina_DOP.jpg",
   "license": "CC BY 3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Fontina_DOP.jpg"
+ },
+ "frenchfries": {
+  "author": "StockSnap",
+  "file": "French_Fries.JPG",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:French_Fries.JPG"
  },
  "froglegs": {
   "author": "Anagoria",
@@ -3002,6 +3020,12 @@ window.IMAGE_CREDITS = {
   "file": "Pork_loin_(1027276219).jpg",
   "license": "CC BY 2.0",
   "page": "https://commons.wikimedia.org/wiki/File:Pork_loin_(1027276219).jpg"
+ },
+ "porksausagecooked": {
+  "author": "Daniel Schwen",
+  "file": "Breakfast Sausage.jpg",
+  "license": "CC BY 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Breakfast_Sausage.jpg"
  },
  "porkshoulder": {
   "author": "Mark Miller",

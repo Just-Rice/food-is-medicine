@@ -512,3 +512,7 @@ porkchopcooked||cooked,meat,red meat,pork
 salmoncooked||cooked,fish,oily fish
 codcooked||cooked,fish
 shrimpcooked|prawns,jhinga|cooked,shellfish,crustacean
+bakedbeans|baked beans in tomato sauce,beans on toast|cooked,legume,pulse
+frenchfries|chips,fries,french fried potatoes|cooked,tuber,nightshade
+bloodsausage|black pudding,blood pudding,morcilla|cooked,meat,processed meat
+porksausagecooked|sausage,pork sausage,bangers,breakfast sausage|cooked,meat,pork,processed meat

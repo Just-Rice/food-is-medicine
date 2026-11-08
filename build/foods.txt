@@ -1092,3 +1092,9 @@ meat|porkchopcooked|Pork chop, cooked|168240
 fish|salmoncooked|Salmon, cooked|175168
 fish|codcooked|Cod, cooked|171956
 shellfish|shrimpcooked|Shrimp, cooked|175180
+# Breakfast and takeaway plates: a full English and a burger with fries had
+# nothing to match the beans, chips, black pudding or sausages to.
+legume|bakedbeans|Baked beans, canned|175182
+veg|frenchfries|French fries, oven-baked|169264
+meat|bloodsausage|Blood sausage|171618
+meat|porksausagecooked|Pork sausage, cooked|174578

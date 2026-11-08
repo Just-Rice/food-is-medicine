@@ -7,7 +7,7 @@ sources and honest about how good the evidence actually is.
 
 ## What it does
 
-**Food explorer** — 1,067 foods across 16 groups: fruits, vegetables, mushrooms, nuts and
+**Food explorer** — 1,071 foods across 16 groups: fruits, vegetables, mushrooms, nuts and
 seeds, legumes, grains, herbs and spices, dairy, meat, poultry, offal, fish, shellfish,
 eggs and roe, animal fats and bee products. Up to 38 nutrients each — energy, protein,
 carbohydrate, fibre, sugars, the full fat breakdown including ALA, EPA and DHA, 13 vitamins
@@ -97,10 +97,11 @@ seeds versus breadfruit) survive.
 Anything without a usable nutrient profile is dropped rather than shown as an
 empty page.
 
-The list is raw and dry foods, which is right for a reference. 52 cooked and
+The list is raw and dry foods, which is right for a reference. 56 cooked and
 ready-to-eat records sit alongside them — rice, pasta, oats, roti, naan, cooked
-dal and beans, hummus, tofu, cooked vegetables, eggs, chicken, beef, salmon and
-shrimp — tagged `cooked`, because people weigh their plate, not the packet.
+dal and beans, baked beans, hummus, tofu, cooked vegetables, chips (fries), eggs,
+chicken, beef, pork and blood sausages, salmon and shrimp — tagged `cooked`,
+because people weigh their plate, not the packet.
 
 Allergens are read from each food's USDA description as well as from hand-kept
 slug lists, so bulk-imported flours, pastas, tofu and tahini are tagged. Family
@@ -135,7 +136,7 @@ script fails loudly if an ID has no USDA record, so a typo cannot produce an emp
 Only foods whose names a picture search can actually resolve get a photograph.
 Curated names like "Okra" work; USDA descriptions like "Pork, fresh, loin, center
 rib (chops or roasts)" do not, and an early run illustrated 2% milk with a
-photograph of a milk-float garage. So 698 foods carry a photo and 317 show a
+photograph of a milk-float garage. So 703 foods carry a photo and 368 show a
 placeholder tile, which is the honest outcome.
 
 The fetcher also rejects digitised print. Wikimedia holds a great many scanned
@@ -224,7 +225,7 @@ data/sources.js       every citation, keyed by id
 data/i18n.js          four languages, with the localisation reasoning
 data/growth.js        GENERATED CDC BMI-for-age parameters
 js/growth.js          BMI-for-age percentile maths
-img/                  698 food photographs from Wikimedia Commons
+img/                  703 food photographs from Wikimedia Commons
 build/build_foods.py  the nutrition generator
 build/select_foods.py bulk selector: whole ingredients, per-category rules
 build/name_foods.py   names, slugs and family tags from USDA descriptions
