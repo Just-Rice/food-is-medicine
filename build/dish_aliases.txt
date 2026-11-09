@@ -1,0 +1,48 @@
+# Names people search for dishes by, for extended-list foods whose source
+# calls them something else: CoFID's "Curry, chick pea, whole and tomato"
+# is what most people call chana masala.
+#
+# pattern | other names
+#
+# The pattern is a regular expression on the food's name (lower case, commas
+# and brackets read as spaces); it may itself use |, so the LAST | on the line
+# separates it from the names, which are separated by ;.
+# Only names for the same dish -- not "close enough" ones -- and patterns
+# specific enough not to catch an unrelated food.
+
+\bcurry\b.*\bchick ?peas?\b|\bchick ?peas?\b.*\bcurry\b|\bchick ?pea dhal\b|\bchana\b|\bchole\b|chana masala;chole;chana
+\bcurry\b.*\bred kidney bean\b|\bkidney bean\b.*\bcurry\b|^rajma|rajma;rajmah
+\bcauliflower and potato\b|\bpotato and cauliflower\b|aloo gobi;aloo gobhi;gobi aloo
+^(curry|bhaji) .*\bpotato\b|\bbombay potato\b|aloo;aloo sabzi
+\bspinach\b.*\b(curry|bhaji)\b|\b(curry|bhaji)\b.*\bspinach\b|\bsaag\b|\bpalak\b|palak;saag
+\bokra\b.*\b(bhaji|curry)\b|\b(bhaji|curry)\b.*\bokra\b|bhindi;bhindi masala
+\b(aubergine|eggplant)\b.*\b(bhaji|curry)\b|\b(bhaji|curry)\b.*\b(aubergine|eggplant)\b|baingan;baingan bharta
+\bkarela\b|bitter gourd
+\bmung bean dahl\b|\bmung\b.*\bcurry\b|moong dal;mung dal
+^curry black gram whole and red kidney bean|dal makhani;maa ki dal
+\bblack gram\b|urad dal
+\bpigeon pea\b|toor dal;arhar dal
+\b(lentil|masoor)\b.*\b(dahl|dhal|curry)\b|^dal$|^lentil curry|^curry lentil|dal;masoor dal;dhal
+\bkhichadi\b|khichdi;kitchari
+\bdoner kebab\b|shawarma;doner
+^bread puri|^puri homemade|poori
+^dosa plain|sada dosa;plain dosa
+^dosa (with filling|filling)|masala dosa
+\bchicken\b.*\btandoori\b|\btandoori\b.*\bchicken\b|tandoori chicken
+^bread chapati|^chapatis|phulka;roti
+^halva semolina|sooji halwa;suji halwa;sheera
+^halva carrot|gajar halwa;gajar ka halwa
+arroz con leche|rice pudding
+^barfi or burfi|barfi;burfi
+\bchevda\b|\bchevra\b|chivda;bombay mix
+^dukboki or tteokbokki|tteokbokki;ddukbokki;topokki
+^soup pho|pho
+^cabbage kimchi|kimchee
+^gyro|gyros
+^falafel|felafel
+^hummus|houmous;hommus
+^tabbouleh|^tabouleh|tabouli
+^pierogi|perogies;varenyky
+^goulash|gulyas
+^sushi|maki
+^biryani|biriyani

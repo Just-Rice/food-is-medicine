@@ -108,7 +108,8 @@
     }
 
     var terms = customTerms();
-    var haystack = (food.name + ' ' + (food.usda || '')).toLowerCase();
+    var haystack = (food.name + ' ' + (food.usda || '') + ' ' + (food.aka || []).join(' ') + ' ' +
+                    (food.tags || []).join(' ')).toLowerCase();
     for (var j = 0; j < terms.length; j++) {
       if (haystack.indexOf(terms[j]) >= 0) {
         return { reason: 'custom', detail: terms[j] };

@@ -65,8 +65,10 @@ FLESH_GROUPS = {'meat', 'poultry', 'offal', 'fish', 'shellfish'}
 # typical recipe suggests it. A wrongly hidden food costs a search; a wrongly
 # offered one can cost much more.
 # ---------------------------------------------------------------------------
-NOT_FLESH = re.compile(r'\b(meatless|vegetarian|veggie|vegan|meat-free|meat free|imitation|substitute|'
-                       r'analog|soy-based|plant-based|without meat|no meat|egg ?plant)\b')
+# Words that undo a meat word in the same name ("Chicken, meatless", "Veggie
+# burger"). Not "soy-based" or "imitation": "...vegetables, soy-based sauce"
+# still has chicken in it, and imitation crab is fish.
+NOT_FLESH = re.compile(r'\b(meatless|vegetarian|veggie|vegan|meat-free|meat free|plant-based|without meat|no meat)\b')
 FLESH = re.compile(r'\b(beef|pork|ham|hams|bacon|lamb|mutton|veal|goat|venison|chicken|turkey|duck|goose|'
                    r'poultry|meat|meats|meatball|meatballs|meatloaf|sausage|sausages|salami|pepperoni|bologna|'
                    r'frankfurter|frankfurters|hot ?dog|hot ?dogs|wiener|liver|kidney|kidneys|tripe|giblets|'
@@ -797,7 +799,35 @@ def main():
         else:
             it['diet'], it['allergens'] = classify_text(it['group'], text, it.get('ingredients'))
         it['cuisines'] = cuisines_for(text + ' ' + ' '.join(it.get('aka', [])), it['kind'], cuisines)
-        it['tags'] = tags_for(it['desc'], it['group'] if it['group'] in PLANT_GROUPS | FLESH_GROUPS | {'dairy', 'fat'} else '')
+        # Family tags (citrus, brassica, mushroom...) only for single foods: a
+        # chocolate truffle is not a fungus, and a dish is found by its name.
+        it['tags'] = tags_for(it['desc'], it['group']) if it['kind'] in ('whole', 'spice') else []
+
+    # Names people search for dishes by (build/dish_aliases.txt).
+    rules = []
+    for line in open(os.path.join(HERE, 'dish_aliases.txt')):
+        line = line.rstrip('\n')
+        if not line.strip() or line.startswith('#'):
+            continue
+        pat, names = line.rsplit('|', 1)
+        rules.append((re.compile(pat), [n.strip() for n in names.split(';') if n.strip()]))
+    aliased = 0
+    for it in items:
+        if it['src'] == 'spice':
+            continue
+        t = flat(it['name'])
+        extra = []
+        for rx, names in rules:
+            if rx.search(t):
+                extra += [n for n in names if n not in extra and n not in t]
+        if extra:
+            it['aka'] = sorted(set(it.get('aka', []) + extra))
+            aliased += 1
+    print('dishes given other names: %d' % aliased)
+    for it in items:
+        if it.get('aka') and it['src'] != 'spice':
+            it['cuisines'] = sorted(set(it['cuisines']) | set(cuisines_for(
+                it['name'] + ' ' + it['desc'] + ' ' + ' '.join(it['aka']), it['kind'], cuisines)))
 
     # Cuisines for the curated foods too, from their names and other names.
     core_cuisines = {}

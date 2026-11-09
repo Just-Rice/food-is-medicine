@@ -290,6 +290,7 @@ build/build_more.py   the extended-list generator
 build/cuisines.txt    cuisine keywords
 build/spices.txt      spices no table lists, and blend recipes
 build/dish_spices.txt the spices a dish usually contains
+build/dish_aliases.txt names people search dishes by (chana masala, rajma, aloo gobi)
 ```
 
 ## Disclaimer
