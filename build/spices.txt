@@ -1,0 +1,42 @@
+# Spices and spice blends that none of the open food tables (USDA SR Legacy,
+# Foundation, FNDDS, UK CoFID 2021) lists, added so they can be searched,
+# logged and counted toward plant variety.
+#
+# slug | name | other names | recipe
+#
+# A blend whose every part is in the tables gets its nutrients worked out from
+# those parts by the recipe (parts by weight, ids as in data/foods.js or
+# foods-more.js). A spice with no recipe, or a blend with a part no table
+# lists, carries no nutrient figures at all ("nodata"): eaten by the gram, a
+# spice adds little, and inventing numbers would be worse than leaving them
+# out. Blend recipes are common published proportions, simplified.
+
+ajwain|Ajwain (carom seeds)|carom,ajowan,omum,bishop's weed|
+amchur|Amchur (dried mango powder)|amchoor,mango powder,aamchur|
+kalonji|Nigella seeds (kalonji)|kalonji,nigella,black cumin,charnushka,kalo jeera|
+kasurimethi|Kasuri methi (dried fenugreek leaves)|dried fenugreek leaves,methi leaves|
+staranise|Star anise|badiyan,chakra phool,bajiao|
+sumac|Sumac|sumach,sumak|
+sichuanpepper|Sichuan pepper|szechuan pepper,huajiao,timur|
+gochugaru|Gochugaru (Korean chilli flakes)|korean chili flakes,korean red pepper|
+galangal|Galangal|blue ginger,kha,lengkuas|
+makrutlime|Makrut lime leaves|kaffir lime leaves,lime leaves,bai makrut|
+annatto|Annatto (achiote) seeds|achiote,achuete,urucum|
+juniper|Juniper berries|juniper|
+whitepoppy|White poppy seeds|khus khus,khaskhas|
+blackcardamom|Black cardamom|badi elaichi,kali elaichi|
+mustardoilseed|Black mustard seeds|rai,sarson|
+# Blends worked out from their parts.
+chaatmasala|Chaat masala|chat masala|amchur:3,cumin:2,coriander seed:1,blackpepper:1,gingerground:1,ajwain:1
+panchphoron|Panch phoron|panch phoran,bengali five spice|cumin:1,fennelseed:1,fenugreekseed:1,kalonji:1,mustardseed:1
+fivespice|Chinese five-spice|five spice powder,wu xiang fen|staranise:1,cloves:1,cinnamonspice:1,sichuanpepper:1,fennelseed:1
+zaatar|Za'atar|zaatar,zatar,zahtar|thymedried:2,sumac:2,sesame:1,oregano:1
+rasel|Ras el hanout|ras el hanout|cumin:2,coriander seed:2,cinnamonspice:1,gingerground:1,turmericroot:1,blackpepper:1,paprika:1,allspiceground:1,cardamom:1,nutmeg:1
+herbesdeprovence|Herbes de Provence|herbs de provence|thymedried:2,rosemarydried:1,savoryground:1,marjoram:1,oregano:1
+italianseasoning|Italian seasoning|italian herbs|oregano:2,basildried:2,thymedried:1,rosemarydried:1,marjoram:1
+cajunseasoning|Cajun seasoning|creole seasoning|paprika:2,garlicpowder:1,onionpowder:1,pepperredorcayenne:1,blackpepper:1,oregano:1,thymedried:1
+sambarpowder|Sambar powder|sambhar powder|coriander seed:4,pepperredorcayenne:2,cumin:1,fenugreekseed:1,blackpepper:1,turmericroot:1
+berbere|Berbere|berbere spice|pepperredorcayenne:4,paprika:2,fenugreekseed:1,coriander seed:1,cardamom:1,gingerground:1,blackpepper:1,cloves:1,cinnamonspice:1
+jerkseasoning|Jerk seasoning|jamaican jerk|allspiceground:3,pepperredorcayenne:2,thymedried:2,garlicpowder:1,onionpowder:1,blackpepper:1,cinnamonspice:1,nutmeg:1
+shichimi|Shichimi togarashi|togarashi,seven spice|pepperredorcayenne:3,sichuanpepper:1,sesame:1,poppyseed:1,gingerground:1,nori:1
+dukkah|Dukkah|duqqa|hazelnut:3,sesame:2,coriander seed:2,cumin:1,blackpepper:1

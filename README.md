@@ -139,6 +139,46 @@ python3 build/build_foods.py sr/FoodData_Central_sr_legacy_food_csv_2018-04/ \
 To add a food, append `group|slug|display name|fdc_id` to `build/foods.txt` and re-run. The
 script fails loudly if an ID has no USDA record, so a typo cannot produce an empty food.
 
+### The extended list
+
+`data/foods.js` is the curated list, about a thousand whole foods with photographs.
+`data/foods-more.js` adds about thirteen thousand more — dishes, drinks, baked goods,
+sweets, restaurant and fast food, more cuts and preparations — built by
+`build/build_more.py` from:
+
+- the rest of USDA SR Legacy and new Foundation Foods records (no baby foods);
+- USDA FNDDS 2021–2023, the foods "as eaten" in the national dietary survey, which is where
+  the mixed dishes are: curries, biryani, dal, dosa, tacos, pho, pad thai, paella, quiche;
+- the UK's McCance and Widdowson's Composition of Foods Integrated Dataset 2021 (CoFID),
+  strong on British and South Asian home cooking;
+- `build/spices.txt`: spices none of those list (ajwain, amchur, kalonji, star anise,
+  sumac…), and blends worked out from their parts by a stated recipe (chaat masala,
+  za'atar, five-spice…). A spice with no measured data carries no nutrient figures rather
+  than invented ones.
+
+A nutrient a source does not measure is left out, never written as zero: FNDDS lists no
+manganese or pantothenic acid, CoFID no choline. Dietary and allergen tags come from a
+dish's ingredient list where FNDDS gives one, otherwise from its name, and err towards
+caution — a dish is called vegetarian only when nothing suggests meat or fish, and an
+allergen is tagged when the name or a typical recipe suggests it. Each food also gets
+cuisines (`build/cuisines.txt`) and, for dishes, the spices it usually contains (FNDDS
+ingredients, else `build/dish_spices.txt`). Ids are source-prefixed and stable across
+builds: `sr-` and `fd-` FDC IDs, `fn-` FNDDS food codes, `uk-` CoFID codes, `sp-` spices.
+
+```sh
+curl -L -o fndds.zip https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_survey_food_csv_2024-10-31.zip
+curl -L -o cofid.xlsx "https://assets.publishing.service.gov.uk/media/60538b91e90e07527df82ae4/McCance_Widdowsons_Composition_of_Foods_Integrated_Dataset_2021..xlsx"
+unzip -q fndds.zip -d fndds
+pip install openpyxl
+python3 build/build_more.py sr/FoodData_Central_sr_legacy_food_csv_2018-04/ \
+    fnd/FoodData_Central_foundation_food_csv_2025-04-24/ \
+    fndds/FoodData_Central_survey_food_csv_2024-10-31/ cofid.xlsx
+```
+
+It writes `data/foods-more.js` (about 3.8 MB, 1 MB compressed) and the small
+`data/cuisines.js`. Pages load the big file only when they need it, through
+`data/more.js`.
+
 ### Photographs
 
 Only foods whose names a picture search can actually resolve get a photograph.
@@ -184,7 +224,7 @@ supplement seller or a wellness site.
 
 | What | Source |
 | --- | --- |
-| All nutrition values | [USDA FoodData Central](https://fdc.nal.usda.gov/), SR Legacy and Foundation Foods |
+| All nutrition values | [USDA FoodData Central](https://fdc.nal.usda.gov/): SR Legacy, Foundation Foods and FNDDS 2021–2023; and for the extended list [McCance and Widdowson's Composition of Foods Integrated Dataset 2021](https://www.gov.uk/government/publications/composition-of-foods-integrated-dataset-cofid) (Office for Health Improvement and Disparities). Contains public sector information licensed under the [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/). |
 | All daily targets | [NASEM Dietary Reference Intakes](https://nap.nationalacademies.org/read/25353), 2019 tables |
 | Energy estimation | Mifflin-St Jeor, *Am J Clin Nutr* 1990;51(2):241-7 |
 | Weight-change dynamics | Hall KD et al., *Lancet* 2011;378:826-37; [NIH Body Weight Planner](https://www.niddk.nih.gov/bwp) |
@@ -202,7 +242,8 @@ The full annotated list is on the site's Sources page and in `data/sources.js`.
 ## Data used by other sites
 
 [Food Log](https://just-rice.github.io/food-log/) loads `data/foods.js`,
-`data/images.js`, `data/dri.js` and `data/growth.js` straight from this site, and
+`data/images.js`, `data/dri.js`, `data/cuisines.js` and `data/more.js` (which loads
+`data/foods-more.js` on demand) straight from this site, and
 reads the profile and preferences saved under `fim.profile.v1` and `fim.prefs.v1`.
 Keep those paths, the `window.FOODS` / `window.IMAGE_CREDITS` / `window.DRI`
 globals and those storage keys stable, or change both sites together.
@@ -226,6 +267,9 @@ js/profile.js         profile storage and the personal maths
 js/weight.js          weight-change arithmetic and its safety checks
 js/recipes.js         Gemini client, prompt construction, key storage
 data/foods.js         GENERATED from USDA — do not edit by hand
+data/foods-more.js    GENERATED extended list (USDA, UK CoFID, spices), loaded on demand
+data/cuisines.js      GENERATED cuisine list, dish spice templates
+data/more.js          loader for the extended list, shared with Food Log
 data/images.js        GENERATED photo credits — do not edit by hand
 data/dri.js           reference intakes, upper limits, energy equations
 data/medicinal.js     herb and food entries with graded claims
@@ -242,6 +286,10 @@ build/build_growth.py CDC growth-chart generator
 build/aliases.txt     other names and family tags, hand-maintained
 build/fetch_images.py the photo fetcher
 build/foods.txt       curated food list locked to FDC IDs
+build/build_more.py   the extended-list generator
+build/cuisines.txt    cuisine keywords
+build/spices.txt      spices no table lists, and blend recipes
+build/dish_spices.txt the spices a dish usually contains
 ```
 
 ## Disclaimer

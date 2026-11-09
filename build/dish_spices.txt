@@ -1,0 +1,52 @@
+# The spices a dish usually contains, for dishes whose source does not list its
+# ingredients (UK CoFID, a photo or a description). FNDDS dishes use their own
+# ingredient lists instead.
+#
+# words that name the dish | spice id:grams per 100 g of the dish, ...
+#
+# The first line whose words match a dish wins, so specific dishes come before
+# general ones. Amounts are typical home-cooking quantities: a teaspoon of
+# ground spice is about 2-3 g, spread over four servings of 250-300 g, which is
+# 0.2-0.3 g per 100 g. They are small on purpose: spices are eaten by the gram.
+# Ids are those in data/foods.js, foods-more.js or build/spices.txt.
+
+chana masala,chole,chick pea curry,chickpea curry,curry chick pea|cumin:0.3,coriander seed:0.3,garammasala:0.2,turmericroot:0.15,chilipowder:0.15,amchur:0.1
+rajma,kidney bean curry,curry red kidney bean|cumin:0.3,coriander seed:0.25,garammasala:0.2,turmericroot:0.15,chilipowder:0.15
+sambar|sambarpowder:0.6,turmericroot:0.1,mustardseed:0.1,currylea:0.1,asafoetida:0.02
+dal,dhal,daal,dahl,lentil curry,khichdi,kichri|turmericroot:0.2,cumin:0.25,asafoetida:0.03,chilipowder:0.1
+biryani,biriyani,pilau,pulao|garammasala:0.25,cumin:0.15,cardamom:0.05,cloves:0.03,cinnamonspice:0.05,bayleaf:0.02,turmericroot:0.1,saffron:0.005
+tikka masala,butter chicken,makhani|garammasala:0.3,cumin:0.2,coriander seed:0.2,paprika:0.3,turmericroot:0.1,chilipowder:0.1,kasurimethi:0.1
+tandoori,tikka|garammasala:0.3,paprika:0.4,cumin:0.2,coriander seed:0.2,turmericroot:0.1,chilipowder:0.15
+korma|garammasala:0.2,cardamom:0.05,cumin:0.15,coriander seed:0.15,turmericroot:0.08,cinnamonspice:0.03
+vindaloo,madras,jalfrezi,bhuna,balti,rogan josh,dhansak,karahi|garammasala:0.25,cumin:0.25,coriander seed:0.25,chilipowder:0.3,turmericroot:0.12,paprika:0.2
+palak,saag,sag,methi|cumin:0.2,garammasala:0.15,turmericroot:0.1,chilipowder:0.1,kasurimethi:0.05
+aloo gobi,bombay potato,bhaji,bhindi,baingan,sabzi,subji,vegetable curry|turmericroot:0.2,cumin:0.25,coriander seed:0.2,chilipowder:0.1,garammasala:0.1,mustardseed:0.05
+samosa,pakora,bhajia,onion bhaji|cumin:0.2,coriander seed:0.2,ajwain:0.1,chilipowder:0.15,turmericroot:0.08,garammasala:0.1
+dosa,idli,uttapam,upma,poha|mustardseed:0.15,currylea:0.1,turmericroot:0.05,asafoetida:0.02
+curry|currypowder:0.5,turmericroot:0.1,cumin:0.15,chilipowder:0.1
+pad thai|chilipowder:0.05
+green curry,red curry,massaman,thai curry|coriander seed:0.15,cumin:0.1,galangal:0.2,makrutlime:0.05,lemongrass:0.3
+pho|staranise:0.05,cinnamonspice:0.03,cloves:0.02,coriander seed:0.05
+kung pao,szechuan,sichuan,mapo|sichuanpepper:0.1,chilipowder:0.1
+five spice,char siu,peking|fivespice:0.3
+kimchi,bibimbap,bulgogi,gochujang|gochugaru:0.4
+teriyaki,sushi,ramen,miso|gingerground:0.05
+taco,burrito,enchilada,fajita,chimichanga,nacho,chili con carne,chilli con carne|cumin:0.3,chilipowder:0.4,oregano:0.1,paprika:0.15,garlicpowder:0.1
+tamale,pozole,posole,mole|cumin:0.15,chilipowder:0.3,oregano:0.1,cinnamonspice:0.03
+arroz con pollo,sofrito,adobo|annatto:0.1,cumin:0.15,oregano:0.1,garlicpowder:0.1
+jerk|jerkseasoning:0.6
+jambalaya,gumbo,cajun,creole|cajunseasoning:0.5,bayleaf:0.02
+shawarma,kebab,kofte,kofta|cumin:0.2,coriander seed:0.15,paprika:0.2,cinnamonspice:0.05,allspiceground:0.05,sumac:0.1
+falafel|cumin:0.3,coriander seed:0.3,pepperredorcayenne:0.05
+tagine,couscous,harissa|rasel:0.4,cumin:0.1,cinnamonspice:0.05
+hummus,baba ganoush|cumin:0.15,paprika:0.05
+shakshuka|cumin:0.2,paprika:0.3,pepperredorcayenne:0.05
+fattoush,za'atar,zaatar|sumac:0.3,zaatar:0.2
+paella|saffron:0.01,paprika:0.2
+goulash,gulasch|paprika:0.8,carawayseed:0.1
+bolognese,lasagna,lasagne,marinara,pizza,parmigiana,minestrone|oregano:0.1,basildried:0.1,italianseasoning:0.1
+ratatouille,provencal|herbesdeprovence:0.3
+coq au vin,bourguignon,bourguignonne,stew|thymedried:0.05,bayleaf:0.02,blackpepper:0.03
+moussaka,souvlaki,gyro|oregano:0.15,cinnamonspice:0.05,allspiceground:0.03
+borscht,borsch,stroganoff|dillweeddried:0.05,paprika:0.1,blackpepper:0.03
+sausage roll,shepherd's pie,cottage pie|thymedried:0.05,blackpepper:0.03

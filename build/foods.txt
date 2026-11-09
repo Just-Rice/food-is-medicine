@@ -881,6 +881,15 @@ herb|salttable|Salt, table|173468
 herb|vinegarcider|Vinegar, cider|173469
 herb|vanillaextract|Vanilla extract|173471
 herb|seasoningmixchilioriginal|Seasoning mix, chili, original|173476
+herb|basildried|Basil, dried|171317
+herb|thymedried|Thyme, dried|170938
+herb|rosemarydried|Rosemary, dried|171333
+herb|dillweeddried|Dill weed, dried|171322
+herb|parsleydried|Parsley, dried|170930
+herb|spearmintdried|Spearmint, dried|172239
+herb|pumpkinpiespice|Pumpkin pie spice|171332
+herb|capers|Capers, canned|172238
+herb|mustardprepared|Mustard, prepared (yellow)|172234
 fat|avocadooil|Avocado oil|173573
 fat|oatoil|Oat oil|173576
 poultry|chickenbroilersorfryersleg|Chicken, broilers or fryers, leg|173619
