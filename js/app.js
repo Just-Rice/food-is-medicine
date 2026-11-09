@@ -155,7 +155,55 @@
                 'herb', 'dairy', 'meat', 'poultry', 'offal', 'fish',
                 'shellfish', 'egg', 'fat', 'bee'];
 
-  function groupLabel(id) { return t('g_' + id); }
+  // The extended list's groups (data/foods-more.js), English only for now.
+  var EXTRA_GROUPS = ['dish', 'baked', 'sweet', 'snack', 'drink', 'sauce', 'cereal'];
+  var EXTRA_GROUP_LABELS = { dish: 'Dishes', baked: 'Breads and baking', sweet: 'Sweets and desserts',
+    snack: 'Snacks', drink: 'Drinks', sauce: 'Sauces and soups', cereal: 'Breakfast cereals' };
+  function groupLabel(id) {
+    var l = t('g_' + id);
+    return l === 'g_' + id && EXTRA_GROUP_LABELS[id] ? EXTRA_GROUP_LABELS[id] : l;
+  }
+  function moreFoods() { return window.FoodsMore && FoodsMore.loaded() ? FoodsMore.foods() : []; }
+  function findFood(slug) {
+    for (var i = 0; i < FOODS.length; i++) if (FOODS[i].slug === slug) return FOODS[i];
+    var m = moreFoods();
+    for (var j = 0; j < m.length; j++) if (m[j].slug === slug) return m[j];
+    return null;
+  }
+
+  /** Where a food's figures come from, linked. */
+  function sourceLink(food) {
+    if (!food.more || food.source === 'sr' || food.source === 'fd') {
+      return '<a href="https://fdc.nal.usda.gov/food-details/' + food.fdcId + '/nutrients" rel="noopener" target="_blank">FDC ' +
+        food.fdcId + '</a>';
+    }
+    var name = FoodsMore.sourceName(food.source);
+    if (food.source === 'fn') {
+      return '<a href="https://fdc.nal.usda.gov/food-search?type=Survey%20(FNDDS)&query=' +
+        encodeURIComponent(food.usda || food.name) + '" rel="noopener" target="_blank">' + esc(name) + ', food code ' +
+        esc(food.slug.slice(3)) + '</a>';
+    }
+    if (food.source === 'uk') {
+      return '<a href="https://www.gov.uk/government/publications/composition-of-foods-integrated-dataset-cofid" ' +
+        'rel="noopener" target="_blank">' + esc(name) + ', food code ' + esc(food.slug.slice(3)) + '</a>' +
+        ' (contains public sector information licensed under the Open Government Licence v3.0)';
+    }
+    return esc(name);
+  }
+
+  /** What an extended-list food's source does not measure. */
+  function sourceGaps(food) {
+    if (!food.more) return '';
+    if (food.nodata) {
+      return '<div class="note"><p>None of the open food tables lists this spice, so it has no nutrient ' +
+        'figures here: it can be logged and counts toward the plants you eat. Eaten by the gram, a spice adds little.</p></div>';
+    }
+    var miss = (window.FoodsMore && FoodsMore.missing[food.source]) || [];
+    if (!miss.length) return '';
+    return '<p class="hint">' + esc(FoodsMore.sourceName(food.source)) + ' does not measure ' +
+      miss.map(function (k) { return nutrientLabel(k).toLowerCase(); }).join(' or ') +
+      ', so those are blank rather than zero.</p>';
+  }
 
   function foodImage(food, cls) {
     var credit = CREDITS[food.slug];
@@ -235,7 +283,7 @@
   // ======================================================================
   // View: food explorer
   // ======================================================================
-  var foodState = { q: '', group: 'all', sort: 'name' };
+  var foodState = { q: '', group: 'all', sort: 'name', every: false };
 
   // Building a thousand cards costs the best part of a second, most of it spent
   // on rows nobody has scrolled to. Render a page at a time and let the reader
@@ -266,8 +314,14 @@
           esc(t('sort_prefix') + nutrientLabel(k) + ' ' + t('sort_highest')) + '</option>';
       }).join('') + '</select></div>' +
 
+      '<div class="chips every-row"><button class="chip" type="button" id="everyFood" aria-pressed="' +
+      foodState.every + '">' + esc('Every food (' + (window.FoodsMore && FoodsMore.loaded()
+        ? (FOODS.length + moreFoods().length).toLocaleString('en') : 'about 14,600') + ')') + '</button>' +
+      '<span class="hint">' + esc(foodState.every
+        ? 'Dishes, drinks, baking and more from USDA and the UK’s food tables, most without a photograph.'
+        : 'Browsing the curated whole foods. Search always covers every food.') + '</span></div>' +
       '<div class="chips" role="group" aria-label="' + esc(t('filter_group')) + '">' +
-      GROUPS.map(function (g) {
+      GROUPS.concat(foodState.every ? EXTRA_GROUPS : []).map(function (g) {
         return '<button class="chip" type="button" data-group="' + g + '" aria-pressed="' +
           (foodState.group === g ? 'true' : 'false') + '">' + esc(groupLabel(g)) + '</button>';
       }).join('') + '</div>' +
@@ -283,7 +337,22 @@
     // Coalesce the keystrokes and paint once the typing pauses.
     var search = document.getElementById('foodSearch');
     var typingTimer = null;
+    // The extended list loads on the first search, or when asked for.
+    function needMore() {
+      if (!window.FoodsMore || FoodsMore.loaded()) return;
+      FoodsMore.load().then(function () {
+        if (document.getElementById('foodGrid')) paint();
+      }, function () { /* curated only */ });
+    }
+    if (foodState.every || foodState.q) needMore();
+    document.getElementById('everyFood').addEventListener('click', function () {
+      foodState.every = !foodState.every;
+      showAllFoods = false;
+      if (!foodState.every && EXTRA_GROUPS.indexOf(foodState.group) >= 0) foodState.group = 'all';
+      viewFoods();
+    });
     search.addEventListener('input', function () {
+      needMore();
       foodState.q = search.value;
       showAllFoods = false;
       if (typingTimer) clearTimeout(typingTimer);
@@ -308,7 +377,8 @@
     function paint() {
       var q = foodState.q.trim().toLowerCase();
       var hidden = 0;
-      var list = FOODS.filter(function (f) {
+      var pool = foodState.every || q ? FOODS.concat(moreFoods()) : FOODS;
+      var list = pool.filter(function (f) {
         if (foodState.group !== 'all' && f.group !== foodState.group) return false;
         if (q && haystack(f).indexOf(q) < 0 && f.slug.indexOf(q) < 0) return false;
         if (Prefs.excludedReason(f)) { hidden++; return false; }
@@ -316,8 +386,9 @@
       });
 
       if (foodState.sort === 'name' && q) {
+        // The curated foods first when a match is otherwise as good.
         list.sort(function (a, b) {
-          var d = relevance(b, q) - relevance(a, q);
+          var d = (relevance(b, q) + (b.more ? 0 : 8)) - (relevance(a, q) + (a.more ? 0 : 8));
           return d !== 0 ? d : a.name.localeCompare(b.name);
         });
       } else if (foodState.sort === 'name') {
@@ -327,7 +398,8 @@
         list.sort(function (a, b) { return (b.nutrients[key] || 0) - (a.nutrients[key] || 0); });
       }
 
-      var count = list.length === 1 ? t('one_food') : t('n_foods', { n: list.length });
+      var count = list.length === 1 ? t('one_food') : t('n_foods', { n: list.length.toLocaleString('en') });
+      if (window.FoodsMore && !FoodsMore.loaded() && (foodState.every || q)) count += ' · loading the full list…';
       var capped = !showAllFoods && list.length > PAGE_SIZE;
       var shown = capped ? list.slice(0, PAGE_SIZE) : list;
 
@@ -355,8 +427,8 @@
             var alias = matchedAlias(f, q);
             return alias ? '<div class="alias-hit">also called ' + esc(alias) + '</div>' : '';
           })() +
-          '<div class="kcal">' + fmt(f.nutrients.kcal) + ' kcal · ' +
-          fmt(f.nutrients.protein) + ' g ' + esc(t('n_protein').toLowerCase()) + '</div>' +
+          '<div class="kcal">' + (f.nutrients.kcal != null ? fmt(f.nutrients.kcal) + ' kcal · ' +
+          fmt(f.nutrients.protein) + ' g ' + esc(t('n_protein').toLowerCase()) : 'no nutrient figures') + '</div>' +
           (hs.length
             ? '<div class="highlights">' + hs.map(function (h) {
                 return '<span class="tag">' + esc(nutrientLabel(h.key)) + ' ' +
@@ -390,7 +462,16 @@
   var portionState = {};
 
   function viewFood(slug) {
-    var food = FOODS.filter(function (f) { return f.slug === slug; })[0];
+    var food = findFood(slug);
+    // An extended-list food (sr-, fd-, fn-, uk-, sp-): load the list, then show it.
+    if (!food && /^(sr|fd|fn|uk|sp)-/.test(slug) && window.FoodsMore && !FoodsMore.loaded()) {
+      main.innerHTML = '<p class="hint" style="padding:24px 0">Loading the full food list…</p>';
+      FoodsMore.load().then(function () {
+        // Still on this food's page (the reader may have moved on meanwhile).
+        if (decodeURIComponent(location.hash.split('?')[0]) === '#/food/' + slug) viewFood(slug);
+      }, function () { viewMissing(); });
+      return;
+    }
     if (!food) return viewMissing();
 
     var ref = referenceSet();
@@ -432,8 +513,7 @@
               encodeURIComponent(tg) + '">' + esc(tg) + '</a>';
           }).join('') + '</div>'
         : '') +
-      '<p class="source-line">' + esc(food.usda || '') + ' — ' +
-      '<a href="' + fdcUrl + '" rel="noopener" target="_blank">FDC ' + food.fdcId + '</a>' +
+      '<p class="source-line">' + esc(food.usda || '') + ' — ' + sourceLink(food) +
       (credit && credit.page
         ? '<br><span class="credit">' +
           esc(t('photo_credit', { author: credit.author, license: credit.license })) +
@@ -442,7 +522,7 @@
       '</p>' +
       '<p class="log-this"><a href="../food-log/#/today?add=' + encodeURIComponent(food.slug) + '">' +
       esc(t('log_this')) + ' &rarr;</a></p>' +
-      '</div></div>' +
+      '</div></div>' + sourceGaps(food) +
 
       (choices.length > 1
         ? '<div class="portion-toggle"><span class="label">' + esc(t('show')) + '</span>' +
@@ -1876,7 +1956,16 @@
       'placeholder="mushroom, cilantro, shellfish">' +
       '<span class="hint">' + esc(t('custom_excl_hint')) + '</span></div>' +
 
-      '<p class="result-count" id="filterCount" style="margin-top:16px"></p></div>';
+      '<p class="result-count" id="filterCount" style="margin-top:16px"></p></div>' +
+      (window.FoodsMore && FoodsMore.cuisines.length
+        ? '<h2 class="section">Favourite cuisines</h2><div class="card pad">' +
+          '<p class="hint" style="margin-top:0">The cuisines you eat most. Food Log puts their foods first and ' +
+          'reads your meal photos with them in mind. ' + englishMark() + '</p>' +
+          '<div class="chips">' + FoodsMore.cuisines.map(function (c) {
+            return '<button class="chip" type="button" data-cuisine="' + esc(c.code) + '" aria-pressed="' +
+              ((prefs.cuisines || []).indexOf(c.code) >= 0) + '">' + esc(c.label) + '</button>';
+          }).join('') + '</div></div>'
+        : '');
 
     function toggle(key, on) {
       return '<button class="switch" type="button" data-toggle="' + key + '" role="switch" ' +
@@ -1914,6 +2003,14 @@
     });
     main.querySelectorAll('[data-diet]').forEach(function (b) {
       b.addEventListener('click', function () { Prefs.set('diet', b.dataset.diet); rerender(); });
+    });
+    main.querySelectorAll('[data-cuisine]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var list = (Prefs.get('cuisines') || []).slice(), i = list.indexOf(b.dataset.cuisine);
+        if (i >= 0) list.splice(i, 1); else list.push(b.dataset.cuisine);
+        Prefs.set('cuisines', list);
+        rerender();
+      });
     });
     main.querySelectorAll('[data-allergen]').forEach(function (b) {
       b.addEventListener('click', function () {

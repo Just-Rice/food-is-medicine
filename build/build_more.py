@@ -299,6 +299,23 @@ def sig(v):
     return s
 
 
+def per_one(o):
+    """Both sites write "1 " before a portion label, so a label must name one
+    unit: FNDDS's "1 cup" becomes "cup", and "2 slices" (60 g) "slice" (30 g)."""
+    m = re.match(r'^\s*(\d+(?:\.\d+)?|\d+/\d+)\s+(.+)$', o['label'])
+    if not m:
+        return o
+    q = m.group(1)
+    qty = float(q.split('/')[0]) / float(q.split('/')[1]) if '/' in q else float(q)
+    if qty <= 0:
+        return o
+    label = m.group(2)
+    if abs(qty - 1) > 1e-9:
+        label = re.sub(r'^(\w+?)(es|s)\b', lambda x: x.group(1) + ('' if x.group(2) == 's' else 'e')
+                       if not x.group(1).endswith(('s', 'x', 'ch', 'sh')) else x.group(1), label, count=1)
+    return {'label': label, 'grams': o['grams'] / qty, 'amount': 1.0}
+
+
 def norm_name(s):
     s = s.lower()
     s = re.sub(r"[^a-z0-9 ]+", ' ', s)
@@ -848,7 +865,7 @@ def main():
     for it in sorted(items, key=lambda i: (i['name'].lower(), i['id'])):
         n = it['n']
         nums = ','.join(sig(n.get(k)) if n.get(k) is not None else '' for k in KEYS).rstrip(',')
-        opts = it['portions']
+        opts = [per_one(o) for o in it['portions']]
         best, serve = choose_portion(opts), choose_serving(opts)
         port = '%s|%s' % (best['label'], sig(best['grams'])) if best else 0
         srv = '%s|%s' % (serve['label'], sig(serve['grams'])) if serve and (not best or serve['label'] != best['label']) else 0

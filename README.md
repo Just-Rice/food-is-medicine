@@ -7,12 +7,28 @@ sources and honest about how good the evidence actually is.
 
 ## What it does
 
-**Food explorer** — 1,071 foods across 16 groups: fruits, vegetables, mushrooms, nuts and
+**Food explorer** — 1,080 curated foods across 16 groups: fruits, vegetables, mushrooms, nuts and
 seeds, legumes, grains, herbs and spices, dairy, meat, poultry, offal, fish, shellfish,
 eggs and roe, animal fats and bee products. Up to 38 nutrients each — energy, protein,
 carbohydrate, fibre, sugars, the full fat breakdown including ALA, EPA and DHA, 13 vitamins
 and 10 minerals. Search, filter by group, or sort by any nutrient to find its best sources.
 Every food carries a photograph and links back to the USDA record it came from.
+
+**Every food** — search also covers about 13,600 more foods from the open food tables:
+dishes as eaten (curries, dal, dosa, biryani, tacos, pho, pad thai, paella, quiche, coq au
+vin), breads and baking, drinks, sweets, restaurant and fast food, and more cuts and
+preparations, from USDA (SR Legacy, Foundation Foods, FNDDS) and the UK's CoFID 2021. Dishes
+are findable by the names people use — chana masala, rajma, aloo gobi, toor dal. Browsing
+stays with the curated whole foods; an "Every food" switch shows the lot, with groups for
+dishes, baking, sweets, snacks, drinks, sauces and cereals. Extended foods have their own
+pages, which say where their figures come from and what that source does not measure
+(blank, never zero), and most have no photograph. The full list loads only when a search
+or the switch needs it.
+
+**Favourite cuisines** — sixteen to choose from in Settings, from Indian & South Asian,
+Chinese, Japanese and Korean to Mexican & Latin American, Italian, Greek & Turkish, Middle
+Eastern, French and other European cuisines. Shared with Food Log, which puts their foods
+first, reads meal photos with them in mind and adds their dishes' usual spices.
 
 **Names and families** — the same vegetable has different names in different places, so
 okra is findable as ladyfinger, bhindi, gumbo or vendakkai, and aubergine, brinjal and

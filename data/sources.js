@@ -21,6 +21,22 @@ window.SOURCES = {
     url: 'https://fdc.nal.usda.gov/',
     note: 'The source of every nutrition number on this site. SR Legacy is the final release of the USDA National Nutrient Database for Standard Reference, the reference dataset most nutrition software is built on. Values are per 100 g of edible portion.'
   },
+  fndds: {
+    tier: 'government',
+    title: 'Food and Nutrient Database for Dietary Studies (FNDDS) 2021-2023, in FoodData Central',
+    org: 'U.S. Department of Agriculture, Agricultural Research Service',
+    year: 2024,
+    url: 'https://fdc.nal.usda.gov/',
+    note: 'The foods "as eaten" in the US national dietary survey, which is where the mixed dishes are: curries, biryani, tacos, pho, pad thai. Each comes with its ingredient list, which this site uses for dietary and allergen tags and for a dish\'s spices. It does not measure manganese or pantothenic acid.'
+  },
+  cofid: {
+    tier: 'government',
+    title: "McCance and Widdowson's Composition of Foods Integrated Dataset (CoFID) 2021",
+    org: 'Office for Health Improvement and Disparities (UK)',
+    year: 2021,
+    url: 'https://www.gov.uk/government/publications/composition-of-foods-integrated-dataset-cofid',
+    note: 'The UK\'s food composition tables, strong on British and South Asian home cooking: bhajis, dals, curries, takeaway dishes. Contains public sector information licensed under the Open Government Licence v3.0. It does not measure choline.'
+  },
   dri: {
     tier: 'government',
     title: 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements (consolidated DRI tables)',
