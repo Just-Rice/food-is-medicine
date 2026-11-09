@@ -13,7 +13,8 @@
     reduceMotion: false,
     diet: 'none',           // 'none' | 'vegetarian' | 'vegan' | 'pescatarian'
     allergens: [],          // keys matching the tags in data/foods.js
-    customExclude: ''       // free text, comma separated
+    customExclude: '',      // free text, comma separated
+    cuisines: []            // favourite cuisines, codes from data/cuisines.js
   };
 
   var listeners = [];
