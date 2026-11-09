@@ -310,6 +310,11 @@ cardamom|elaichi,elachi|spice
 nutmeg|jaiphal|spice
 cinnamonspice|dalchini,cassia|spice
 fenugreekseed|methi seed,methi dana|spice
+fennelseed|saunf,sonf,fennel seeds|seed,spice
+saffron|kesar,zafran|spice
+# Tej patta is Indian bay leaf, a different tree's leaf used the same way;
+# bay leaf is the closest record.
+bayleaf|bay leaves,tej patta,tejpatta|spice
 
 # ---- animal products -----------------------------------------------------
 shrimp|prawn,prawns,jhinga|shellfish,crustacean,seafood

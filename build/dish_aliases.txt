@@ -46,3 +46,5 @@ arroz con leche|rice pudding
 ^goulash|gulyas
 ^sushi|maki
 ^biryani|biriyani
+^asafoetida|hing;heeng
+^curry leaves|kadi patta;kadhi patta;kari patta;curry patta
