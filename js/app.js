@@ -466,10 +466,12 @@
     // An extended-list food (sr-, fd-, fn-, uk-, sp-): load the list, then show it.
     if (!food && /^(sr|fd|fn|uk|sp)-/.test(slug) && window.FoodsMore && !FoodsMore.loaded()) {
       main.innerHTML = '<p class="hint" style="padding:24px 0">Loading the full food list…</p>';
+      // Still on this food's page? The reader may have moved on while the list loaded,
+      // and neither the food nor "no match" should then be drawn over where they went.
+      var onThisFood = function () { return decodeLoose(location.hash.split('?')[0]) === '#/food/' + slug; };
       FoodsMore.load().then(function () {
-        // Still on this food's page (the reader may have moved on meanwhile).
-        if (decodeURIComponent(location.hash.split('?')[0]) === '#/food/' + slug) viewFood(slug);
-      }, function () { viewMissing(); });
+        if (onThisFood()) viewFood(slug);
+      }, function () { if (onThisFood()) viewMissing(); });
       return;
     }
     if (!food) return viewMissing();
@@ -2160,6 +2162,12 @@
   // ======================================================================
   // Router
   // ======================================================================
+  // decodeURIComponent throws on a stray "%" (a link cut short, or typed by hand: ?q=100%),
+  // and an error here left the whole page blank. Such text is used as it stands.
+  function decodeLoose(text) {
+    try { return decodeURIComponent(text); } catch (e) { return text; }
+  }
+
   function route() {
     var raw = location.hash.replace(/^#/, '');
     var anchor = null;
@@ -2173,7 +2181,7 @@
       raw = raw.slice(0, qIdx);
       qs.split('&').forEach(function (pair) {
         var kv = pair.split('=');
-        if (kv[0] === 'q') query = decodeURIComponent(kv[1] || '').replace(/\+/g, ' ');
+        if (kv[0] === 'q') query = decodeLoose((kv[1] || '').replace(/\+/g, ' '));
       });
     }
     var parts = raw.split('/').filter(Boolean);
